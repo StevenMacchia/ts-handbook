@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>The T&amp;S Handbook: updates</title>
+  <subtitle>Every change to the handbook, newest first.</subtitle>
+  <link href="https://stevenmacchia.com/ts-handbook/updates/feed.xml" rel="self"/>
+  <link href="https://stevenmacchia.com/ts-handbook/updates/"/>
+  <id>https://stevenmacchia.com/ts-handbook/updates/</id>
+  <updated>2026-10-04T12:00:00Z</updated>
+  <author><name>Steven Macchia</name><uri>https://stevenmacchia.com/</uri></author>
+  <entry>
+    <title>Added: 1. What Trust &amp; Safety is for, 5. Detection and prevention, 8. Hiring and structuring the team and 1 more</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-3"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-3</id>
+    <updated>2026-10-04T12:00:00Z</updated>
+    <summary>Linked Steven's post on why treating Trust &amp; Safety as an operations function is a mistake, and added it to chapter 8's view on where the team should report. Read the post: You can't moderate your way out of a systems problem (https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 1. What Trust &amp; Safety is for, 2. Know your risks, 3. The first 90 days and 16 more</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-2"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-2</id>
+    <updated>2026-10-04T12:00:00Z</updated>
+    <summary>Practical advice that varies by platform, such as cadences, sample sizes, targets and who owns what, is now set out as options with examples, so each team can choose what fits.</summary>
+  </entry>
+  <entry>
+    <title>Revised: 1. What Trust &amp; Safety is for, 2. Know your risks, 3. The first 90 days and 12 more</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-1"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-1</id>
+    <updated>2026-10-04T12:00:00Z</updated>
+    <summary>Added Steven's own calls from an interview: where Trust &amp; Safety should report, what to automate first, the one number to track from day one, who makes the 2am call, and more. Practical choices that vary by platform are now laid out as options.</summary>
+  </entry>
+  <entry>
+    <title>Drafted: 1. What Trust &amp; Safety is for, 2. Know your risks, 3. The first 90 days and 15 more</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-03-3"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-03-3</id>
+    <updated>2026-10-03T12:00:00Z</updated>
+    <summary>First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</summary>
+  </entry>
+  <entry>
+    <title>Drafted: 6. Child safety and age assurance</title>
+    <link href="https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-03-2</id>
+    <updated>2026-10-03T12:00:00Z</updated>
+    <summary>First full draft: what each level of age assurance should unlock, safe defaults, grooming responses that build as signals stack, the account decision, and how to measure prevention.</summary>
+  </entry>
+  <entry>
+    <title>Added: 1. What Trust &amp; Safety is for, 2. Know your risks, 4. Writing policy and an enforcement ladder and 12 more</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-03-1"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-03-1</id>
+    <updated>2026-10-03T12:00:00Z</updated>
+    <summary>Linked the first 16 posts to the chapters they inform, and set out the ten principles behind the handbook.</summary>
+  </entry>
+</feed>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2. Know your risks · The T&amp;S Handbook</title>
+<meta name="description" content="How will people misuse this product, and which harms should you tackle first?">
+<meta name="author" content="Steven Macchia">
+<link rel="canonical" href="https://stevenmacchia.com/ts-handbook/know-your-risks/">
+<link rel="alternate" type="application/atom+xml" title="The T&amp;S Handbook: updates" href="https://stevenmacchia.com/ts-handbook/updates/feed.xml">
+<meta property="og:type" content="article"><meta property="og:title" content="2. Know your risks · The T&amp;S Handbook"><meta property="og:description" content="How will people misuse this product, and which harms should you tackle first?">
+<meta property="og:url" content="https://stevenmacchia.com/ts-handbook/know-your-risks/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+summary:focus-visible{border-radius:2px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1152px;margin:0 auto;padding:0 32px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.05}
+.top{display:flex;align-items:center;gap:28px;height:64px;border-bottom:1px solid var(--line)}
+.top .mark{width:12px;height:12px;background:var(--ink);flex:none}
+.top .name{font-weight:600;margin-right:auto}
+.top a{color:var(--ink);text-decoration:none;font-size:15px}
+.top a:hover{text-decoration:underline}
+.top a[aria-current="page"]{font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:4px;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn:hover{background:var(--panel);text-decoration:none}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#2a2a2a}
+.top .btn{padding:8px 14px;font-size:14px}
+.lbl{font-size:13px;color:var(--muted);font-weight:500;margin:0}
+.lbl a{color:inherit}
+h3.lbl{letter-spacing:0;line-height:1.55}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:end;padding:88px 0 56px}
+.hero h1{font-size:clamp(44px,6.5vw,80px);margin-top:18px}
+.lead{margin:22px 0 0;font-size:clamp(18px,2.2vw,21px);line-height:1.45;max-width:44ch}
+.sub{margin:14px 0 0;font-size:17px;color:var(--muted);max-width:58ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:30px}
+.cta .go{margin-left:8px;font-weight:500}
+.open{border-top:1px solid var(--ink);padding-top:14px;font-size:14.5px;display:grid;gap:8px}
+.open .sq{display:inline-block;width:8px;height:8px;background:var(--good);margin-right:9px}
+.open span{color:var(--muted)}
+.open .mono{font-size:12.5px}
+/* Grid children must be allowed to shrink, or a wide table inside a step widens the page on phones */
+.steps>li>*,.cs-h>*,.stages>*{min-width:0}
+.legal{margin:0 0 32px;padding:14px 18px;background:var(--panel);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;font-size:15px;line-height:1.5;max-width:86ch}
+.legal b{font-weight:600}
+.hh .legal{margin:16px 0 0;font-size:14px}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0 72px;border-top:1px solid var(--line)}
+.proof div{display:grid;gap:4px;font-size:14.5px}
+.proof b{font-weight:600}
+.proof span{color:var(--muted)}
+section{padding:0 0 88px}
+.sec-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:end;padding-top:28px;border-top:1px solid var(--ink);margin-bottom:28px}
+h2{font-size:36px}
+.sec-h p{margin:0}
+.sec-h .big{font-size:19px;font-weight:500}
+.sec-h .intro{margin-top:10px;color:var(--muted);max-width:72ch}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.5fr);gap:32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows li>*{min-width:0}
+.rows i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:2px}
+.rows h3{font-size:17px;line-height:1.35;letter-spacing:-.01em}
+.rows p{margin:0;color:var(--muted);font-size:15px}
+.rows .from{display:block;margin-top:8px;font-size:13.5px}
+.rows .from a{text-decoration:none}
+.rows .from a:hover{text-decoration:underline}
+/* Home: a short hero, then the contents as the main column with a sidebar beside them */
+.hh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 64px;align-items:end;padding:56px 0 36px}
+.hh h1{font-size:clamp(40px,5.5vw,64px);margin-top:14px}
+.hh .lead{margin-top:16px;max-width:46ch}
+.hh .sub{margin-top:10px;font-size:16px;max-width:60ch}
+.hh .cta{margin-top:24px}
+.status{margin:0;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;line-height:1.7;color:var(--muted);text-align:right;white-space:nowrap}
+.status .sq{display:inline-block;width:8px;height:8px;background:var(--ink);margin-right:8px;vertical-align:1px}
+.status .sq.outline{background:var(--strong)}
+.status .sq.published{background:var(--good)}
+.home{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 64px;border-top:1px solid var(--ink);padding-top:24px}
+.home>*{min-width:0}
+.home>section{padding-bottom:80px;scroll-margin-top:16px}
+.ch-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px}
+.ch-h .intro{margin:0;color:var(--muted);font-size:15px}
+.part{margin:28px 0 0}
+.part:first-of-type{margin-top:0}
+.part h3.ph{display:flex;align-items:baseline;gap:12px;font-size:16px;font-weight:600;letter-spacing:0;line-height:1.3;margin:0 0 8px}
+.ph i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;flex:none}
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.toc li{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.toc li>*{min-width:0}
+.toc i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:3px}
+.toc .t{font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.toc .t a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.toc .t a::after{content:"";position:absolute;inset:0}
+.toc li:hover .t a{text-decoration-color:var(--ink)}
+.toc li:hover i{color:var(--ink)}
+.toc .q{grid-column:2;margin:0;color:var(--muted);font-size:14.5px;line-height:1.45}
+.toc .st{grid-column:3;grid-row:1/3;align-self:start;display:grid;gap:3px;justify-items:end;padding-top:3px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+.toc .st.published{color:var(--good)}
+.filters{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;flex-basis:100%;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted)}
+.filters button{border:0;background:none;padding:0;margin:0;color:var(--muted);font:inherit;cursor:pointer;text-underline-offset:3px}
+.filters button:hover{color:var(--ink);text-decoration:underline}
+.filters button[aria-pressed="true"]{color:var(--ink);text-decoration:underline}
+.side{align-self:start;position:sticky;top:24px;display:grid;gap:32px;padding-bottom:80px}
+.sb .lbl{margin-bottom:6px}
+.sl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.sl li{display:grid;gap:3px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.4}
+.sl li>*{min-width:0}
+.sl a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px;font-weight:500;overflow-wrap:anywhere}
+.sl a:hover{text-decoration-color:var(--ink)}
+.sl time,.sl .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.sl.up li{grid-template-columns:48px minmax(0,1fr);gap:0 12px;align-items:baseline;font-size:14.5px}
+.sl.up time{padding-top:1px}
+.side .more{margin-top:10px;font-size:14.5px}
+.side .more a+a{margin-left:14px}
+.pr2{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;align-items:start}
+.pr{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pr li{border-bottom:1px solid var(--line)}
+.pr summary{display:grid;grid-template-columns:36px minmax(0,1fr) 14px;gap:12px;align-items:baseline;padding:11px 0;cursor:pointer;list-style:none;font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.01em}
+.pr summary::-webkit-details-marker{display:none}
+.pr summary i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;font-weight:400;color:var(--muted)}
+.pr summary::after{content:"▾";color:var(--muted);text-align:right}
+.pr details[open] summary::after{content:"▴"}
+.pr summary:hover{color:var(--blue)}
+.pr .pb{padding:0 0 14px 48px;color:var(--muted);font-size:15px;line-height:1.5}
+.pr .pb p{margin:0}
+.pr .from{display:block;margin-top:6px;font-size:13.5px}
+.pr .from a{text-decoration:none}
+.pr .from a:hover{text-decoration:underline}
+.ctl{margin:10px 0 0}
+.ctl button{border:0;background:none;padding:0;margin:0;font:inherit;font-size:14.5px;font-weight:500;color:var(--blue);cursor:pointer}
+.ctl button:hover{text-decoration:underline}
+.st3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.st3 div{display:grid;gap:3px;align-content:start;font-size:14.5px}
+.st3 b{font-weight:600}
+.st3 span{color:var(--muted)}
+.row2{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:32px}
+.row2 ul{margin:0;padding-left:20px;display:grid;gap:6px;max-width:70ch}
+.row2 p{margin:0 0 10px;max-width:70ch}
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px;align-items:start}
+.feed .lbl{margin-bottom:8px}
+.log{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.log>li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.log>li>*{min-width:0}
+.log time,.posts time{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);padding-top:3px;white-space:nowrap}
+.log .k,.posts .k{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.log .k{margin-bottom:4px}
+.posts .k{margin-top:4px}
+.log .ch{display:block;font-weight:500;line-height:1.35}
+.log .ch a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.log .ch a:hover{text-decoration-color:var(--ink)}
+.log p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.log .meta,.posts .meta{font-size:13.5px}
+.log .meta a,.posts .meta a{text-decoration:none}
+.log .meta a:hover,.posts .meta a:hover{text-decoration:underline}
+.log ol{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.feed .log>li,.feed .posts li{grid-template-columns:64px minmax(0,1fr);gap:20px}
+.more{margin:16px 0 0;font-size:15px;font-weight:500}
+.more a{text-decoration:none}
+.more a:hover{text-decoration:underline}
+.ch-page section{padding-bottom:72px}
+.ch-page .sec-h h2,.cs-h h2{font-size:32px;line-height:1.08}
+.ch-hero{padding:72px 0 48px}
+.ch-hero h1{font-size:clamp(40px,5.5vw,68px)}
+.ch-hero .lead{max-width:40ch}
+.open .sq.outline{background:var(--strong)}
+.open .sq.draft{background:var(--ink)}
+.toc-d summary{cursor:pointer;color:var(--blue);font-weight:500;list-style:none}
+.toc-d summary::-webkit-details-marker{display:none}
+.toc-d summary::after{content:" ▾"}
+.toc-d[open] summary::after{content:" ▴"}
+.toc-list{margin-top:10px;font-size:14px;max-height:420px;overflow:auto;border-top:1px solid var(--line);padding-top:4px}
+.toc-list p{margin:12px 0 4px;font-weight:600;font-size:13px;color:var(--ink)}
+.toc-list ol{list-style:none;margin:0;padding:0}
+.toc-list a{display:flex;gap:10px;padding:3px 0;color:var(--muted);text-decoration:none;line-height:1.35}
+.toc-list a:hover{color:var(--ink);text-decoration:underline}
+.toc-list a i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;width:18px;flex:none;padding-top:1px}
+.toc-list a[aria-current="page"]{color:var(--ink);font-weight:600}
+.toc-list .more-l{margin:14px 0 6px;font-weight:500;border-top:1px solid var(--line);padding-top:10px}
+.toc-list .more-l a{display:inline;padding:0;color:var(--blue)}
+.proof .lbl{grid-column:1/-1}
+.proof div{align-content:start}
+.cs-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:28px;border-top:1px solid var(--ink)}
+.prose{max-width:72ch}
+.prose p,.prose li{font-size:17px;line-height:1.65}
+.prose p{margin:0 0 16px}
+.prose>:last-child{margin-bottom:0}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:20px}
+.prose li{margin:6px 0}
+.prose li::marker{color:var(--muted)}
+.prose h3,.prose h4{font-size:17px;letter-spacing:-.01em;line-height:1.3;margin:24px 0 8px}
+.prose blockquote{margin:20px 0;padding:2px 0 2px 18px;border-left:3px solid var(--ink)}
+.prose code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em;background:var(--panel);padding:1px 5px;border-radius:3px}
+.prose pre{background:var(--panel);padding:16px;border-radius:4px;overflow:auto}
+.prose pre code{background:none;padding:0}
+.prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.prose a,.src a,.posts h3 a,.posts h4 a,.log .ch a{overflow-wrap:anywhere}
+.tbl{overflow-x:auto;margin:4px 0 20px}
+.tbl table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.tbl th{text-align:left;vertical-align:bottom;font-size:13px;font-weight:500;color:var(--muted);padding:0 16px 10px 0;border-bottom:1px solid var(--ink)}
+.tbl td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
+.tbl td:first-child{font-weight:500}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;background:var(--panel);border-radius:4px;padding:32px}
+.stages h3{font-size:20px;line-height:1.2}
+.stages .d{margin:8px 0 0;color:var(--muted);font-size:14px}
+.stages .lbl{margin:22px 0 6px}
+.stages .v{margin:0;font-size:15px}
+.jump-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;margin:-6px 0 28px}
+.jump{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px}
+.jump a{color:var(--muted);text-decoration:none}
+.jump a:hover{color:var(--ink);text-decoration:underline}
+.jump i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;margin-right:7px}
+.steps{list-style:none;margin:0;padding:0}
+.steps>li{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.steps>li:first-child{padding-top:4px}
+.steps .n{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);margin-bottom:10px}
+.steps h3{font-size:22px;line-height:1.2;letter-spacing:-.02em}
+.tpl{background:var(--panel);border-radius:4px;padding:24px 28px;margin:0 0 16px}
+.tpl .lbl{margin:0 0 6px}
+.tpl h3{font-size:18px;line-height:1.3;margin:0 0 6px}
+.tpl>p:not(.lbl){margin:0 0 14px;color:var(--muted);font-size:15px;max-width:72ch}
+.tpl .tbl{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{display:grid;gap:6px;align-content:start;padding:18px 20px;border:1px solid var(--line);border-radius:4px;min-width:0}
+.card .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.card h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+.card h3 a,.posts h3 a,.posts h4 a,.src a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.card h3 a:hover,.posts h3 a:hover,.posts h4 a:hover,.src a:hover{text-decoration-color:var(--ink)}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.posts li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.posts li>*{min-width:0}
+.posts h3,.posts h4{font-size:17px;line-height:1.35;letter-spacing:-.01em;margin:0;font-weight:600}
+.posts p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.more-d{margin:0}
+.more-d summary{list-style:none;cursor:pointer;color:var(--blue);font-weight:500;font-size:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.more-d summary::-webkit-details-marker{display:none}
+.more-d summary::after{content:" ▾"}
+.more-d[open] summary::after{content:" ▴"}
+.more-d[open] summary{border-bottom:0}
+.sub-h{margin:36px 0 10px}
+.sub-h:first-of-type{margin-top:0}
+.src{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.src li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:32px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.src li span{color:var(--muted)}
+.src a{font-weight:500}
+.cover li{grid-template-columns:56px minmax(0,1fr)}
+.cover p{color:var(--ink);font-size:16px}
+.story{background:var(--panel);border-radius:4px;padding:28px 32px}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pn a{display:grid;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;min-width:0}
+.pn a:hover{background:var(--panel)}
+.pn a span{font-size:13px;color:var(--muted)}
+.pn a b{font-weight:600;line-height:1.3}
+.pn .next{text-align:right;grid-column:2}
+footer{background:var(--ink);color:#fff;padding:56px 0}
+footer .wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:baseline}
+footer h2{color:#fff}
+footer .c{display:flex;flex-wrap:wrap;gap:22px;font-size:17px}
+footer .c a{color:#fff}
+footer .fine{grid-column:1/-1;margin-top:28px;font-size:13px;color:#A8A6A1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .fine a{color:#A8A6A1}
+footer :focus-visible{outline-color:#fff}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}.hh{grid-template-columns:1fr;gap:18px;padding:40px 0 28px}.status{text-align:left;white-space:normal}.home{grid-template-columns:1fr;padding-top:20px}.home>section{padding-bottom:48px}.side{position:static;padding-bottom:56px}.proof{grid-template-columns:1fr;gap:16px;padding-bottom:48px}.sec-h,.row2,.cs-h,.steps>li,.jump-row,footer .wrap{grid-template-columns:1fr;gap:16px}.jump-row{gap:8px;margin:-4px 0 20px}.rows li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px}.rows li>:nth-child(n+3){grid-column:2}.toc li{grid-template-columns:34px minmax(0,1fr);gap:2px 12px}.toc .st{grid-column:2;grid-row:auto;display:flex;gap:12px;justify-items:start;padding-top:4px}.pr2,.st3{grid-template-columns:1fr}.pr2{gap:0}.pr+.pr{border-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top a.name{display:inline}.top .btn{margin-left:auto}section,.ch-page section{padding-bottom:56px}.ch-hero{padding:40px 0 32px}.stages{grid-template-columns:1fr;gap:28px;padding:22px}.cards{grid-template-columns:1fr}.feed{grid-template-columns:1fr;gap:40px}.posts li,.src li,.log>li,.feed .log>li,.feed .posts li{grid-template-columns:1fr;gap:4px}.posts time,.log time{padding-top:0}.posts .k{display:inline;margin:0 0 0 10px}.steps>li{gap:12px;padding:24px 0}.pn{grid-template-columns:1fr}.pn .next{grid-column:1;text-align:left}}
+@media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
+@media (max-height:640px){.side{position:static}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav class="top"><span class="mark" aria-hidden="true"></span><a class="name" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a href="../" aria-current="page">Handbook</a><a href="https://stevenmacchia.com/writing/">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Download resume</a></nav></div></header>
+<main>
+<div class="ch-page">
+<div class="wrap">
+  <div class="hero ch-hero">
+    <div>
+      <p class="lbl"><a href="../">The T&amp;S Handbook</a> · Part 1: Before the first hire</p>
+      <h1>Know your risks</h1>
+      <p class="lead">How will people misuse this product, and which harms should you tackle first?</p>
+    </div>
+    <div>
+      <div class="open"><div><i class="sq draft" aria-hidden="true"></i><b>Draft: written, not yet reviewed</b></div><span>Chapter 2 of 19 · About 14 minutes</span><span>Updated Oct 4, 2026 · <a href="#changes">What changed</a></span><details class="toc-d"><summary>All chapters</summary><div class="toc-list"><p>Part 1: Before the first hire</p><ol><li><a href="../what-trust-and-safety-is-for/"><i>1</i><span>What Trust &amp; Safety is for</span></a></li><li><a href="../know-your-risks/" aria-current="page"><i>2</i><span>Know your risks</span></a></li><li><a href="../the-first-90-days/"><i>3</i><span>The first 90 days</span></a></li></ol><p>Part 2: Build</p><ol><li><a href="../writing-policy/"><i>4</i><span>Writing policy and an enforcement ladder</span></a></li><li><a href="../detection-and-prevention/"><i>5</i><span>Detection and prevention</span></a></li><li><a href="../child-safety-and-age-assurance/"><i>6</i><span>Child safety and age assurance</span></a></li><li><a href="../review-operations/"><i>7</i><span>Standing up review operations</span></a></li><li><a href="../hiring-and-structuring-the-team/"><i>8</i><span>Hiring and structuring the team</span></a></li><li><a href="../choosing-vendors-and-tools/"><i>9</i><span>Choosing vendors and tools</span></a></li></ol><p>Part 3: Run</p><ol><li><a href="../quality-calibration-and-appeals/"><i>10</i><span>Quality, calibration and appeals</span></a></li><li><a href="../measuring-what-matters/"><i>11</i><span>Measuring what matters</span></a></li><li><a href="../severe-harm-escalations/"><i>12</i><span>Severe harm escalations</span></a></li><li><a href="../crisis-response/"><i>13</i><span>Crisis response</span></a></li><li><a href="../moderator-wellbeing/"><i>14</i><span>Moderator wellbeing</span></a></li><li><a href="../working-with-product-legal-and-leadership/"><i>15</i><span>Working with Product, Legal, Comms and leadership</span></a></li></ol><p>Part 4: Scale and govern</p><ol><li><a href="../regulation-and-compliance/"><i>16</i><span>Regulation and compliance</span></a></li><li><a href="../transparency-reports-and-notices/"><i>17</i><span>Transparency reports and enforcement notices</span></a></li><li><a href="../ai-in-trust-and-safety/"><i>18</i><span>AI in Trust &amp; Safety</span></a></li><li><a href="../budgets-roadmaps-and-making-the-case/"><i>19</i><span>Budgets, roadmaps and making the case</span></a></li></ol><p class="more-l"><a href="../updates/">What changed recently →</a></p></div></details></div>
+    </div>
+  </div>
+  <p class="legal" role="note"><b>General information, not legal advice.</b> Laws differ by country, change often and apply differently to each service. Check with your own legal team or outside counsel before acting on anything here.</p>
+  <div class="proof"><p class="lbl">In one minute</p><div><b>Run an abuse pre-mortem at design review</b><span>At that point, changing a default is a quick edit to the spec. After launch, the same change means taking something away from users.</span></div><div><b>Be selective, and answer in days</b><span>Give a full review to launches that let strangers contact each other, move money or items between users, expose location or change what minors can do. Everything else gets a short checklist.</span></div><div><b>Rank harms by severity, likelihood and reach</b><span>Give extra weight where children are involved, and treat &quot;18+&quot; as minors being present unless you check age.</span></div><div><b>Map your defenses in five layers</b><span>Rate policy, detection, enforcement, appeals and measurement for each kind of harm, and fix the places where risk outruns them.</span></div><div><b>Give every accepted risk an owner and a date</b><span>The person who owns the product outcome signs off, and the most serious risks go to the executive who owns safety risk.</span></div><div><b>The mistake to avoid</b><span>Reviewing every release the same way. A review that slows everything won't stay in the launch plan for long.</span></div></div>
+</div>
+<section id="why-it-matters"><div class="wrap"><div class="cs-h"><h2>Why it matters</h2><div class="prose"><p>Most product launches get a security review. Almost none get an abuse review: who will misuse this, how, and what ships on day one to stop it.</p>
+<p>That's a missed chance, because the things that predict abuse are knowable before launch. Who can contact whom. Whether money moves. Whether children are present. What gets recommended. Which markets you're in. A team that asks these questions at design review can fix a risk with an edit to the spec. A team that waits finds out from a support queue, a parent or a journalist, and then has to take something away from users who already rely on it.</p>
+<p>Regulators now expect the same habit. The UK's Online Safety Act requires user-to-user services to carry out a &quot;suitable and sufficient&quot; illegal content risk assessment, keep it up to date, and assess again before making a significant change to the service's design or operation (<a href="https://www.legislation.gov.uk/ukpga/2023/50/section/9">section 9</a>). Services likely to be accessed by children must also carry out a children's risk assessment (<a href="https://www.legislation.gov.uk/ukpga/2023/50/section/11">section 11</a>). Ofcom has said the illegal harms assessment applies to every service in scope, whatever its size (<a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/enforcing-the-online-safety-act-scrutinising-illegal-harms-risk-assessments">Ofcom, scrutinising illegal harms risk assessments</a>). In the EU, platforms and search engines that the European Commission designates as very large (45 million or more average monthly active recipients in the EU, under Article 33) must assess systemic risks once designated, at least once a year, and before deploying features likely to have a critical impact on them (Digital Services Act, <a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Article 34</a>). A pre-mortem at design review is how you do that work while it's still cheap.</p></div></div></div></section>
+<section id="what-good-looks-like"><div class="wrap"><div class="sec-h"><h2>What good looks like</h2><p class="big">What you have, and what you can show, at each stage</p></div><div class="stages"><div><h3>Early</h3><p class="d">A founder or first safety hire covers trust and safety, usually with under a million users.</p><p class="lbl">What you have</p><p class="v">A pre-mortem on the core product and on each launch that meets the full-review criteria, a ranked list of the top harms, a short checklist for every other launch, and an owner and a date on every accepted risk.</p><p class="lbl">What you can show</p><p class="v">The top risks, the safeguard and owner for each, and who signed off each accepted risk.</p></div><div><h3>Growing</h3><p class="d">A dedicated safety team, millions of users, and new markets or features on the way.</p><p class="lbl">What you have</p><p class="v">The pre-mortem as a standing step in design review with an answer in days, coverage rated for each kind of harm across five layers, and exit criteria agreed for safeguards that cost a feature its metric.</p><p class="lbl">What you can show</p><p class="v">The share of qualifying launches reviewed before design was final. How many incidents in a feature's first 90 days the review predicted.</p></div><div><h3>At scale or regulated</h3><p class="d">Tens of millions of users, a heavily regulated sector, or extra duties as a very large platform under EU or UK law.</p><p class="lbl">What you have</p><p class="v">A risk register that feeds the risk assessments the law requires, updated before significant changes, coverage reviewed every quarter against risk, and serious accepted risks taken to the executive who owns safety risk.</p><p class="lbl">What you can show</p><p class="v">Risk assessments that are current for every product and market, coverage against risk over time, and how many accepted risks turned into incidents.</p></div></div></div></section>
+<section id="how-to-do-it"><div class="wrap"><div class="sec-h"><h2>How to do it</h2><p class="big">8 steps</p></div><div class="jump-row"><p class="lbl">Jump to a step</p><ol class="jump"><li><a href="#step-1"><i>01</i>Decide which launches get a full review</a></li><li><a href="#step-2"><i>02</i>Run the pre-mortem at design review</a></li><li><a href="#step-3"><i>03</i>Work out how each feature creates risk</a></li><li><a href="#step-4"><i>04</i>Rank harms by severity, likelihood and reach</a></li><li><a href="#step-5"><i>05</i>Choose safeguards, and agree exit criteria for the ones that cost a metric</a></li><li><a href="#step-6"><i>06</i>Give every accepted risk an owner and a date</a></li><li><a href="#step-7"><i>07</i>Map your defenses in five layers, and find where risk outruns them</a></li><li><a href="#step-8"><i>08</i>Check the review against what actually happened</a></li></ol></div><ol class="steps"><li id="step-1"><div><span class="n">Step 01</span><h3>Decide which launches get a full review</h3></div><div class="prose"><p>If every product team pre-mortems only one kind of launch, make it anything that changes what children can do or who can reach them.</p>
+<p>Being invited to design review is something T&amp;S earns. You earn it by being selective and fast. A review that slows every release won't stay in the launch plan for long.</p>
+<p>Give a full pre-mortem to any launch that does at least one of these:</p>
+<ul><li><strong>Lets strangers contact each other.</strong> Messages, friend requests, voice, live video, group invites.</li><li><strong>Moves money or items between users.</strong> Gifting, virtual currency, tips, trading, payouts, marketplace sales.</li><li><strong>Exposes location.</strong> Maps, nearby features, check-ins, in-person meetups, photos that carry location data.</li><li><strong>Changes what minors can do.</strong> New features open to under-18s, or any change to their defaults.</li></ul>
+<p>Everything else gets a short checklist the product team fills in themselves (there's one under the templates below). If any answer worries you, it becomes a full review.</p>
+<p>Put the four questions into the launch template your product teams already use, so the trigger doesn't depend on someone remembering to invite you. The T&amp;S lead owns the criteria. Product operations or whoever runs the launch process owns the template. It's working when qualifying launches reach you before the design is final, and your answers go back within days.</p></div></li><li id="step-2"><div><span class="n">Step 02</span><h3>Run the pre-mortem at design review</h3></div><div class="prose"><p>A pre-mortem is a session where the team assumes the project has already failed and works out why (<a href="https://hbr.org/2007/09/performing-a-project-premortem">Gary Klein, Harvard Business Review</a>). For abuse, the prompt is simple: it's three months after launch and this feature is in the news for the wrong reason. What happened?</p>
+<p>A typical room: the product manager who owns the outcome, the engineering lead, the designer, and T&amp;S, though on a small team one person may fill two of those seats. Add Legal and Privacy when minors, money or new markets are involved. Walk through the product the way an abuser would: who can I reach, what can I send, what can I take, and what happens if I'm banned?</p>
+<p>The Workbench's <a href="https://stevenmacchia.com/ts-workbench/#premortem">abuse pre-mortem</a> structures this as 12 plain questions: what you're building, what people can do in it, whether anyone under 18 could use it, whether strangers can make contact, what it takes to make an account, whether money changes hands, where it will be used, how many people use it, and who deals with safety problems today. It returns the risks that apply, rated, the safeguards to ship before launch with an owner for each in priority order, the laws that likely apply in your markets, and a launch plan you can send to Jira, Linear or GitHub.</p>
+<p>The output of the session is a short record: the risks, the rating for each, the safeguards you'll ship, and any risk you're accepting. Changes made now are cheap. If new accounts shouldn't be able to message strangers, or should have a lower gifting cap in their first week, that's an edit to the spec today and a fight with users after launch.</p></div></li><li id="step-3"><div><span class="n">Step 03</span><h3>Work out how each feature creates risk</h3></div><div class="prose"><p>Most abuse comes through a small number of features. Know how each one gets misused, and what a safer default looks like:</p>
+<div class="tbl"><table><thead><tr><th>Feature</th><th>How it gets misused</th><th>Safeguards to decide at design review</th></tr></thead><tbody><tr><td>Messaging between strangers</td><td>Grooming, scams, harassment and unwanted sexual images, which often start with a message from someone the target doesn't know</td><td>No messages to strangers from new accounts, adults unable to message minors they aren't connected to, a block that stops all contact, warnings when someone asks for money or to move to another app</td></tr><tr><td>Gifting, currency and payouts</td><td>Gifts used as grooming lures, scam payments, laundering through items or stored value, accounts recruited as money mules</td><td>Lower gifting caps for new accounts, limits on gifts to minors, payout holds and velocity limits for new payees</td></tr><tr><td>Live voice and video</td><td>Harm happens in real time and is hard to review afterwards: grooming, sexual exploitation, harassment, self-harm on stream</td><td>Eligibility rules for going live, instant stream shutdown, round-the-clock on-call cover, no private voice between adults and minors they don't know</td></tr><tr><td>Location</td><td>Stalking, doxxing (publishing someone's address or other private details) and harm at in-person meetings</td><td>Approximate location by default, precise location opt-in and time-limited and never shown to strangers, location data stripped from photos</td></tr><tr><td>Anonymity and easy sign-up</td><td>Ban evasion, bots, fake accounts at scale, guests who can't be held to account</td><td>Limited abilities for new accounts, rate limits, device and network signals to link banned accounts, no private messages or uploads for guests</td></tr><tr><td>Generative AI</td><td>Sexual imagery of children, sexual deepfakes of real people, jailbreaks for dangerous information, harmful responses from AI companions</td><td>Input and output filters, a block on sexual images of real people, red-teaming before launch and after every model update, clear and repeated notice that users are talking to an AI</td></tr></tbody></table></div>
+<p>Two things multiply every row: who's present and where. Children raise both the likelihood and the severity of the worst harms. New markets bring new laws and new languages your reviewers may not read. The <a href="https://github.com/stevenmacchia/abuse-premortem/blob/main/risks.md">risk catalog</a> lists 58 risks in 14 areas, and the <a href="https://github.com/stevenmacchia/abuse-premortem/blob/main/safeguards.md">safeguards library</a> lists 104 safeguards with an owner and effort for each.</p></div></li><li id="step-4"><div><span class="n">Step 04</span><h3>Rank harms by severity, likelihood and reach</h3></div><div class="prose"><p>You can't fix everything before launch, so rank. One simple method, and the one the abuse pre-mortem uses, scores each risk on two scales:</p>
+<div class="tbl"><table><thead><tr><th>Score</th><th>Severity: how bad is it if it happens?</th><th>Likelihood: how likely is it on this product?</th></tr></thead><tbody><tr><td>1</td><td>Limited</td><td>Rare</td></tr><tr><td>2</td><td>Serious</td><td>Possible</td></tr><tr><td>3</td><td>Severe</td><td>Likely</td></tr><tr><td>4</td><td>Critical</td><td>Expected</td></tr></tbody></table></div>
+<p>Multiply them for a score out of 16. Twelve or more is critical, 8 to 11 is high, 4 to 7 is medium, and below 4 is low. Severity is the inherent harm and doesn't change. Likelihood is what your design moves: stranger contact raises the likelihood of grooming and scams, and verified identity lowers it. Three- or five-point scales work too, as long as everyone scores on the same one.</p>
+<p>Then use reach to order risks with the same score. A harm that recommendations, live features or sheer scale can spread to thousands of people goes ahead of one that stays inside a single conversation. Scale also raises the likelihood of organized abuse.</p>
+<p>Give extra weight where children are involved. One simple way: if a harm could reach a minor, rate its severity a level higher than you would for adults. Don't let &quot;18+&quot; in your terms lower the rating. A rule that says 18+ doesn't keep children out unless you check, so treat it as minors being present, just fewer of them (<a href="../child-safety-and-age-assurance/">chapter 6</a> covers age assurance).</p>
+<p>T&amp;S does the rating with the product team, and writes down the evidence behind each score: past incidents, support tickets, what's happened on similar products. A score you can't explain will be argued down in the first meeting where it costs something.</p></div></li><li id="step-5"><div><span class="n">Step 05</span><h3>Choose safeguards, and agree exit criteria for the ones that cost a metric</h3></div><div class="prose"><p>Work down the ranked list. Prefer safeguards that lower several critical risks at once, and prefer defaults over detection. Safer defaults and targeted limits stop most harm before anything needs removing, and most users never feel them. Detection and review come next (<a href="../detection-and-prevention/">chapter 5</a>).</p>
+<p>Give each safeguard an owner by function, because most of them aren't T&amp;S work. A common split, though it shifts with how your company is organized:</p>
+<ul><li><strong>Product:</strong> defaults, limits for new accounts, reporting and blocking, warnings</li><li><strong>Engineering:</strong> rate limits, hash matching, account linking, logging every enforcement action</li><li><strong>T&amp;S operations:</strong> a review queue with an owner, response times by severity, escalation paths</li><li><strong>Policy:</strong> written rules for the harms the feature creates (<a href="../writing-policy/">chapter 4</a>)</li><li><strong>Legal and compliance:</strong> reporting duties, notice channels, records</li></ul>
+<p>Some safeguards cost the feature its own metric. A gifting limit on new accounts will reduce gifting, and revenue usually wins that argument. Don't fight it twice. Agree the exit criteria up front: what the safeguard protects against, which number would show it's no longer needed, and when you'll look again. Then the follow-up is a check against an agreed bar, not a new negotiation.</p></div></li><li id="step-6"><div><span class="n">Step 06</span><h3>Give every accepted risk an owner and a date</h3></div><div class="prose"><p>Some launches will go ahead with a known risk. That's a legitimate business decision, as long as the right person makes it.</p>
+<p>The person who owns the product outcome signs off on the risk, with a date to revisit it. T&amp;S's job is to make sure the risk is in front of them when they decide, in plain words: what could happen, to whom, how likely it is, and what's in place. When a risk is too serious to be one person's call, T&amp;S takes it to the executive who owns safety risk.</p>
+<p>Write it down every time. Accepted risks without an owner and a date don't get revisited. And on the day something goes wrong, the first question will be who knew, and what they decided (<a href="../working-with-product-legal-and-leadership/">chapter 15</a> covers the conversation with Product and leadership).</p></div></li><li id="step-7"><div><span class="n">Step 07</span><h3>Map your defenses in five layers, and find where risk outruns them</h3></div><div class="prose"><p>A pre-mortem tells you where the risk is. It doesn't tell you whether you're ready for it. For that, rate your defenses for each kind of harm in five layers:</p>
+<div class="tbl"><table><thead><tr><th>Layer</th><th>The question it answers</th></tr></thead><tbody><tr><td>Policy</td><td>Is there a clear rule, with guidance reviewers can apply?</td></tr><tr><td>Detection</td><td>How do you find it, beyond waiting for user reports?</td></tr><tr><td>Enforcement</td><td>Can trained people act on it quickly and consistently?</td></tr><tr><td>Appeals</td><td>Can users contest decisions, and do mistakes get fixed?</td></tr><tr><td>Measurement</td><td>Do you know how much of it users see, and how well you respond?</td></tr></tbody></table></div>
+<p>Rate each layer from 0 (none) to 3 (strong). Coverage is the share of the maximum across all five. Then put it next to the risk score as a share of the maximum (16 on the scale above). A critical risk (12 or more) with less than half the coverage is exposed. A high risk (8 or more) whose coverage is below its risk level is a gap: a risk of 12 out of 16 is 75%, so it needs coverage of at least 75%.</p>
+<p>The <a href="https://stevenmacchia.com/ts-workbench/#coverage">coverage radar</a> does this for eight kinds of harm and names the next step for each weak layer. Fix exposed areas first, starting with the weakest layer. When several layers are weak, the radar's order for serious harm is detection, enforcement, policy, measurement, appeals, and it gives every exposed area its first step before any area gets a second. That's a sound default, but it's a choice: a team whose reviewers keep disagreeing may need policy first, and one facing a regulator's questions may move measurement up.</p>
+<p>The point is to see risk and readiness side by side. Most programs can list the harms they worry about, and separately the defenses they have. Without the two together, budget follows whoever argues loudest. A child safety policy with no proactive detection looks fine on paper until something goes wrong.</p>
+<p>By stage: an early team rates coverage once, for its top few harm areas, for example three or four. A growing team rates every area and reruns it regularly, for example each quarter. At scale, the coverage map is part of the risk assessment you'd show a regulator.</p></div></li><li id="step-8"><div><span class="n">Step 08</span><h3>Check the review against what actually happened</h3></div><div class="prose"><p>Measure the review itself. Two numbers:</p>
+<ul><li><strong>How many incidents in a feature's first 90 days the review predicted.</strong> If the review keeps missing the incidents that happen, the questions need to change.</li><li><strong>How many accepted risks turned into incidents.</strong> If that number keeps climbing, risks are being accepted at too low a level.</li></ul>
+<p>Ninety days after each reviewed launch, list the incidents, match them to the record, and add anything you missed to the checklist for next time. When the feature changes significantly, run the review again. Under the UK's Online Safety Act, a significant change to a service's design or operation needs a fresh look at the risk before it's made (<a href="https://www.legislation.gov.uk/ukpga/2023/50/section/9">section 9</a>).</p></div></li></ol></div></section>
+<section id="mistakes-to-avoid"><div class="wrap"><div class="sec-h"><h2>Mistakes to avoid</h2><p class="big">And what to do instead</p></div><ol class="rows"><li><i>01</i><h3>Reviewing the week before launch</h3><p>By then every fix is a delay. Get the four trigger questions into the launch template so you're in at design review.</p></li><li><i>02</i><h3>Reviewing every release the same way</h3><p>You'll slow everything and lose the invite. Full reviews for the four triggers, a checklist for the rest, and answers in days.</p></li><li><i>03</i><h3>Treating &quot;18+&quot; as no children</h3><p>Without an age check, minors are present, just fewer of them. Rate child safety risks accordingly.</p></li><li><i>04</i><h3>Scoring likelihood from silence</h3><p>No reports doesn't mean no harm. Much of it is never reported. Score from how the feature works, and from what's happened on similar products.</p></li><li><i>05</i><h3>Accepting risk without an owner or a date</h3><p>Have the person who owns the product outcome sign off, with a date to revisit, and escalate the most serious risks.</p></li><li><i>06</i><h3>Counting a policy as coverage</h3><p>A rule with no detection, no trained reviewers and no measurement is one layer out of five. Rate all five.</p></li><li><i>07</i><h3>Never checking the review</h3><p>Track what it predicted and which accepted risks became incidents, and change the questions when it misses.</p></li></ol></div></section>
+<section id="start-from-this-template"><div class="wrap"><div class="sec-h"><h2>Start from this template</h2><p class="big">Copy it, fill it in, make it yours</p></div><div class="tpl"><p class="lbl">Template</p><h3>Full-review trigger</h3><p>Add these four questions to your launch template. A yes to any of them means a full pre-mortem.</p><div class="tbl"><table><thead><tr><th>Does this launch...</th><th>Yes or no</th></tr></thead><tbody><tr><td>Let strangers contact each other?</td><td></td></tr><tr><td>Move money or items between users?</td><td></td></tr><tr><td>Expose anyone's location?</td><td></td></tr><tr><td>Change what minors can do?</td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Short checklist for every other launch</h3><p>The product team fills it in. Any &quot;no&quot; goes to T&amp;S.</p><div class="tbl"><table><thead><tr><th>Question</th><th>Yes or no</th></tr></thead><tbody><tr><td>Can users report anything new this launch creates, with reasons that match your policies?</td><td></td></tr><tr><td>Does blocking still stop all contact?</td><td></td></tr><tr><td>Is every enforcement action on the new surface logged (what, why, who, when)?</td><td></td></tr><tr><td>Do new accounts get the same limits here as everywhere else?</td><td></td></tr><tr><td>Does it leave minors' defaults unchanged?</td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Pre-mortem record</h3><p>One row per risk. Keep it with the design document.</p><div class="tbl"><table><thead><tr><th>Risk</th><th>Severity (1 to 4)</th><th>Likelihood (1 to 4)</th><th>Score</th><th>Reach</th><th>Could it reach a minor?</th><th>Safeguard</th><th>Owner</th><th>Before launch?</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Accepted-risk sign-off</h3><p>One per accepted risk.</p><div class="tbl"><table><thead><tr><th>Field</th><th>Entry</th></tr></thead><tbody><tr><td>The risk, in plain words</td><td></td></tr><tr><td>Score and why</td><td></td></tr><tr><td>What's in place today</td><td></td></tr><tr><td>Why we're accepting it</td><td></td></tr><tr><td>Signed off by (owner of the product outcome)</td><td></td></tr><tr><td>Date to revisit</td><td></td></tr><tr><td>Escalated to (if too serious for one person's call)</td><td></td></tr></tbody></table></div></div></div></section>
+<section id="do-it-with"><div class="wrap"><div class="sec-h"><h2>Do it with</h2><p class="big">Free tools and metrics that go with this chapter</p></div><div class="cards"><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#premortem">Abuse pre-mortem</a></h3><p>Profile a product and see how it will be misused before launch. <a href="https://github.com/stevenmacchia/abuse-premortem">Open content</a></p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#coverage">Coverage radar</a></h3><p>Rate five layers of defense for eight kinds of harm, against your products' risk. <a href="https://github.com/stevenmacchia/harm-coverage-radar">Open content</a></p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/systemic-risk-assessment-currency.md">Systemic-risk assessment currency</a></h3><p>Whether the risk assessments the law requires are up to date.</p></div><div class="card"><span class="k">Reference</span><h3><a href="https://github.com/stevenmacchia/abuse-premortem/blob/main/risks.md">Risk catalog</a></h3><p>58 ways products get misused, in 14 areas, with the inherent severity of each.</p></div><div class="card"><span class="k">Reference</span><h3><a href="https://github.com/stevenmacchia/harm-coverage-radar/blob/main/gap-playbook.md">Gap playbook</a></h3><p>The next step for each layer of defense when it's rated none or partial in a high-risk area.</p></div><div class="card"><span class="k">Reference</span><h3><a href="https://github.com/stevenmacchia/abuse-premortem/blob/main/laws.md">Legal obligations</a></h3><p>33 obligations across 7 jurisdictions that a product's features and markets can bring into scope, in plain language.</p></div></div></div></section>
+<section id="further-reading"><div class="wrap"><div class="sec-h"><h2>Further reading</h2><p class="big">Steven's posts on this topic, and sources worth the time</p></div><p class="lbl sub-h">From Steven's writing · 2 posts</p><ol class="posts"><li><div><time datetime="2026-10-02">Oct 2, 2026</time><span class="k">Essay</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7511792474445750272-3rLV/">Run the abuse pre-mortem at design review</a></h3><p>At design review, changing a default is a quick edit. After launch it means taking something away. T&amp;S earns the invite by being selective and fast, and accepted risks get an owner and a date.</p><p class="meta">Also in: <a href="../working-with-product-legal-and-leadership/">15. Working with Product, Legal, Comms and leadership</a></p></div></li><li><div><time datetime="2026-09-30">Sep 30, 2026</time><span class="k">Tool launch</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_most-product-launches-get-a-security-review-share-7511154971653070848-PMG-/">Launches get a security review. Almost none get an abuse review.</a></h3><p>Introducing the free abuse pre-mortem: 12 questions, rated risks, safeguards with owners in priority order, likely laws, and a launch plan for Jira, Linear or GitHub.</p></div></li></ol><p class="lbl sub-h">Outside sources</p><ul class="src"><li><a href="https://hbr.org/2007/09/performing-a-project-premortem">Gary Klein: Performing a Project Premortem</a><span>the Harvard Business Review article that introduced the premortem, imagining a project has failed in order to find out why.</span></li><li><a href="https://www.esafety.gov.au/industry/safety-by-design">eSafety Commissioner: Safety by Design</a><span>Australia's regulator on anticipating harm in design, built on three principles: service provider responsibility, user empowerment and autonomy, and transparency and accountability.</span></li><li><a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online">Ofcom: Protecting people from illegal harms online</a><span>the UK regulator's statement, including its risk assessment guidance and risk profiles for user-to-user services.</span></li><li><a href="https://www.tspa.org/curriculum/ts-fundamentals/safety-by-design/">TSPA: Safety by Design</a><span>the Trust &amp; Safety Professional Association's chapter on finding and reducing harm during product development.</span></li><li><a href="https://dtspartnership.org/best-practices/">Digital Trust &amp; Safety Partnership: Best Practices Framework</a><span>its first commitment is to identify, evaluate and adjust for content- and conduct-related risks in product development.</span></li></ul></div></section>
+<section id="changes"><div class="wrap"><div class="sec-h"><h2>Recent changes</h2><div><p class="big">4 changes to this chapter, newest first</p><p class="intro">The <a href="../updates/">updates page</a> has every change to the handbook, by date.</p></div></div><ol class="log"><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 18 other chapters</span><p>Practical advice that varies by platform, such as cadences, sample sizes, targets and who owns what, is now set out as options with examples, so each team can choose what fits.</p></div></li><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 14 other chapters</span><p>Added Steven's own calls from an interview: where Trust &amp; Safety should report, what to automate first, the one number to track from day one, who makes the 2am call, and more. Practical choices that vary by platform are now laid out as options.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Drafted</span><span class="ch">With 17 other chapters</span><p>First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Added</span><span class="ch">With 14 other chapters</span><p>Linked the first 16 posts to the chapters they inform, and set out the ten principles behind the handbook.</p></div></li></ol></div></section>
+<section><div class="wrap"><nav class="pn" aria-label="Chapters"><a href="../what-trust-and-safety-is-for/"><span>← Chapter 1</span><b>What Trust &amp; Safety is for</b></a><a class="next" href="../the-first-90-days/"><span>Chapter 3 →</span><b>The first 90 days</b></a></nav></div></section>
+</div>
+</main>
+<footer><div class="wrap"><h2>Get in touch.</h2><div class="c"><a href="mailto:stevenamacchia@gmail.com">stevenamacchia@gmail.com</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Resume</a></div><div class="fine"><span>© 2026 Steven Macchia · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://github.com/stevenmacchia/ts-handbook">Source</a> · <a href="../updates/">Updates</a></span><span>Written with AI-assisted drafting · Not legal advice: check with your own legal team · Visits counted without cookies</span></div></div></footer>
+</body>
+</html>

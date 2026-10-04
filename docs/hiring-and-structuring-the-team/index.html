@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>8. Hiring and structuring the team · The T&amp;S Handbook</title>
+<meta name="description" content="Who do you hire, in what order, and where should the team report?">
+<meta name="author" content="Steven Macchia">
+<link rel="canonical" href="https://stevenmacchia.com/ts-handbook/hiring-and-structuring-the-team/">
+<link rel="alternate" type="application/atom+xml" title="The T&amp;S Handbook: updates" href="https://stevenmacchia.com/ts-handbook/updates/feed.xml">
+<meta property="og:type" content="article"><meta property="og:title" content="8. Hiring and structuring the team · The T&amp;S Handbook"><meta property="og:description" content="Who do you hire, in what order, and where should the team report?">
+<meta property="og:url" content="https://stevenmacchia.com/ts-handbook/hiring-and-structuring-the-team/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+summary:focus-visible{border-radius:2px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1152px;margin:0 auto;padding:0 32px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.05}
+.top{display:flex;align-items:center;gap:28px;height:64px;border-bottom:1px solid var(--line)}
+.top .mark{width:12px;height:12px;background:var(--ink);flex:none}
+.top .name{font-weight:600;margin-right:auto}
+.top a{color:var(--ink);text-decoration:none;font-size:15px}
+.top a:hover{text-decoration:underline}
+.top a[aria-current="page"]{font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:4px;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn:hover{background:var(--panel);text-decoration:none}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#2a2a2a}
+.top .btn{padding:8px 14px;font-size:14px}
+.lbl{font-size:13px;color:var(--muted);font-weight:500;margin:0}
+.lbl a{color:inherit}
+h3.lbl{letter-spacing:0;line-height:1.55}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:end;padding:88px 0 56px}
+.hero h1{font-size:clamp(44px,6.5vw,80px);margin-top:18px}
+.lead{margin:22px 0 0;font-size:clamp(18px,2.2vw,21px);line-height:1.45;max-width:44ch}
+.sub{margin:14px 0 0;font-size:17px;color:var(--muted);max-width:58ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:30px}
+.cta .go{margin-left:8px;font-weight:500}
+.open{border-top:1px solid var(--ink);padding-top:14px;font-size:14.5px;display:grid;gap:8px}
+.open .sq{display:inline-block;width:8px;height:8px;background:var(--good);margin-right:9px}
+.open span{color:var(--muted)}
+.open .mono{font-size:12.5px}
+/* Grid children must be allowed to shrink, or a wide table inside a step widens the page on phones */
+.steps>li>*,.cs-h>*,.stages>*{min-width:0}
+.legal{margin:0 0 32px;padding:14px 18px;background:var(--panel);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;font-size:15px;line-height:1.5;max-width:86ch}
+.legal b{font-weight:600}
+.hh .legal{margin:16px 0 0;font-size:14px}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0 72px;border-top:1px solid var(--line)}
+.proof div{display:grid;gap:4px;font-size:14.5px}
+.proof b{font-weight:600}
+.proof span{color:var(--muted)}
+section{padding:0 0 88px}
+.sec-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:end;padding-top:28px;border-top:1px solid var(--ink);margin-bottom:28px}
+h2{font-size:36px}
+.sec-h p{margin:0}
+.sec-h .big{font-size:19px;font-weight:500}
+.sec-h .intro{margin-top:10px;color:var(--muted);max-width:72ch}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.5fr);gap:32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows li>*{min-width:0}
+.rows i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:2px}
+.rows h3{font-size:17px;line-height:1.35;letter-spacing:-.01em}
+.rows p{margin:0;color:var(--muted);font-size:15px}
+.rows .from{display:block;margin-top:8px;font-size:13.5px}
+.rows .from a{text-decoration:none}
+.rows .from a:hover{text-decoration:underline}
+/* Home: a short hero, then the contents as the main column with a sidebar beside them */
+.hh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 64px;align-items:end;padding:56px 0 36px}
+.hh h1{font-size:clamp(40px,5.5vw,64px);margin-top:14px}
+.hh .lead{margin-top:16px;max-width:46ch}
+.hh .sub{margin-top:10px;font-size:16px;max-width:60ch}
+.hh .cta{margin-top:24px}
+.status{margin:0;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;line-height:1.7;color:var(--muted);text-align:right;white-space:nowrap}
+.status .sq{display:inline-block;width:8px;height:8px;background:var(--ink);margin-right:8px;vertical-align:1px}
+.status .sq.outline{background:var(--strong)}
+.status .sq.published{background:var(--good)}
+.home{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 64px;border-top:1px solid var(--ink);padding-top:24px}
+.home>*{min-width:0}
+.home>section{padding-bottom:80px;scroll-margin-top:16px}
+.ch-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px}
+.ch-h .intro{margin:0;color:var(--muted);font-size:15px}
+.part{margin:28px 0 0}
+.part:first-of-type{margin-top:0}
+.part h3.ph{display:flex;align-items:baseline;gap:12px;font-size:16px;font-weight:600;letter-spacing:0;line-height:1.3;margin:0 0 8px}
+.ph i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;flex:none}
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.toc li{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.toc li>*{min-width:0}
+.toc i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:3px}
+.toc .t{font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.toc .t a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.toc .t a::after{content:"";position:absolute;inset:0}
+.toc li:hover .t a{text-decoration-color:var(--ink)}
+.toc li:hover i{color:var(--ink)}
+.toc .q{grid-column:2;margin:0;color:var(--muted);font-size:14.5px;line-height:1.45}
+.toc .st{grid-column:3;grid-row:1/3;align-self:start;display:grid;gap:3px;justify-items:end;padding-top:3px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+.toc .st.published{color:var(--good)}
+.filters{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;flex-basis:100%;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted)}
+.filters button{border:0;background:none;padding:0;margin:0;color:var(--muted);font:inherit;cursor:pointer;text-underline-offset:3px}
+.filters button:hover{color:var(--ink);text-decoration:underline}
+.filters button[aria-pressed="true"]{color:var(--ink);text-decoration:underline}
+.side{align-self:start;position:sticky;top:24px;display:grid;gap:32px;padding-bottom:80px}
+.sb .lbl{margin-bottom:6px}
+.sl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.sl li{display:grid;gap:3px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.4}
+.sl li>*{min-width:0}
+.sl a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px;font-weight:500;overflow-wrap:anywhere}
+.sl a:hover{text-decoration-color:var(--ink)}
+.sl time,.sl .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.sl.up li{grid-template-columns:48px minmax(0,1fr);gap:0 12px;align-items:baseline;font-size:14.5px}
+.sl.up time{padding-top:1px}
+.side .more{margin-top:10px;font-size:14.5px}
+.side .more a+a{margin-left:14px}
+.pr2{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;align-items:start}
+.pr{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pr li{border-bottom:1px solid var(--line)}
+.pr summary{display:grid;grid-template-columns:36px minmax(0,1fr) 14px;gap:12px;align-items:baseline;padding:11px 0;cursor:pointer;list-style:none;font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.01em}
+.pr summary::-webkit-details-marker{display:none}
+.pr summary i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;font-weight:400;color:var(--muted)}
+.pr summary::after{content:"▾";color:var(--muted);text-align:right}
+.pr details[open] summary::after{content:"▴"}
+.pr summary:hover{color:var(--blue)}
+.pr .pb{padding:0 0 14px 48px;color:var(--muted);font-size:15px;line-height:1.5}
+.pr .pb p{margin:0}
+.pr .from{display:block;margin-top:6px;font-size:13.5px}
+.pr .from a{text-decoration:none}
+.pr .from a:hover{text-decoration:underline}
+.ctl{margin:10px 0 0}
+.ctl button{border:0;background:none;padding:0;margin:0;font:inherit;font-size:14.5px;font-weight:500;color:var(--blue);cursor:pointer}
+.ctl button:hover{text-decoration:underline}
+.st3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.st3 div{display:grid;gap:3px;align-content:start;font-size:14.5px}
+.st3 b{font-weight:600}
+.st3 span{color:var(--muted)}
+.row2{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:32px}
+.row2 ul{margin:0;padding-left:20px;display:grid;gap:6px;max-width:70ch}
+.row2 p{margin:0 0 10px;max-width:70ch}
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px;align-items:start}
+.feed .lbl{margin-bottom:8px}
+.log{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.log>li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.log>li>*{min-width:0}
+.log time,.posts time{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);padding-top:3px;white-space:nowrap}
+.log .k,.posts .k{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.log .k{margin-bottom:4px}
+.posts .k{margin-top:4px}
+.log .ch{display:block;font-weight:500;line-height:1.35}
+.log .ch a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.log .ch a:hover{text-decoration-color:var(--ink)}
+.log p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.log .meta,.posts .meta{font-size:13.5px}
+.log .meta a,.posts .meta a{text-decoration:none}
+.log .meta a:hover,.posts .meta a:hover{text-decoration:underline}
+.log ol{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.feed .log>li,.feed .posts li{grid-template-columns:64px minmax(0,1fr);gap:20px}
+.more{margin:16px 0 0;font-size:15px;font-weight:500}
+.more a{text-decoration:none}
+.more a:hover{text-decoration:underline}
+.ch-page section{padding-bottom:72px}
+.ch-page .sec-h h2,.cs-h h2{font-size:32px;line-height:1.08}
+.ch-hero{padding:72px 0 48px}
+.ch-hero h1{font-size:clamp(40px,5.5vw,68px)}
+.ch-hero .lead{max-width:40ch}
+.open .sq.outline{background:var(--strong)}
+.open .sq.draft{background:var(--ink)}
+.toc-d summary{cursor:pointer;color:var(--blue);font-weight:500;list-style:none}
+.toc-d summary::-webkit-details-marker{display:none}
+.toc-d summary::after{content:" ▾"}
+.toc-d[open] summary::after{content:" ▴"}
+.toc-list{margin-top:10px;font-size:14px;max-height:420px;overflow:auto;border-top:1px solid var(--line);padding-top:4px}
+.toc-list p{margin:12px 0 4px;font-weight:600;font-size:13px;color:var(--ink)}
+.toc-list ol{list-style:none;margin:0;padding:0}
+.toc-list a{display:flex;gap:10px;padding:3px 0;color:var(--muted);text-decoration:none;line-height:1.35}
+.toc-list a:hover{color:var(--ink);text-decoration:underline}
+.toc-list a i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;width:18px;flex:none;padding-top:1px}
+.toc-list a[aria-current="page"]{color:var(--ink);font-weight:600}
+.toc-list .more-l{margin:14px 0 6px;font-weight:500;border-top:1px solid var(--line);padding-top:10px}
+.toc-list .more-l a{display:inline;padding:0;color:var(--blue)}
+.proof .lbl{grid-column:1/-1}
+.proof div{align-content:start}
+.cs-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:28px;border-top:1px solid var(--ink)}
+.prose{max-width:72ch}
+.prose p,.prose li{font-size:17px;line-height:1.65}
+.prose p{margin:0 0 16px}
+.prose>:last-child{margin-bottom:0}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:20px}
+.prose li{margin:6px 0}
+.prose li::marker{color:var(--muted)}
+.prose h3,.prose h4{font-size:17px;letter-spacing:-.01em;line-height:1.3;margin:24px 0 8px}
+.prose blockquote{margin:20px 0;padding:2px 0 2px 18px;border-left:3px solid var(--ink)}
+.prose code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em;background:var(--panel);padding:1px 5px;border-radius:3px}
+.prose pre{background:var(--panel);padding:16px;border-radius:4px;overflow:auto}
+.prose pre code{background:none;padding:0}
+.prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.prose a,.src a,.posts h3 a,.posts h4 a,.log .ch a{overflow-wrap:anywhere}
+.tbl{overflow-x:auto;margin:4px 0 20px}
+.tbl table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.tbl th{text-align:left;vertical-align:bottom;font-size:13px;font-weight:500;color:var(--muted);padding:0 16px 10px 0;border-bottom:1px solid var(--ink)}
+.tbl td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
+.tbl td:first-child{font-weight:500}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;background:var(--panel);border-radius:4px;padding:32px}
+.stages h3{font-size:20px;line-height:1.2}
+.stages .d{margin:8px 0 0;color:var(--muted);font-size:14px}
+.stages .lbl{margin:22px 0 6px}
+.stages .v{margin:0;font-size:15px}
+.jump-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;margin:-6px 0 28px}
+.jump{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px}
+.jump a{color:var(--muted);text-decoration:none}
+.jump a:hover{color:var(--ink);text-decoration:underline}
+.jump i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;margin-right:7px}
+.steps{list-style:none;margin:0;padding:0}
+.steps>li{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.steps>li:first-child{padding-top:4px}
+.steps .n{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);margin-bottom:10px}
+.steps h3{font-size:22px;line-height:1.2;letter-spacing:-.02em}
+.tpl{background:var(--panel);border-radius:4px;padding:24px 28px;margin:0 0 16px}
+.tpl .lbl{margin:0 0 6px}
+.tpl h3{font-size:18px;line-height:1.3;margin:0 0 6px}
+.tpl>p:not(.lbl){margin:0 0 14px;color:var(--muted);font-size:15px;max-width:72ch}
+.tpl .tbl{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{display:grid;gap:6px;align-content:start;padding:18px 20px;border:1px solid var(--line);border-radius:4px;min-width:0}
+.card .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.card h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+.card h3 a,.posts h3 a,.posts h4 a,.src a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.card h3 a:hover,.posts h3 a:hover,.posts h4 a:hover,.src a:hover{text-decoration-color:var(--ink)}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.posts li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.posts li>*{min-width:0}
+.posts h3,.posts h4{font-size:17px;line-height:1.35;letter-spacing:-.01em;margin:0;font-weight:600}
+.posts p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.more-d{margin:0}
+.more-d summary{list-style:none;cursor:pointer;color:var(--blue);font-weight:500;font-size:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.more-d summary::-webkit-details-marker{display:none}
+.more-d summary::after{content:" ▾"}
+.more-d[open] summary::after{content:" ▴"}
+.more-d[open] summary{border-bottom:0}
+.sub-h{margin:36px 0 10px}
+.sub-h:first-of-type{margin-top:0}
+.src{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.src li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:32px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.src li span{color:var(--muted)}
+.src a{font-weight:500}
+.cover li{grid-template-columns:56px minmax(0,1fr)}
+.cover p{color:var(--ink);font-size:16px}
+.story{background:var(--panel);border-radius:4px;padding:28px 32px}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pn a{display:grid;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;min-width:0}
+.pn a:hover{background:var(--panel)}
+.pn a span{font-size:13px;color:var(--muted)}
+.pn a b{font-weight:600;line-height:1.3}
+.pn .next{text-align:right;grid-column:2}
+footer{background:var(--ink);color:#fff;padding:56px 0}
+footer .wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:baseline}
+footer h2{color:#fff}
+footer .c{display:flex;flex-wrap:wrap;gap:22px;font-size:17px}
+footer .c a{color:#fff}
+footer .fine{grid-column:1/-1;margin-top:28px;font-size:13px;color:#A8A6A1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .fine a{color:#A8A6A1}
+footer :focus-visible{outline-color:#fff}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}.hh{grid-template-columns:1fr;gap:18px;padding:40px 0 28px}.status{text-align:left;white-space:normal}.home{grid-template-columns:1fr;padding-top:20px}.home>section{padding-bottom:48px}.side{position:static;padding-bottom:56px}.proof{grid-template-columns:1fr;gap:16px;padding-bottom:48px}.sec-h,.row2,.cs-h,.steps>li,.jump-row,footer .wrap{grid-template-columns:1fr;gap:16px}.jump-row{gap:8px;margin:-4px 0 20px}.rows li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px}.rows li>:nth-child(n+3){grid-column:2}.toc li{grid-template-columns:34px minmax(0,1fr);gap:2px 12px}.toc .st{grid-column:2;grid-row:auto;display:flex;gap:12px;justify-items:start;padding-top:4px}.pr2,.st3{grid-template-columns:1fr}.pr2{gap:0}.pr+.pr{border-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top a.name{display:inline}.top .btn{margin-left:auto}section,.ch-page section{padding-bottom:56px}.ch-hero{padding:40px 0 32px}.stages{grid-template-columns:1fr;gap:28px;padding:22px}.cards{grid-template-columns:1fr}.feed{grid-template-columns:1fr;gap:40px}.posts li,.src li,.log>li,.feed .log>li,.feed .posts li{grid-template-columns:1fr;gap:4px}.posts time,.log time{padding-top:0}.posts .k{display:inline;margin:0 0 0 10px}.steps>li{gap:12px;padding:24px 0}.pn{grid-template-columns:1fr}.pn .next{grid-column:1;text-align:left}}
+@media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
+@media (max-height:640px){.side{position:static}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav class="top"><span class="mark" aria-hidden="true"></span><a class="name" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a href="../" aria-current="page">Handbook</a><a href="https://stevenmacchia.com/writing/">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Download resume</a></nav></div></header>
+<main>
+<div class="ch-page">
+<div class="wrap">
+  <div class="hero ch-hero">
+    <div>
+      <p class="lbl"><a href="../">The T&amp;S Handbook</a> · Part 2: Build</p>
+      <h1>Hiring and structuring the team</h1>
+      <p class="lead">Who do you hire, in what order, and where should the team report?</p>
+    </div>
+    <div>
+      <div class="open"><div><i class="sq draft" aria-hidden="true"></i><b>Draft: written, not yet reviewed</b></div><span>Chapter 8 of 19 · About 13 minutes</span><span>Updated Oct 4, 2026 · <a href="#changes">What changed</a></span><details class="toc-d"><summary>All chapters</summary><div class="toc-list"><p>Part 1: Before the first hire</p><ol><li><a href="../what-trust-and-safety-is-for/"><i>1</i><span>What Trust &amp; Safety is for</span></a></li><li><a href="../know-your-risks/"><i>2</i><span>Know your risks</span></a></li><li><a href="../the-first-90-days/"><i>3</i><span>The first 90 days</span></a></li></ol><p>Part 2: Build</p><ol><li><a href="../writing-policy/"><i>4</i><span>Writing policy and an enforcement ladder</span></a></li><li><a href="../detection-and-prevention/"><i>5</i><span>Detection and prevention</span></a></li><li><a href="../child-safety-and-age-assurance/"><i>6</i><span>Child safety and age assurance</span></a></li><li><a href="../review-operations/"><i>7</i><span>Standing up review operations</span></a></li><li><a href="../hiring-and-structuring-the-team/" aria-current="page"><i>8</i><span>Hiring and structuring the team</span></a></li><li><a href="../choosing-vendors-and-tools/"><i>9</i><span>Choosing vendors and tools</span></a></li></ol><p>Part 3: Run</p><ol><li><a href="../quality-calibration-and-appeals/"><i>10</i><span>Quality, calibration and appeals</span></a></li><li><a href="../measuring-what-matters/"><i>11</i><span>Measuring what matters</span></a></li><li><a href="../severe-harm-escalations/"><i>12</i><span>Severe harm escalations</span></a></li><li><a href="../crisis-response/"><i>13</i><span>Crisis response</span></a></li><li><a href="../moderator-wellbeing/"><i>14</i><span>Moderator wellbeing</span></a></li><li><a href="../working-with-product-legal-and-leadership/"><i>15</i><span>Working with Product, Legal, Comms and leadership</span></a></li></ol><p>Part 4: Scale and govern</p><ol><li><a href="../regulation-and-compliance/"><i>16</i><span>Regulation and compliance</span></a></li><li><a href="../transparency-reports-and-notices/"><i>17</i><span>Transparency reports and enforcement notices</span></a></li><li><a href="../ai-in-trust-and-safety/"><i>18</i><span>AI in Trust &amp; Safety</span></a></li><li><a href="../budgets-roadmaps-and-making-the-case/"><i>19</i><span>Budgets, roadmaps and making the case</span></a></li></ol><p class="more-l"><a href="../updates/">What changed recently →</a></p></div></details></div>
+    </div>
+  </div>
+  <p class="legal" role="note"><b>General information, not legal advice.</b> Laws differ by country, change often and apply differently to each service. Check with your own legal team or outside counsel before acting on anything here.</p>
+  <div class="proof"><p class="lbl">In one minute</p><div><b>Hire for your risks, not an org chart</b><span>The harms your product invites decide which skills you need first. For a long time, one person will cover several roles, so write down who wears which hat.</span></div><div><b>Make the first hire someone who can write a rule, run a queue and handle an escalation</b><span>Then add operations, investigations, data and engineering in the order your risks call for. Support for anyone who sees harmful content comes before any of them.</span></div><div><b>Report where you can be heard before launch, and can't be overruled quietly</b><span>Every reporting line has a trade-off. Whichever you pick, name the executive who owns safety risk and write down who decides what.</span></div><div><b>Interview for judgment, not knowledge of the rules</b><span>Give candidates a case with no clean answer. Listen for what they'd want to know, what they'd do now that can be undone, and how they'd explain the decision later.</span></div><div><b>Treat vendor staff as part of the team</b><span>Same guidance, same calibration, same wellbeing standards, and career paths that don't run only through the worst queues.</span></div><div><b>The mistake to avoid</b><span>Hiring a large review team before anyone owns policy, data and escalations. Reviewers can only be as consistent as the rules and the system around them.</span></div></div>
+</div>
+<section id="why-it-matters"><div class="wrap"><div class="cs-h"><h2>Why it matters</h2><div class="prose"><p>Many Trust &amp; Safety teams start by accident. Someone in support starts handling the worst reports, a founder makes the hard calls at night, and an engineer adds a ban button. That works until it doesn't: decisions depend on who handled the case, nobody owns the thresholds, and the person making 2am calls burns out or leaves with everything they knew.</p>
+<p>Regulators now expect named accountability. In the UK, Ofcom's <a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online">illegal content codes of practice</a> recommend that every user-to-user service names a person accountable to its most senior governance body for complying with its illegal content duties and its reporting and complaints duties. In the EU, the Digital Services Act requires very large online platforms and search engines to set up a compliance function that is independent of their operational functions, with a head who reports directly to the management body (<a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Article 41</a>). How you structure the team is now part of how you show you're in control of the risk.</p></div></div></div></section>
+<section id="what-good-looks-like"><div class="wrap"><div class="sec-h"><h2>What good looks like</h2><p class="big">What you have, and what you can show, at each stage</p></div><div class="stages"><div><h3>Early</h3><p class="d">A founder or first safety hire covers trust and safety, usually with under a million users.</p><p class="lbl">What you have</p><p class="v">A safety lead who owns policy, the queue and escalations, a vendor or part-time reviewers, outside counsel you can call, a clinical partner for anyone who sees harmful content, and a named executive who owns safety risk.</p><p class="lbl">What you can show</p><p class="v">A one-page list of who decides what. Every person who reviews harmful content has support.</p></div><div><h3>Growing</h3><p class="d">A dedicated safety team, millions of users, and new markets or features on the way.</p><p class="lbl">What you have</p><p class="v">Separate leads for policy and operations, an investigator for severe harm, an analyst who owns safety metrics, engineers assigned to safety tooling, a legal or compliance partner, and vendor staff calibrated with the in-house team.</p><p class="lbl">What you can show</p><p class="v">An owner for every policy area, threshold and legal duty. Quality and attrition reported for in-house and vendor teams on the same page.</p></div><div><h3>At scale or regulated</h3><p class="d">Tens of millions of users, a heavily regulated sector, or extra duties as a very large platform under EU or UK law.</p><p class="lbl">What you have</p><p class="v">Specialist teams by harm area and region, a compliance function where the law requires one, a wellbeing lead, written career levels for reviewers, specialists and managers, and workforce planning tied to the risk assessment.</p><p class="lbl">What you can show</p><p class="v">The accountability regulators expect, written down. How many leads and specialists came up from the review team. Attrition by team and exposure level.</p></div></div></div></section>
+<section id="how-to-do-it"><div class="wrap"><div class="sec-h"><h2>How to do it</h2><p class="big">7 steps</p></div><div class="jump-row"><p class="lbl">Jump to a step</p><ol class="jump"><li><a href="#step-1"><i>01</i>Start from your risks</a></li><li><a href="#step-2"><i>02</i>Know the roles</a></li><li><a href="#step-3"><i>03</i>Choose the order of your first five hires</a></li><li><a href="#step-4"><i>04</i>Decide where the team reports</a></li><li><a href="#step-5"><i>05</i>Interview for judgment</a></li><li><a href="#step-6"><i>06</i>Build career paths, so people can grow without staying in the worst queues</a></li><li><a href="#step-7"><i>07</i>Treat vendor staff as part of the team</a></li></ol></div><ol class="steps"><li id="step-1"><div><span class="n">Step 01</span><h3>Start from your risks</h3></div><div class="prose"><p>The harms your product invites decide which skills you need first, so start from your risk assessment (<a href="../know-your-risks/">chapter 2</a>), not a template org chart. A few product traits change the first specialist hire more than anything else:</p>
+<div class="tbl"><table><thead><tr><th>If your product...</th><th>You'll need early</th></tr></thead><tbody><tr><td>Lets strangers talk to each other, especially if children use it</td><td>Child safety investigation, trained reviewers and a restricted escalation path</td></tr><tr><td>Moves money or items between users</td><td>Fraud and scam investigation, and access to payments data</td></tr><tr><td>Hosts uploads at scale</td><td>Operations and vendor management, and hash matching for known illegal images</td></tr><tr><td>Shares or exposes location</td><td>Investigation of stalking and real-world threats, with a route to the authorities</td></tr><tr><td>Generates content with AI</td><td>Policy that can be turned into prompts and evaluations, and people who can attack your own model</td></tr><tr><td>Serves users in the EU or UK, or many children</td><td>A legal or compliance partner who maps each duty to an owner</td></tr></tbody></table></div>
+<p>Early on, one person covers several of these. That's fine, as long as you write down which hats each person wears. A gap is only dangerous when nobody knows it's there.</p></div></li><li id="step-2"><div><span class="n">Step 02</span><h3>Know the roles</h3></div><div class="prose"><p>These are the roles a mature team ends up with. At first they're responsibilities, not job titles.</p>
+<div class="tbl"><table><thead><tr><th>Role</th><th>What they own</th><th>You need it covered when</th></tr></thead><tbody><tr><td><strong>Policy</strong></td><td>The written rules, internal guidance for reviewers, the enforcement ladder and the change log (<a href="../writing-policy/">chapter 4</a>)</td><td>Decisions depend on who handles the case</td></tr><tr><td><strong>Operations</strong></td><td>Queues, response-time targets, capacity, vendors and getting guidance changes to every reviewer (<a href="../review-operations/">chapter 7</a>)</td><td>There's more review than one person can do, or you sign a vendor</td></tr><tr><td><strong>Investigations</strong></td><td>Networks of accounts, severe harm cases, evidence, referrals to law enforcement and cross-platform signal sharing (<a href="../severe-harm-escalations/">chapter 12</a>)</td><td>You see repeat offenders, organized abuse or child safety cases</td></tr><tr><td><strong>Data</strong></td><td>Metrics, thresholds, prevalence sampling and the analysis that shows safety's effect on retention (<a href="../measuring-what-matters/">chapter 11</a>)</td><td>You need to set a threshold from evidence or prove the program works</td></tr><tr><td><strong>Engineering</strong></td><td>Review tooling, detection, logging and the safety features inside the product (<a href="../detection-and-prevention/">chapter 5</a>)</td><td>Your tools limit what you can do, for example when banning is the only lever</td></tr><tr><td><strong>Legal liaison or compliance</strong></td><td>Each legal duty mapped to an owner, reporting duties, and requests from regulators and law enforcement (<a href="../regulation-and-compliance/">chapter 16</a>)</td><td>A safety law applies to you, or a regulator writes</td></tr><tr><td><strong>Wellbeing</strong></td><td>Exposure limits, counseling, support tools and wellbeing standards for vendors (<a href="../moderator-wellbeing/">chapter 14</a>)</td><td>Anyone reviews harmful content: from day one, usually as a contracted clinical partner first</td></tr></tbody></table></div>
+<p>Data and engineering are easy to borrow and hard to keep. A data analyst on loan for a quarter can build a dashboard. Nobody on loan owns a threshold. If the program has to prove it works, someone has to own the numbers. Since every threshold decision gets tested the day a regulator, a parent or a court asks why a specific account was or wasn't restricted, that someone needs to be on your team, or permanently assigned to it.</p></div></li><li id="step-3"><div><span class="n">Step 03</span><h3>Choose the order of your first five hires</h3></div><div class="prose"><p>There's no single right order: it's a choice your risks should make. For a consumer product where users can contact each other, one order that works well is:</p>
+<ol><li><strong>A Trust &amp; Safety lead.</strong> A generalist who can write a policy, run a queue, handle a severe escalation and explain a trade-off to an executive. Not a pure specialist: in the first year they'll do all of it. <a href="../the-first-90-days/">Chapter 3</a> covers what they do first.</li><li><strong>An operations lead or senior reviewer.</strong> Someone who builds the queues, targets and vendor relationship, so the lead isn't the queue.</li><li><strong>An investigator for severe harm.</strong> Trained in your highest risk, whether that's child safety, threats or organized fraud, and in preserving evidence and meeting reporting duties.</li><li><strong>A data analyst.</strong> At least half dedicated, owning the metrics and the evidence behind every threshold.</li><li><strong>A safety engineer.</strong> Or an engineer assigned for a long stretch, who owns the review tooling and builds safety features into the product.</li></ol>
+<p>Then a policy specialist and a legal or compliance partner, as your markets and laws demand.</p>
+<p>Other orders are just as defensible, depending on what you face first:</p>
+<ul><li><strong>Engineer earlier</strong> when safety tooling and product changes would do more than headcount, for example when reviewers are slowed by poor tools or the biggest risks can be designed out.</li><li><strong>Investigator before operations</strong> when severe harm can't wait and a vendor can cover queue volume at first.</li><li><strong>Data earlier</strong> when leadership needs proof before it will invest, or when you can't yet tell which harms are growing.</li></ul>
+<p>Change the order when your risks are different. A marketplace or payments product is likely to need a fraud investigator before an operations lead. An AI product needs policy and evaluation skills early. A product launching in the EU or UK, or built for children, may need compliance help before an analyst, even if it's shared with Legal.</p>
+<p>Some things are better bought than hired at first: review volume and language coverage from a vendor, outside counsel for unusual legal questions, open-source tools such as ROOST's <a href="https://github.com/roostorg/coop">Coop</a>, and a clinical partner for wellbeing. Put the clinical partner in place before anyone starts reviewing harmful content, not after the first person struggles.</p></div></li><li id="step-4"><div><span class="n">Step 04</span><h3>Decide where the team reports</h3></div><div class="prose"><p>Every option has trade-offs, but I have a view. Trust &amp; Safety should report into Product or directly to the executive level, and work across every team: Product, Engineering, Legal, Operations, Support and Comms. Making safety a function of Operations is a mistake, and I've written about why: <a href="https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/">You can't moderate your way out of a systems problem</a>. At scale, you can't moderate your way out of a systems problem. Under Operations, safety gets judged on throughput and cost per ticket, and the work that prevents harm, policy, detection and getting into design reviews, gets starved. Here are the options, with their trade-offs:</p>
+<div class="tbl"><table><thead><tr><th>Reports into</th><th>Strengths</th><th>Risks</th><th>Works best when</th></tr></thead><tbody><tr><td><strong>Product</strong></td><td>In the room at design review, with access to engineers and roadmaps</td><td>Safety competes with growth goals set by the same leader, and safeguards that cost a feature its metric get traded away</td><td>The product leader has safety outcomes in their own goals</td></tr><tr><td><strong>Legal</strong></td><td>Regulatory weight, close to reporting duties and law enforcement</td><td>Drifts toward the legal minimum and away from product decisions</td><td>You're heavily regulated, or building out compliance fast</td></tr><tr><td><strong>Operations or support</strong></td><td>Process discipline, vendor management and cost control</td><td>Judged on throughput and cost per ticket, like a cost center, with policy and detection starved</td><td>The work is mostly high-volume review, and risk ownership sits elsewhere</td></tr><tr><td><strong>CEO or COO</strong></td><td>Authority, fast escalation and a clear signal that safety matters</td><td>Little executive time, and distance from daily product work</td><td>Safety is core to the business, or you're rebuilding trust after a crisis</td></tr></tbody></table></div>
+<p>Whichever you choose, three things matter more than the box on the org chart:</p>
+<ul><li><strong>Name the executive who owns safety risk</strong>, and give the Trust &amp; Safety lead a direct line to them for escalations, whatever the reporting line.</li><li><strong>Write down decision rights.</strong> Who can change a policy, move a threshold, report to law enforcement, approve a public statement, or accept a known risk at launch. When a launch goes ahead with a known risk, the person who owns the product outcome signs off, with a date to revisit. Trust &amp; Safety makes sure the risk is in front of them, and takes it to the executive who owns safety risk when it's too serious for one person.</li><li><strong>Keep the team out of a throughput-only scorecard.</strong> If your leader judges you on tickets closed and cost per ticket, report outcomes beside them (<a href="../measuring-what-matters/">chapter 11</a>), or the program will be run as a cost center.</li></ul>
+<p>Revisit the reporting line when you change stage. What suited five people may not suit fifty.</p></div></li><li id="step-5"><div><span class="n">Step 05</span><h3>Interview for judgment</h3></div><div class="prose"><p>Most Trust &amp; Safety work is a decision made with incomplete information, under time pressure, that someone will question later. Interview for that, not for knowledge of your rules, which anyone can learn.</p>
+<ul><li><strong>Use a case, not trivia.</strong> Give a short written scenario with no clean answer: an account that's probably a minor on an adult feature, a report that could be a credible threat or a joke, a top creator breaking a rule. A decision from the <a href="https://stevenmacchia.com/ts-workbench/#tabletop">incident tabletop</a> works well.</li><li><strong>Add a fact halfway through.</strong> Good candidates change their answer when the evidence changes, and explain why.</li><li><strong>Score against a rubric agreed before the interviews</strong>, with at least two interviewers scoring separately.</li><li><strong>For reviewer roles, use a work sample.</strong> A set of cases near the line, ten for example, with your written guidance open. You're testing how they read guidance, not what they remember.</li><li><strong>Test languages in the language</strong>, with a native speaker.</li><li><strong>For leadership roles, hand them a quarter where the numbers went up.</strong> The answer you want sounds like &quot;Our numbers are up, and I'm not convinced we're safer,&quot; followed by what they'd check.</li></ul>
+<p>You don't need graphic material to test judgment, so leave it out of interviews. But tell candidates plainly what the job involves, what they may see, and what support exists, before they accept.</p></div></li><li id="step-6"><div><span class="n">Step 06</span><h3>Build career paths, so people can grow without staying in the worst queues</h3></div><div class="prose"><p>Expertise in this work is slow to build and quick to lose. Every leaver takes their training and judgment with them. Career paths are how you keep it.</p>
+<ul><li><strong>Make the paths visible.</strong> Which ones you can offer depends on your size. Common ones: reviewer to quality and calibration specialist, to harm-area specialist, to investigator. Reviewer to lead, to operations manager. Sideways into policy, data, vendor management or product.</li><li><strong>Offer a specialist track.</strong> Pay and titles for expertise, such as child safety investigation or a language market, without forcing people to manage.</li><li><strong>Never make the worst queue the only route up.</strong> Time on high-exposure queues should be limited and rotated, and promotion shouldn't depend on staying there (<a href="../moderator-wellbeing/">chapter 14</a>).</li><li><strong>Pay for scarce skills.</strong> Languages, investigation and engineering that understands abuse are hard to hire, so pay to keep them.</li><li><strong>Write down the levels.</strong> What's expected at each one, so promotion doesn't depend on who your manager is.</li></ul>
+<p>Track attrition by team and exposure level, using the <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/attrition-and-wellness-support-usage.md">attrition and wellness-support usage</a> metric. If people leave high-exposure queues much faster than others, the problem is the work design, not the hiring.</p></div></li><li id="step-7"><div><span class="n">Step 07</span><h3>Treat vendor staff as part of the team</h3></div><div class="prose"><p>Where you use a vendor, its reviewers may make most of the decisions your users actually experience. If they're treated as a ticket count, the quality shows it.</p>
+<ul><li><strong>Same guidance, at the same moment.</strong> A change reaches vendor teams when it reaches yours, not a week later through an account manager (<a href="../review-operations/">chapter 7</a>).</li><li><strong>Same calibration.</strong> Vendor reviewers join the same calibration sessions, and their quality is measured the same way as yours.</li><li><strong>Same escalation paths.</strong> A vendor reviewer who finds a child at risk at 3am reaches your on-call specialist as fast as an employee would.</li><li><strong>Same wellbeing standards</strong>, written into the contract and checked (<a href="../moderator-wellbeing/">chapter 14</a>).</li><li><strong>A way to flag what they see.</strong> Vendor reviewers may spot a new abuse pattern before anyone else. Give them a route to report it, and tell them what happened.</li><li><strong>Least access, logged.</strong> Give each reviewer access only to what the case needs, log every lookup, and get audit rights in the contract. The tabletop scenario <a href="https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/insider.md">The DMs nobody reported</a> shows why.</li></ul>
+<p>How you treat vendor staff in a crisis shapes quality afterwards. If a site goes dark, keep paying, ask how you can help, and expect experienced people back sooner. <a href="../choosing-vendors-and-tools/">Chapter 9</a> covers choosing and contracting vendors.</p></div></li></ol></div></section>
+<section id="mistakes-to-avoid"><div class="wrap"><div class="sec-h"><h2>Mistakes to avoid</h2><p class="big">And what to do instead</p></div><ol class="rows"><li><i>01</i><h3>Hiring reviewers before anyone owns policy</h3><p>Write the rules and the escalation path first, or a larger team just makes inconsistent decisions faster.</p></li><li><i>02</i><h3>Making the first hire a narrow specialist</h3><p>The first lead needs to write policy, run a queue and handle escalations. Add specialists second.</p></li><li><i>03</i><h3>Borrowing data and engineering indefinitely</h3><p>Somebody on your team has to own the numbers and the tools.</p></li><li><i>04</i><h3>Reporting into a line that measures only throughput</h3><p>Report outcomes beside activity, or the program will be run as a cost center.</p></li><li><i>05</i><h3>Leaving safety risk without an executive owner</h3><p>Name one, and write down who decides what.</p></li><li><i>06</i><h3>Interviewing for knowledge of the rules</h3><p>Test judgment with a case that has no clean answer.</p></li><li><i>07</i><h3>Making the worst queue the path to promotion</h3><p>Rotate exposure and offer a specialist track.</p></li><li><i>08</i><h3>Treating vendor reviewers as a ticket count</h3><p>Same guidance, calibration, escalation and wellbeing as your own team.</p></li><li><i>09</i><h3>Waiting for scale to arrange wellbeing support</h3><p>Put a clinical partner in place before the first person reviews harmful content.</p></li></ol></div></section>
+<section id="start-from-this-template"><div class="wrap"><div class="sec-h"><h2>Start from this template</h2><p class="big">Copy it, fill it in, make it yours</p></div><div class="tpl"><p class="lbl">Template</p><h3>Who wears which hat</h3><p>Fill it in today, and again on a regular rhythm, every quarter for example.</p><div class="tbl"><table><thead><tr><th>Role</th><th>Who covers it now</th><th>Share of their time</th><th>Biggest gap</th><th>Hire, buy or borrow, and by when</th></tr></thead><tbody><tr><td>Policy</td><td></td><td></td><td></td><td></td></tr><tr><td>Operations</td><td></td><td></td><td></td><td></td></tr><tr><td>Investigations</td><td></td><td></td><td></td><td></td></tr><tr><td>Data</td><td></td><td></td><td></td><td></td></tr><tr><td>Engineering</td><td></td><td></td><td></td><td></td></tr><tr><td>Legal liaison or compliance</td><td></td><td></td><td></td><td></td></tr><tr><td>Wellbeing</td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Decision rights</h3><p>Agree it with your executive sponsor and Legal.</p><div class="tbl"><table><thead><tr><th>Decision</th><th>Who proposes</th><th>Who decides</th><th>Who must be consulted</th><th>Where it's recorded</th></tr></thead><tbody><tr><td>New or changed policy</td><td></td><td></td><td></td><td></td></tr><tr><td>Threshold change</td><td></td><td></td><td></td><td></td></tr><tr><td>Accepting a known risk at launch</td><td></td><td></td><td></td><td></td></tr><tr><td>Report to law enforcement</td><td></td><td></td><td></td><td></td></tr><tr><td>Public statement about an incident</td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Judgment interview scorecard</h3><p>Score each separately on a short scale, for example 1 to 4, before you discuss the candidate: asks for the facts that matter; separates what to do now from what to decide later; weighs harm against fairness and privacy; changes their answer when the evidence changes; explains the decision so a user or regulator could follow it; knows when to escalate.</p></div></div></section>
+<section id="do-it-with"><div class="wrap"><div class="sec-h"><h2>Do it with</h2><p class="big">Free tools and metrics that go with this chapter</p></div><div class="cards"><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#maturity">Program maturity</a></h3><p>Rate the program in eight areas against the targets for your stage, and get a phased roadmap. <a href="https://github.com/stevenmacchia/ts-maturity-model">Open content</a></p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#tabletop">Incident tabletop</a></h3><p>Use a scenario's decisions as interview cases, and rehearse <a href="https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/insider.md">The DMs nobody reported</a> (a contractor on the review team misusing access).</p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#vendors">Vendor scorecard</a></h3><p>Choose a moderation vendor on evidence, with reviewer wellness as a minimum. <a href="https://github.com/stevenmacchia/moderation-vendor-scorecard">Open content</a></p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/qa-agreement-rate.md">QA agreement rate</a></h3><p>How often in-house and vendor reviewers make the same call an expert would, measured the same way for both.</p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/attrition-and-wellness-support-usage.md">Attrition and wellness-support usage</a></h3><p>Whether you're keeping the people who keep users safe, by team and exposure level.</p></div></div></div></section>
+<section id="further-reading"><div class="wrap"><div class="sec-h"><h2>Further reading</h2><p class="big">Steven's posts on this topic, and sources worth the time</p></div><p class="lbl sub-h">From Steven's writing · 1 post</p><ol class="posts"><li><div><time datetime="2026-09-18">Sep 18, 2026</time><span class="k">Essay</span></div><div><h3><a href="https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/">You can't moderate your way out of a systems problem</a></h3><p>Treating Trust &amp; Safety mainly as an operations function is a mistake. Reputation, history, age and behavior signals belong in one risk model, automation needs clear limits, and safety belongs in the product architecture from the start.</p><p class="meta">Also in: <a href="../what-trust-and-safety-is-for/">1. What Trust &amp; Safety is for</a>, <a href="../detection-and-prevention/">5. Detection and prevention</a>, <a href="../working-with-product-legal-and-leadership/">15. Working with Product, Legal, Comms and leadership</a></p></div></li></ol><p class="lbl sub-h">Outside sources</p><ul class="src"><li><a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online">Ofcom: protecting people from illegal harms online</a><span>the UK illegal content codes, including the governance and accountability measures.</span></li><li><a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">The Digital Services Act</a><span>Article 41 sets out the compliance function very large platforms and search engines must have.</span></li><li><a href="https://www.tspa.org/curriculum/ts-curriculum/functions-roles/">TSPA: Key Functions and Roles</a><span>the Trust &amp; Safety Professional Association's guide to the common functions in a Trust &amp; Safety team and the job titles in each.</span></li><li><a href="https://www.tspa.org/careers/">TSPA: Careers in Trust &amp; Safety</a><span>guidance for people moving into the field, with common questions, job-search advice and learning resources.</span></li><li><a href="https://dtspartnership.org/best-practices/">Digital Trust &amp; Safety Partnership: Best Practices Framework</a><span>industry commitments, including accountable roles for policy and operations and investment in the wellness of teams handling sensitive material.</span></li></ul></div></section>
+<section id="changes"><div class="wrap"><div class="sec-h"><h2>Recent changes</h2><div><p class="big">4 changes to this chapter, newest first</p><p class="intro">The <a href="../updates/">updates page</a> has every change to the handbook, by date.</p></div></div><ol class="log"><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Added</span><span class="ch">Also: <a href="../what-trust-and-safety-is-for/">1. What Trust &amp; Safety is for</a>, <a href="../detection-and-prevention/">5. Detection and prevention</a>, <a href="../working-with-product-legal-and-leadership/">15. Working with Product, Legal, Comms and leadership</a></span><p>Linked Steven's post on why treating Trust &amp; Safety as an operations function is a mistake, and added it to chapter 8's view on where the team should report.</p><p class="meta"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/">Read the post: You can't moderate your way out of a systems problem →</a></p></div></li><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 18 other chapters</span><p>Practical advice that varies by platform, such as cadences, sample sizes, targets and who owns what, is now set out as options with examples, so each team can choose what fits.</p></div></li><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 14 other chapters</span><p>Added Steven's own calls from an interview: where Trust &amp; Safety should report, what to automate first, the one number to track from day one, who makes the 2am call, and more. Practical choices that vary by platform are now laid out as options.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Drafted</span><span class="ch">With 17 other chapters</span><p>First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</p></div></li></ol></div></section>
+<section><div class="wrap"><nav class="pn" aria-label="Chapters"><a href="../review-operations/"><span>← Chapter 7</span><b>Standing up review operations</b></a><a class="next" href="../choosing-vendors-and-tools/"><span>Chapter 9 →</span><b>Choosing vendors and tools</b></a></nav></div></section>
+</div>
+</main>
+<footer><div class="wrap"><h2>Get in touch.</h2><div class="c"><a href="mailto:stevenamacchia@gmail.com">stevenamacchia@gmail.com</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Resume</a></div><div class="fine"><span>© 2026 Steven Macchia · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://github.com/stevenmacchia/ts-handbook">Source</a> · <a href="../updates/">Updates</a></span><span>Written with AI-assisted drafting · Not legal advice: check with your own legal team · Visits counted without cookies</span></div></div></footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "ts-handbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The T&S Handbook: how to build and run a Trust & Safety team. Markdown chapters, built into a website in docs/.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "license": "CC-BY-4.0"
+}

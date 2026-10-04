@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The T&amp;S Handbook · Steven Macchia</title>
+<meta name="description" content="How to build and run a Trust &amp; Safety team, from the first hire to a regulated program at scale. A free, open handbook in progress by Steven Macchia.">
+<meta name="author" content="Steven Macchia">
+<link rel="canonical" href="https://stevenmacchia.com/ts-handbook/">
+<link rel="alternate" type="application/atom+xml" title="The T&amp;S Handbook: updates" href="https://stevenmacchia.com/ts-handbook/updates/feed.xml">
+<meta property="og:type" content="article"><meta property="og:title" content="The T&amp;S Handbook · Steven Macchia"><meta property="og:description" content="How to build and run a Trust &amp; Safety team, from the first hire to a regulated program at scale. A free, open handbook in progress by Steven Macchia.">
+<meta property="og:url" content="https://stevenmacchia.com/ts-handbook/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+summary:focus-visible{border-radius:2px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1152px;margin:0 auto;padding:0 32px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.05}
+.top{display:flex;align-items:center;gap:28px;height:64px;border-bottom:1px solid var(--line)}
+.top .mark{width:12px;height:12px;background:var(--ink);flex:none}
+.top .name{font-weight:600;margin-right:auto}
+.top a{color:var(--ink);text-decoration:none;font-size:15px}
+.top a:hover{text-decoration:underline}
+.top a[aria-current="page"]{font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:4px;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn:hover{background:var(--panel);text-decoration:none}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#2a2a2a}
+.top .btn{padding:8px 14px;font-size:14px}
+.lbl{font-size:13px;color:var(--muted);font-weight:500;margin:0}
+.lbl a{color:inherit}
+h3.lbl{letter-spacing:0;line-height:1.55}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:end;padding:88px 0 56px}
+.hero h1{font-size:clamp(44px,6.5vw,80px);margin-top:18px}
+.lead{margin:22px 0 0;font-size:clamp(18px,2.2vw,21px);line-height:1.45;max-width:44ch}
+.sub{margin:14px 0 0;font-size:17px;color:var(--muted);max-width:58ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:30px}
+.cta .go{margin-left:8px;font-weight:500}
+.open{border-top:1px solid var(--ink);padding-top:14px;font-size:14.5px;display:grid;gap:8px}
+.open .sq{display:inline-block;width:8px;height:8px;background:var(--good);margin-right:9px}
+.open span{color:var(--muted)}
+.open .mono{font-size:12.5px}
+/* Grid children must be allowed to shrink, or a wide table inside a step widens the page on phones */
+.steps>li>*,.cs-h>*,.stages>*{min-width:0}
+.legal{margin:0 0 32px;padding:14px 18px;background:var(--panel);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;font-size:15px;line-height:1.5;max-width:86ch}
+.legal b{font-weight:600}
+.hh .legal{margin:16px 0 0;font-size:14px}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0 72px;border-top:1px solid var(--line)}
+.proof div{display:grid;gap:4px;font-size:14.5px}
+.proof b{font-weight:600}
+.proof span{color:var(--muted)}
+section{padding:0 0 88px}
+.sec-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:end;padding-top:28px;border-top:1px solid var(--ink);margin-bottom:28px}
+h2{font-size:36px}
+.sec-h p{margin:0}
+.sec-h .big{font-size:19px;font-weight:500}
+.sec-h .intro{margin-top:10px;color:var(--muted);max-width:72ch}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.5fr);gap:32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows li>*{min-width:0}
+.rows i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:2px}
+.rows h3{font-size:17px;line-height:1.35;letter-spacing:-.01em}
+.rows p{margin:0;color:var(--muted);font-size:15px}
+.rows .from{display:block;margin-top:8px;font-size:13.5px}
+.rows .from a{text-decoration:none}
+.rows .from a:hover{text-decoration:underline}
+/* Home: a short hero, then the contents as the main column with a sidebar beside them */
+.hh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 64px;align-items:end;padding:56px 0 36px}
+.hh h1{font-size:clamp(40px,5.5vw,64px);margin-top:14px}
+.hh .lead{margin-top:16px;max-width:46ch}
+.hh .sub{margin-top:10px;font-size:16px;max-width:60ch}
+.hh .cta{margin-top:24px}
+.status{margin:0;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;line-height:1.7;color:var(--muted);text-align:right;white-space:nowrap}
+.status .sq{display:inline-block;width:8px;height:8px;background:var(--ink);margin-right:8px;vertical-align:1px}
+.status .sq.outline{background:var(--strong)}
+.status .sq.published{background:var(--good)}
+.home{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 64px;border-top:1px solid var(--ink);padding-top:24px}
+.home>*{min-width:0}
+.home>section{padding-bottom:80px;scroll-margin-top:16px}
+.ch-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px}
+.ch-h .intro{margin:0;color:var(--muted);font-size:15px}
+.part{margin:28px 0 0}
+.part:first-of-type{margin-top:0}
+.part h3.ph{display:flex;align-items:baseline;gap:12px;font-size:16px;font-weight:600;letter-spacing:0;line-height:1.3;margin:0 0 8px}
+.ph i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;flex:none}
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.toc li{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.toc li>*{min-width:0}
+.toc i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:3px}
+.toc .t{font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.toc .t a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.toc .t a::after{content:"";position:absolute;inset:0}
+.toc li:hover .t a{text-decoration-color:var(--ink)}
+.toc li:hover i{color:var(--ink)}
+.toc .q{grid-column:2;margin:0;color:var(--muted);font-size:14.5px;line-height:1.45}
+.toc .st{grid-column:3;grid-row:1/3;align-self:start;display:grid;gap:3px;justify-items:end;padding-top:3px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+.toc .st.published{color:var(--good)}
+.filters{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;flex-basis:100%;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted)}
+.filters button{border:0;background:none;padding:0;margin:0;color:var(--muted);font:inherit;cursor:pointer;text-underline-offset:3px}
+.filters button:hover{color:var(--ink);text-decoration:underline}
+.filters button[aria-pressed="true"]{color:var(--ink);text-decoration:underline}
+.side{align-self:start;position:sticky;top:24px;display:grid;gap:32px;padding-bottom:80px}
+.sb .lbl{margin-bottom:6px}
+.sl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.sl li{display:grid;gap:3px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.4}
+.sl li>*{min-width:0}
+.sl a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px;font-weight:500;overflow-wrap:anywhere}
+.sl a:hover{text-decoration-color:var(--ink)}
+.sl time,.sl .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.sl.up li{grid-template-columns:48px minmax(0,1fr);gap:0 12px;align-items:baseline;font-size:14.5px}
+.sl.up time{padding-top:1px}
+.side .more{margin-top:10px;font-size:14.5px}
+.side .more a+a{margin-left:14px}
+.pr2{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;align-items:start}
+.pr{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pr li{border-bottom:1px solid var(--line)}
+.pr summary{display:grid;grid-template-columns:36px minmax(0,1fr) 14px;gap:12px;align-items:baseline;padding:11px 0;cursor:pointer;list-style:none;font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.01em}
+.pr summary::-webkit-details-marker{display:none}
+.pr summary i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;font-weight:400;color:var(--muted)}
+.pr summary::after{content:"▾";color:var(--muted);text-align:right}
+.pr details[open] summary::after{content:"▴"}
+.pr summary:hover{color:var(--blue)}
+.pr .pb{padding:0 0 14px 48px;color:var(--muted);font-size:15px;line-height:1.5}
+.pr .pb p{margin:0}
+.pr .from{display:block;margin-top:6px;font-size:13.5px}
+.pr .from a{text-decoration:none}
+.pr .from a:hover{text-decoration:underline}
+.ctl{margin:10px 0 0}
+.ctl button{border:0;background:none;padding:0;margin:0;font:inherit;font-size:14.5px;font-weight:500;color:var(--blue);cursor:pointer}
+.ctl button:hover{text-decoration:underline}
+.st3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.st3 div{display:grid;gap:3px;align-content:start;font-size:14.5px}
+.st3 b{font-weight:600}
+.st3 span{color:var(--muted)}
+.row2{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:32px}
+.row2 ul{margin:0;padding-left:20px;display:grid;gap:6px;max-width:70ch}
+.row2 p{margin:0 0 10px;max-width:70ch}
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px;align-items:start}
+.feed .lbl{margin-bottom:8px}
+.log{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.log>li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.log>li>*{min-width:0}
+.log time,.posts time{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);padding-top:3px;white-space:nowrap}
+.log .k,.posts .k{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.log .k{margin-bottom:4px}
+.posts .k{margin-top:4px}
+.log .ch{display:block;font-weight:500;line-height:1.35}
+.log .ch a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.log .ch a:hover{text-decoration-color:var(--ink)}
+.log p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.log .meta,.posts .meta{font-size:13.5px}
+.log .meta a,.posts .meta a{text-decoration:none}
+.log .meta a:hover,.posts .meta a:hover{text-decoration:underline}
+.log ol{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.feed .log>li,.feed .posts li{grid-template-columns:64px minmax(0,1fr);gap:20px}
+.more{margin:16px 0 0;font-size:15px;font-weight:500}
+.more a{text-decoration:none}
+.more a:hover{text-decoration:underline}
+.ch-page section{padding-bottom:72px}
+.ch-page .sec-h h2,.cs-h h2{font-size:32px;line-height:1.08}
+.ch-hero{padding:72px 0 48px}
+.ch-hero h1{font-size:clamp(40px,5.5vw,68px)}
+.ch-hero .lead{max-width:40ch}
+.open .sq.outline{background:var(--strong)}
+.open .sq.draft{background:var(--ink)}
+.toc-d summary{cursor:pointer;color:var(--blue);font-weight:500;list-style:none}
+.toc-d summary::-webkit-details-marker{display:none}
+.toc-d summary::after{content:" ▾"}
+.toc-d[open] summary::after{content:" ▴"}
+.toc-list{margin-top:10px;font-size:14px;max-height:420px;overflow:auto;border-top:1px solid var(--line);padding-top:4px}
+.toc-list p{margin:12px 0 4px;font-weight:600;font-size:13px;color:var(--ink)}
+.toc-list ol{list-style:none;margin:0;padding:0}
+.toc-list a{display:flex;gap:10px;padding:3px 0;color:var(--muted);text-decoration:none;line-height:1.35}
+.toc-list a:hover{color:var(--ink);text-decoration:underline}
+.toc-list a i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;width:18px;flex:none;padding-top:1px}
+.toc-list a[aria-current="page"]{color:var(--ink);font-weight:600}
+.toc-list .more-l{margin:14px 0 6px;font-weight:500;border-top:1px solid var(--line);padding-top:10px}
+.toc-list .more-l a{display:inline;padding:0;color:var(--blue)}
+.proof .lbl{grid-column:1/-1}
+.proof div{align-content:start}
+.cs-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:28px;border-top:1px solid var(--ink)}
+.prose{max-width:72ch}
+.prose p,.prose li{font-size:17px;line-height:1.65}
+.prose p{margin:0 0 16px}
+.prose>:last-child{margin-bottom:0}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:20px}
+.prose li{margin:6px 0}
+.prose li::marker{color:var(--muted)}
+.prose h3,.prose h4{font-size:17px;letter-spacing:-.01em;line-height:1.3;margin:24px 0 8px}
+.prose blockquote{margin:20px 0;padding:2px 0 2px 18px;border-left:3px solid var(--ink)}
+.prose code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em;background:var(--panel);padding:1px 5px;border-radius:3px}
+.prose pre{background:var(--panel);padding:16px;border-radius:4px;overflow:auto}
+.prose pre code{background:none;padding:0}
+.prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.prose a,.src a,.posts h3 a,.posts h4 a,.log .ch a{overflow-wrap:anywhere}
+.tbl{overflow-x:auto;margin:4px 0 20px}
+.tbl table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.tbl th{text-align:left;vertical-align:bottom;font-size:13px;font-weight:500;color:var(--muted);padding:0 16px 10px 0;border-bottom:1px solid var(--ink)}
+.tbl td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
+.tbl td:first-child{font-weight:500}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;background:var(--panel);border-radius:4px;padding:32px}
+.stages h3{font-size:20px;line-height:1.2}
+.stages .d{margin:8px 0 0;color:var(--muted);font-size:14px}
+.stages .lbl{margin:22px 0 6px}
+.stages .v{margin:0;font-size:15px}
+.jump-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;margin:-6px 0 28px}
+.jump{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px}
+.jump a{color:var(--muted);text-decoration:none}
+.jump a:hover{color:var(--ink);text-decoration:underline}
+.jump i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;margin-right:7px}
+.steps{list-style:none;margin:0;padding:0}
+.steps>li{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.steps>li:first-child{padding-top:4px}
+.steps .n{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);margin-bottom:10px}
+.steps h3{font-size:22px;line-height:1.2;letter-spacing:-.02em}
+.tpl{background:var(--panel);border-radius:4px;padding:24px 28px;margin:0 0 16px}
+.tpl .lbl{margin:0 0 6px}
+.tpl h3{font-size:18px;line-height:1.3;margin:0 0 6px}
+.tpl>p:not(.lbl){margin:0 0 14px;color:var(--muted);font-size:15px;max-width:72ch}
+.tpl .tbl{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{display:grid;gap:6px;align-content:start;padding:18px 20px;border:1px solid var(--line);border-radius:4px;min-width:0}
+.card .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.card h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+.card h3 a,.posts h3 a,.posts h4 a,.src a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.card h3 a:hover,.posts h3 a:hover,.posts h4 a:hover,.src a:hover{text-decoration-color:var(--ink)}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.posts li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.posts li>*{min-width:0}
+.posts h3,.posts h4{font-size:17px;line-height:1.35;letter-spacing:-.01em;margin:0;font-weight:600}
+.posts p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.more-d{margin:0}
+.more-d summary{list-style:none;cursor:pointer;color:var(--blue);font-weight:500;font-size:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.more-d summary::-webkit-details-marker{display:none}
+.more-d summary::after{content:" ▾"}
+.more-d[open] summary::after{content:" ▴"}
+.more-d[open] summary{border-bottom:0}
+.sub-h{margin:36px 0 10px}
+.sub-h:first-of-type{margin-top:0}
+.src{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.src li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:32px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.src li span{color:var(--muted)}
+.src a{font-weight:500}
+.cover li{grid-template-columns:56px minmax(0,1fr)}
+.cover p{color:var(--ink);font-size:16px}
+.story{background:var(--panel);border-radius:4px;padding:28px 32px}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pn a{display:grid;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;min-width:0}
+.pn a:hover{background:var(--panel)}
+.pn a span{font-size:13px;color:var(--muted)}
+.pn a b{font-weight:600;line-height:1.3}
+.pn .next{text-align:right;grid-column:2}
+footer{background:var(--ink);color:#fff;padding:56px 0}
+footer .wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:baseline}
+footer h2{color:#fff}
+footer .c{display:flex;flex-wrap:wrap;gap:22px;font-size:17px}
+footer .c a{color:#fff}
+footer .fine{grid-column:1/-1;margin-top:28px;font-size:13px;color:#A8A6A1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .fine a{color:#A8A6A1}
+footer :focus-visible{outline-color:#fff}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}.hh{grid-template-columns:1fr;gap:18px;padding:40px 0 28px}.status{text-align:left;white-space:normal}.home{grid-template-columns:1fr;padding-top:20px}.home>section{padding-bottom:48px}.side{position:static;padding-bottom:56px}.proof{grid-template-columns:1fr;gap:16px;padding-bottom:48px}.sec-h,.row2,.cs-h,.steps>li,.jump-row,footer .wrap{grid-template-columns:1fr;gap:16px}.jump-row{gap:8px;margin:-4px 0 20px}.rows li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px}.rows li>:nth-child(n+3){grid-column:2}.toc li{grid-template-columns:34px minmax(0,1fr);gap:2px 12px}.toc .st{grid-column:2;grid-row:auto;display:flex;gap:12px;justify-items:start;padding-top:4px}.pr2,.st3{grid-template-columns:1fr}.pr2{gap:0}.pr+.pr{border-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top a.name{display:inline}.top .btn{margin-left:auto}section,.ch-page section{padding-bottom:56px}.ch-hero{padding:40px 0 32px}.stages{grid-template-columns:1fr;gap:28px;padding:22px}.cards{grid-template-columns:1fr}.feed{grid-template-columns:1fr;gap:40px}.posts li,.src li,.log>li,.feed .log>li,.feed .posts li{grid-template-columns:1fr;gap:4px}.posts time,.log time{padding-top:0}.posts .k{display:inline;margin:0 0 0 10px}.steps>li{gap:12px;padding:24px 0}.pn{grid-template-columns:1fr}.pn .next{grid-column:1;text-align:left}}
+@media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
+@media (max-height:640px){.side{position:static}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav class="top"><span class="mark" aria-hidden="true"></span><a class="name" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a href="./" aria-current="page">Handbook</a><a href="https://stevenmacchia.com/writing/">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Download resume</a></nav></div></header>
+<main>
+<div class="wrap">
+  <div class="hh">
+    <div>
+      <p class="lbl">Free and open · By <a href="https://stevenmacchia.com/">Steven Macchia</a>, Trust &amp; Safety leader</p>
+      <h1>The T&amp;S Handbook</h1>
+      <p class="lead">How do you build and run a Trust &amp; Safety team, from the first hire to a regulated program at scale?</p>
+      <p class="sub">A practitioner's handbook in 19 chapters for founders, product leaders and new Trust &amp; Safety leads. No sign-up.</p>
+      <p class="legal"><b>General information, not legal advice.</b> Check with your own legal team before acting on anything here.</p>
+      <div class="cta"><a class="btn primary" href="./what-trust-and-safety-is-for/">Start with chapter 1</a><a class="go" href="#believes">What it believes →</a></div>
+    </div>
+    <p class="status"><i class="sq draft" aria-hidden="true"></i>19 of 19 chapters drafted<br>Updated Oct 4, 2026 · <a href="#new">What's new</a></p>
+  </div>
+</div>
+<div class="wrap home">
+<section id="contents">
+  <div class="ch-h"><h2>Contents</h2><p class="intro">19 chapters in 4 parts. Read Part 1 in order. After that, go to the chapter for the problem in front of you.</p></div>
+  <div class="part"><h3 class="ph"><i>Part 1</i>Before the first hire</h3><ol class="toc">
+    <li data-status="draft"><i>01</i><span class="t"><a href="./what-trust-and-safety-is-for/">What Trust &amp; Safety is for</a></span><p class="q">What is this function for, and how do you know it's working?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>02</i><span class="t"><a href="./know-your-risks/">Know your risks</a></span><p class="q">How will people misuse this product, and which harms should you tackle first?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>03</i><span class="t"><a href="./the-first-90-days/">The first 90 days</a></span><p class="q">You're the first safety hire. What do you do first?</p><span class="st draft"><span>Draft</span></span></li>
+  </ol></div>
+  <div class="part"><h3 class="ph"><i>Part 2</i>Build</h3><ol class="toc">
+    <li data-status="draft"><i>04</i><span class="t"><a href="./writing-policy/">Writing policy and an enforcement ladder</a></span><p class="q">How do you write rules people can follow and reviewers can apply the same way?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>05</i><span class="t"><a href="./detection-and-prevention/">Detection and prevention</a></span><p class="q">How do you find harm before users have to report it, and stop it before it happens?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>06</i><span class="t"><a href="./child-safety-and-age-assurance/">Child safety and age assurance</a></span><p class="q">How do you keep children safe on a product adults use too?</p><span class="st draft"><span>Draft</span><span class="fresh">Updated Oct 3</span></span></li>
+    <li data-status="draft"><i>07</i><span class="t"><a href="./review-operations/">Standing up review operations</a></span><p class="q">How do you build a review operation that's fast, consistent and affordable?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>08</i><span class="t"><a href="./hiring-and-structuring-the-team/">Hiring and structuring the team</a></span><p class="q">Who do you hire, in what order, and where should the team report?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>09</i><span class="t"><a href="./choosing-vendors-and-tools/">Choosing vendors and tools</a></span><p class="q">When should you buy, build or use open source, and how do you choose?</p><span class="st draft"><span>Draft</span></span></li>
+  </ol></div>
+  <div class="part"><h3 class="ph"><i>Part 3</i>Run</h3><ol class="toc">
+    <li data-status="draft"><i>10</i><span class="t"><a href="./quality-calibration-and-appeals/">Quality, calibration and appeals</a></span><p class="q">How do you know decisions are right, and fix them when they aren't?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>11</i><span class="t"><a href="./measuring-what-matters/">Measuring what matters</a></span><p class="q">Is the program making people safer, and how would you prove it?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>12</i><span class="t"><a href="./severe-harm-escalations/">Severe harm escalations</a></span><p class="q">What happens in the first hour after you find child sexual abuse material, a threat to life or a request from law enforcement?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>13</i><span class="t"><a href="./crisis-response/">Crisis response</a></span><p class="q">When something goes badly wrong in public, who decides what, and how fast?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>14</i><span class="t"><a href="./moderator-wellbeing/">Moderator wellbeing</a></span><p class="q">How do you protect the people who look at the worst content?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>15</i><span class="t"><a href="./working-with-product-legal-and-leadership/">Working with Product, Legal, Comms and leadership</a></span><p class="q">How do you get safety built in rather than bolted on?</p><span class="st draft"><span>Draft</span></span></li>
+  </ol></div>
+  <div class="part"><h3 class="ph"><i>Part 4</i>Scale and govern</h3><ol class="toc">
+    <li data-status="draft"><i>16</i><span class="t"><a href="./regulation-and-compliance/">Regulation and compliance</a></span><p class="q">Which laws apply to your service, and what do they make you do?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>17</i><span class="t"><a href="./transparency-reports-and-notices/">Transparency reports and enforcement notices</a></span><p class="q">How do you explain your decisions to users and the public?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>18</i><span class="t"><a href="./ai-in-trust-and-safety/">AI in Trust &amp; Safety</a></span><p class="q">Where does AI help moderation, and how do you keep AI products safe?</p><span class="st draft"><span>Draft</span></span></li>
+    <li data-status="draft"><i>19</i><span class="t"><a href="./budgets-roadmaps-and-making-the-case/">Budgets, roadmaps and making the case</a></span><p class="q">How do you get the people and money the program needs?</p><span class="st draft"><span>Draft</span></span></li>
+  </ol></div>
+</section>
+<aside class="side" aria-label="Latest posts and updates">
+  <div class="sb"><h3 class="lbl">Latest posts</h3><ol class="sl"><li><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-gamingsafety-share-7512121016282882048-B4fp/">Saturday reading: child safety gaps in games, Ofcom in court and California's new laws</a><span class="k"><time datetime="2026-10-03">Oct 3</time> · Reading roundup</span></li><li><a href="https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/">Watch the rate, not the volume</a><span class="k"><time datetime="2026-10-02">Oct 2</time> · Commentary</span></li><li><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7511792474445750272-3rLV/">Run the abuse pre-mortem at design review</a><span class="k"><time datetime="2026-10-02">Oct 2</time> · Essay</span></li></ol><p class="more"><a href="https://stevenmacchia.com/writing/">All writing →</a></p></div>
+  <div class="sb"><h3 class="lbl">Recent updates</h3><ol class="sl up"><li><time datetime="2026-10-04">Oct 4</time><span>Added · 4 chapters</span></li><li><time datetime="2026-10-04">Oct 4</time><span>Revised · 19 chapters</span></li><li><time datetime="2026-10-04">Oct 4</time><span>Revised · 15 chapters</span></li></ol><p class="more"><a href="#new">What's new ↓</a><a href="./updates/">All updates →</a></p></div>
+</aside>
+</div>
+<section id="believes"><div class="wrap">
+  <div class="sec-h"><h2>What it believes</h2><div><p class="big">Ten principles behind every chapter</p><p class="intro">Each one comes from something Steven has written. Open a principle for the full line and the posts behind it. The posts are collected on the <a href="https://stevenmacchia.com/writing/">writing page</a>.</p><p class="ctl"><button type="button" id="xall" hidden>Open all</button></p></div></div>
+  <div class="pr2">
+    <ol class="pr"><li><details><summary><i>01</i><span>Measure impact, not activity.</span></summary><div class="pb"><p>More removals can mean better detection, more harm or more good users caught by mistake. Report outcomes next to operations, and say so when they disagree.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_if-your-team-took-down-40-more-harmful-content-share-7508565523224432642-JJno/">Activity is easy to measure. Impact is harder.</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/">Harassed players look like your best-retained users</a></span></div></details></li><li><details><summary><i>02</i><span>Automate as far as the evidence supports, and no further.</span></summary><div class="pb"><p>Where a wrong decision can't be reversed or someone's safety is at risk, automation prepares the case and a person closes it.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-responsibleai-share-7507791297672486913-jc9j/">Automation rate isn't a measure of maturity</a></span></div></details></li><li><details><summary><i>03</i><span>Automation earns its scope.</span></summary><div class="pb"><p>It expands into a new area only when its overturn rate matches human review, and it rolls back when that rate moves.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_as-more-enforcement-moves-to-automation-share-7508900187977854976-DLyv/">Appeal overturns: the early warning for automation</a></span></div></details></li><li><details><summary><i>04</i><span>Harm is a pattern, not a message.</span></summary><div class="pb"><p>Grooming, raids and scams build over time, so the response should build as signals stack.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7511067864448237568-k7h4/">Grooming is a pattern, not a message</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_games-have-become-one-of-the-main-places-share-7510446882154864641-n3PV/">Games are where kids socialize now, and regulators know it</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/">Watch the rate, not the volume</a></span></div></details></li><li><details><summary><i>05</i><span>Put friction where the risk is.</span></summary><div class="pb"><p>Safer defaults and targeted limits stop most harm before anything needs removing, and most users never feel them.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_most-of-the-debate-about-age-assurance-in-share-7510763675658477568-IVax/">Age assurance: what should each check unlock?</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/">Watch the rate, not the volume</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7511792474445750272-3rLV/">Run the abuse pre-mortem at design review</a></span></div></details></li></ol>
+    <ol class="pr" start="6"><li><details><summary><i>06</i><span>A ban is one move, not a closed case.</span></summary><div class="pb"><p>Offenders come back on new accounts and move across platforms, so map the network and share signals.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_childsafety-trustandsafety-responsibleai-share-7509260900831260674-gar3/">A banned account is not a closed case</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_nudify-apps-are-a-growing-problem-and-a-share-7510771967986155520-s7TP/">Nudify apps: harm no single platform sees in full</a></span></div></details></li><li><details><summary><i>07</i><span>Age assurance is the foundation.</span></summary><div class="pb"><p>Every protection for children assumes you know who's a child, and each level of assurance should unlock only what it can support.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_most-of-the-debate-about-age-assurance-in-share-7510763675658477568-IVax/">Age assurance: what should each check unlock?</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-gamingsafety-share-7512121016282882048-B4fp/">Saturday reading: child safety gaps in games, Ofcom in court and California's new laws</a></span></div></details></li><li><details><summary><i>08</i><span>Get in at design review, and earn the invite.</span></summary><div class="pb"><p>Before launch, changing a default is an edit. After launch, it's taking something away. Be selective about what gets a full review, and answer in days.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7511792474445750272-3rLV/">Run the abuse pre-mortem at design review</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_most-product-launches-get-a-security-review-share-7511154971653070848-PMG-/">Launches get a security review. Almost none get an abuse review.</a> · <a href="https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/">You can't moderate your way out of a systems problem</a></span></div></details></li><li><details><summary><i>09</i><span>Be able to prove it works.</span></summary><div class="pb"><p>Regulators, courts and attorneys general have moved from &quot;do you have a policy?&quot; to &quot;can you prove it works?&quot; That takes an owner for every threshold and a written record of every change.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-onlinesafety-share-7510666169993805824-VI4v/">The era of voluntary child safety is ending</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7511067864448237568-k7h4/">Grooming is a pattern, not a message</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_most-of-the-debate-about-age-assurance-in-share-7510763675658477568-IVax/">Age assurance: what should each check unlock?</a></span></div></details></li><li><details><summary><i>10</i><span>Safety is a retention and revenue question.</span></summary><div class="pb"><p>Prove it with your own data, cut correctly, so the program isn't judged as a cost center by its throughput.</p><span class="from">From: <a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/">Harassed players look like your best-retained users</a> · <a href="https://www.linkedin.com/posts/stevenmacchia_if-your-team-took-down-40-more-harmful-content-share-7508565523224432642-JJno/">Activity is easy to measure. Impact is harder.</a></span></div></details></li></ol>
+  </div>
+</div></section>
+<section id="about"><div class="wrap">
+  <div class="sec-h"><h2>Who it's for</h2><div><p class="big">Anyone who just became responsible for keeping people safe</p></div></div>
+  <div class="row2"><span></span><div><ul><li>A founder or product leader who has just realized safety is now part of their job</li><li>The first safety hire, building from nothing</li><li>A new Trust &amp; Safety leader inheriting a team, or growing one into new markets and new laws</li><li>Anyone moving into Trust &amp; Safety from operations, policy, legal or data</li></ul>
+<p>Examples lean on gaming, social and user-generated content platforms, Steven's background, and on child safety, where the stakes are highest.</p></div></div>
+  <div class="row2"><p class="lbl">How to read it</p><div><p>Each chapter covers one part of the job: what good looks like at your stage, how to do it, the mistakes that cost teams most, a template to start from, and the <a href="https://stevenmacchia.com/ts-workbench/">T&amp;S Workbench</a> tool that does the work with you.</p><p class="lbl">Every chapter shows what good looks like at three stages</p><div class="st3"><div><b>Early</b><span>A founder or first safety hire covers trust and safety, usually with under a million users.</span></div><div><b>Growing</b><span>A dedicated safety team, millions of users, and new markets or features on the way.</span></div><div><b>At scale or regulated</b><span>Tens of millions of users, a heavily regulated sector, or extra duties as a very large platform under EU or UK law.</span></div></div></div></div>
+  <div class="row2"><p class="lbl">Goes with</p><div><p>The handbook explains the job. <a href="https://stevenmacchia.com/ts-workbench/">T&amp;S Workbench</a> gives you free, private tools to do it, and every chapter links the ones that go with it.</p></div></div>
+</div></section>
+<section id="new"><div class="wrap">
+  <div class="sec-h"><h2>What's new</h2><div><p class="big">Updated Oct 4, 2026</p><p class="intro">The handbook grows as Steven writes. Posts are linked to the chapters they inform, and chapters are drafted and revised from them. <a href="./updates/">Every change, by date →</a></p></div></div>
+  <div class="feed">
+    <div><h3 class="lbl">Latest changes</h3><ol class="log"><li><time datetime="2026-10-04">Oct 4</time><div><span class="k">Added</span><span class="ch">4 chapters (<a href="./what-trust-and-safety-is-for/" title="What Trust &amp; Safety is for">1</a>, <a href="./detection-and-prevention/" title="Detection and prevention">5</a>, <a href="./hiring-and-structuring-the-team/" title="Hiring and structuring the team">8</a>, <a href="./working-with-product-legal-and-leadership/" title="Working with Product, Legal, Comms and leadership">15</a>)</span><p>Linked Steven's post on why treating Trust &amp; Safety as an operations function is a mistake, and added it to chapter 8's view on where the team should report.</p><p class="meta"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/">Read the post: You can't moderate your way out of a systems problem →</a></p></div></li><li><time datetime="2026-10-04">Oct 4</time><div><span class="k">Revised</span><span class="ch">19 chapters (<a href="./what-trust-and-safety-is-for/" title="What Trust &amp; Safety is for">1</a>, <a href="./know-your-risks/" title="Know your risks">2</a>, <a href="./the-first-90-days/" title="The first 90 days">3</a>, <a href="./writing-policy/" title="Writing policy and an enforcement ladder">4</a>, <a href="./detection-and-prevention/" title="Detection and prevention">5</a>, <a href="./child-safety-and-age-assurance/" title="Child safety and age assurance">6</a>, <a href="./review-operations/" title="Standing up review operations">7</a>, <a href="./hiring-and-structuring-the-team/" title="Hiring and structuring the team">8</a>, <a href="./choosing-vendors-and-tools/" title="Choosing vendors and tools">9</a>, <a href="./quality-calibration-and-appeals/" title="Quality, calibration and appeals">10</a>, <a href="./measuring-what-matters/" title="Measuring what matters">11</a>, <a href="./severe-harm-escalations/" title="Severe harm escalations">12</a>, <a href="./crisis-response/" title="Crisis response">13</a>, <a href="./moderator-wellbeing/" title="Moderator wellbeing">14</a>, <a href="./working-with-product-legal-and-leadership/" title="Working with Product, Legal, Comms and leadership">15</a>, <a href="./regulation-and-compliance/" title="Regulation and compliance">16</a>, <a href="./transparency-reports-and-notices/" title="Transparency reports and enforcement notices">17</a>, <a href="./ai-in-trust-and-safety/" title="AI in Trust &amp; Safety">18</a>, <a href="./budgets-roadmaps-and-making-the-case/" title="Budgets, roadmaps and making the case">19</a>)</span><p>Practical advice that varies by platform, such as cadences, sample sizes, targets and who owns what, is now set out as options with examples, so each team can choose what fits.</p></div></li><li><time datetime="2026-10-04">Oct 4</time><div><span class="k">Revised</span><span class="ch">15 chapters (<a href="./what-trust-and-safety-is-for/" title="What Trust &amp; Safety is for">1</a>, <a href="./know-your-risks/" title="Know your risks">2</a>, <a href="./the-first-90-days/" title="The first 90 days">3</a>, <a href="./writing-policy/" title="Writing policy and an enforcement ladder">4</a>, <a href="./review-operations/" title="Standing up review operations">7</a>, <a href="./hiring-and-structuring-the-team/" title="Hiring and structuring the team">8</a>, <a href="./choosing-vendors-and-tools/" title="Choosing vendors and tools">9</a>, <a href="./quality-calibration-and-appeals/" title="Quality, calibration and appeals">10</a>, <a href="./measuring-what-matters/" title="Measuring what matters">11</a>, <a href="./severe-harm-escalations/" title="Severe harm escalations">12</a>, <a href="./crisis-response/" title="Crisis response">13</a>, <a href="./moderator-wellbeing/" title="Moderator wellbeing">14</a>, <a href="./working-with-product-legal-and-leadership/" title="Working with Product, Legal, Comms and leadership">15</a>, <a href="./transparency-reports-and-notices/" title="Transparency reports and enforcement notices">17</a>, <a href="./ai-in-trust-and-safety/" title="AI in Trust &amp; Safety">18</a>)</span><p>Added Steven's own calls from an interview: where Trust &amp; Safety should report, what to automate first, the one number to track from day one, who makes the 2am call, and more. Practical choices that vary by platform are now laid out as options.</p></div></li><li><time datetime="2026-10-03">Oct 3</time><div><span class="k">Drafted</span><span class="ch">18 chapters (<a href="./what-trust-and-safety-is-for/" title="What Trust &amp; Safety is for">1</a>, <a href="./know-your-risks/" title="Know your risks">2</a>, <a href="./the-first-90-days/" title="The first 90 days">3</a>, <a href="./writing-policy/" title="Writing policy and an enforcement ladder">4</a>, <a href="./detection-and-prevention/" title="Detection and prevention">5</a>, <a href="./review-operations/" title="Standing up review operations">7</a>, <a href="./hiring-and-structuring-the-team/" title="Hiring and structuring the team">8</a>, <a href="./choosing-vendors-and-tools/" title="Choosing vendors and tools">9</a>, <a href="./quality-calibration-and-appeals/" title="Quality, calibration and appeals">10</a>, <a href="./measuring-what-matters/" title="Measuring what matters">11</a>, <a href="./severe-harm-escalations/" title="Severe harm escalations">12</a>, <a href="./crisis-response/" title="Crisis response">13</a>, <a href="./moderator-wellbeing/" title="Moderator wellbeing">14</a>, <a href="./working-with-product-legal-and-leadership/" title="Working with Product, Legal, Comms and leadership">15</a>, <a href="./regulation-and-compliance/" title="Regulation and compliance">16</a>, <a href="./transparency-reports-and-notices/" title="Transparency reports and enforcement notices">17</a>, <a href="./ai-in-trust-and-safety/" title="AI in Trust &amp; Safety">18</a>, <a href="./budgets-roadmaps-and-making-the-case/" title="Budgets, roadmaps and making the case">19</a>)</span><p>First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</p></div></li><li><time datetime="2026-10-03">Oct 3</time><div><span class="k">Drafted</span><span class="ch"><a href="./child-safety-and-age-assurance/">6. Child safety and age assurance</a></span><p>First full draft: what each level of age assurance should unlock, safe defaults, grooming responses that build as signals stack, the account decision, and how to measure prevention.</p></div></li></ol><p class="more"><a href="./updates/">All updates →</a></p></div>
+    <div><h3 class="lbl">Latest posts</h3><ol class="posts"><li><div><time datetime="2026-10-03">Oct 3</time></div><div><h4><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-gamingsafety-share-7512121016282882048-B4fp/">Saturday reading: child safety gaps in games, Ofcom in court and California's new laws</a></h4><p>Australia's eSafety found Fortnite and Minecraft still mostly rely on self-declared age. Age assurance is the foundation, because every other safeguard assumes you know who's a kid.</p><p class="meta">In the handbook: <a href="./child-safety-and-age-assurance/">6. Child safety and age assurance</a>, <a href="./regulation-and-compliance/">16. Regulation and compliance</a></p></div></li><li><div><time datetime="2026-10-02">Oct 2</time></div><div><h4><a href="https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/">Watch the rate, not the volume</a></h4><p>In Stream's live sports chat data, volume swung 7.5x but the rate of racist content held steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.</p><p class="meta">In the handbook: <a href="./detection-and-prevention/">5. Detection and prevention</a>, <a href="./review-operations/">7. Standing up review operations</a>, <a href="./crisis-response/">13. Crisis response</a></p></div></li><li><div><time datetime="2026-10-02">Oct 2</time></div><div><h4><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7511792474445750272-3rLV/">Run the abuse pre-mortem at design review</a></h4><p>At design review, changing a default is a quick edit. After launch it means taking something away. T&amp;S earns the invite by being selective and fast, and accepted risks get an owner and a date.</p><p class="meta">In the handbook: <a href="./know-your-risks/">2. Know your risks</a>, <a href="./working-with-product-legal-and-leadership/">15. Working with Product, Legal, Comms and leadership</a></p></div></li><li><div><time datetime="2026-10-01">Oct 1</time></div><div><h4><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/">Harassed players look like your best-retained users</a></h4><p>Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.</p><p class="meta">In the handbook: <a href="./what-trust-and-safety-is-for/">1. What Trust &amp; Safety is for</a>, <a href="./measuring-what-matters/">11. Measuring what matters</a>, <a href="./budgets-roadmaps-and-making-the-case/">19. Budgets, roadmaps and making the case</a></p></div></li></ol><p class="more"><a href="https://stevenmacchia.com/writing/">All writing →</a></p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap"><h2>Get in touch.</h2><div class="c"><a href="mailto:stevenamacchia@gmail.com">stevenamacchia@gmail.com</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Resume</a></div><div class="fine"><span>© 2026 Steven Macchia · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://github.com/stevenmacchia/ts-handbook">Source</a> · <a href="./updates/">Updates</a></span><span>Written with AI-assisted drafting · Not legal advice: check with your own legal team · Visits counted without cookies</span></div></div></footer>
+<script>(function(){var f=document.getElementById('filters');if(!f)return;f.hidden=false;var bs=[].slice.call(f.querySelectorAll('button')),rows=[].slice.call(document.querySelectorAll('.toc li')),parts=[].slice.call(document.querySelectorAll('.part'));bs.forEach(function(b){b.addEventListener('click',function(){var k=b.getAttribute('data-f');bs.forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});rows.forEach(function(r){r.hidden=k!=='all'&&r.getAttribute('data-status')!==k;});parts.forEach(function(p){p.hidden=!p.querySelector('.toc li:not([hidden])');});});});})();
+(function(){var b=document.getElementById('xall');if(!b)return;var ds=[].slice.call(document.querySelectorAll('#believes details'));if(!ds.length)return;b.hidden=false;function sync(){var all=ds.every(function(d){return d.open});b.textContent=all?'Close all':'Open all';b.setAttribute('data-open',String(all));}b.addEventListener('click',function(){var open=b.getAttribute('data-open')!=='true';ds.forEach(function(d){d.open=open});sync();});ds.forEach(function(d){d.addEventListener('toggle',sync)});sync();})();</script>
+</body>
+</html>

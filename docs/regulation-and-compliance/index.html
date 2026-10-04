@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>16. Regulation and compliance · The T&amp;S Handbook</title>
+<meta name="description" content="Which laws apply to your service, and what do they make you do?">
+<meta name="author" content="Steven Macchia">
+<link rel="canonical" href="https://stevenmacchia.com/ts-handbook/regulation-and-compliance/">
+<link rel="alternate" type="application/atom+xml" title="The T&amp;S Handbook: updates" href="https://stevenmacchia.com/ts-handbook/updates/feed.xml">
+<meta property="og:type" content="article"><meta property="og:title" content="16. Regulation and compliance · The T&amp;S Handbook"><meta property="og:description" content="Which laws apply to your service, and what do they make you do?">
+<meta property="og:url" content="https://stevenmacchia.com/ts-handbook/regulation-and-compliance/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+summary:focus-visible{border-radius:2px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1152px;margin:0 auto;padding:0 32px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.05}
+.top{display:flex;align-items:center;gap:28px;height:64px;border-bottom:1px solid var(--line)}
+.top .mark{width:12px;height:12px;background:var(--ink);flex:none}
+.top .name{font-weight:600;margin-right:auto}
+.top a{color:var(--ink);text-decoration:none;font-size:15px}
+.top a:hover{text-decoration:underline}
+.top a[aria-current="page"]{font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:4px;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn:hover{background:var(--panel);text-decoration:none}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#2a2a2a}
+.top .btn{padding:8px 14px;font-size:14px}
+.lbl{font-size:13px;color:var(--muted);font-weight:500;margin:0}
+.lbl a{color:inherit}
+h3.lbl{letter-spacing:0;line-height:1.55}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:end;padding:88px 0 56px}
+.hero h1{font-size:clamp(44px,6.5vw,80px);margin-top:18px}
+.lead{margin:22px 0 0;font-size:clamp(18px,2.2vw,21px);line-height:1.45;max-width:44ch}
+.sub{margin:14px 0 0;font-size:17px;color:var(--muted);max-width:58ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:30px}
+.cta .go{margin-left:8px;font-weight:500}
+.open{border-top:1px solid var(--ink);padding-top:14px;font-size:14.5px;display:grid;gap:8px}
+.open .sq{display:inline-block;width:8px;height:8px;background:var(--good);margin-right:9px}
+.open span{color:var(--muted)}
+.open .mono{font-size:12.5px}
+/* Grid children must be allowed to shrink, or a wide table inside a step widens the page on phones */
+.steps>li>*,.cs-h>*,.stages>*{min-width:0}
+.legal{margin:0 0 32px;padding:14px 18px;background:var(--panel);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;font-size:15px;line-height:1.5;max-width:86ch}
+.legal b{font-weight:600}
+.hh .legal{margin:16px 0 0;font-size:14px}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0 72px;border-top:1px solid var(--line)}
+.proof div{display:grid;gap:4px;font-size:14.5px}
+.proof b{font-weight:600}
+.proof span{color:var(--muted)}
+section{padding:0 0 88px}
+.sec-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:end;padding-top:28px;border-top:1px solid var(--ink);margin-bottom:28px}
+h2{font-size:36px}
+.sec-h p{margin:0}
+.sec-h .big{font-size:19px;font-weight:500}
+.sec-h .intro{margin-top:10px;color:var(--muted);max-width:72ch}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.5fr);gap:32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows li>*{min-width:0}
+.rows i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:2px}
+.rows h3{font-size:17px;line-height:1.35;letter-spacing:-.01em}
+.rows p{margin:0;color:var(--muted);font-size:15px}
+.rows .from{display:block;margin-top:8px;font-size:13.5px}
+.rows .from a{text-decoration:none}
+.rows .from a:hover{text-decoration:underline}
+/* Home: a short hero, then the contents as the main column with a sidebar beside them */
+.hh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 64px;align-items:end;padding:56px 0 36px}
+.hh h1{font-size:clamp(40px,5.5vw,64px);margin-top:14px}
+.hh .lead{margin-top:16px;max-width:46ch}
+.hh .sub{margin-top:10px;font-size:16px;max-width:60ch}
+.hh .cta{margin-top:24px}
+.status{margin:0;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;line-height:1.7;color:var(--muted);text-align:right;white-space:nowrap}
+.status .sq{display:inline-block;width:8px;height:8px;background:var(--ink);margin-right:8px;vertical-align:1px}
+.status .sq.outline{background:var(--strong)}
+.status .sq.published{background:var(--good)}
+.home{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 64px;border-top:1px solid var(--ink);padding-top:24px}
+.home>*{min-width:0}
+.home>section{padding-bottom:80px;scroll-margin-top:16px}
+.ch-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px}
+.ch-h .intro{margin:0;color:var(--muted);font-size:15px}
+.part{margin:28px 0 0}
+.part:first-of-type{margin-top:0}
+.part h3.ph{display:flex;align-items:baseline;gap:12px;font-size:16px;font-weight:600;letter-spacing:0;line-height:1.3;margin:0 0 8px}
+.ph i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;flex:none}
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.toc li{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.toc li>*{min-width:0}
+.toc i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:3px}
+.toc .t{font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.toc .t a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.toc .t a::after{content:"";position:absolute;inset:0}
+.toc li:hover .t a{text-decoration-color:var(--ink)}
+.toc li:hover i{color:var(--ink)}
+.toc .q{grid-column:2;margin:0;color:var(--muted);font-size:14.5px;line-height:1.45}
+.toc .st{grid-column:3;grid-row:1/3;align-self:start;display:grid;gap:3px;justify-items:end;padding-top:3px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+.toc .st.published{color:var(--good)}
+.filters{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;flex-basis:100%;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted)}
+.filters button{border:0;background:none;padding:0;margin:0;color:var(--muted);font:inherit;cursor:pointer;text-underline-offset:3px}
+.filters button:hover{color:var(--ink);text-decoration:underline}
+.filters button[aria-pressed="true"]{color:var(--ink);text-decoration:underline}
+.side{align-self:start;position:sticky;top:24px;display:grid;gap:32px;padding-bottom:80px}
+.sb .lbl{margin-bottom:6px}
+.sl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.sl li{display:grid;gap:3px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.4}
+.sl li>*{min-width:0}
+.sl a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px;font-weight:500;overflow-wrap:anywhere}
+.sl a:hover{text-decoration-color:var(--ink)}
+.sl time,.sl .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.sl.up li{grid-template-columns:48px minmax(0,1fr);gap:0 12px;align-items:baseline;font-size:14.5px}
+.sl.up time{padding-top:1px}
+.side .more{margin-top:10px;font-size:14.5px}
+.side .more a+a{margin-left:14px}
+.pr2{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;align-items:start}
+.pr{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pr li{border-bottom:1px solid var(--line)}
+.pr summary{display:grid;grid-template-columns:36px minmax(0,1fr) 14px;gap:12px;align-items:baseline;padding:11px 0;cursor:pointer;list-style:none;font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.01em}
+.pr summary::-webkit-details-marker{display:none}
+.pr summary i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;font-weight:400;color:var(--muted)}
+.pr summary::after{content:"▾";color:var(--muted);text-align:right}
+.pr details[open] summary::after{content:"▴"}
+.pr summary:hover{color:var(--blue)}
+.pr .pb{padding:0 0 14px 48px;color:var(--muted);font-size:15px;line-height:1.5}
+.pr .pb p{margin:0}
+.pr .from{display:block;margin-top:6px;font-size:13.5px}
+.pr .from a{text-decoration:none}
+.pr .from a:hover{text-decoration:underline}
+.ctl{margin:10px 0 0}
+.ctl button{border:0;background:none;padding:0;margin:0;font:inherit;font-size:14.5px;font-weight:500;color:var(--blue);cursor:pointer}
+.ctl button:hover{text-decoration:underline}
+.st3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.st3 div{display:grid;gap:3px;align-content:start;font-size:14.5px}
+.st3 b{font-weight:600}
+.st3 span{color:var(--muted)}
+.row2{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:32px}
+.row2 ul{margin:0;padding-left:20px;display:grid;gap:6px;max-width:70ch}
+.row2 p{margin:0 0 10px;max-width:70ch}
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px;align-items:start}
+.feed .lbl{margin-bottom:8px}
+.log{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.log>li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.log>li>*{min-width:0}
+.log time,.posts time{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);padding-top:3px;white-space:nowrap}
+.log .k,.posts .k{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.log .k{margin-bottom:4px}
+.posts .k{margin-top:4px}
+.log .ch{display:block;font-weight:500;line-height:1.35}
+.log .ch a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.log .ch a:hover{text-decoration-color:var(--ink)}
+.log p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.log .meta,.posts .meta{font-size:13.5px}
+.log .meta a,.posts .meta a{text-decoration:none}
+.log .meta a:hover,.posts .meta a:hover{text-decoration:underline}
+.log ol{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.feed .log>li,.feed .posts li{grid-template-columns:64px minmax(0,1fr);gap:20px}
+.more{margin:16px 0 0;font-size:15px;font-weight:500}
+.more a{text-decoration:none}
+.more a:hover{text-decoration:underline}
+.ch-page section{padding-bottom:72px}
+.ch-page .sec-h h2,.cs-h h2{font-size:32px;line-height:1.08}
+.ch-hero{padding:72px 0 48px}
+.ch-hero h1{font-size:clamp(40px,5.5vw,68px)}
+.ch-hero .lead{max-width:40ch}
+.open .sq.outline{background:var(--strong)}
+.open .sq.draft{background:var(--ink)}
+.toc-d summary{cursor:pointer;color:var(--blue);font-weight:500;list-style:none}
+.toc-d summary::-webkit-details-marker{display:none}
+.toc-d summary::after{content:" ▾"}
+.toc-d[open] summary::after{content:" ▴"}
+.toc-list{margin-top:10px;font-size:14px;max-height:420px;overflow:auto;border-top:1px solid var(--line);padding-top:4px}
+.toc-list p{margin:12px 0 4px;font-weight:600;font-size:13px;color:var(--ink)}
+.toc-list ol{list-style:none;margin:0;padding:0}
+.toc-list a{display:flex;gap:10px;padding:3px 0;color:var(--muted);text-decoration:none;line-height:1.35}
+.toc-list a:hover{color:var(--ink);text-decoration:underline}
+.toc-list a i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;width:18px;flex:none;padding-top:1px}
+.toc-list a[aria-current="page"]{color:var(--ink);font-weight:600}
+.toc-list .more-l{margin:14px 0 6px;font-weight:500;border-top:1px solid var(--line);padding-top:10px}
+.toc-list .more-l a{display:inline;padding:0;color:var(--blue)}
+.proof .lbl{grid-column:1/-1}
+.proof div{align-content:start}
+.cs-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:28px;border-top:1px solid var(--ink)}
+.prose{max-width:72ch}
+.prose p,.prose li{font-size:17px;line-height:1.65}
+.prose p{margin:0 0 16px}
+.prose>:last-child{margin-bottom:0}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:20px}
+.prose li{margin:6px 0}
+.prose li::marker{color:var(--muted)}
+.prose h3,.prose h4{font-size:17px;letter-spacing:-.01em;line-height:1.3;margin:24px 0 8px}
+.prose blockquote{margin:20px 0;padding:2px 0 2px 18px;border-left:3px solid var(--ink)}
+.prose code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em;background:var(--panel);padding:1px 5px;border-radius:3px}
+.prose pre{background:var(--panel);padding:16px;border-radius:4px;overflow:auto}
+.prose pre code{background:none;padding:0}
+.prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.prose a,.src a,.posts h3 a,.posts h4 a,.log .ch a{overflow-wrap:anywhere}
+.tbl{overflow-x:auto;margin:4px 0 20px}
+.tbl table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.tbl th{text-align:left;vertical-align:bottom;font-size:13px;font-weight:500;color:var(--muted);padding:0 16px 10px 0;border-bottom:1px solid var(--ink)}
+.tbl td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
+.tbl td:first-child{font-weight:500}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;background:var(--panel);border-radius:4px;padding:32px}
+.stages h3{font-size:20px;line-height:1.2}
+.stages .d{margin:8px 0 0;color:var(--muted);font-size:14px}
+.stages .lbl{margin:22px 0 6px}
+.stages .v{margin:0;font-size:15px}
+.jump-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;margin:-6px 0 28px}
+.jump{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px}
+.jump a{color:var(--muted);text-decoration:none}
+.jump a:hover{color:var(--ink);text-decoration:underline}
+.jump i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;margin-right:7px}
+.steps{list-style:none;margin:0;padding:0}
+.steps>li{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.steps>li:first-child{padding-top:4px}
+.steps .n{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);margin-bottom:10px}
+.steps h3{font-size:22px;line-height:1.2;letter-spacing:-.02em}
+.tpl{background:var(--panel);border-radius:4px;padding:24px 28px;margin:0 0 16px}
+.tpl .lbl{margin:0 0 6px}
+.tpl h3{font-size:18px;line-height:1.3;margin:0 0 6px}
+.tpl>p:not(.lbl){margin:0 0 14px;color:var(--muted);font-size:15px;max-width:72ch}
+.tpl .tbl{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{display:grid;gap:6px;align-content:start;padding:18px 20px;border:1px solid var(--line);border-radius:4px;min-width:0}
+.card .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.card h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+.card h3 a,.posts h3 a,.posts h4 a,.src a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.card h3 a:hover,.posts h3 a:hover,.posts h4 a:hover,.src a:hover{text-decoration-color:var(--ink)}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.posts li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.posts li>*{min-width:0}
+.posts h3,.posts h4{font-size:17px;line-height:1.35;letter-spacing:-.01em;margin:0;font-weight:600}
+.posts p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.more-d{margin:0}
+.more-d summary{list-style:none;cursor:pointer;color:var(--blue);font-weight:500;font-size:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.more-d summary::-webkit-details-marker{display:none}
+.more-d summary::after{content:" ▾"}
+.more-d[open] summary::after{content:" ▴"}
+.more-d[open] summary{border-bottom:0}
+.sub-h{margin:36px 0 10px}
+.sub-h:first-of-type{margin-top:0}
+.src{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.src li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:32px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.src li span{color:var(--muted)}
+.src a{font-weight:500}
+.cover li{grid-template-columns:56px minmax(0,1fr)}
+.cover p{color:var(--ink);font-size:16px}
+.story{background:var(--panel);border-radius:4px;padding:28px 32px}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pn a{display:grid;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;min-width:0}
+.pn a:hover{background:var(--panel)}
+.pn a span{font-size:13px;color:var(--muted)}
+.pn a b{font-weight:600;line-height:1.3}
+.pn .next{text-align:right;grid-column:2}
+footer{background:var(--ink);color:#fff;padding:56px 0}
+footer .wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:baseline}
+footer h2{color:#fff}
+footer .c{display:flex;flex-wrap:wrap;gap:22px;font-size:17px}
+footer .c a{color:#fff}
+footer .fine{grid-column:1/-1;margin-top:28px;font-size:13px;color:#A8A6A1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .fine a{color:#A8A6A1}
+footer :focus-visible{outline-color:#fff}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}.hh{grid-template-columns:1fr;gap:18px;padding:40px 0 28px}.status{text-align:left;white-space:normal}.home{grid-template-columns:1fr;padding-top:20px}.home>section{padding-bottom:48px}.side{position:static;padding-bottom:56px}.proof{grid-template-columns:1fr;gap:16px;padding-bottom:48px}.sec-h,.row2,.cs-h,.steps>li,.jump-row,footer .wrap{grid-template-columns:1fr;gap:16px}.jump-row{gap:8px;margin:-4px 0 20px}.rows li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px}.rows li>:nth-child(n+3){grid-column:2}.toc li{grid-template-columns:34px minmax(0,1fr);gap:2px 12px}.toc .st{grid-column:2;grid-row:auto;display:flex;gap:12px;justify-items:start;padding-top:4px}.pr2,.st3{grid-template-columns:1fr}.pr2{gap:0}.pr+.pr{border-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top a.name{display:inline}.top .btn{margin-left:auto}section,.ch-page section{padding-bottom:56px}.ch-hero{padding:40px 0 32px}.stages{grid-template-columns:1fr;gap:28px;padding:22px}.cards{grid-template-columns:1fr}.feed{grid-template-columns:1fr;gap:40px}.posts li,.src li,.log>li,.feed .log>li,.feed .posts li{grid-template-columns:1fr;gap:4px}.posts time,.log time{padding-top:0}.posts .k{display:inline;margin:0 0 0 10px}.steps>li{gap:12px;padding:24px 0}.pn{grid-template-columns:1fr}.pn .next{grid-column:1;text-align:left}}
+@media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
+@media (max-height:640px){.side{position:static}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav class="top"><span class="mark" aria-hidden="true"></span><a class="name" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a href="../" aria-current="page">Handbook</a><a href="https://stevenmacchia.com/writing/">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Download resume</a></nav></div></header>
+<main>
+<div class="ch-page">
+<div class="wrap">
+  <div class="hero ch-hero">
+    <div>
+      <p class="lbl"><a href="../">The T&amp;S Handbook</a> · Part 4: Scale and govern</p>
+      <h1>Regulation and compliance</h1>
+      <p class="lead">Which laws apply to your service, and what do they make you do?</p>
+    </div>
+    <div>
+      <div class="open"><div><i class="sq draft" aria-hidden="true"></i><b>Draft: written, not yet reviewed</b></div><span>Chapter 16 of 19 · About 17 minutes</span><span>Updated Oct 4, 2026 · <a href="#changes">What changed</a></span><details class="toc-d"><summary>All chapters</summary><div class="toc-list"><p>Part 1: Before the first hire</p><ol><li><a href="../what-trust-and-safety-is-for/"><i>1</i><span>What Trust &amp; Safety is for</span></a></li><li><a href="../know-your-risks/"><i>2</i><span>Know your risks</span></a></li><li><a href="../the-first-90-days/"><i>3</i><span>The first 90 days</span></a></li></ol><p>Part 2: Build</p><ol><li><a href="../writing-policy/"><i>4</i><span>Writing policy and an enforcement ladder</span></a></li><li><a href="../detection-and-prevention/"><i>5</i><span>Detection and prevention</span></a></li><li><a href="../child-safety-and-age-assurance/"><i>6</i><span>Child safety and age assurance</span></a></li><li><a href="../review-operations/"><i>7</i><span>Standing up review operations</span></a></li><li><a href="../hiring-and-structuring-the-team/"><i>8</i><span>Hiring and structuring the team</span></a></li><li><a href="../choosing-vendors-and-tools/"><i>9</i><span>Choosing vendors and tools</span></a></li></ol><p>Part 3: Run</p><ol><li><a href="../quality-calibration-and-appeals/"><i>10</i><span>Quality, calibration and appeals</span></a></li><li><a href="../measuring-what-matters/"><i>11</i><span>Measuring what matters</span></a></li><li><a href="../severe-harm-escalations/"><i>12</i><span>Severe harm escalations</span></a></li><li><a href="../crisis-response/"><i>13</i><span>Crisis response</span></a></li><li><a href="../moderator-wellbeing/"><i>14</i><span>Moderator wellbeing</span></a></li><li><a href="../working-with-product-legal-and-leadership/"><i>15</i><span>Working with Product, Legal, Comms and leadership</span></a></li></ol><p>Part 4: Scale and govern</p><ol><li><a href="../regulation-and-compliance/" aria-current="page"><i>16</i><span>Regulation and compliance</span></a></li><li><a href="../transparency-reports-and-notices/"><i>17</i><span>Transparency reports and enforcement notices</span></a></li><li><a href="../ai-in-trust-and-safety/"><i>18</i><span>AI in Trust &amp; Safety</span></a></li><li><a href="../budgets-roadmaps-and-making-the-case/"><i>19</i><span>Budgets, roadmaps and making the case</span></a></li></ol><p class="more-l"><a href="../updates/">What changed recently →</a></p></div></details></div>
+    </div>
+  </div>
+  <p class="legal" role="note"><b>General information, not legal advice.</b> Laws differ by country, change often and apply differently to each service. Check with your own legal team or outside counsel before acting on anything here.</p>
+  <div class="proof"><p class="lbl">In one minute</p><div><b>Start from what your service is, not from a list of laws</b><span>Duties attach to facts: where your users are, what they can do with each other, whether children use it, how big it is and which features it has. Write those facts down first, and the duties follow.</span></div><div><b>Turn every duty into a line with an owner, a process and evidence</b><span>Legal interprets the law. The people who run the process own the proof that it happens. A duty nobody can point to in your operations isn't met, however good the policy reads.</span></div><div><b>Run risk assessments as product work</b><span>Redo them when the product changes, before the launch, not on the anniversary.</span></div><div><b>Build a record that holds up</b><span>One owner for every threshold, and every change written down with the numbers behind it, so you can answer &quot;why this account?&quot; on the day someone asks.</span></div><div><b>Read settlements and court orders as requirements in waiting</b><span>Time limits, overnight restrictions, default feeds and age checks are now written into them, and AI products are in scope too.</span></div><div><b>The mistake to avoid</b><span>Treating compliance as a launch checklist that Legal owns. The question has moved from &quot;do you have a policy?&quot; to &quot;can you prove it works?&quot;, and only the people running the program can prove it.</span></div></div>
+</div>
+<section id="why-it-matters"><div class="wrap"><div class="cs-h"><h2>Why it matters</h2><div class="prose"><p>The era of voluntary safety is ending. Courts, attorneys general and regulators are turning platform promises into binding obligations, and the laws reach a long way. The UK's Online Safety Act applies to any service with a significant number of UK users, that targets UK users, or that can be used in the UK and presents a material risk of significant harm to people there, wherever the company is based (<a href="https://www.legislation.gov.uk/ukpga/2023/50/section/4">section 4</a>). The EU's Digital Services Act (DSA) applies to services offered to people in the EU, wherever the provider is established (<a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Article 2</a>). Fines are sized for large companies: up to 6% of annual worldwide turnover under the DSA (Articles 52 and 74), and up to £18 million or 10% of qualifying worldwide revenue, whichever is greater, under the UK Act (<a href="https://www.legislation.gov.uk/ukpga/2023/50/schedule/13">Schedule 13, paragraph 4</a>). Enforcement has started. In December 2025 the European Commission fined X €120 million in its <a href="https://digital-strategy.ec.europa.eu/en/news/commission-fines-x-eu120-million-under-digital-services-act">first non-compliance decision under the DSA</a>.</p>
+<p>In the US, much of the pressure arrives through courts and attorneys general. In September 2026, TikTok's <a href="https://www.alabamaag.gov/attorney-general-marshall-announces-historic-multi-million-dollar-settlement-with-tiktok/">settlement with Alabama's Attorney General</a> included, according to the Attorney General's announcement, a two-hour daily time limit, restricted night-time access for children from midnight to 6 a.m., and a default non-personalized feed for teens. Rules like these used to be product choices. Now they're terms a company has agreed to and has to show it meets.</p></div></div></div></section>
+<section id="what-good-looks-like"><div class="wrap"><div class="sec-h"><h2>What good looks like</h2><p class="big">What you have, and what you can show, at each stage</p></div><div class="stages"><div><h3>Early</h3><p class="d">A founder or first safety hire covers trust and safety, usually with under a million users.</p><p class="lbl">What you have</p><p class="v">A list of the markets you serve and the laws that apply in each, one named owner for regulatory questions, the basics every service needs running (a way to report illegal content, a notice when you act, CSAM reporting where US law applies), and a first risk assessment if you have UK users.</p><p class="lbl">What you can show</p><p class="v">A one-page service profile and duty map, the date each risk assessment was last reviewed, and every regulator or law enforcement request answered on time.</p></div><div><h3>Growing</h3><p class="d">A dedicated safety team, millions of users, and new markets or features on the way.</p><p class="lbl">What you have</p><p class="v">A duty register with an owner, a process and evidence for each line; risk assessments rerun at design review; a written change log for every threshold; a regulatory check in the launch process; and a regular look at what changed.</p><p class="lbl">What you can show</p><p class="v">The share of duties with current evidence, every required risk assessment in date, illegal-content notice handling time, and statement-of-reasons coverage.</p></div><div><h3>At scale or regulated</h3><p class="d">Tens of millions of users, a heavily regulated sector, or extra duties as a very large platform under EU or UK law.</p><p class="lbl">What you have</p><p class="v">Annual systemic risk assessments and independent audits if you're a very large platform, a compliance function independent of operations, commitments to regulators tracked like roadmap items, and responses to consultations on new rules.</p><p class="lbl">What you can show</p><p class="v">Audit findings closed on schedule, information requests answered without later corrections, mitigations delivered on their dates, and a record that answers &quot;why this account?&quot; for any decision.</p></div></div></div></section>
+<section id="how-to-do-it"><div class="wrap"><div class="sec-h"><h2>How to do it</h2><p class="big">7 steps</p></div><div class="jump-row"><p class="lbl">Jump to a step</p><ol class="jump"><li><a href="#step-1"><i>01</i>Describe your service the way the laws do</a></li><li><a href="#step-2"><i>02</i>Map the duties that follow</a></li><li><a href="#step-3"><i>03</i>Turn the duties into a register with owners</a></li><li><a href="#step-4"><i>04</i>Run risk assessments as product work</a></li><li><a href="#step-5"><i>05</i>Build a record that holds up</a></li><li><a href="#step-6"><i>06</i>Read settlements and court orders as requirements in waiting</a></li><li><a href="#step-7"><i>07</i>Work with Legal and regulators, and keep up</a></li></ol></div><ol class="steps"><li id="step-1"><div><span class="n">Step 01</span><h3>Describe your service the way the laws do</h3></div><div class="prose"><p>Laws don't care what you call your product. They care what it does. Before anyone reads an article of law, write a one-page service profile. Legal and T&amp;S fill it in together, and it changes whenever the product does.</p>
+<div class="tbl"><table><thead><tr><th>Question</th><th>Why it matters</th></tr></thead><tbody><tr><td>Where are your users?</td><td>Most laws reach any service with enough users in their market, or that targets it, wherever the company is based.</td></tr><tr><td>What can users do with content and with each other?</td><td>The EU sorts services into hosting services, online platforms (which share users' content with the public) and others. The UK regulates user-to-user services, search services and pornography providers.</td></tr><tr><td>Can children use it, and how young are they?</td><td>Under-13s bring in the US COPPA Rule, under-16s Australia's social media minimum age, under-18s the UK's children's duties, and minors DSA Article 28 (the DSA doesn't define &quot;minor&quot;, so check with Legal).</td></tr><tr><td>How big is it, in users and in company size?</td><td>The DSA exempts micro and small enterprises from some duties and adds many for very large platforms. The UK adds duties for categorised services.</td></tr><tr><td>Which features does it have?</td><td>Recommendations, ads, direct messages, marketplaces and generative AI each switch on specific duties.</td></tr></tbody></table></div>
+<p>Answer from data, not intent. Under the UK Act, whether a service is likely to be accessed by children turns on whether a significant number of children actually use it, or it's likely to attract them, not on who you built it for. You can only conclude children can't access it if age verification or estimation means they normally can't (<a href="https://www.legislation.gov.uk/ukpga/2023/50/section/35">section 35</a>).</p>
+<p>Ofcom's <a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/check">checker</a> and the Workbench's <a href="https://stevenmacchia.com/ts-workbench/#dsa">compliance readiness</a> tool help with the first pass. Neither is legal advice, but both make a good agenda for your first meeting with counsel.</p></div></li><li id="step-2"><div><span class="n">Step 02</span><h3>Map the duties that follow</h3></div><div class="prose"><p>Once the profile is written, the duties mostly follow from it. These are the four regimes most consumer platforms meet first.</p>
+<p><strong>EU: the Digital Services Act</strong> (<a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Regulation (EU) 2022/2065</a>). Duties stack by tier, and each tier carries everything in the rows above it.</p>
+<div class="tbl"><table><thead><tr><th>If you are</th><th>You add</th><th>Articles</th></tr></thead><tbody><tr><td>Any intermediary service offered in the EU</td><td>Points of contact, a legal representative if you have no EU establishment, clear terms applied diligently and proportionately, and a yearly transparency report</td><td>11 to 15</td></tr><tr><td>A hosting service</td><td>A notice-and-action mechanism, a statement of reasons for every restriction, and prompt reports to the police of suspected crimes that threaten someone's life or safety</td><td>16 to 18</td></tr><tr><td>An online platform</td><td>Internal complaints, out-of-court dispute settlement, priority for trusted flaggers, measures against misuse, user numbers every six months, statements of reasons sent to the Commission's database, no deceptive design, ad and recommender transparency, and protection of minors</td><td>20 to 28</td></tr><tr><td>A very large online platform: 45 million or more average monthly active users in the EU, designated by the Commission</td><td>Yearly systemic risk assessments and mitigation, an independent audit, a feed option not based on profiling, an ad repository, data access for researchers, a compliance function and transparency reports every six months</td><td>33 to 42</td></tr></tbody></table></div>
+<p>Size changes some of this. Micro and small enterprises, broadly fewer than 50 staff and no more than €10 million in turnover or balance sheet (<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361">Recommendation 2003/361/EC</a>), don't have to publish transparency reports (Article 15(2)). They're also exempt from the online platform duties in Articles 20 to 28, except giving their user numbers when asked (Article 19). That platform exemption continues for 12 months after you lose micro or small status, which happens only once you've exceeded the thresholds for two accounting periods in a row, and it never covers a very large platform. Notice and action, and statements of reasons, apply at any size.</p>
+<p><strong>UK: the Online Safety Act 2023</strong> (<a href="https://www.legislation.gov.uk/ukpga/2023/50/contents">legislation.gov.uk</a>). It applies to organizations big and small, with duties proportionate to risk and to the provider's size and capacity (<a href="https://www.gov.uk/government/publications/online-safety-act-explainer/online-safety-act-explainer">GOV.UK explainer</a>). For a user-to-user service:</p>
+<div class="tbl"><table><thead><tr><th>Who</th><th>Duties</th><th>Sections</th></tr></thead><tbody><tr><td>Every regulated user-to-user service</td><td>An illegal content risk assessment, kept up to date and redone before significant changes; proportionate measures to stop users encountering priority illegal content and to take illegal content down swiftly; easy reporting; complaints; regard for freedom of expression and privacy; written records; and a children's access assessment</td><td>9, 10, 20 to 23, 35 to 37</td></tr><tr><td>UK providers, and others for UK-linked content only</td><td>Reporting child sexual exploitation and abuse content detected from 7 April 2026 to the National Crime Agency, unless it's already reported to an equivalent foreign agency such as NCMEC (<a href="../severe-harm-escalations/">chapter 12</a>)</td><td>66</td></tr><tr><td>Services likely to be accessed by children</td><td>A children's risk assessment and measures to protect children, including highly effective age assurance where the service allows the most harmful content, such as pornography or content promoting suicide, self-harm or eating disorders</td><td>11, 12</td></tr><tr><td>Categorised services (Category 1 or 2B on Ofcom's register; 2A is for search and combined services)</td><td>Annual transparency reports to Ofcom's specification, plus further duties by category</td><td>77, 95</td></tr></tbody></table></div>
+<p>Ofcom's codes of practice are the practical route. A service that takes the measures a code recommends is treated as complying with the duty they cover (<a href="https://www.legislation.gov.uk/ukpga/2023/50/section/49">section 49</a>). The illegal content duties have been enforceable since 17 March 2025, and children's protections set out in the codes since 25 July 2025.</p>
+<p><strong>US: the COPPA Rule</strong> (<a href="https://www.law.cornell.edu/cfr/text/16/part-312">16 CFR Part 312</a>). It applies if your service is directed to children under 13, or you know you're collecting personal information from a child under 13 (<a href="https://www.law.cornell.edu/cfr/text/16/312.3">§ 312.3</a>). You need a clear notice, verifiable parental consent before collecting, using or disclosing a child's information, a way for parents to review and delete it, and reasonable security. The FTC's 2025 amendments, in force since 23 June 2025 with compliance due by 22 April 2026, changed definitions, notices and safe harbor rules, and, among other things, added: separate parental consent before disclosing a child's information to third parties, unless that's integral to the service (<a href="https://www.law.cornell.edu/cfr/text/16/312.5">§ 312.5(a)(2)</a>); a written information security program (<a href="https://www.law.cornell.edu/cfr/text/16/312.8">§ 312.8</a>); and a written data retention policy, with no keeping children's data indefinitely (<a href="https://www.law.cornell.edu/cfr/text/16/312.10">§ 312.10</a>). Separately, providers must report apparent child sexual abuse material to NCMEC's CyberTipline under 18 U.S.C. § 2258A (<a href="../severe-harm-escalations/">chapter 12</a>).</p>
+<p><strong>Australia: the Online Safety Act 2021</strong> (<a href="https://www.legislation.gov.au/C2021A00076/latest/text">Federal Register of Legislation</a>). The eSafety Commissioner can issue removal notices, which give you 24 hours to comply unless eSafety allows longer (for example, section 65, for cyberbullying material targeted at a child). Services are measured against the Basic Online Safety Expectations (sections 45 and 46) and can be required to report on how they meet them (sections 49 and 56). Registered industry codes and industry standards set rules for each section of the industry, which eSafety can enforce (sections 140 to 146). Since 10 December 2025, age-restricted social media platforms must take reasonable steps to prevent Australians under 16 from having accounts (Part 4A, section 63D). The Minister's rules exclude messaging, online gaming, professional networking, education and health services (<a href="https://www.infrastructure.gov.au/media-communications/internet/online-safety/social-media-minimum-age">Department of Infrastructure</a>).</p>
+<p>Other markets have their own rules. The abuse pre-mortem's <a href="https://github.com/stevenmacchia/abuse-premortem/blob/main/laws.md">legal obligations list</a> covers 33 obligations in 7 jurisdictions in plain language. Use it as a starting map, and confirm each line with counsel.</p></div></li><li id="step-3"><div><span class="n">Step 03</span><h3>Turn the duties into a register with owners</h3></div><div class="prose"><p>A map tells you what applies. A register tells you who makes it happen and how you'd prove it. Give each duty one row:</p>
+<ul><li>The duty in plain words, with its law and article.</li><li>Why it applies to you: the line in your service profile that brings it in.</li><li>One named owner, not a team.</li><li>The process that delivers it, and where that process is written down.</li><li>The evidence you keep, and where it lives.</li><li>Its status, and the date of the next review.</li></ul>
+<p>T&amp;S owns the processes and the evidence, Product and Engineering build what's missing, and whoever plays the compliance role keeps the register honest. Very large platforms must set up a compliance function independent of operations (<a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Article 41</a>). <a href="../hiring-and-structuring-the-team/">Chapter 8</a> covers where that role sits.</p>
+<p>The test of a row: could its owner show a regulator the evidence within a day? For statements of reasons, that could be a monthly sample of notices checked against the list in DSA Article 17 (<a href="../transparency-reports-and-notices/">chapter 17</a>). For a UK risk assessment, it's the written record section 23 requires. If the answer is no, the row is a gap with a date, not a tick.</p>
+<p>Close gaps in order of consequence: first duties with hard deadlines or that protect people from severe harm, such as child safety reporting and removal notices, then the duties regulators are known to check. The <a href="https://github.com/stevenmacchia/ts-maturity-model/blob/main/maturity-model.md">program maturity model</a> calls a program with every obligation mapped to an owner, a process and evidence &quot;Defined&quot; (level 3), and sets that as the target for regulatory readiness even at the early stage, because the harm is the same whatever your size.</p></div></li><li id="step-4"><div><span class="n">Step 04</span><h3>Run risk assessments as product work</h3></div><div class="prose"><p>Risk assessments are where regulation meets the product. The UK Act requires illegal content and children's risk assessments to be kept up to date, and redone before any significant change to the service's design or operation (<a href="https://www.legislation.gov.uk/ukpga/2023/50/section/9">section 9</a>, <a href="https://www.legislation.gov.uk/ukpga/2023/50/section/11">section 11</a>). It also requires a written record of each one (<a href="https://www.legislation.gov.uk/ukpga/2023/50/section/23">section 23</a>). The DSA requires very large platforms to assess systemic risks at least once a year and before deploying functionality likely to have a critical impact on those risks, and to keep the supporting documents for at least three years (Article 34).</p>
+<p>Ofcom's risk assessment guidance uses four steps that work for any assessment: understand the kinds of harm that could occur, assess the risk of each, decide on measures and record them, then report, review and update.</p>
+<p>The trap is treating the assessment as a document you file. Tie it to design review instead (<a href="../know-your-risks/">chapter 2</a>, <a href="../working-with-product-legal-and-leadership/">chapter 15</a>). When a launch lets strangers contact each other, moves money or items between users, exposes location or changes what minors can do, the abuse pre-mortem at design review starts the risk assessment update. A children's risk assessment last reviewed 14 months ago, before direct messaging launched, needs a review now, not at the next annual cycle. Track the age of the oldest assessment and the share of mitigations overdue.</p></div></li><li id="step-5"><div><span class="n">Step 05</span><h3>Build a record that holds up</h3></div><div class="prose"><p>Every threshold decision gets tested the day a regulator, a parent or a court asks why a specific account was or wasn't restricted. That question is only answerable if:</p>
+<ul><li>One person owned the threshold.</li><li>Every change was written down, with the date, the numbers behind it and who signed it off.</li><li>The decision to report to law enforcement was made by people trained for it.</li></ul>
+<p>Make the record a by-product of the work, not a project at the deadline. Log every decision with its policy, source and timestamps. Keep one change log for thresholds, models and policies. Stamp legal notices the moment they arrive, because regulators start the clock then, not when someone opens them. When a launch goes ahead with a known risk, record who accepted it and when it will be revisited (<a href="../working-with-product-legal-and-leadership/">chapter 15</a>). The <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/data-to-log.md">data to log</a> guide lists the fields.</p>
+<p>Be careful with what you tell regulators. Under the DSA, supplying incorrect, incomplete or misleading information can itself be fined up to 1% of annual income or worldwide turnover (<a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Article 52(3)</a>). A known gap with a remediation plan is a better answer than a figure you'll have to correct later. Treat every commitment you make to a regulator as a roadmap item with an owner and a date, because the follow-up request will test it. And don't count on regulators taking your word for it. Assume every number will be checked.</p></div></li><li id="step-6"><div><span class="n">Step 06</span><h3>Read settlements and court orders as requirements in waiting</h3></div><div class="prose"><p>Not every duty comes from a statute. Settlements and court orders are now writing product requirements, and once one company has agreed to terms, expect other states to ask for the same.</p>
+<ul><li><strong>TikTok and Alabama, September 2026.</strong> A two-hour daily limit for young users that parents can lower, no night-time access from midnight to 6 a.m., a default non-personalized feed for teens, stronger parental controls and more robust age assurance (<a href="https://www.alabamaag.gov/attorney-general-marshall-announces-historic-multi-million-dollar-settlement-with-tiktok/">Alabama Attorney General</a>).</li><li><strong>New Mexico v. Meta, August 2026.</strong> A court ruling on public nuisance, with a $567 million abatement fund on top of the March jury penalty. According to the state's Department of Justice, it orders reforms for five years, including more rigorous age verification for New Mexico users, no push notifications to under-18s overnight, time-use limits for under-18s and semiannual public compliance reports (<a href="https://nmdoj.gov/press-release/court-orders-meta-to-pay-942-million-and-overhaul-protections-for-children-on-facebook-and-instagram-in-landmark-new-mexico-ruling/">New Mexico Department of Justice</a>). Meta has said it will appeal, so treat these as a direction of travel, not settled law.</li></ul>
+<p>When an order lands against any company in your sector, run its terms against your own product as a gap check, and show the result to the person who owns the product outcome. Each term you don't meet becomes a decision made on purpose, not one discovered in a deposition.</p>
+<p>Age assurance is the clearest direction of travel. The UK requires it for the most harmful content. Australia requires reasonable steps to keep under-16s off social media. The DSA lists age verification among the measures very large platforms can take against systemic risk (<a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Article 35(1)(j)</a>). In February 2026, the FTC said it <a href="https://www.ftc.gov/news-events/news/press-releases/2026/02/ftc-issues-coppa-policy-statement-incentivize-use-age-verification-technologies-protect-children">would not bring COPPA enforcement</a> against general-audience and mixed-audience operators that collect information solely to determine age, if they meet conditions such as using it only for that purpose and deleting it promptly. It's a statement of enforcement discretion until the Rule is amended, and it doesn't bind state attorneys general or private plaintiffs. Every other safeguard assumes you know who's a child (<a href="../child-safety-and-age-assurance/">chapter 6</a>).</p>
+<p>AI products are in scope too. In September 2025 the FTC <a href="https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions">ordered seven companies</a> running AI chatbots to explain how they test for and limit harm to children and teens. California's <a href="https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243">SB 243</a> requires companion chatbot operators to tell users the chatbot is AI where they could think it's human, keep a protocol for suicidal ideation and self-harm, and add protections for users they know are minors. AI age gating and safety evaluations need the same rigor as feeds. <a href="../ai-in-trust-and-safety/">Chapter 18</a> covers the AI-specific laws.</p></div></li><li id="step-7"><div><span class="n">Step 07</span><h3>Work with Legal and regulators, and keep up</h3></div><div class="prose"><p>Agree who decides what before the first letter arrives. Legal advises on what the law requires, decides how much legal risk to take and protects privileged advice. T&amp;S owns the facts, the processes and the evidence. The person who owns the product outcome signs off any risk the company accepts.</p>
+<p>When a regulator sends a request for information, treat it as a data problem that Legal packages. Name one owner on day one, map every question to a data source, and say early where your data has gaps. Deadlines are short, so know where your data lives before the request arrives.</p>
+<p>Keep up on a schedule, for example monthly, not when the news breaks. Take each change (a new law, guidance or code, an enforcement decision, a settlement) and ask: does it touch our service profile, which register lines does it change, who owns that, and by when? Reread the whole profile quarterly or so, and before entering a new market.</p>
+<p>By stage:</p>
+<ul><li><strong>Early.</strong> The founder or first safety hire owns the list, with outside counsel for the questions that matter. Get reporting, notices and child safety reporting running before launch in each market.</li><li><strong>Growing.</strong> A named compliance owner in or beside T&amp;S keeps the register, and a regulatory check sits in the launch process.</li><li><strong>At scale or regulated.</strong> A compliance function, audits and a standing relationship with each regulator. Respond to consultations, because you'll know where a draft won't work in practice.</li></ul></div></li></ol></div></section>
+<section id="mistakes-to-avoid"><div class="wrap"><div class="sec-h"><h2>Mistakes to avoid</h2><p class="big">And what to do instead</p></div><ol class="rows"><li><i>01</i><h3>Starting from the list of laws</h3><p>Start from your service profile, and let the duties follow from it.</p></li><li><i>02</i><h3>Assuming you're too small or too far away</h3><p>The UK Act applies to services of every size, and both the UK and EU laws reach companies based elsewhere. The DSA's small-company exemption covers some duties, not notice and action or statements of reasons.</p></li><li><i>03</i><h3>Letting Legal own compliance alone</h3><p>Legal interprets the law. The people who run each process own the evidence that it happens.</p></li><li><i>04</i><h3>Writing the risk assessment once</h3><p>Redo it at design review for any significant change, and track how old each one is.</p></li><li><i>05</i><h3>Changing thresholds without writing it down</h3><p>One owner, a change log and the numbers behind every change.</p></li><li><i>06</i><h3>Giving a regulator a number you can't stand behind</h3><p>Say what you don't know, and when you will.</p></li><li><i>07</i><h3>Ignoring other companies' settlements</h3><p>Run their terms against your product before someone asks you to.</p></li></ol></div></section>
+<section id="start-from-this-template"><div class="wrap"><div class="sec-h"><h2>Start from this template</h2><p class="big">Copy it, fill it in, make it yours</p></div><div class="tpl"><p class="lbl">Template</p><h3>Service profile</h3><p>Fill it in with Legal, and update it whenever the product changes.</p><div class="tbl"><table><thead><tr><th>Question</th><th>Your answer</th><th>Duties it brings in</th></tr></thead><tbody><tr><td>Markets where you have users, and markets you target</td><td></td><td></td></tr><tr><td>What users can do with content and with each other</td><td></td><td></td></tr><tr><td>Youngest users, and how you know</td><td></td><td></td></tr><tr><td>Average monthly active users in the EU, and company size</td><td></td><td></td></tr><tr><td>UK users, and Ofcom category if any</td><td></td><td></td></tr><tr><td>Recommendations, ads, messaging, marketplace, generative AI</td><td></td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Duty register</h3><p>One row per duty. Two example rows to start from.</p><div class="tbl"><table><thead><tr><th>Duty</th><th>Law and article</th><th>Applies because</th><th>Owner</th><th>Process</th><th>Evidence</th><th>Next review</th></tr></thead><tbody><tr><td>A statement of reasons for every restriction</td><td>DSA Article 17</td><td>Hosting service with EU users</td><td></td><td>Notice templates for each policy</td><td>Monthly sample of 100 notices checked against Article 17(3)</td><td></td></tr><tr><td>Children's risk assessment</td><td>Online Safety Act, sections 11 and 23</td><td>Likely to be accessed by children in the UK</td><td></td><td>Rerun at design review for significant changes</td><td>Written record and last review date</td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Monthly regulatory review</h3><p>One page: what changed this month (laws, guidance, codes, enforcement decisions, settlements), whether each change touches your service profile, the register lines added or changed with owners and dates, risk assessments due for review, open requests from regulators and law enforcement, and commitments made to regulators with their status.</p></div></div></section>
+<section id="do-it-with"><div class="wrap"><div class="sec-h"><h2>Do it with</h2><p class="big">Free tools and metrics that go with this chapter</p></div><div class="cards"><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#dsa">Compliance readiness</a></h3><p>Find which duties under the EU Digital Services Act and the US COPPA Rule apply, article by article.</p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#coppa">COPPA readiness</a></h3><p>Check a service against the US COPPA Rule's duties for children under 13.</p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#maturity">Program maturity</a></h3><p>Rate regulatory readiness and seven other areas against the targets for your stage, and get a phased roadmap. <a href="https://github.com/stevenmacchia/ts-maturity-model">Open content</a></p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#tabletop">Incident tabletop</a></h3><p>Rehearse <a href="https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/newlaw.md">The age gate countdown</a> (UK children's duties 90 days before launch) and <a href="https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/rfi.md">The regulator's request</a> (an EU information request with ten working days to answer).</p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/systemic-risk-assessment-currency.md">Systemic-risk assessment currency</a></h3><p>How long since each required risk assessment was reviewed, and how many of its mitigations are overdue.</p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/illegal-content-notice-handling-time.md">Illegal-content notice handling time</a></h3><p>How fast formal notices of illegal content get a decision, split by who sent them.</p></div><div class="card"><span class="k">Reference</span><h3><a href="https://github.com/stevenmacchia/abuse-premortem/blob/main/laws.md">Legal obligations</a></h3><p>33 obligations in 7 jurisdictions, from the abuse pre-mortem.</p></div></div></div></section>
+<section id="further-reading"><div class="wrap"><div class="sec-h"><h2>Further reading</h2><p class="big">Steven's posts on this topic, and sources worth the time</p></div><p class="lbl sub-h">From Steven's writing · 3 posts</p><ol class="posts"><li><div><time datetime="2026-10-03">Oct 3, 2026</time><span class="k">Reading roundup</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-gamingsafety-share-7512121016282882048-B4fp/">Saturday reading: child safety gaps in games, Ofcom in court and California's new laws</a></h3><p>Australia's eSafety found Fortnite and Minecraft still mostly rely on self-declared age. Age assurance is the foundation, because every other safeguard assumes you know who's a kid.</p><p class="meta">Also in: <a href="../child-safety-and-age-assurance/">6. Child safety and age assurance</a></p></div></li><li><div><time datetime="2026-09-29">Sep 29, 2026</time><span class="k">Reading roundup</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-onlinesafety-share-7510666169993805824-VI4v/">The era of voluntary child safety is ending</a></h3><p>India's push for age checks, Florida's case against OpenAI, Copilot data labeling, TikTok's Alabama settlement and Meta's New Mexico verdict. The question has moved from &quot;do you have a policy?&quot; to &quot;can you prove it works?&quot;</p><p class="meta">Also in: <a href="../moderator-wellbeing/">14. Moderator wellbeing</a>, <a href="../working-with-product-legal-and-leadership/">15. Working with Product, Legal, Comms and leadership</a>, <a href="../ai-in-trust-and-safety/">18. AI in Trust &amp; Safety</a></p></div></li><li><div><time datetime="2026-09-28">Sep 28, 2026</time><span class="k">Essay</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_games-have-become-one-of-the-main-places-share-7510446882154864641-n3PV/">Games are where kids socialize now, and regulators know it</a></h3><p>Grooming builds over weeks and usually moves off-platform. Protections that work act earlier and limit who can reach a child. Measure prevented contact, not just removals.</p><p class="meta">Also in: <a href="../detection-and-prevention/">5. Detection and prevention</a>, <a href="../child-safety-and-age-assurance/">6. Child safety and age assurance</a></p></div></li></ol><p class="lbl sub-h">Outside sources</p><ul class="src"><li><a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Regulation (EU) 2022/2065, the Digital Services Act</a><span>the official text. Articles 11 to 42 set out the duties, tier by tier.</span></li><li><a href="https://www.legislation.gov.uk/ukpga/2023/50/contents">Online Safety Act 2023</a><span>the UK Act as amended, on legislation.gov.uk.</span></li><li><a href="https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/check">Ofcom: Check if the Online Safety Act applies to you</a><span>the regulator's ten-minute checker for whether your service is in scope.</span></li><li><a href="https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions">FTC: Complying with COPPA, frequently asked questions</a><span>the FTC's own guidance on the COPPA Rule, flagged for the 2025 amendments.</span></li><li><a href="https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions">eSafety: Social media age restrictions</a><span>which platforms Australia's under-16 rule covers, what's excluded and what eSafety expects.</span></li></ul></div></section>
+<section id="changes"><div class="wrap"><div class="sec-h"><h2>Recent changes</h2><div><p class="big">3 changes to this chapter, newest first</p><p class="intro">The <a href="../updates/">updates page</a> has every change to the handbook, by date.</p></div></div><ol class="log"><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 18 other chapters</span><p>Practical advice that varies by platform, such as cadences, sample sizes, targets and who owns what, is now set out as options with examples, so each team can choose what fits.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Drafted</span><span class="ch">With 17 other chapters</span><p>First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Added</span><span class="ch">With 14 other chapters</span><p>Linked the first 16 posts to the chapters they inform, and set out the ten principles behind the handbook.</p></div></li></ol></div></section>
+<section><div class="wrap"><nav class="pn" aria-label="Chapters"><a href="../working-with-product-legal-and-leadership/"><span>← Chapter 15</span><b>Working with Product, Legal, Comms and leadership</b></a><a class="next" href="../transparency-reports-and-notices/"><span>Chapter 17 →</span><b>Transparency reports and enforcement notices</b></a></nav></div></section>
+</div>
+</main>
+<footer><div class="wrap"><h2>Get in touch.</h2><div class="c"><a href="mailto:stevenamacchia@gmail.com">stevenamacchia@gmail.com</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Resume</a></div><div class="fine"><span>© 2026 Steven Macchia · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://github.com/stevenmacchia/ts-handbook">Source</a> · <a href="../updates/">Updates</a></span><span>Written with AI-assisted drafting · Not legal advice: check with your own legal team · Visits counted without cookies</span></div></div></footer>
+</body>
+</html>

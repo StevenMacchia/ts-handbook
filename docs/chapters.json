@@ -1,0 +1,222 @@
+{
+ "generated": "2026-10-04",
+ "handbook": "https://stevenmacchia.com/ts-handbook/",
+ "updates": "https://stevenmacchia.com/ts-handbook/updates/",
+ "parts": [
+  "Before the first hire",
+  "Build",
+  "Run",
+  "Scale and govern"
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "slug": "what-trust-and-safety-is-for",
+   "title": "What Trust & Safety is for",
+   "question": "What is this function for, and how do you know it's working?",
+   "part": 1,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 3,
+   "url": "https://stevenmacchia.com/ts-handbook/what-trust-and-safety-is-for/"
+  },
+  {
+   "n": 2,
+   "slug": "know-your-risks",
+   "title": "Know your risks",
+   "question": "How will people misuse this product, and which harms should you tackle first?",
+   "part": 1,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 2,
+   "url": "https://stevenmacchia.com/ts-handbook/know-your-risks/"
+  },
+  {
+   "n": 3,
+   "slug": "the-first-90-days",
+   "title": "The first 90 days",
+   "question": "You're the first safety hire. What do you do first?",
+   "part": 1,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 0,
+   "url": "https://stevenmacchia.com/ts-handbook/the-first-90-days/"
+  },
+  {
+   "n": 4,
+   "slug": "writing-policy",
+   "title": "Writing policy and an enforcement ladder",
+   "question": "How do you write rules people can follow and reviewers can apply the same way?",
+   "part": 2,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 1,
+   "url": "https://stevenmacchia.com/ts-handbook/writing-policy/"
+  },
+  {
+   "n": 5,
+   "slug": "detection-and-prevention",
+   "title": "Detection and prevention",
+   "question": "How do you find harm before users have to report it, and stop it before it happens?",
+   "part": 2,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 6,
+   "url": "https://stevenmacchia.com/ts-handbook/detection-and-prevention/"
+  },
+  {
+   "n": 6,
+   "slug": "child-safety-and-age-assurance",
+   "title": "Child safety and age assurance",
+   "question": "How do you keep children safe on a product adults use too?",
+   "part": 2,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 7,
+   "url": "https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/"
+  },
+  {
+   "n": 7,
+   "slug": "review-operations",
+   "title": "Standing up review operations",
+   "question": "How do you build a review operation that's fast, consistent and affordable?",
+   "part": 2,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 3,
+   "url": "https://stevenmacchia.com/ts-handbook/review-operations/"
+  },
+  {
+   "n": 8,
+   "slug": "hiring-and-structuring-the-team",
+   "title": "Hiring and structuring the team",
+   "question": "Who do you hire, in what order, and where should the team report?",
+   "part": 2,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 1,
+   "url": "https://stevenmacchia.com/ts-handbook/hiring-and-structuring-the-team/"
+  },
+  {
+   "n": 9,
+   "slug": "choosing-vendors-and-tools",
+   "title": "Choosing vendors and tools",
+   "question": "When should you buy, build or use open source, and how do you choose?",
+   "part": 2,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 0,
+   "url": "https://stevenmacchia.com/ts-handbook/choosing-vendors-and-tools/"
+  },
+  {
+   "n": 10,
+   "slug": "quality-calibration-and-appeals",
+   "title": "Quality, calibration and appeals",
+   "question": "How do you know decisions are right, and fix them when they aren't?",
+   "part": 3,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 1,
+   "url": "https://stevenmacchia.com/ts-handbook/quality-calibration-and-appeals/"
+  },
+  {
+   "n": 11,
+   "slug": "measuring-what-matters",
+   "title": "Measuring what matters",
+   "question": "Is the program making people safer, and how would you prove it?",
+   "part": 3,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 3,
+   "url": "https://stevenmacchia.com/ts-handbook/measuring-what-matters/"
+  },
+  {
+   "n": 12,
+   "slug": "severe-harm-escalations",
+   "title": "Severe harm escalations",
+   "question": "What happens in the first hour after you find child sexual abuse material, a threat to life or a request from law enforcement?",
+   "part": 3,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 1,
+   "url": "https://stevenmacchia.com/ts-handbook/severe-harm-escalations/"
+  },
+  {
+   "n": 13,
+   "slug": "crisis-response",
+   "title": "Crisis response",
+   "question": "When something goes badly wrong in public, who decides what, and how fast?",
+   "part": 3,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 1,
+   "url": "https://stevenmacchia.com/ts-handbook/crisis-response/"
+  },
+  {
+   "n": 14,
+   "slug": "moderator-wellbeing",
+   "title": "Moderator wellbeing",
+   "question": "How do you protect the people who look at the worst content?",
+   "part": 3,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 2,
+   "url": "https://stevenmacchia.com/ts-handbook/moderator-wellbeing/"
+  },
+  {
+   "n": 15,
+   "slug": "working-with-product-legal-and-leadership",
+   "title": "Working with Product, Legal, Comms and leadership",
+   "question": "How do you get safety built in rather than bolted on?",
+   "part": 3,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 3,
+   "url": "https://stevenmacchia.com/ts-handbook/working-with-product-legal-and-leadership/"
+  },
+  {
+   "n": 16,
+   "slug": "regulation-and-compliance",
+   "title": "Regulation and compliance",
+   "question": "Which laws apply to your service, and what do they make you do?",
+   "part": 4,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 3,
+   "url": "https://stevenmacchia.com/ts-handbook/regulation-and-compliance/"
+  },
+  {
+   "n": 17,
+   "slug": "transparency-reports-and-notices",
+   "title": "Transparency reports and enforcement notices",
+   "question": "How do you explain your decisions to users and the public?",
+   "part": 4,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 0,
+   "url": "https://stevenmacchia.com/ts-handbook/transparency-reports-and-notices/"
+  },
+  {
+   "n": 18,
+   "slug": "ai-in-trust-and-safety",
+   "title": "AI in Trust & Safety",
+   "question": "Where does AI help moderation, and how do you keep AI products safe?",
+   "part": 4,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 3,
+   "url": "https://stevenmacchia.com/ts-handbook/ai-in-trust-and-safety/"
+  },
+  {
+   "n": 19,
+   "slug": "budgets-roadmaps-and-making-the-case",
+   "title": "Budgets, roadmaps and making the case",
+   "question": "How do you get the people and money the program needs?",
+   "part": 4,
+   "status": "Draft",
+   "updated": "2026-10-04",
+   "posts": 2,
+   "url": "https://stevenmacchia.com/ts-handbook/budgets-roadmaps-and-making-the-case/"
+  }
+ ]
+}

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>14. Moderator wellbeing · The T&amp;S Handbook</title>
+<meta name="description" content="How do you protect the people who look at the worst content?">
+<meta name="author" content="Steven Macchia">
+<link rel="canonical" href="https://stevenmacchia.com/ts-handbook/moderator-wellbeing/">
+<link rel="alternate" type="application/atom+xml" title="The T&amp;S Handbook: updates" href="https://stevenmacchia.com/ts-handbook/updates/feed.xml">
+<meta property="og:type" content="article"><meta property="og:title" content="14. Moderator wellbeing · The T&amp;S Handbook"><meta property="og:description" content="How do you protect the people who look at the worst content?">
+<meta property="og:url" content="https://stevenmacchia.com/ts-handbook/moderator-wellbeing/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+summary:focus-visible{border-radius:2px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1152px;margin:0 auto;padding:0 32px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.05}
+.top{display:flex;align-items:center;gap:28px;height:64px;border-bottom:1px solid var(--line)}
+.top .mark{width:12px;height:12px;background:var(--ink);flex:none}
+.top .name{font-weight:600;margin-right:auto}
+.top a{color:var(--ink);text-decoration:none;font-size:15px}
+.top a:hover{text-decoration:underline}
+.top a[aria-current="page"]{font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:4px;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn:hover{background:var(--panel);text-decoration:none}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#2a2a2a}
+.top .btn{padding:8px 14px;font-size:14px}
+.lbl{font-size:13px;color:var(--muted);font-weight:500;margin:0}
+.lbl a{color:inherit}
+h3.lbl{letter-spacing:0;line-height:1.55}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:end;padding:88px 0 56px}
+.hero h1{font-size:clamp(44px,6.5vw,80px);margin-top:18px}
+.lead{margin:22px 0 0;font-size:clamp(18px,2.2vw,21px);line-height:1.45;max-width:44ch}
+.sub{margin:14px 0 0;font-size:17px;color:var(--muted);max-width:58ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:30px}
+.cta .go{margin-left:8px;font-weight:500}
+.open{border-top:1px solid var(--ink);padding-top:14px;font-size:14.5px;display:grid;gap:8px}
+.open .sq{display:inline-block;width:8px;height:8px;background:var(--good);margin-right:9px}
+.open span{color:var(--muted)}
+.open .mono{font-size:12.5px}
+/* Grid children must be allowed to shrink, or a wide table inside a step widens the page on phones */
+.steps>li>*,.cs-h>*,.stages>*{min-width:0}
+.legal{margin:0 0 32px;padding:14px 18px;background:var(--panel);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;font-size:15px;line-height:1.5;max-width:86ch}
+.legal b{font-weight:600}
+.hh .legal{margin:16px 0 0;font-size:14px}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0 72px;border-top:1px solid var(--line)}
+.proof div{display:grid;gap:4px;font-size:14.5px}
+.proof b{font-weight:600}
+.proof span{color:var(--muted)}
+section{padding:0 0 88px}
+.sec-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:end;padding-top:28px;border-top:1px solid var(--ink);margin-bottom:28px}
+h2{font-size:36px}
+.sec-h p{margin:0}
+.sec-h .big{font-size:19px;font-weight:500}
+.sec-h .intro{margin-top:10px;color:var(--muted);max-width:72ch}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.5fr);gap:32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows li>*{min-width:0}
+.rows i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:2px}
+.rows h3{font-size:17px;line-height:1.35;letter-spacing:-.01em}
+.rows p{margin:0;color:var(--muted);font-size:15px}
+.rows .from{display:block;margin-top:8px;font-size:13.5px}
+.rows .from a{text-decoration:none}
+.rows .from a:hover{text-decoration:underline}
+/* Home: a short hero, then the contents as the main column with a sidebar beside them */
+.hh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 64px;align-items:end;padding:56px 0 36px}
+.hh h1{font-size:clamp(40px,5.5vw,64px);margin-top:14px}
+.hh .lead{margin-top:16px;max-width:46ch}
+.hh .sub{margin-top:10px;font-size:16px;max-width:60ch}
+.hh .cta{margin-top:24px}
+.status{margin:0;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;line-height:1.7;color:var(--muted);text-align:right;white-space:nowrap}
+.status .sq{display:inline-block;width:8px;height:8px;background:var(--ink);margin-right:8px;vertical-align:1px}
+.status .sq.outline{background:var(--strong)}
+.status .sq.published{background:var(--good)}
+.home{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 64px;border-top:1px solid var(--ink);padding-top:24px}
+.home>*{min-width:0}
+.home>section{padding-bottom:80px;scroll-margin-top:16px}
+.ch-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px}
+.ch-h .intro{margin:0;color:var(--muted);font-size:15px}
+.part{margin:28px 0 0}
+.part:first-of-type{margin-top:0}
+.part h3.ph{display:flex;align-items:baseline;gap:12px;font-size:16px;font-weight:600;letter-spacing:0;line-height:1.3;margin:0 0 8px}
+.ph i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;flex:none}
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.toc li{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.toc li>*{min-width:0}
+.toc i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:3px}
+.toc .t{font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.toc .t a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.toc .t a::after{content:"";position:absolute;inset:0}
+.toc li:hover .t a{text-decoration-color:var(--ink)}
+.toc li:hover i{color:var(--ink)}
+.toc .q{grid-column:2;margin:0;color:var(--muted);font-size:14.5px;line-height:1.45}
+.toc .st{grid-column:3;grid-row:1/3;align-self:start;display:grid;gap:3px;justify-items:end;padding-top:3px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+.toc .st.published{color:var(--good)}
+.filters{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;flex-basis:100%;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted)}
+.filters button{border:0;background:none;padding:0;margin:0;color:var(--muted);font:inherit;cursor:pointer;text-underline-offset:3px}
+.filters button:hover{color:var(--ink);text-decoration:underline}
+.filters button[aria-pressed="true"]{color:var(--ink);text-decoration:underline}
+.side{align-self:start;position:sticky;top:24px;display:grid;gap:32px;padding-bottom:80px}
+.sb .lbl{margin-bottom:6px}
+.sl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.sl li{display:grid;gap:3px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.4}
+.sl li>*{min-width:0}
+.sl a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px;font-weight:500;overflow-wrap:anywhere}
+.sl a:hover{text-decoration-color:var(--ink)}
+.sl time,.sl .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.sl.up li{grid-template-columns:48px minmax(0,1fr);gap:0 12px;align-items:baseline;font-size:14.5px}
+.sl.up time{padding-top:1px}
+.side .more{margin-top:10px;font-size:14.5px}
+.side .more a+a{margin-left:14px}
+.pr2{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;align-items:start}
+.pr{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pr li{border-bottom:1px solid var(--line)}
+.pr summary{display:grid;grid-template-columns:36px minmax(0,1fr) 14px;gap:12px;align-items:baseline;padding:11px 0;cursor:pointer;list-style:none;font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.01em}
+.pr summary::-webkit-details-marker{display:none}
+.pr summary i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;font-weight:400;color:var(--muted)}
+.pr summary::after{content:"▾";color:var(--muted);text-align:right}
+.pr details[open] summary::after{content:"▴"}
+.pr summary:hover{color:var(--blue)}
+.pr .pb{padding:0 0 14px 48px;color:var(--muted);font-size:15px;line-height:1.5}
+.pr .pb p{margin:0}
+.pr .from{display:block;margin-top:6px;font-size:13.5px}
+.pr .from a{text-decoration:none}
+.pr .from a:hover{text-decoration:underline}
+.ctl{margin:10px 0 0}
+.ctl button{border:0;background:none;padding:0;margin:0;font:inherit;font-size:14.5px;font-weight:500;color:var(--blue);cursor:pointer}
+.ctl button:hover{text-decoration:underline}
+.st3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.st3 div{display:grid;gap:3px;align-content:start;font-size:14.5px}
+.st3 b{font-weight:600}
+.st3 span{color:var(--muted)}
+.row2{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:32px}
+.row2 ul{margin:0;padding-left:20px;display:grid;gap:6px;max-width:70ch}
+.row2 p{margin:0 0 10px;max-width:70ch}
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px;align-items:start}
+.feed .lbl{margin-bottom:8px}
+.log{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.log>li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.log>li>*{min-width:0}
+.log time,.posts time{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);padding-top:3px;white-space:nowrap}
+.log .k,.posts .k{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.log .k{margin-bottom:4px}
+.posts .k{margin-top:4px}
+.log .ch{display:block;font-weight:500;line-height:1.35}
+.log .ch a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.log .ch a:hover{text-decoration-color:var(--ink)}
+.log p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.log .meta,.posts .meta{font-size:13.5px}
+.log .meta a,.posts .meta a{text-decoration:none}
+.log .meta a:hover,.posts .meta a:hover{text-decoration:underline}
+.log ol{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.feed .log>li,.feed .posts li{grid-template-columns:64px minmax(0,1fr);gap:20px}
+.more{margin:16px 0 0;font-size:15px;font-weight:500}
+.more a{text-decoration:none}
+.more a:hover{text-decoration:underline}
+.ch-page section{padding-bottom:72px}
+.ch-page .sec-h h2,.cs-h h2{font-size:32px;line-height:1.08}
+.ch-hero{padding:72px 0 48px}
+.ch-hero h1{font-size:clamp(40px,5.5vw,68px)}
+.ch-hero .lead{max-width:40ch}
+.open .sq.outline{background:var(--strong)}
+.open .sq.draft{background:var(--ink)}
+.toc-d summary{cursor:pointer;color:var(--blue);font-weight:500;list-style:none}
+.toc-d summary::-webkit-details-marker{display:none}
+.toc-d summary::after{content:" ▾"}
+.toc-d[open] summary::after{content:" ▴"}
+.toc-list{margin-top:10px;font-size:14px;max-height:420px;overflow:auto;border-top:1px solid var(--line);padding-top:4px}
+.toc-list p{margin:12px 0 4px;font-weight:600;font-size:13px;color:var(--ink)}
+.toc-list ol{list-style:none;margin:0;padding:0}
+.toc-list a{display:flex;gap:10px;padding:3px 0;color:var(--muted);text-decoration:none;line-height:1.35}
+.toc-list a:hover{color:var(--ink);text-decoration:underline}
+.toc-list a i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;width:18px;flex:none;padding-top:1px}
+.toc-list a[aria-current="page"]{color:var(--ink);font-weight:600}
+.toc-list .more-l{margin:14px 0 6px;font-weight:500;border-top:1px solid var(--line);padding-top:10px}
+.toc-list .more-l a{display:inline;padding:0;color:var(--blue)}
+.proof .lbl{grid-column:1/-1}
+.proof div{align-content:start}
+.cs-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:28px;border-top:1px solid var(--ink)}
+.prose{max-width:72ch}
+.prose p,.prose li{font-size:17px;line-height:1.65}
+.prose p{margin:0 0 16px}
+.prose>:last-child{margin-bottom:0}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:20px}
+.prose li{margin:6px 0}
+.prose li::marker{color:var(--muted)}
+.prose h3,.prose h4{font-size:17px;letter-spacing:-.01em;line-height:1.3;margin:24px 0 8px}
+.prose blockquote{margin:20px 0;padding:2px 0 2px 18px;border-left:3px solid var(--ink)}
+.prose code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em;background:var(--panel);padding:1px 5px;border-radius:3px}
+.prose pre{background:var(--panel);padding:16px;border-radius:4px;overflow:auto}
+.prose pre code{background:none;padding:0}
+.prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.prose a,.src a,.posts h3 a,.posts h4 a,.log .ch a{overflow-wrap:anywhere}
+.tbl{overflow-x:auto;margin:4px 0 20px}
+.tbl table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.tbl th{text-align:left;vertical-align:bottom;font-size:13px;font-weight:500;color:var(--muted);padding:0 16px 10px 0;border-bottom:1px solid var(--ink)}
+.tbl td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
+.tbl td:first-child{font-weight:500}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;background:var(--panel);border-radius:4px;padding:32px}
+.stages h3{font-size:20px;line-height:1.2}
+.stages .d{margin:8px 0 0;color:var(--muted);font-size:14px}
+.stages .lbl{margin:22px 0 6px}
+.stages .v{margin:0;font-size:15px}
+.jump-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;margin:-6px 0 28px}
+.jump{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px}
+.jump a{color:var(--muted);text-decoration:none}
+.jump a:hover{color:var(--ink);text-decoration:underline}
+.jump i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;margin-right:7px}
+.steps{list-style:none;margin:0;padding:0}
+.steps>li{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.steps>li:first-child{padding-top:4px}
+.steps .n{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);margin-bottom:10px}
+.steps h3{font-size:22px;line-height:1.2;letter-spacing:-.02em}
+.tpl{background:var(--panel);border-radius:4px;padding:24px 28px;margin:0 0 16px}
+.tpl .lbl{margin:0 0 6px}
+.tpl h3{font-size:18px;line-height:1.3;margin:0 0 6px}
+.tpl>p:not(.lbl){margin:0 0 14px;color:var(--muted);font-size:15px;max-width:72ch}
+.tpl .tbl{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{display:grid;gap:6px;align-content:start;padding:18px 20px;border:1px solid var(--line);border-radius:4px;min-width:0}
+.card .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.card h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+.card h3 a,.posts h3 a,.posts h4 a,.src a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.card h3 a:hover,.posts h3 a:hover,.posts h4 a:hover,.src a:hover{text-decoration-color:var(--ink)}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.posts li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.posts li>*{min-width:0}
+.posts h3,.posts h4{font-size:17px;line-height:1.35;letter-spacing:-.01em;margin:0;font-weight:600}
+.posts p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.more-d{margin:0}
+.more-d summary{list-style:none;cursor:pointer;color:var(--blue);font-weight:500;font-size:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.more-d summary::-webkit-details-marker{display:none}
+.more-d summary::after{content:" ▾"}
+.more-d[open] summary::after{content:" ▴"}
+.more-d[open] summary{border-bottom:0}
+.sub-h{margin:36px 0 10px}
+.sub-h:first-of-type{margin-top:0}
+.src{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.src li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:32px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.src li span{color:var(--muted)}
+.src a{font-weight:500}
+.cover li{grid-template-columns:56px minmax(0,1fr)}
+.cover p{color:var(--ink);font-size:16px}
+.story{background:var(--panel);border-radius:4px;padding:28px 32px}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pn a{display:grid;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;min-width:0}
+.pn a:hover{background:var(--panel)}
+.pn a span{font-size:13px;color:var(--muted)}
+.pn a b{font-weight:600;line-height:1.3}
+.pn .next{text-align:right;grid-column:2}
+footer{background:var(--ink);color:#fff;padding:56px 0}
+footer .wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:baseline}
+footer h2{color:#fff}
+footer .c{display:flex;flex-wrap:wrap;gap:22px;font-size:17px}
+footer .c a{color:#fff}
+footer .fine{grid-column:1/-1;margin-top:28px;font-size:13px;color:#A8A6A1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .fine a{color:#A8A6A1}
+footer :focus-visible{outline-color:#fff}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}.hh{grid-template-columns:1fr;gap:18px;padding:40px 0 28px}.status{text-align:left;white-space:normal}.home{grid-template-columns:1fr;padding-top:20px}.home>section{padding-bottom:48px}.side{position:static;padding-bottom:56px}.proof{grid-template-columns:1fr;gap:16px;padding-bottom:48px}.sec-h,.row2,.cs-h,.steps>li,.jump-row,footer .wrap{grid-template-columns:1fr;gap:16px}.jump-row{gap:8px;margin:-4px 0 20px}.rows li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px}.rows li>:nth-child(n+3){grid-column:2}.toc li{grid-template-columns:34px minmax(0,1fr);gap:2px 12px}.toc .st{grid-column:2;grid-row:auto;display:flex;gap:12px;justify-items:start;padding-top:4px}.pr2,.st3{grid-template-columns:1fr}.pr2{gap:0}.pr+.pr{border-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top a.name{display:inline}.top .btn{margin-left:auto}section,.ch-page section{padding-bottom:56px}.ch-hero{padding:40px 0 32px}.stages{grid-template-columns:1fr;gap:28px;padding:22px}.cards{grid-template-columns:1fr}.feed{grid-template-columns:1fr;gap:40px}.posts li,.src li,.log>li,.feed .log>li,.feed .posts li{grid-template-columns:1fr;gap:4px}.posts time,.log time{padding-top:0}.posts .k{display:inline;margin:0 0 0 10px}.steps>li{gap:12px;padding:24px 0}.pn{grid-template-columns:1fr}.pn .next{grid-column:1;text-align:left}}
+@media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
+@media (max-height:640px){.side{position:static}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav class="top"><span class="mark" aria-hidden="true"></span><a class="name" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a href="../" aria-current="page">Handbook</a><a href="https://stevenmacchia.com/writing/">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Download resume</a></nav></div></header>
+<main>
+<div class="ch-page">
+<div class="wrap">
+  <div class="hero ch-hero">
+    <div>
+      <p class="lbl"><a href="../">The T&amp;S Handbook</a> · Part 3: Run</p>
+      <h1>Moderator wellbeing</h1>
+      <p class="lead">How do you protect the people who look at the worst content?</p>
+    </div>
+    <div>
+      <div class="open"><div><i class="sq draft" aria-hidden="true"></i><b>Draft: written, not yet reviewed</b></div><span>Chapter 14 of 19 · About 14 minutes</span><span>Updated Oct 4, 2026 · <a href="#changes">What changed</a></span><details class="toc-d"><summary>All chapters</summary><div class="toc-list"><p>Part 1: Before the first hire</p><ol><li><a href="../what-trust-and-safety-is-for/"><i>1</i><span>What Trust &amp; Safety is for</span></a></li><li><a href="../know-your-risks/"><i>2</i><span>Know your risks</span></a></li><li><a href="../the-first-90-days/"><i>3</i><span>The first 90 days</span></a></li></ol><p>Part 2: Build</p><ol><li><a href="../writing-policy/"><i>4</i><span>Writing policy and an enforcement ladder</span></a></li><li><a href="../detection-and-prevention/"><i>5</i><span>Detection and prevention</span></a></li><li><a href="../child-safety-and-age-assurance/"><i>6</i><span>Child safety and age assurance</span></a></li><li><a href="../review-operations/"><i>7</i><span>Standing up review operations</span></a></li><li><a href="../hiring-and-structuring-the-team/"><i>8</i><span>Hiring and structuring the team</span></a></li><li><a href="../choosing-vendors-and-tools/"><i>9</i><span>Choosing vendors and tools</span></a></li></ol><p>Part 3: Run</p><ol><li><a href="../quality-calibration-and-appeals/"><i>10</i><span>Quality, calibration and appeals</span></a></li><li><a href="../measuring-what-matters/"><i>11</i><span>Measuring what matters</span></a></li><li><a href="../severe-harm-escalations/"><i>12</i><span>Severe harm escalations</span></a></li><li><a href="../crisis-response/"><i>13</i><span>Crisis response</span></a></li><li><a href="../moderator-wellbeing/" aria-current="page"><i>14</i><span>Moderator wellbeing</span></a></li><li><a href="../working-with-product-legal-and-leadership/"><i>15</i><span>Working with Product, Legal, Comms and leadership</span></a></li></ol><p>Part 4: Scale and govern</p><ol><li><a href="../regulation-and-compliance/"><i>16</i><span>Regulation and compliance</span></a></li><li><a href="../transparency-reports-and-notices/"><i>17</i><span>Transparency reports and enforcement notices</span></a></li><li><a href="../ai-in-trust-and-safety/"><i>18</i><span>AI in Trust &amp; Safety</span></a></li><li><a href="../budgets-roadmaps-and-making-the-case/"><i>19</i><span>Budgets, roadmaps and making the case</span></a></li></ol><p class="more-l"><a href="../updates/">What changed recently →</a></p></div></details></div>
+    </div>
+  </div>
+  <div class="proof"><p class="lbl">In one minute</p><div><b>Decide how much harm people see when you decide what they review</b><span>Where the line between automated and human decisions sits sets reviewers' exposure. Design it with that in mind, and measure exposure after every automation change.</span></div><div><b>Limit exposure per person, and measure it from your tools</b><span>Log hours on high-exposure queues for each reviewer, set caps with a clinical partner, and report who is over them, never just the average.</span></div><div><b>Make the tools reduce exposure by default</b><span>Grayscale, blur that lifts on hover, muted audio, previews instead of full video, and hash matching so known material doesn't need fresh eyes.</span></div><div><b>Give support people actually use</b><span>Specialist counseling, not just a general helpline, plus consent before severe work, a confidential way to step away, debriefs after hard cases and support that continues after people leave.</span></div><div><b>Cover everyone who sees the material</b><span>Data labelers, AI raters, red-teamers and vendor staff get the same limits, tools, support and escalation paths, written into contracts and checked.</span></div><div><b>The mistake to avoid</b><span>Reading low counseling use as good health. Watch attrition and support use by exposure level, and ask people anonymously.</span></div></div>
+</div>
+<section id="why-it-matters"><div class="wrap"><div class="cs-h"><h2>Why it matters</h2><div class="prose"><p>Reviewing harmful content is an occupational exposure, and psychiatry treats it as one. DSM-5's criteria for post-traumatic stress disorder count repeated or extreme exposure to aversive details of traumatic events, including through electronic media or pictures when that exposure is work related (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4663500/">summarized in the BMJ</a>). Research on moderators points the same way. In a survey of content moderators, Spence and colleagues found a dose-response effect: the more often people were exposed to distressing content, the higher their psychological distress and secondary trauma. The results suggested that supportive colleagues and feedback about the importance of their role softened that link (<a href="https://pubmed.ncbi.nlm.nih.gov/38153846/">Cyberpsychology, Behavior, and Social Networking, 2024</a>).</p>
+<p>Both findings point at things you control: how often people are exposed, and what surrounds the work. It's also an operational risk. People who are struggling make more mistakes and leave, and every leaver takes their training and judgment with them. And the people exposed now include more than your reviewers: the contractors labeling data and rating AI output can see the same material, without the same protections.</p></div></div></div></section>
+<section id="what-good-looks-like"><div class="wrap"><div class="sec-h"><h2>What good looks like</h2><p class="big">What you have, and what you can show, at each stage</p></div><div class="stages"><div><h3>Early</h3><p class="d">A founder or first safety hire covers trust and safety, usually with under a million users.</p><p class="lbl">What you have</p><p class="v">Before anyone reviews harmful content: confidential counseling with a clinician who understands the work, a plain description of what the job involves, grayscale, blur and muted audio on by default, hash matching for known child sexual abuse material, and a limit on time in the worst queues.</p><p class="lbl">What you can show</p><p class="v">A list of everyone who sees severe content, with their weekly hours. Support offered to vendor staff and contractors, not just employees.</p></div><div><h3>Growing</h3><p class="d">A dedicated safety team, millions of users, and new markets or features on the way.</p><p class="lbl">What you have</p><p class="v">Exposure hours logged per person from the case tool, caps with alerts, cross-training and rotation so caps hold, debriefs after severe cases, labelers and raters inside the program, wellbeing standards in every vendor contract, and a regular anonymous survey.</p><p class="lbl">What you can show</p><p class="v">The spread of exposure hours and how many people went over the cap. Attrition and support use by exposure level, in-house and at vendors.</p></div><div><h3>At scale or regulated</h3><p class="d">Tens of millions of users, a heavily regulated sector, or extra duties as a very large platform under EU or UK law.</p><p class="lbl">What you have</p><p class="v">Wellbeing designed into tools and workflows, vendor audits against contract standards, support that continues after people leave, and a senior leader accountable for reviewer wellbeing.</p><p class="lbl">What you can show</p><p class="v">Exposure hours before and after each automation change. Vendor audit results. Whether the attrition gap between high-exposure queues and the rest is closing.</p></div></div></div></section>
+<section id="how-to-do-it"><div class="wrap"><div class="sec-h"><h2>How to do it</h2><p class="big">8 steps</p></div><div class="jump-row"><p class="lbl">Jump to a step</p><ol class="jump"><li><a href="#step-1"><i>01</i>Treat the automation line as a wellbeing decision</a></li><li><a href="#step-2"><i>02</i>Map everyone who's exposed</a></li><li><a href="#step-3"><i>03</i>Limit exposure, and measure it per person</a></li><li><a href="#step-4"><i>04</i>Make the tools reduce exposure by default</a></li><li><a href="#step-5"><i>05</i>Give support people actually use</a></li><li><a href="#step-6"><i>06</i>Treat data labeling and AI training review as moderation work</a></li><li><a href="#step-7"><i>07</i>Write wellbeing standards into vendor contracts, and check them</a></li><li><a href="#step-8"><i>08</i>Watch attrition and support use as early warnings</a></li></ol></div><div class="prose" style="margin:0 0 24px"><p>I wouldn't run a team without all four of the core protections: limits on exposure with rotation out of the worst queues, tools that reduce what people see, real clinical support in place before anyone reviews harmful content, and leads who model taking breaks and protect their people's time. The steps below cover each, and what holds them up.</p></div><ol class="steps"><li id="step-1"><div><span class="n">Step 01</span><h3>Treat the automation line as a wellbeing decision</h3></div><div class="prose"><p>Where the line between automated and human decisions sits also sets how much harmful material your reviewers see. Designing it well includes limiting that exposure through rotation and support. Two effects pull in opposite directions.</p>
+<p><strong>Automation can take people away from the material.</strong> Hash matching finds copies of known images without anyone having to study them fresh. Classifiers clear the obvious cases. Summaries, metadata and transcripts let a reviewer understand a case before opening the worst of it, or decide it without opening it at all.</p>
+<p><strong>Automation also concentrates what's left.</strong> Where a wrong decision can't be reversed or someone's safety is at risk, a person owns the call. That means child safety, credible threats, exploitation and self-harm stay with people, and those are the most disturbing queues. As automation takes the clear-cut cases, each hour of human review can carry more severe content, not less.</p>
+<p>So measure exposure hours before and after every automation change, next to accuracy and cost. And design the case view so automation prepares the case: context first, the content itself last, and only as much of it as the decision needs. <a href="../review-operations/">Chapter 7</a> covers where the line sits, and <a href="../ai-in-trust-and-safety/">chapter 18</a> covers automation in depth.</p></div></li><li id="step-2"><div><span class="n">Step 02</span><h3>Map everyone who's exposed</h3></div><div class="prose"><p>It's easy to protect the front-line review team and forget everyone else. List every role that sees harmful material, in-house and at vendors:</p>
+<ul><li>Front-line reviewers, and the specialists and investigators who take their escalations</li><li>Quality reviewers, calibrators and appeals reviewers, who see the same cases twice</li><li>The on-call team and anyone who handles law enforcement requests</li><li>Policy writers who build example sets, and trainers who show them</li><li>Engineers and data scientists who inspect training data or classifier errors</li><li>Data labelers, AI output raters, red-teamers and evaluation graders</li><li>Support agents who read user reports before they're routed</li></ul>
+<p>Then tag each queue with an exposure level, for example high, medium or low. Graphic violence, child sexual exploitation and self-harm are high. Voice review can be as hard as graphic video, so count it. The tag decides which limits, tools and support apply.</p></div></li><li id="step-3"><div><span class="n">Step 03</span><h3>Limit exposure, and measure it per person</h3></div><div class="prose"><p>You can't manage exposure you don't measure. Track <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/graphic-exposure-hours-per-reviewer.md">graphic-exposure hours per reviewer</a>: hours each person spends on high-exposure queues each week.</p>
+<ul><li><strong>Log it from the case tool, not from self-reporting</strong>, so the number doesn't depend on anyone remembering, or wanting to admit, how long they spent.</li><li><strong>Set daily and weekly caps with a clinical partner.</strong> There's no agreed, evidence-based number for how much is too much. The Technology Coalition's guidebook says limiting time exposed to child sexual abuse material is key, without naming a figure (<a href="https://cdn.icmec.org/wp-content/uploads/2023/04/TechnologyCoalitionEmployeeResilienceGuidebookV2January2015.pdf">Employee Resilience Guidebook</a>). Start with your clinician's advice, then adjust on what you see in attrition, survey results and support use.</li><li><strong>Decide what happens at the cap.</strong> The person moves to lower-exposure work, with no loss of pay or standing. If hitting the cap costs people anything, they'll hide their hours.</li><li><strong>Alert leads before someone reaches the cap</strong>, not after.</li><li><strong>Report the spread and the number of people over the cap.</strong> Averages hide individuals. A team can average well under the cap while the few people trained for the child-safety queue sit far above it.</li><li><strong>Cross-train so the caps can hold.</strong> A cap nobody can cover for is a cap that gets broken in the first busy week.</li></ul>
+<p>Look at productivity targets too. Don't run high-exposure queues on the same throughput targets as spam: a target built for volume pushes people through the worst material faster. Moderators' unions go further. The Global Trade Union Alliance of Content Moderators, formed in 2025, calls for eliminating all quotas for egregious content (<a href="https://uniglobalunion.org/news/tech-protocols/">UNI Global Union</a>).</p></div></li><li id="step-4"><div><span class="n">Step 04</span><h3>Make the tools reduce exposure by default</h3></div><div class="prose"><p>Small interface choices change how much of each item a reviewer has to take in. Turn them on by default, and let reviewers turn detail up when a case needs it, rather than down after they've seen too much.</p>
+<div class="tbl"><table><thead><tr><th>Default</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Grayscale</strong></td><td>Shows images and video without color</td></tr><tr><td><strong>Blur that lifts on hover</strong></td><td>The reviewer reveals only the part they need, only for as long as they need it</td></tr><tr><td><strong>Muted audio</strong></td><td>Sound plays only when the reviewer chooses, with a transcript where you have one</td></tr><tr><td><strong>Previews</strong></td><td>Thumbnails or keyframes before the full video, and no autoplay</td></tr><tr><td><strong>A warning before opening</strong></td><td>The suspected category is shown first, so nothing arrives as a surprise</td></tr><tr><td><strong>Hash matching</strong></td><td>Known material is matched by its digital fingerprint, so it doesn't need fresh eyes to be identified</td></tr><tr><td><strong>Context first</strong></td><td>Account history, reports and metadata appear before the content itself</td></tr></tbody></table></div>
+<p>The research supports the first two, with a caveat. In a live review setting, simple grayscale transformations significantly changed the emotional impact of reviews without a significant drop in accuracy, while a full blur was challenging for reviewers (<a href="https://doi.org/10.1609/hcomp.v7i1.5270">Karunakaran and Ramakrishan, 2019</a>). In experiments with crowd workers, interactive blurring reduced emotional impact without sacrificing accuracy or speed (<a href="https://doi.org/10.1609/hcomp.v8i1.7461">Das, Dang and Lease, 2020</a>). So blur that reviewers control, not blur that gets in their way.</p>
+<p>You don't have to build these from scratch. ROOST's open-source review console, <a href="https://github.com/roostorg/coop">Coop</a>, blurs images and video by default with hover to reveal, offers grayscale and muted video, lets admins set organization-wide wellness defaults, and matches uploads against NCMEC's hashes of known child sexual abuse material. For hash matching, Microsoft's <a href="https://www.microsoft.com/en-us/photodna">PhotoDNA</a> and Thorn's <a href="https://safer.io/solutions/">Safer</a> are established options.</p></div></li><li id="step-5"><div><span class="n">Step 05</span><h3>Give support people actually use</h3></div><div class="prose"><p>A general employee assistance program, the counseling benefit offered to all staff, is built for everyday problems, not the specific effects of reviewing harmful content. People in these roles need more.</p>
+<ul><li><strong>Before the work.</strong> Tell every candidate and new reviewer what they'll see and what support exists. Get informed consent before assigning anyone to child sexual abuse material, as the Technology Coalition's guidebook recommends, and do the same for other high-exposure queues.</li><li><strong>Specialist counseling.</strong> A licensed clinician who understands this work, available during working hours. The guidebook advises that the care provider be outside the company, which helps with confidentiality.</li><li><strong>A confidential way to step away.</strong> Clear opt-out rules, so someone can leave a queue for a while without explaining why to the whole team.</li><li><strong>Rotation and real breaks.</strong> Rotation off high-exposure queues, either on a fixed schedule or triggered by the cap, whichever your staffing can hold, and wellbeing time counted as planned time away from the queue, so it isn't taken out of anyone's targets (<a href="../review-operations/">chapter 7</a>).</li><li><strong>Debriefs after severe cases.</strong> After a self-harm emergency or a child safety case, offer a debrief and counseling, give time away from high-severity queues, and check exposure across the team. The tabletop scenario <a href="https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/emergency.md">The post six friends saw</a> rehearses that call.</li><li><strong>Colleagues and meaning.</strong> In Spence's survey, supportive colleagues and feedback about the importance of the role softened the link between exposure and distress. Build time for peers to talk, and tell reviewers what their decisions led to: a child safeguarded, a network removed, a report that reached the right people.</li><li><strong>Trained managers who model it.</strong> Leads should know the signs of secondary trauma and what to do next, and should take their own breaks and talk about it. When leads do, everyone else feels able to. UNI's protocols ask for trauma-informed training for supervisors as well as moderators.</li><li><strong>After they leave.</strong> Support shouldn't end on someone's last day. The <a href="https://github.com/stevenmacchia/ts-maturity-model">maturity model</a> treats support after people leave review roles as the mark of a leading program.</li></ul></div></li><li id="step-6"><div><span class="n">Step 06</span><h3>Treat data labeling and AI training review as moderation work</h3></div><div class="prose"><p>Data labeling is moderation work. It needs the same wellbeing support and escalation paths.</p>
+<p>The people who label training data for safety classifiers, rate model outputs, red-team AI products and grade evaluations see the same material your reviewers do. Many are contractors working through a platform, outside the Trust &amp; Safety team, and may have no exposure limits, no blurring in the labeling tool and nobody to call.</p>
+<ul><li><strong>Bring them into the program.</strong> Same exposure levels, caps, tools and counseling as your reviewers.</li><li><strong>Give them an escalation path.</strong> A labeler who finds what looks like child sexual abuse material, or a real person at risk, needs a route to your restricted escalation path, not just a &quot;skip&quot; button. <a href="../severe-harm-escalations/">Chapter 12</a> covers what happens next.</li><li><strong>Design datasets to need less exposure.</strong> Filter known material out by hash before anyone labels it, and label from text or metadata where that's enough.</li><li><strong>Put it in the contract.</strong> Labeling vendors get the same wellbeing clauses as review vendors. Partnership on AI's <a href="https://partnershiponai.org/responsible-sourcing-considerations/">Responsible Sourcing of Data Enrichment Services</a> sets out what AI developers should consider when buying this work.</li></ul></div></li><li id="step-7"><div><span class="n">Step 07</span><h3>Write wellbeing standards into vendor contracts, and check them</h3></div><div class="prose"><p>If you use a vendor, its staff may make most of your review decisions and see much of the worst content. A contract that says &quot;wellness program&quot; without numbers or a way to check is a promise, not a standard. Write in:</p>
+<ul><li>A maximum daily exposure to graphic content for each person, with logs you can see</li><li>Licensed counseling during employment and after someone leaves</li><li>Blurring and grayscale on by default in every review tool</li><li>Annual attrition for your account, split by queue</li><li>Support use and survey results, aggregated and anonymous</li><li>Your right to audit and visit</li><li>A price that pays for wellbeing time, not just decisions</li></ul>
+<p>Choose vendors with this as a floor. In the <a href="https://stevenmacchia.com/ts-workbench/#vendors">vendor scorecard</a>, reviewer wellness carries 15% of the weight and has a minimum: a score of 2 or lower rules a vendor out, whatever its total. Hard daily exposure caps per person, counseling during and after employment and blurring by default earn a 5.</p>
+<p>Then check it. Ask for exposure data by person, pseudonymized, not a summary slide. Compare attrition by queue against your own teams. Visit, and talk to reviewers without their managers in the room. When something goes wrong at the vendor, how you treat their people shapes the quality you get afterwards: if a site goes dark, keep paying and ask how you can help. <a href="../choosing-vendors-and-tools/">Chapter 9</a> covers contracts in full.</p></div></li><li id="step-8"><div><span class="n">Step 08</span><h3>Watch attrition and support use as early warnings</h3></div><div class="prose"><p>Watch the people, not just the quality scores. Track <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/attrition-and-wellness-support-usage.md">attrition and wellness-support usage</a> on a regular cadence, monthly for example, for in-house and vendor teams:</p>
+<ul><li><strong>Attrition by exposure level.</strong> Monthly leavers divided by average headcount, times 12. If high-exposure queues lose people much faster than the rest, fix the work design, not the hiring.</li><li><strong>Support sessions per person.</strong> From your provider, aggregated and anonymous only. Never individual records.</li><li><strong>A regular anonymous pulse survey.</strong> Quarterly, for example. It explains what the numbers can't.</li><li><strong>Other signals.</strong> Rising sick leave, quality dropping on one team, handle time climbing on severe queues, and people asking to move.</li></ul>
+<p>Read low support use carefully. It can mean people are fine. It can also mean they doubt it's confidential, don't want to be seen using it, or can't fit it into a shift. Ask anonymously which.</p>
+<p>Make one senior leader accountable for reviewer wellbeing, and put these numbers in your regular executive review next to the operational ones. If nobody senior owns it, it's easy to cut in a tight quarter.</p></div></li></ol></div></section>
+<section id="mistakes-to-avoid"><div class="wrap"><div class="sec-h"><h2>Mistakes to avoid</h2><p class="big">And what to do instead</p></div><ol class="rows"><li><i>01</i><h3>Relying on a general employee assistance program</h3><p>Provide specialist counseling from clinicians who understand this work.</p></li><li><i>02</i><h3>Automating the easy cases and forgetting what's left</h3><p>Measure exposure after every automation change, because the human queue gets harder.</p></li><li><i>03</i><h3>Reporting average exposure</h3><p>Report the spread and the number of people over the cap.</p></li><li><i>04</i><h3>Caps that cost people pay or standing</h3><p>Move people to lower-exposure work at the cap, with nothing lost.</p></li><li><i>05</i><h3>Training only one or two people on the worst queue</h3><p>Cross-train so caps can hold.</p></li><li><i>06</i><h3>Forgetting the people outside review</h3><p>Labelers, raters, red-teamers, policy writers and engineers are exposed too.</p></li><li><i>07</i><h3>Contracts that say &quot;wellness&quot; with no numbers</h3><p>Write in caps, counseling, tooling and audit rights, then check them.</p></li><li><i>08</i><h3>Reading low counseling use as good health</h3><p>Ask anonymously why people do or don't use it.</p></li><li><i>09</i><h3>Support that ends on someone's last day</h3><p>Continue it after people leave review roles.</p></li></ol></div></section>
+<section id="start-from-this-template"><div class="wrap"><div class="sec-h"><h2>Start from this template</h2><p class="big">Copy it, fill it in, make it yours</p></div><div class="tpl"><p class="lbl">Template</p><h3>Exposure plan</h3><p>One row per queue. Agree it with your clinical partner.</p><div class="tbl"><table><thead><tr><th>Queue</th><th>Exposure level</th><th>Who works it</th><th>Daily cap</th><th>Weekly cap</th><th>Tool defaults</th><th>Rotation</th><th>Support after a hard case</th></tr></thead><tbody><tr><td></td><td>High</td><td></td><td></td><td></td><td>Grayscale, blur, muted</td><td></td><td></td></tr><tr><td></td><td>Medium</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Low</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Vendor wellbeing clauses</h3><p>Paste into every review and labeling contract, with your numbers: maximum daily exposure to graphic content per person, with logs available to us; licensed counseling during employment and for a set period after; blurring, grayscale and muted audio on by default; annual attrition for our account by queue; aggregated, anonymous support use and survey results every quarter; our right to audit and visit; and pricing that includes wellbeing time.</p></div><div class="tpl"><p class="lbl">Template</p><h3>Quarterly wellbeing review</h3><p>One page for leadership: exposure hours by queue (spread, and people over the cap); attrition by exposure level, in-house and vendor; support sessions per person; survey results and what changed because of them; exposure before and after any automation change; vendor audit findings; and the senior leader who owns the actions.</p></div></div></section>
+<section id="do-it-with"><div class="wrap"><div class="sec-h"><h2>Do it with</h2><p class="big">Free tools and metrics that go with this chapter</p></div><div class="cards"><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#maturity">Program maturity</a></h3><p>Rate the program in eight areas against the targets for your stage, and get a phased roadmap. <a href="https://github.com/stevenmacchia/ts-maturity-model">Open content</a></p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#vendors">Vendor scorecard</a></h3><p>Score moderation vendors with reviewer wellness as a minimum, and copy its RFP questions on exposure, counseling and attrition. <a href="https://github.com/stevenmacchia/moderation-vendor-scorecard">Open content</a></p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#tabletop">Incident tabletop</a></h3><p>Rehearse <a href="https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/emergency.md">The post six friends saw</a> (looking after the reviewer who handled a self-harm emergency) and <a href="https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/vendor.md">The empty review floor</a> (a vendor's staff hit by a disaster).</p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/graphic-exposure-hours-per-reviewer.md">Graphic-exposure hours per reviewer</a></h3><p>How many hours each person spends on graphic or egregious queues each week, and who is over the cap.</p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/attrition-and-wellness-support-usage.md">Attrition and wellness-support usage</a></h3><p>Whether you're burning out the people who keep users safe, by exposure level.</p></div></div></div></section>
+<section id="further-reading"><div class="wrap"><div class="sec-h"><h2>Further reading</h2><p class="big">Steven's posts on this topic, and sources worth the time</p></div><p class="lbl sub-h">From Steven's writing · 2 posts</p><ol class="posts"><li><div><time datetime="2026-09-29">Sep 29, 2026</time><span class="k">Reading roundup</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-onlinesafety-share-7510666169993805824-VI4v/">The era of voluntary child safety is ending</a></h3><p>India's push for age checks, Florida's case against OpenAI, Copilot data labeling, TikTok's Alabama settlement and Meta's New Mexico verdict. The question has moved from &quot;do you have a policy?&quot; to &quot;can you prove it works?&quot;</p><p class="meta">Also in: <a href="../working-with-product-legal-and-leadership/">15. Working with Product, Legal, Comms and leadership</a>, <a href="../regulation-and-compliance/">16. Regulation and compliance</a>, <a href="../ai-in-trust-and-safety/">18. AI in Trust &amp; Safety</a></p></div></li><li><div><time datetime="2026-09-21">Sep 21, 2026</time><span class="k">Essay</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-responsibleai-share-7507791297672486913-jc9j/">Automation rate isn't a measure of maturity</a></h3><p>Automate as much as the evidence supports. Where a wrong decision can't be reversed or someone's safety is at risk, automation prepares the case and a person closes it.</p><p class="meta">Also in: <a href="../detection-and-prevention/">5. Detection and prevention</a>, <a href="../review-operations/">7. Standing up review operations</a>, <a href="../ai-in-trust-and-safety/">18. AI in Trust &amp; Safety</a></p></div></li></ol><p class="lbl sub-h">Outside sources</p><ul class="src"><li><a href="https://cdn.icmec.org/wp-content/uploads/2023/04/TechnologyCoalitionEmployeeResilienceGuidebookV2January2015.pdf">Technology Coalition: Employee Resilience Guidebook</a><span>industry guidance on protecting staff who handle child sexual abuse images, from hiring and consent to counseling and opting out.</span></li><li><a href="https://doi.org/10.1145/3411764.3445092">Steiger et al., The Psychological Well-Being of Content Moderators</a><span>a CHI 2021 review of the research on moderators' mental health and the ways to support them.</span></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/38153846/">Spence et al., Content Moderator Mental Health, Secondary Trauma, and Well-being</a><span>a 2024 survey linking how often moderators are exposed to distress and secondary trauma.</span></li><li><a href="https://doi.org/10.1609/hcomp.v8i1.7461">Das, Dang and Lease, Interactive Blurring Helps Moderators Reduce Exposure to Harmful Content</a><span>experiments on blur designs that protect reviewers without slowing them down.</span></li><li><a href="https://uniglobalunion.org/news/tech-protocols/">UNI Global Union: Mental Health Protocols for content moderation</a><span>the eight protocols moderators' unions are asking the tech supply chain to adopt.</span></li><li><a href="https://partnershiponai.org/responsible-sourcing-considerations/">Partnership on AI: Responsible Sourcing of Data Enrichment Services</a><span>recommendations for AI developers on the working conditions of the people who label their data.</span></li></ul></div></section>
+<section id="changes"><div class="wrap"><div class="sec-h"><h2>Recent changes</h2><div><p class="big">4 changes to this chapter, newest first</p><p class="intro">The <a href="../updates/">updates page</a> has every change to the handbook, by date.</p></div></div><ol class="log"><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 18 other chapters</span><p>Practical advice that varies by platform, such as cadences, sample sizes, targets and who owns what, is now set out as options with examples, so each team can choose what fits.</p></div></li><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 14 other chapters</span><p>Added Steven's own calls from an interview: where Trust &amp; Safety should report, what to automate first, the one number to track from day one, who makes the 2am call, and more. Practical choices that vary by platform are now laid out as options.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Drafted</span><span class="ch">With 17 other chapters</span><p>First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Added</span><span class="ch">With 14 other chapters</span><p>Linked the first 16 posts to the chapters they inform, and set out the ten principles behind the handbook.</p></div></li></ol></div></section>
+<section><div class="wrap"><nav class="pn" aria-label="Chapters"><a href="../crisis-response/"><span>← Chapter 13</span><b>Crisis response</b></a><a class="next" href="../working-with-product-legal-and-leadership/"><span>Chapter 15 →</span><b>Working with Product, Legal, Comms and leadership</b></a></nav></div></section>
+</div>
+</main>
+<footer><div class="wrap"><h2>Get in touch.</h2><div class="c"><a href="mailto:stevenamacchia@gmail.com">stevenamacchia@gmail.com</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Resume</a></div><div class="fine"><span>© 2026 Steven Macchia · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://github.com/stevenmacchia/ts-handbook">Source</a> · <a href="../updates/">Updates</a></span><span>Written with AI-assisted drafting · Not legal advice: check with your own legal team · Visits counted without cookies</span></div></div></footer>
+</body>
+</html>

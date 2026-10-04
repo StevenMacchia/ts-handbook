@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11. Measuring what matters · The T&amp;S Handbook</title>
+<meta name="description" content="Is the program making people safer, and how would you prove it?">
+<meta name="author" content="Steven Macchia">
+<link rel="canonical" href="https://stevenmacchia.com/ts-handbook/measuring-what-matters/">
+<link rel="alternate" type="application/atom+xml" title="The T&amp;S Handbook: updates" href="https://stevenmacchia.com/ts-handbook/updates/feed.xml">
+<meta property="og:type" content="article"><meta property="og:title" content="11. Measuring what matters · The T&amp;S Handbook"><meta property="og:description" content="Is the program making people safer, and how would you prove it?">
+<meta property="og:url" content="https://stevenmacchia.com/ts-handbook/measuring-what-matters/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+summary:focus-visible{border-radius:2px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1152px;margin:0 auto;padding:0 32px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;line-height:1.05}
+.top{display:flex;align-items:center;gap:28px;height:64px;border-bottom:1px solid var(--line)}
+.top .mark{width:12px;height:12px;background:var(--ink);flex:none}
+.top .name{font-weight:600;margin-right:auto}
+.top a{color:var(--ink);text-decoration:none;font-size:15px}
+.top a:hover{text-decoration:underline}
+.top a[aria-current="page"]{font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:4px;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn:hover{background:var(--panel);text-decoration:none}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#2a2a2a}
+.top .btn{padding:8px 14px;font-size:14px}
+.lbl{font-size:13px;color:var(--muted);font-weight:500;margin:0}
+.lbl a{color:inherit}
+h3.lbl{letter-spacing:0;line-height:1.55}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:end;padding:88px 0 56px}
+.hero h1{font-size:clamp(44px,6.5vw,80px);margin-top:18px}
+.lead{margin:22px 0 0;font-size:clamp(18px,2.2vw,21px);line-height:1.45;max-width:44ch}
+.sub{margin:14px 0 0;font-size:17px;color:var(--muted);max-width:58ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:30px}
+.cta .go{margin-left:8px;font-weight:500}
+.open{border-top:1px solid var(--ink);padding-top:14px;font-size:14.5px;display:grid;gap:8px}
+.open .sq{display:inline-block;width:8px;height:8px;background:var(--good);margin-right:9px}
+.open span{color:var(--muted)}
+.open .mono{font-size:12.5px}
+/* Grid children must be allowed to shrink, or a wide table inside a step widens the page on phones */
+.steps>li>*,.cs-h>*,.stages>*{min-width:0}
+.legal{margin:0 0 32px;padding:14px 18px;background:var(--panel);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;font-size:15px;line-height:1.5;max-width:86ch}
+.legal b{font-weight:600}
+.hh .legal{margin:16px 0 0;font-size:14px}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0 72px;border-top:1px solid var(--line)}
+.proof div{display:grid;gap:4px;font-size:14.5px}
+.proof b{font-weight:600}
+.proof span{color:var(--muted)}
+section{padding:0 0 88px}
+.sec-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:end;padding-top:28px;border-top:1px solid var(--ink);margin-bottom:28px}
+h2{font-size:36px}
+.sec-h p{margin:0}
+.sec-h .big{font-size:19px;font-weight:500}
+.sec-h .intro{margin-top:10px;color:var(--muted);max-width:72ch}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.5fr);gap:32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows li>*{min-width:0}
+.rows i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:2px}
+.rows h3{font-size:17px;line-height:1.35;letter-spacing:-.01em}
+.rows p{margin:0;color:var(--muted);font-size:15px}
+.rows .from{display:block;margin-top:8px;font-size:13.5px}
+.rows .from a{text-decoration:none}
+.rows .from a:hover{text-decoration:underline}
+/* Home: a short hero, then the contents as the main column with a sidebar beside them */
+.hh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 64px;align-items:end;padding:56px 0 36px}
+.hh h1{font-size:clamp(40px,5.5vw,64px);margin-top:14px}
+.hh .lead{margin-top:16px;max-width:46ch}
+.hh .sub{margin-top:10px;font-size:16px;max-width:60ch}
+.hh .cta{margin-top:24px}
+.status{margin:0;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;line-height:1.7;color:var(--muted);text-align:right;white-space:nowrap}
+.status .sq{display:inline-block;width:8px;height:8px;background:var(--ink);margin-right:8px;vertical-align:1px}
+.status .sq.outline{background:var(--strong)}
+.status .sq.published{background:var(--good)}
+.home{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 64px;border-top:1px solid var(--ink);padding-top:24px}
+.home>*{min-width:0}
+.home>section{padding-bottom:80px;scroll-margin-top:16px}
+.ch-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:20px}
+.ch-h .intro{margin:0;color:var(--muted);font-size:15px}
+.part{margin:28px 0 0}
+.part:first-of-type{margin-top:0}
+.part h3.ph{display:flex;align-items:baseline;gap:12px;font-size:16px;font-weight:600;letter-spacing:0;line-height:1.3;margin:0 0 8px}
+.ph i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;flex:none}
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.toc li{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.toc li>*{min-width:0}
+.toc i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;color:var(--muted);padding-top:3px}
+.toc .t{font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.toc .t a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.toc .t a::after{content:"";position:absolute;inset:0}
+.toc li:hover .t a{text-decoration-color:var(--ink)}
+.toc li:hover i{color:var(--ink)}
+.toc .q{grid-column:2;margin:0;color:var(--muted);font-size:14.5px;line-height:1.45}
+.toc .st{grid-column:3;grid-row:1/3;align-self:start;display:grid;gap:3px;justify-items:end;padding-top:3px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+.toc .st.published{color:var(--good)}
+.filters{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;flex-basis:100%;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted)}
+.filters button{border:0;background:none;padding:0;margin:0;color:var(--muted);font:inherit;cursor:pointer;text-underline-offset:3px}
+.filters button:hover{color:var(--ink);text-decoration:underline}
+.filters button[aria-pressed="true"]{color:var(--ink);text-decoration:underline}
+.side{align-self:start;position:sticky;top:24px;display:grid;gap:32px;padding-bottom:80px}
+.sb .lbl{margin-bottom:6px}
+.sl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.sl li{display:grid;gap:3px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.4}
+.sl li>*{min-width:0}
+.sl a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px;font-weight:500;overflow-wrap:anywhere}
+.sl a:hover{text-decoration-color:var(--ink)}
+.sl time,.sl .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.sl.up li{grid-template-columns:48px minmax(0,1fr);gap:0 12px;align-items:baseline;font-size:14.5px}
+.sl.up time{padding-top:1px}
+.side .more{margin-top:10px;font-size:14.5px}
+.side .more a+a{margin-left:14px}
+.pr2{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;align-items:start}
+.pr{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pr li{border-bottom:1px solid var(--line)}
+.pr summary{display:grid;grid-template-columns:36px minmax(0,1fr) 14px;gap:12px;align-items:baseline;padding:11px 0;cursor:pointer;list-style:none;font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.01em}
+.pr summary::-webkit-details-marker{display:none}
+.pr summary i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:13px;font-weight:400;color:var(--muted)}
+.pr summary::after{content:"▾";color:var(--muted);text-align:right}
+.pr details[open] summary::after{content:"▴"}
+.pr summary:hover{color:var(--blue)}
+.pr .pb{padding:0 0 14px 48px;color:var(--muted);font-size:15px;line-height:1.5}
+.pr .pb p{margin:0}
+.pr .from{display:block;margin-top:6px;font-size:13.5px}
+.pr .from a{text-decoration:none}
+.pr .from a:hover{text-decoration:underline}
+.ctl{margin:10px 0 0}
+.ctl button{border:0;background:none;padding:0;margin:0;font:inherit;font-size:14.5px;font-weight:500;color:var(--blue);cursor:pointer}
+.ctl button:hover{text-decoration:underline}
+.st3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.st3 div{display:grid;gap:3px;align-content:start;font-size:14.5px}
+.st3 b{font-weight:600}
+.st3 span{color:var(--muted)}
+.row2{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:32px}
+.row2 ul{margin:0;padding-left:20px;display:grid;gap:6px;max-width:70ch}
+.row2 p{margin:0 0 10px;max-width:70ch}
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px;align-items:start}
+.feed .lbl{margin-bottom:8px}
+.log{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.log>li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.log>li>*{min-width:0}
+.log time,.posts time{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);padding-top:3px;white-space:nowrap}
+.log .k,.posts .k{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.log .k{margin-bottom:4px}
+.posts .k{margin-top:4px}
+.log .ch{display:block;font-weight:500;line-height:1.35}
+.log .ch a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.log .ch a:hover{text-decoration-color:var(--ink)}
+.log p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.log .meta,.posts .meta{font-size:13.5px}
+.log .meta a,.posts .meta a{text-decoration:none}
+.log .meta a:hover,.posts .meta a:hover{text-decoration:underline}
+.log ol{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.feed .log>li,.feed .posts li{grid-template-columns:64px minmax(0,1fr);gap:20px}
+.more{margin:16px 0 0;font-size:15px;font-weight:500}
+.more a{text-decoration:none}
+.more a:hover{text-decoration:underline}
+.ch-page section{padding-bottom:72px}
+.ch-page .sec-h h2,.cs-h h2{font-size:32px;line-height:1.08}
+.ch-hero{padding:72px 0 48px}
+.ch-hero h1{font-size:clamp(40px,5.5vw,68px)}
+.ch-hero .lead{max-width:40ch}
+.open .sq.outline{background:var(--strong)}
+.open .sq.draft{background:var(--ink)}
+.toc-d summary{cursor:pointer;color:var(--blue);font-weight:500;list-style:none}
+.toc-d summary::-webkit-details-marker{display:none}
+.toc-d summary::after{content:" ▾"}
+.toc-d[open] summary::after{content:" ▴"}
+.toc-list{margin-top:10px;font-size:14px;max-height:420px;overflow:auto;border-top:1px solid var(--line);padding-top:4px}
+.toc-list p{margin:12px 0 4px;font-weight:600;font-size:13px;color:var(--ink)}
+.toc-list ol{list-style:none;margin:0;padding:0}
+.toc-list a{display:flex;gap:10px;padding:3px 0;color:var(--muted);text-decoration:none;line-height:1.35}
+.toc-list a:hover{color:var(--ink);text-decoration:underline}
+.toc-list a i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;width:18px;flex:none;padding-top:1px}
+.toc-list a[aria-current="page"]{color:var(--ink);font-weight:600}
+.toc-list .more-l{margin:14px 0 6px;font-weight:500;border-top:1px solid var(--line);padding-top:10px}
+.toc-list .more-l a{display:inline;padding:0;color:var(--blue)}
+.proof .lbl{grid-column:1/-1}
+.proof div{align-content:start}
+.cs-h{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding-top:28px;border-top:1px solid var(--ink)}
+.prose{max-width:72ch}
+.prose p,.prose li{font-size:17px;line-height:1.65}
+.prose p{margin:0 0 16px}
+.prose>:last-child{margin-bottom:0}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:20px}
+.prose li{margin:6px 0}
+.prose li::marker{color:var(--muted)}
+.prose h3,.prose h4{font-size:17px;letter-spacing:-.01em;line-height:1.3;margin:24px 0 8px}
+.prose blockquote{margin:20px 0;padding:2px 0 2px 18px;border-left:3px solid var(--ink)}
+.prose code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em;background:var(--panel);padding:1px 5px;border-radius:3px}
+.prose pre{background:var(--panel);padding:16px;border-radius:4px;overflow:auto}
+.prose pre code{background:none;padding:0}
+.prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.prose a,.src a,.posts h3 a,.posts h4 a,.log .ch a{overflow-wrap:anywhere}
+.tbl{overflow-x:auto;margin:4px 0 20px}
+.tbl table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+.tbl th{text-align:left;vertical-align:bottom;font-size:13px;font-weight:500;color:var(--muted);padding:0 16px 10px 0;border-bottom:1px solid var(--ink)}
+.tbl td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
+.tbl td:first-child{font-weight:500}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;background:var(--panel);border-radius:4px;padding:32px}
+.stages h3{font-size:20px;line-height:1.2}
+.stages .d{margin:8px 0 0;color:var(--muted);font-size:14px}
+.stages .lbl{margin:22px 0 6px}
+.stages .v{margin:0;font-size:15px}
+.jump-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;margin:-6px 0 28px}
+.jump{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px}
+.jump a{color:var(--muted);text-decoration:none}
+.jump a:hover{color:var(--ink);text-decoration:underline}
+.jump i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-size:12px;margin-right:7px}
+.steps{list-style:none;margin:0;padding:0}
+.steps>li{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.steps>li:first-child{padding-top:4px}
+.steps .n{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);margin-bottom:10px}
+.steps h3{font-size:22px;line-height:1.2;letter-spacing:-.02em}
+.tpl{background:var(--panel);border-radius:4px;padding:24px 28px;margin:0 0 16px}
+.tpl .lbl{margin:0 0 6px}
+.tpl h3{font-size:18px;line-height:1.3;margin:0 0 6px}
+.tpl>p:not(.lbl){margin:0 0 14px;color:var(--muted);font-size:15px;max-width:72ch}
+.tpl .tbl{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{display:grid;gap:6px;align-content:start;padding:18px 20px;border:1px solid var(--line);border-radius:4px;min-width:0}
+.card .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted)}
+.card h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+.card h3 a,.posts h3 a,.posts h4 a,.src a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--strong);text-underline-offset:3px}
+.card h3 a:hover,.posts h3 a:hover,.posts h4 a:hover,.src a:hover{text-decoration-color:var(--ink)}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.posts li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.posts li>*{min-width:0}
+.posts h3,.posts h4{font-size:17px;line-height:1.35;letter-spacing:-.01em;margin:0;font-weight:600}
+.posts p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:72ch}
+.more-d{margin:0}
+.more-d summary{list-style:none;cursor:pointer;color:var(--blue);font-weight:500;font-size:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.more-d summary::-webkit-details-marker{display:none}
+.more-d summary::after{content:" ▾"}
+.more-d[open] summary::after{content:" ▴"}
+.more-d[open] summary{border-bottom:0}
+.sub-h{margin:36px 0 10px}
+.sub-h:first-of-type{margin-top:0}
+.src{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.src li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:32px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.src li span{color:var(--muted)}
+.src a{font-weight:500}
+.cover li{grid-template-columns:56px minmax(0,1fr)}
+.cover p{color:var(--ink);font-size:16px}
+.story{background:var(--panel);border-radius:4px;padding:28px 32px}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pn a{display:grid;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;min-width:0}
+.pn a:hover{background:var(--panel)}
+.pn a span{font-size:13px;color:var(--muted)}
+.pn a b{font-weight:600;line-height:1.3}
+.pn .next{text-align:right;grid-column:2}
+footer{background:var(--ink);color:#fff;padding:56px 0}
+footer .wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:baseline}
+footer h2{color:#fff}
+footer .c{display:flex;flex-wrap:wrap;gap:22px;font-size:17px}
+footer .c a{color:#fff}
+footer .fine{grid-column:1/-1;margin-top:28px;font-size:13px;color:#A8A6A1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .fine a{color:#A8A6A1}
+footer :focus-visible{outline-color:#fff}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}.hh{grid-template-columns:1fr;gap:18px;padding:40px 0 28px}.status{text-align:left;white-space:normal}.home{grid-template-columns:1fr;padding-top:20px}.home>section{padding-bottom:48px}.side{position:static;padding-bottom:56px}.proof{grid-template-columns:1fr;gap:16px;padding-bottom:48px}.sec-h,.row2,.cs-h,.steps>li,.jump-row,footer .wrap{grid-template-columns:1fr;gap:16px}.jump-row{gap:8px;margin:-4px 0 20px}.rows li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px}.rows li>:nth-child(n+3){grid-column:2}.toc li{grid-template-columns:34px minmax(0,1fr);gap:2px 12px}.toc .st{grid-column:2;grid-row:auto;display:flex;gap:12px;justify-items:start;padding-top:4px}.pr2,.st3{grid-template-columns:1fr}.pr2{gap:0}.pr+.pr{border-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top a.name{display:inline}.top .btn{margin-left:auto}section,.ch-page section{padding-bottom:56px}.ch-hero{padding:40px 0 32px}.stages{grid-template-columns:1fr;gap:28px;padding:22px}.cards{grid-template-columns:1fr}.feed{grid-template-columns:1fr;gap:40px}.posts li,.src li,.log>li,.feed .log>li,.feed .posts li{grid-template-columns:1fr;gap:4px}.posts time,.log time{padding-top:0}.posts .k{display:inline;margin:0 0 0 10px}.steps>li{gap:12px;padding:24px 0}.pn{grid-template-columns:1fr}.pn .next{grid-column:1;text-align:left}}
+@media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
+@media (max-height:640px){.side{position:static}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav class="top"><span class="mark" aria-hidden="true"></span><a class="name" href="https://stevenmacchia.com/">Steven Macchia</a><a href="https://stevenmacchia.com/#projects">Projects</a><a href="../" aria-current="page">Handbook</a><a href="https://stevenmacchia.com/writing/">Writing</a><a href="https://stevenmacchia.com/#experience">Experience</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a class="btn" href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Download resume</a></nav></div></header>
+<main>
+<div class="ch-page">
+<div class="wrap">
+  <div class="hero ch-hero">
+    <div>
+      <p class="lbl"><a href="../">The T&amp;S Handbook</a> · Part 3: Run</p>
+      <h1>Measuring what matters</h1>
+      <p class="lead">Is the program making people safer, and how would you prove it?</p>
+    </div>
+    <div>
+      <div class="open"><div><i class="sq draft" aria-hidden="true"></i><b>Draft: written, not yet reviewed</b></div><span>Chapter 11 of 19 · About 13 minutes</span><span>Updated Oct 4, 2026 · <a href="#changes">What changed</a></span><details class="toc-d"><summary>All chapters</summary><div class="toc-list"><p>Part 1: Before the first hire</p><ol><li><a href="../what-trust-and-safety-is-for/"><i>1</i><span>What Trust &amp; Safety is for</span></a></li><li><a href="../know-your-risks/"><i>2</i><span>Know your risks</span></a></li><li><a href="../the-first-90-days/"><i>3</i><span>The first 90 days</span></a></li></ol><p>Part 2: Build</p><ol><li><a href="../writing-policy/"><i>4</i><span>Writing policy and an enforcement ladder</span></a></li><li><a href="../detection-and-prevention/"><i>5</i><span>Detection and prevention</span></a></li><li><a href="../child-safety-and-age-assurance/"><i>6</i><span>Child safety and age assurance</span></a></li><li><a href="../review-operations/"><i>7</i><span>Standing up review operations</span></a></li><li><a href="../hiring-and-structuring-the-team/"><i>8</i><span>Hiring and structuring the team</span></a></li><li><a href="../choosing-vendors-and-tools/"><i>9</i><span>Choosing vendors and tools</span></a></li></ol><p>Part 3: Run</p><ol><li><a href="../quality-calibration-and-appeals/"><i>10</i><span>Quality, calibration and appeals</span></a></li><li><a href="../measuring-what-matters/" aria-current="page"><i>11</i><span>Measuring what matters</span></a></li><li><a href="../severe-harm-escalations/"><i>12</i><span>Severe harm escalations</span></a></li><li><a href="../crisis-response/"><i>13</i><span>Crisis response</span></a></li><li><a href="../moderator-wellbeing/"><i>14</i><span>Moderator wellbeing</span></a></li><li><a href="../working-with-product-legal-and-leadership/"><i>15</i><span>Working with Product, Legal, Comms and leadership</span></a></li></ol><p>Part 4: Scale and govern</p><ol><li><a href="../regulation-and-compliance/"><i>16</i><span>Regulation and compliance</span></a></li><li><a href="../transparency-reports-and-notices/"><i>17</i><span>Transparency reports and enforcement notices</span></a></li><li><a href="../ai-in-trust-and-safety/"><i>18</i><span>AI in Trust &amp; Safety</span></a></li><li><a href="../budgets-roadmaps-and-making-the-case/"><i>19</i><span>Budgets, roadmaps and making the case</span></a></li></ol><p class="more-l"><a href="../updates/">What changed recently →</a></p></div></details></div>
+    </div>
+  </div>
+  <p class="legal" role="note"><b>General information, not legal advice.</b> Laws differ by country, change often and apply differently to each service. Check with your own legal team or outside counsel before acting on anything here.</p>
+  <div class="proof"><p class="lbl">In one minute</p><div><b>Report outcomes next to operations, and say so when they disagree</b><span>Removals and automation rate show the machine is running. Exposure to harm, repeat offending and prevented contact show it's working.</span></div><div><b>Adopt metrics a few at a time</b><span>One order that works: north stars, then health metrics, then diagnostics. Each needs an owner, a target band and a meeting that looks at it on a schedule.</span></div><div><b>Measure exposure with a random sample of what users see</b><span>Prevalence sampling is the only way to count the harm nobody reported.</span></div><div><b>Pair appeals with prevalence</b><span>Overturned appeals show what you over-enforced. Sampling shows what you missed.</span></div><div><b>Prove the retention case with a matched cohort</b><span>In raw data, harassed users can look like your best-retained users, because they're your most engaged ones.</span></div><div><b>The mistake to avoid</b><span>Celebrating a jump in removals. 40% more could mean better detection, more harm, or good users caught by mistake.</span></div></div>
+</div>
+<section id="why-it-matters"><div class="wrap"><div class="cs-h"><h2>Why it matters</h2><div class="prose"><p>What gets measured gets resourced. When a program is rewarded for activity, it optimizes for activity: more removals, more reports closed, a higher automation rate. Those numbers are easy to produce and almost always go up and to the right. None of them says whether users are safer, so a safety team measured only by throughput gets judged like a cost center.</p>
+<p>The outcomes are real and measurable. In a 2023 Take This report based on a Nielsen poll of 2,328 teens and adults in North America, 61% of players said they had at least once decided not to spend money in a game because of how other players treated them, and 60% had quit a match or a game because of harassment and hate (<a href="https://www.takethis.org/wp-content/uploads/2023/08/ToxicGamersBottomLineReport_TakeThis.pdf">Take This, 2023</a>). But surveys rarely move a budget. Your own data does, if it's cut correctly.</p>
+<p>Regulators are asking too. The EU's Digital Services Act requires most services' transparency reports to include indicators of the accuracy and possible error rate of automated moderation, and the number of complaint decisions that were reversed (<a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">Article 15(1)(d) and (e)</a>). Counting what you did is no longer enough. You need to show whether it was right and whether it worked.</p></div></div></div></section>
+<section id="what-good-looks-like"><div class="wrap"><div class="sec-h"><h2>What good looks like</h2><p class="big">What you have, and what you can show, at each stage</p></div><div class="stages"><div><h3>Early</h3><p class="d">A founder or first safety hire covers trust and safety, usually with under a million users.</p><p class="lbl">What you have</p><p class="v">Every decision logged with its policy, source and timestamps; one north star for your platform, even from a small weekly sample; appeals tagged upheld or overturned; and a monthly one-page review.</p><p class="lbl">What you can show</p><p class="v">Your north star with an honest range, the overturn rate, how fast the most severe cases are handled, and what changed this month.</p></div><div><h3>Growing</h3><p class="d">A dedicated safety team, millions of users, and new markets or features on the way.</p><p class="lbl">What you have</p><p class="v">Health metrics for detection, decision quality and operations, each with an owner and a target band; prevalence from a properly sized random sample; repeat-offender tracking; a weekly, monthly and quarterly review rhythm; and safety exposure as a cut on the retention dashboard.</p><p class="lbl">What you can show</p><p class="v">Prevalence with a 95% confidence interval by policy area, overturns read next to prevalence, the share of new users whose early sessions include an actioned incident, and outcome and operational metrics side by side on every leadership slide.</p></div><div><h3>At scale or regulated</h3><p class="d">Tens of millions of users, a heavily regulated sector, or extra duties as a very large platform under EU or UK law.</p><p class="lbl">What you have</p><p class="v">Diagnostics across languages, markets, emerging trends and people; matched-cohort retention analysis every quarter; safety metrics required in launch and business reviews; and numbers that reconcile with the transparency report and the company's own figures.</p><p class="lbl">What you can show</p><p class="v">A trend, target and owner for every north star, 7- and 30-day return for exposed new users against a matched group, evidence that specific safety changes moved outcomes, and accuracy and error rates for automated tools that hold up in a transparency report or an audit.</p></div></div></div></section>
+<section id="how-to-do-it"><div class="wrap"><div class="sec-h"><h2>How to do it</h2><p class="big">8 steps</p></div><div class="jump-row"><p class="lbl">Jump to a step</p><ol class="jump"><li><a href="#step-1"><i>01</i>Separate activity from impact</a></li><li><a href="#step-2"><i>02</i>Adopt north stars, then health metrics, then diagnostics</a></li><li><a href="#step-3"><i>03</i>Measure exposure with prevalence sampling</a></li><li><a href="#step-4"><i>04</i>Measure what bad actors do next, and what you prevented</a></li><li><a href="#step-5"><i>05</i>Pair appeals with prevalence</a></li><li><a href="#step-6"><i>06</i>Show safety's effect on retention with a matched cohort</a></li><li><a href="#step-7"><i>07</i>Log the data from day one</a></li><li><a href="#step-8"><i>08</i>Run a review rhythm, and tell leadership the truth</a></li></ol></div><ol class="steps"><li id="step-1"><div><span class="n">Step 01</span><h3>Separate activity from impact</h3></div><div class="prose"><p>If your team took down 40% more harmful content last quarter than the quarter before, is that good news? The honest answer is that you don't know yet. It could mean detection improved. It could mean harm on the platform grew. It could mean automation got more aggressive, and legitimate users are paying for it. Volume alone can't tell you which.</p>
+<p>Activity metrics measure how much work the system does: removals, reports actioned, automation rate and time to decision. Impact metrics answer four harder questions. Map each one to something you can measure:</p>
+<div class="tbl"><table><thead><tr><th>The question</th><th>What to measure</th></tr></thead><tbody><tr><td>Is exposure to severe harm going down?</td><td><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/violating-content-prevalence.md">Violating-content prevalence</a>, <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/harmful-reach-before-action.md">harmful reach before action</a>, or your platform's own harm rate</td></tr><tr><td>After enforcement, do bad actors stop, or come back on new accounts?</td><td><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/repeat-offender-rate.md">Repeat-offender rate</a>, with ban evasion counted</td></tr><tr><td>Are we catching high-risk behavior earlier?</td><td><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/time-to-action-by-severity-p90.md">Time to action by severity</a>, <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/time-to-detect-emerging-trends.md">time to detect emerging trends</a></td></tr><tr><td>What are appeals telling us about where policy or automation is wrong?</td><td><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/appeal-overturn-rate.md">Appeal overturn rate</a> by policy area and enforcement source (<a href="../quality-calibration-and-appeals/">chapter 10</a>)</td></tr></tbody></table></div>
+<p>Some numbers belong in the weekly operations review but not on the executive slide: total items removed, reports received, automation rate on its own, moderator headcount and accounts banned. Each can rise for good or bad reasons, and none says what users experience. The <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/running-the-program.md">running the program</a> guide explains why.</p></div></li><li id="step-2"><div><span class="n">Step 02</span><h3>Adopt north stars, then health metrics, then diagnostics</h3></div><div class="prose"><p>If you can track only one number from day one, I'd make it <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/harmful-reach-before-action.md">harmful reach before action</a>: how many people saw something harmful before you acted on it. It ties your speed to the harm people actually experienced, and it's hard to game.</p>
+<p>The <a href="https://stevenmacchia.com/ts-workbench/#metrics">metrics framework</a> sorts 36 metrics into three tiers, in a suggested order of adoption.</p>
+<div class="tbl"><table><thead><tr><th>Tier</th><th>What it tells you</th><th>Examples</th><th>Who looks, and when</th></tr></thead><tbody><tr><td><strong>North star</strong></td><td>Whether users are actually safer. A few top-level numbers.</td><td>Violating-content prevalence, fraud loss rate, toxicity per 1,000 match-hours, unsafe-contact rate for minors, users who feel safe</td><td>Executives every quarter, T&amp;S leadership more often</td></tr><tr><td><strong>Health</strong></td><td>Whether the system that produces safety is working</td><td>Proactive detection, precision and recall, appeal overturn rate, QA agreement, time to action by severity</td><td>T&amp;S leadership monthly, operations weekly</td></tr><tr><td><strong>Diagnostic</strong></td><td>Why a number moved, and where to look</td><td>Churn after toxic exposure, repeat-offender rate, consistency across languages, backlog age, cost per decision</td><td>Whoever is investigating, plus a quarterly look</td></tr></tbody></table></div>
+<p>Pick one or two north stars that fit your platform. A social or user-generated content service usually starts with prevalence. A marketplace or payments product starts with fraud loss. A game starts with toxicity per match-hour. A product used by children adds the unsafe-contact rate for minors (<a href="../child-safety-and-age-assurance/">chapter 6</a>).</p>
+<p>Don't adopt everything at once. Each metric page says which program stage it suits, from &quot;early and later&quot; to &quot;mature and later&quot;. An early team can run on one north star, the overturn rate, QA agreement, time to action for the most severe cases and proactive detection. Add more only when someone will act on them.</p>
+<p>Every metric on the framework names another metric to read it with, because any number can be gamed. A rising proactive detection rate with falling precision means you're catching more innocent content. Keep the pairs together on the same page.</p></div></li><li id="step-3"><div><span class="n">Step 03</span><h3>Measure exposure with prevalence sampling</h3></div><div class="prose"><p>Prevalence is the share of what users see that breaks a rule. It measures exposure, not effort, and it's the only number that counts harm nobody reported.</p>
+<p>The method matters more than the formula, which is on the <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/violating-content-prevalence.md">violating-content prevalence</a> page:</p>
+<ul><li><strong>Sample views, not posts.</strong> A post seen a million times should be a million times more likely to be picked.</li><li><strong>Label blind, against the current policy,</strong> with two labels per item and an expert to break ties.</li><li><strong>Report a confidence interval every time.</strong> Rare harms need large samples, and a change inside the interval isn't a change.</li><li><strong>Split by surface and audience.</strong> Report feeds, search and recommendations separately, and what young users see separately from adults.</li></ul>
+<p>Ownership varies, but data science often runs the sampling pipeline and Policy the labeling guidelines.</p>
+<p>You don't need a data team to start. Pull a random sample of views each week from your logs, 200 for example, and have two people label them in a spreadsheet. It's imprecise, but it's real, and it's more honest than a removal count.</p>
+<p>Recall works the same way. To estimate how much your systems miss, label a sample of content nothing flagged, and scale up what you find (<a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/precision-and-recall-by-policy-area.md">precision and recall by policy area</a>).</p></div></li><li id="step-4"><div><span class="n">Step 04</span><h3>Measure what bad actors do next, and what you prevented</h3></div><div class="prose"><p>Removal is one move. Measure what happens after it, and what never happened because of a safeguard.</p>
+<p><strong>Repeat offending.</strong> Track the share of actions against accounts with a recent prior violation. Split it by the earlier penalty, so you learn which penalties actually change behavior. Link accounts by device, payment and contact signals where your privacy policy allows, or ban evasion will hide your repeat offenders behind new accounts. A ban is one move, not a closed case.</p>
+<p><strong>Earlier detection.</strong> Time to action matters most at the slow end, so report the 90th percentile by severity, not the average. Harmful reach before action ties speed to harm: removing a viral post fast matters more than removing an unseen one fast. Report the tail, because a few viral items usually carry most of the reach.</p>
+<p><strong>Prevention.</strong> Count risky contact prevented alongside content removed. For a product with young users, that means adults found in teen spaces, the unsafe-contact rate per 10,000 young users and the share of cases caught before the move to another app (<a href="../child-safety-and-age-assurance/">chapter 6</a>). Safer defaults and targeted limits stop most harm before anything needs removing, so if you only count removals, your best work is invisible.</p></div></li><li id="step-5"><div><span class="n">Step 05</span><h3>Pair appeals with prevalence</h3></div><div class="prose"><p>Appeals and prevalence measure opposite errors, so read them together.</p>
+<p>Overturned appeals measure over-enforcement. They're the early warning that automation or guidance has drifted. But nobody appeals the harm you missed, so overturns need to sit next to prevalence sampling, which measures under-enforcement. Appeal rates also vary by market, so a low overturn rate where few people appeal isn't automatically good news.</p>
+<p>Read the two together:</p>
+<div class="tbl"><table><thead><tr><th>Prevalence</th><th>Overturns</th><th>What it probably means</th></tr></thead><tbody><tr><td>Down</td><td>Flat or down</td><td>Real progress</td></tr><tr><td>Down</td><td>Up</td><td>You're catching more, and good users are paying for it</td></tr><tr><td>Up</td><td>Flat or down</td><td>Harm is growing, or detection is missing it. Check recall.</td></tr><tr><td>Flat</td><td>Up</td><td>Automation or guidance has drifted. Break overturns out by source and policy area.</td></tr></tbody></table></div>
+<p>Then estimate the people hurt by mistakes. Most users who are wrongly actioned never appeal. They leave. <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/good-users-wrongly-actioned.md">Good users wrongly actioned</a> estimates them from QA error rates as well as overturns, and follows what happens to them next.</p></div></li><li id="step-6"><div><span class="n">Step 06</span><h3>Show safety's effect on retention with a matched cohort</h3></div><div class="prose"><p>Pull the raw retention data at most game studios and harassed players look like some of the best-retained users. They chat more, queue more and play longer, so they run into more abuse. A team that stops there concludes toxicity doesn't hurt retention, and the safety budget conversation ends before it starts.</p>
+<p>The cut that works is a matched cohort: a comparison group chosen to look like the group you're studying, so the main difference is the thing you're measuring. Take new players whose early sessions included an actioned incident, and compare their 7- and 30-day return against new players with clean sessions, matched on playtime, mode, region and platform. Without the matching, the analysis measures engagement instead of harm.</p>
+<p>The same blind spot affects enforcement on high-value users. Banning a top spender hits the revenue report the next day, while the players they drove away stay invisible unless someone builds the cohort.</p>
+<p>Numbers worth tracking:</p>
+<ul><li>Share of new players whose first five matches include an actioned incident</li><li>D7 and D30 return (the share still active 7 and 30 days later) for exposed new players against the matched group</li><li>Voice chat opt-out rate in a player's first week</li></ul>
+<p>Safety exposure belongs as a standard cut on the retention dashboard, owned jointly by T&amp;S and data teams and reviewed alongside every other churn driver.</p>
+<p>A few cautions. Define exposure as being the target of a confirmed incident, not just filing a report. Present the result as a range, and call it an association unless you've run a proper causal analysis. Outside games, match on what drives exposure on your platform, such as audience size on a social app. With children's data, involve your privacy team and report only aggregates. The <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/churn-after-toxic-exposure.md">churn after toxic exposure</a> page has the steps and a starter query. <a href="../budgets-roadmaps-and-making-the-case/">Chapter 19</a> turns the result into a budget case.</p></div></li><li id="step-7"><div><span class="n">Step 07</span><h3>Log the data from day one</h3></div><div class="prose"><p>Most teams can't measure well because a timestamp or a field was never logged. You can't go back and add it later. The <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/data-to-log.md">data to log</a> guide lists the event logs every metric depends on. The essentials:</p>
+<ul><li><strong>Every decision</strong> with its policy, severity, action, source (automated, proactive or user report), when the item was first reported or detected, when it was decided, who decided, which vendor and queue, the language, and the views at the time of action. The first-seen time and the source are the two fields teams most often forget.</li><li><strong>Every automated detection</strong> with its model version and threshold, or you can never compare before and after a model change.</li><li><strong>Every appeal</strong> joined back to its original decision.</li><li><strong>A random exposure sample</strong>, labeled.</li><li><strong>Blind QA re-reviews</strong>, with experts who can't see the original decision.</li><li><strong>Usage denominators</strong> from the same source the company reports to the board, so your rates reconcile with theirs.</li></ul>
+<p>Decide once when each clock starts, at creation, report or detection, and never change it quietly. A silently changed definition breaks every trend line.</p>
+<p>If your review console is ROOST's open-source Coop, <a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/running-on-coop.md">running on Coop</a> shows where each field lives and which ones you'll need to log yourself (<a href="../choosing-vendors-and-tools/">chapter 9</a>).</p></div></li><li id="step-8"><div><span class="n">Step 08</span><h3>Run a review rhythm, and tell leadership the truth</h3></div><div class="prose"><p>A metric only changes behavior when a named meeting looks at it on a schedule. Here is one rhythm that works, which a small team might fold into fewer meetings:</p>
+<div class="tbl"><table><thead><tr><th>Meeting</th><th>Who</th><th>What it's for</th></tr></thead><tbody><tr><td><strong>Weekly operations review</strong></td><td>Operations leads and vendor managers</td><td>This week's problems: QA agreement, time to action, response-time targets, backlog, graphic exposure</td></tr><tr><td><strong>Monthly health review</strong></td><td>T&amp;S leadership, policy, detection and quality</td><td>Trends and owners: harm rates, proactive detection, precision, overturns, repeat offenders, cost per decision</td></tr><tr><td><strong>Quarterly executive review</strong></td><td>Executives, legal and finance</td><td>North stars, retention impact, risk and investment</td></tr><tr><td><strong>Every release</strong></td><td>Model safety and product, for AI features</td><td>Whether to ship (<a href="../ai-in-trust-and-safety/">chapter 18</a>)</td></tr></tbody></table></div>
+<p>Set targets carefully. Measure for several weeks, for example 6 to 8, before you commit to a number. Set a band, not a point, so the gap between &quot;on track&quot; and &quot;off track&quot; is your early warning. Pair every target with a guardrail: a response-time target without a quality floor rewards rushing. Set thresholds by severity, and show the uncertainty on anything from a sample.</p>
+<p>Then report operational and outcome metrics side by side, and be willing to say when they disagree. It takes discipline to walk into a business review and say, &quot;Our numbers are up, and I'm not convinced we're safer.&quot; That's the conversation that earns credibility, directs investment to the right places and keeps Trust &amp; Safety from being judged like a cost center measured by throughput.</p>
+<p>Activity is easy to measure. Impact is harder.</p></div></li></ol></div></section>
+<section id="mistakes-to-avoid"><div class="wrap"><div class="sec-h"><h2>Mistakes to avoid</h2><p class="big">And what to do instead</p></div><ol class="rows"><li><i>01</i><h3>Leading with removals</h3><p>Put outcome metrics first, and keep removal counts in the operations review.</p></li><li><i>02</i><h3>Adopting every metric at once</h3><p>Start with one or two north stars and a few health metrics, each with an owner and a meeting.</p></li><li><i>03</i><h3>Counting items instead of views</h3><p>Sample what users see, so popular content counts more.</p></li><li><i>04</i><h3>Reporting a sample without its interval</h3><p>Show the confidence interval, and don't celebrate a change inside it.</p></li><li><i>05</i><h3>Reading retention data raw</h3><p>Build a matched cohort, or you'll measure engagement instead of harm.</p></li><li><i>06</i><h3>Treating overturns as the whole quality picture</h3><p>Pair them with prevalence and recall sampling.</p></li><li><i>07</i><h3>Changing a definition quietly</h3><p>Write down every change to a metric or a clock, with the date, and restate the trend.</p></li><li><i>08</i><h3>Hiding the disagreement</h3><p>When the numbers are up and users aren't safer, say so.</p></li></ol></div></section>
+<section id="start-from-this-template"><div class="wrap"><div class="sec-h"><h2>Start from this template</h2><p class="big">Copy it, fill it in, make it yours</p></div><div class="tpl"><p class="lbl">Template</p><h3>Leadership one-pager</h3><p>One row per outcome question, outcome rows first.</p><div class="tbl"><table><thead><tr><th>Question</th><th>Metric</th><th>This period</th><th>Target band</th><th>Trend</th><th>What we're doing about it</th></tr></thead><tbody><tr><td>Is exposure to severe harm going down?</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Do bad actors stop after enforcement?</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Are we catching high-risk behavior earlier?</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>What do appeals say about where we're wrong?</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Is the machine running? (operations)</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Matched-cohort brief</h3><p>Agree it with the data team before anyone pulls numbers.</p><div class="tbl"><table><thead><tr><th>Item</th><th>Your answer</th></tr></thead><tbody><tr><td>Exposure: what counts as an actioned incident</td><td></td></tr><tr><td>Cohort: which new users, and which window</td><td></td></tr><tr><td>Matched on</td><td>Playtime, mode, region and platform, or your platform's equivalents</td></tr><tr><td>Outcome</td><td>D7 and D30 return, plus spend or opt-outs if available</td></tr><tr><td>Owners</td><td>T&amp;S and data, jointly</td></tr><tr><td>How it will be described</td><td>An association, with a range, unless a causal analysis is run</td></tr></tbody></table></div></div><div class="tpl"><p class="lbl">Template</p><h3>Metric register</h3><p>One row per metric you adopt.</p><div class="tbl"><table><thead><tr><th>Metric</th><th>Tier</th><th>Owner</th><th>Meeting</th><th>Target band</th><th>Read it with</th><th>Definition last changed</th></tr></thead><tbody><tr><td></td><td>North star</td><td></td><td>Quarterly</td><td></td><td></td><td></td></tr><tr><td></td><td>Health</td><td></td><td>Monthly</td><td></td><td></td><td></td></tr></tbody></table></div></div></div></section>
+<section id="do-it-with"><div class="wrap"><div class="sec-h"><h2>Do it with</h2><p class="big">Free tools and metrics that go with this chapter</p></div><div class="cards"><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#metrics">Metrics framework</a></h3><p>36 metrics with formulas, measurement steps and SQL, and a one-pager for leadership. <a href="https://github.com/stevenmacchia/ts-metrics-framework">Open content</a></p></div><div class="card"><span class="k">Workbench tool</span><h3><a href="https://stevenmacchia.com/ts-workbench/#maturity">Program maturity</a></h3><p>Rate your program's metrics and reporting, and seven other areas, against the targets for its stage. <a href="https://github.com/stevenmacchia/ts-maturity-model">Open content</a></p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/churn-after-toxic-exposure.md">Churn after toxic exposure</a></h3><p>The retention gap between users targeted by a confirmed incident and matched users who weren't.</p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/violating-content-prevalence.md">Violating-content prevalence</a></h3><p>Out of everything people see, how much breaks your rules, from a random sample of views.</p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/repeat-offender-rate.md">Repeat-offender rate</a></h3><p>Whether people stop after enforcement or keep going, and which penalties deter.</p></div><div class="card"><span class="k">Metric</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/appeal-overturn-rate.md">Appeal overturn rate</a></h3><p>How often appealed decisions are reversed, read next to prevalence.</p></div><div class="card"><span class="k">Reference</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/running-the-program.md">Running the program</a></h3><p>Review rhythm, target setting and vanity metrics to avoid.</p></div><div class="card"><span class="k">Reference</span><h3><a href="https://github.com/stevenmacchia/ts-metrics-framework/blob/main/data-to-log.md">Data to log</a></h3><p>The event logs every metric depends on.</p></div></div></div></section>
+<section id="further-reading"><div class="wrap"><div class="sec-h"><h2>Further reading</h2><p class="big">Steven's posts on this topic, and sources worth the time</p></div><p class="lbl sub-h">From Steven's writing · 3 posts</p><ol class="posts"><li><div><time datetime="2026-10-01">Oct 1, 2026</time><span class="k">Essay</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/">Harassed players look like your best-retained users</a></h3><p>Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.</p><p class="meta">Also in: <a href="../what-trust-and-safety-is-for/">1. What Trust &amp; Safety is for</a>, <a href="../budgets-roadmaps-and-making-the-case/">19. Budgets, roadmaps and making the case</a></p></div></li><li><div><time datetime="2026-09-24">Sep 24, 2026</time><span class="k">Essay</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_as-more-enforcement-moves-to-automation-share-7508900187977854976-DLyv/">Appeal overturns: the early warning for automation</a></h3><p>Overturned appeals show drift weeks before anything else. Automation expands only where its overturn rate matches human review, and changes roll back when the rate moves.</p><p class="meta">Also in: <a href="../quality-calibration-and-appeals/">10. Quality, calibration and appeals</a>, <a href="../ai-in-trust-and-safety/">18. AI in Trust &amp; Safety</a></p></div></li><li><div><time datetime="2026-09-23">Sep 23, 2026</time><span class="k">Essay</span></div><div><h3><a href="https://www.linkedin.com/posts/stevenmacchia_if-your-team-took-down-40-more-harmful-content-share-7508565523224432642-JJno/">Activity is easy to measure. Impact is harder.</a></h3><p>A 40% jump in removals could mean better detection, more harm or over-enforcement. Report outcome metrics next to operational ones, and tell leadership when they disagree.</p><p class="meta">Also in: <a href="../what-trust-and-safety-is-for/">1. What Trust &amp; Safety is for</a>, <a href="../budgets-roadmaps-and-making-the-case/">19. Budgets, roadmaps and making the case</a></p></div></li></ol><p class="lbl sub-h">Outside sources</p><ul class="src"><li><a href="https://www.takethis.org/2023/08/research-report-toxic-gamers-are-alienating-your-core-demographic-the-business-case-for-community-management/">Take This: Toxic Gamers Are Alienating Your Core Demographic</a><span>the 2023 report, with Nielsen data, on how toxicity changes players' spending and play.</span></li><li><a href="https://transparency.meta.com/policies/improving/prevalence-metric/">Meta Transparency Center: prevalence</a><span>how one large platform defines prevalence and samples views to measure it.</span></li><li><a href="https://www.tspa.org/curriculum/ts-fundamentals/content-moderation-and-operations/metrics-for-content-moderation/">TSPA: Metrics for content moderation</a><span>volume, time, quality and appeals metrics, explained.</span></li><li><a href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj">EU Digital Services Act (Regulation 2022/2065)</a><span>the official text. Article 15 sets out what transparency reports must include, including accuracy and error indicators for automated moderation.</span></li></ul></div></section>
+<section id="changes"><div class="wrap"><div class="sec-h"><h2>Recent changes</h2><div><p class="big">4 changes to this chapter, newest first</p><p class="intro">The <a href="../updates/">updates page</a> has every change to the handbook, by date.</p></div></div><ol class="log"><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 18 other chapters</span><p>Practical advice that varies by platform, such as cadences, sample sizes, targets and who owns what, is now set out as options with examples, so each team can choose what fits.</p></div></li><li><time datetime="2026-10-04">Oct 4, 2026</time><div><span class="k">Revised</span><span class="ch">With 14 other chapters</span><p>Added Steven's own calls from an interview: where Trust &amp; Safety should report, what to automate first, the one number to track from day one, who makes the 2am call, and more. Practical choices that vary by platform are now laid out as options.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Drafted</span><span class="ch">With 17 other chapters</span><p>First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</p></div></li><li><time datetime="2026-10-03">Oct 3, 2026</time><div><span class="k">Added</span><span class="ch">With 14 other chapters</span><p>Linked the first 16 posts to the chapters they inform, and set out the ten principles behind the handbook.</p></div></li></ol></div></section>
+<section><div class="wrap"><nav class="pn" aria-label="Chapters"><a href="../quality-calibration-and-appeals/"><span>← Chapter 10</span><b>Quality, calibration and appeals</b></a><a class="next" href="../severe-harm-escalations/"><span>Chapter 12 →</span><b>Severe harm escalations</b></a></nav></div></section>
+</div>
+</main>
+<footer><div class="wrap"><h2>Get in touch.</h2><div class="c"><a href="mailto:stevenamacchia@gmail.com">stevenamacchia@gmail.com</a><a href="https://www.linkedin.com/in/stevenmacchia">LinkedIn</a><a href="https://stevenmacchia.com/Steven_Macchia_Resume.pdf" download>Resume</a></div><div class="fine"><span>© 2026 Steven Macchia · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://github.com/stevenmacchia/ts-handbook">Source</a> · <a href="../updates/">Updates</a></span><span>Written with AI-assisted drafting · Not legal advice: check with your own legal team · Visits counted without cookies</span></div></div></footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+[
+  {
+    "date": "2026-10-04",
+    "kind": "added",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "detection-and-prevention",
+      "hiring-and-structuring-the-team",
+      "working-with-product-legal-and-leadership"
+    ],
+    "post": "act-7506790883938295809",
+    "summary": "Linked Steven's post on why treating Trust & Safety as an operations function is a mistake, and added it to chapter 8's view on where the team should report."
+  },
+  {
+    "date": "2026-10-04",
+    "kind": "revised",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "know-your-risks",
+      "the-first-90-days",
+      "writing-policy",
+      "detection-and-prevention",
+      "child-safety-and-age-assurance",
+      "review-operations",
+      "hiring-and-structuring-the-team",
+      "choosing-vendors-and-tools",
+      "quality-calibration-and-appeals",
+      "measuring-what-matters",
+      "severe-harm-escalations",
+      "crisis-response",
+      "moderator-wellbeing",
+      "working-with-product-legal-and-leadership",
+      "regulation-and-compliance",
+      "transparency-reports-and-notices",
+      "ai-in-trust-and-safety",
+      "budgets-roadmaps-and-making-the-case"
+    ],
+    "post": null,
+    "summary": "Practical advice that varies by platform, such as cadences, sample sizes, targets and who owns what, is now set out as options with examples, so each team can choose what fits."
+  },
+  {
+    "date": "2026-10-04",
+    "kind": "revised",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "know-your-risks",
+      "the-first-90-days",
+      "writing-policy",
+      "review-operations",
+      "hiring-and-structuring-the-team",
+      "choosing-vendors-and-tools",
+      "quality-calibration-and-appeals",
+      "measuring-what-matters",
+      "severe-harm-escalations",
+      "crisis-response",
+      "moderator-wellbeing",
+      "working-with-product-legal-and-leadership",
+      "transparency-reports-and-notices",
+      "ai-in-trust-and-safety"
+    ],
+    "post": null,
+    "summary": "Added Steven's own calls from an interview: where Trust & Safety should report, what to automate first, the one number to track from day one, who makes the 2am call, and more. Practical choices that vary by platform are now laid out as options."
+  },
+  {
+    "date": "2026-10-03",
+    "kind": "drafted",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "know-your-risks",
+      "the-first-90-days",
+      "writing-policy",
+      "detection-and-prevention",
+      "review-operations",
+      "hiring-and-structuring-the-team",
+      "choosing-vendors-and-tools",
+      "quality-calibration-and-appeals",
+      "measuring-what-matters",
+      "severe-harm-escalations",
+      "crisis-response",
+      "moderator-wellbeing",
+      "working-with-product-legal-and-leadership",
+      "regulation-and-compliance",
+      "transparency-reports-and-notices",
+      "ai-in-trust-and-safety",
+      "budgets-roadmaps-and-making-the-case"
+    ],
+    "post": null,
+    "summary": "First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next."
+  },
+  {
+    "date": "2026-10-03",
+    "kind": "drafted",
+    "chapters": [
+      "child-safety-and-age-assurance"
+    ],
+    "post": null,
+    "summary": "First full draft: what each level of age assurance should unlock, safe defaults, grooming responses that build as signals stack, the account decision, and how to measure prevention."
+  },
+  {
+    "date": "2026-10-03",
+    "kind": "added",
+    "chapters": [
+      "child-safety-and-age-assurance",
+      "regulation-and-compliance",
+      "crisis-response",
+      "detection-and-prevention",
+      "review-operations",
+      "know-your-risks",
+      "working-with-product-legal-and-leadership",
+      "what-trust-and-safety-is-for",
+      "measuring-what-matters",
+      "budgets-roadmaps-and-making-the-case",
+      "writing-policy",
+      "ai-in-trust-and-safety",
+      "moderator-wellbeing",
+      "severe-harm-escalations",
+      "quality-calibration-and-appeals"
+    ],
+    "post": null,
+    "summary": "Linked the first 16 posts to the chapters they inform, and set out the ten principles behind the handbook."
+  }
+]

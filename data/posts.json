@@ -1,0 +1,230 @@
+[
+  {
+    "id": "ejnUt-5w",
+    "title": "Saturday reading: child safety gaps in games, Ofcom in court and California's new laws",
+    "date": "2026-10-03",
+    "type": "Reading roundup",
+    "topic": "What's changing",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-gamingsafety-share-7512121016282882048-B4fp/",
+    "point": "Australia's eSafety found Fortnite and Minecraft still mostly rely on self-declared age. Age assurance is the foundation, because every other safeguard assumes you know who's a kid.",
+    "chapters": [
+      "child-safety-and-age-assurance",
+      "regulation-and-compliance"
+    ]
+  },
+  {
+    "id": "eWT68DFG",
+    "title": "Watch the rate, not the volume",
+    "date": "2026-10-02",
+    "type": "Commentary",
+    "topic": "Safety by design and operations",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/",
+    "point": "In Stream's live sports chat data, volume swung 7.5x but the rate of racist content held steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.",
+    "chapters": [
+      "detection-and-prevention",
+      "review-operations",
+      "crisis-response"
+    ]
+  },
+  {
+    "id": "exee2gH2",
+    "title": "Run the abuse pre-mortem at design review",
+    "date": "2026-10-02",
+    "type": "Essay",
+    "topic": "Safety by design and operations",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7511792474445750272-3rLV/",
+    "point": "At design review, changing a default is a quick edit. After launch it means taking something away. T&S earns the invite by being selective and fast, and accepted risks get an owner and a date.",
+    "chapters": [
+      "know-your-risks",
+      "working-with-product-legal-and-leadership"
+    ]
+  },
+  {
+    "id": "ejCYNQCZ",
+    "title": "Harassed players look like your best-retained users",
+    "date": "2026-10-01",
+    "type": "Essay",
+    "topic": "Measuring what matters",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/",
+    "point": "Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "measuring-what-matters",
+      "budgets-roadmaps-and-making-the-case"
+    ]
+  },
+  {
+    "id": "ezHpdbqW",
+    "title": "A proper introduction",
+    "date": "2026-10-01",
+    "type": "Introduction",
+    "topic": "About",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-childsafety-share-7511414432145723392-sNhK/",
+    "point": "Who Steven is and what to expect: T&S news with a practitioner's context, focused on child safety, age assurance, gaming and platform compliance, plus free tools.",
+    "chapters": []
+  },
+  {
+    "id": "ek2sZASC",
+    "title": "Why early grooming detection matters",
+    "date": "2026-09-30",
+    "type": "Share",
+    "topic": "Child safety and age assurance",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_this-is-why-what-aiba-is-building-matters-share-7511198140469800960--XX4/",
+    "point": "Tools that help platforms spot grooming early protect kids and the communities around them.",
+    "chapters": [
+      "child-safety-and-age-assurance"
+    ]
+  },
+  {
+    "id": "eAWfx2HQ",
+    "title": "Launches get a security review. Almost none get an abuse review.",
+    "date": "2026-09-30",
+    "type": "Tool launch",
+    "topic": "Safety by design and operations",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_most-product-launches-get-a-security-review-share-7511154971653070848-PMG-/",
+    "point": "Introducing the free abuse pre-mortem: 12 questions, rated risks, safeguards with owners in priority order, likely laws, and a launch plan for Jira, Linear or GitHub.",
+    "chapters": [
+      "know-your-risks"
+    ]
+  },
+  {
+    "id": "ea-3s2rX",
+    "title": "Grooming is a pattern, not a message",
+    "date": "2026-09-30",
+    "type": "Essay",
+    "topic": "Child safety and age assurance",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7511067864448237568-k7h4/",
+    "point": "Responses build as signals stack on adult-to-minor contact, with thresholds tested on past cases, a queue worked by risk, privacy limits agreed up front, and four numbers that show it works.",
+    "chapters": [
+      "detection-and-prevention",
+      "child-safety-and-age-assurance",
+      "review-operations"
+    ]
+  },
+  {
+    "id": "ewkbc3xv",
+    "title": "Nudify apps: harm no single platform sees in full",
+    "date": "2026-09-29",
+    "type": "Share",
+    "topic": "Child safety and age assurance",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_nudify-apps-are-a-growing-problem-and-a-share-7510771967986155520-s7TP/",
+    "point": "The image is made on one service, the tool promoted on another and the harm lands on a third. That's why cross-platform signal sharing through Lantern matters.",
+    "chapters": [
+      "detection-and-prevention",
+      "child-safety-and-age-assurance"
+    ]
+  },
+  {
+    "id": "em3VHXek",
+    "title": "Age assurance: what should each check unlock?",
+    "date": "2026-09-29",
+    "type": "Essay",
+    "topic": "Child safety and age assurance",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_most-of-the-debate-about-age-assurance-in-share-7510763675658477568-IVax/",
+    "point": "The method matters less than what each level of assurance lets a user do. Errors aren't equal, accounts change hands, and someone has to own the thresholds.",
+    "chapters": [
+      "writing-policy",
+      "child-safety-and-age-assurance"
+    ]
+  },
+  {
+    "id": "ebtQhp33",
+    "title": "The era of voluntary child safety is ending",
+    "date": "2026-09-29",
+    "type": "Reading roundup",
+    "topic": "What's changing",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-onlinesafety-share-7510666169993805824-VI4v/",
+    "point": "India's push for age checks, Florida's case against OpenAI, Copilot data labeling, TikTok's Alabama settlement and Meta's New Mexico verdict. The question has moved from \"do you have a policy?\" to \"can you prove it works?\"",
+    "chapters": [
+      "moderator-wellbeing",
+      "working-with-product-legal-and-leadership",
+      "regulation-and-compliance",
+      "ai-in-trust-and-safety"
+    ]
+  },
+  {
+    "id": "et4ytx_h",
+    "title": "Games are where kids socialize now, and regulators know it",
+    "date": "2026-09-28",
+    "type": "Essay",
+    "topic": "Child safety and age assurance",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_games-have-become-one-of-the-main-places-share-7510446882154864641-n3PV/",
+    "point": "Grooming builds over weeks and usually moves off-platform. Protections that work act earlier and limit who can reach a child. Measure prevented contact, not just removals.",
+    "chapters": [
+      "detection-and-prevention",
+      "child-safety-and-age-assurance",
+      "regulation-and-compliance"
+    ]
+  },
+  {
+    "id": "eFtuS8jg",
+    "title": "A banned account is not a closed case",
+    "date": "2026-09-25",
+    "type": "Essay",
+    "topic": "Child safety and age assurance",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_childsafety-trustandsafety-responsibleai-share-7509260900831260674-gar3/",
+    "point": "Online enticement is a pattern of contact, not a file, and is now mandatory to report. The hard call is the account: ban visibly, or restrict quietly while the network is mapped.",
+    "chapters": [
+      "child-safety-and-age-assurance",
+      "severe-harm-escalations"
+    ]
+  },
+  {
+    "id": "eMxag4_Q",
+    "title": "Appeal overturns: the early warning for automation",
+    "date": "2026-09-24",
+    "type": "Essay",
+    "topic": "Automation and decision quality",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_as-more-enforcement-moves-to-automation-share-7508900187977854976-DLyv/",
+    "point": "Overturned appeals show drift weeks before anything else. Automation expands only where its overturn rate matches human review, and changes roll back when the rate moves.",
+    "chapters": [
+      "quality-calibration-and-appeals",
+      "measuring-what-matters",
+      "ai-in-trust-and-safety"
+    ]
+  },
+  {
+    "id": "eVmYN3Wp",
+    "title": "Activity is easy to measure. Impact is harder.",
+    "date": "2026-09-23",
+    "type": "Essay",
+    "topic": "Measuring what matters",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_if-your-team-took-down-40-more-harmful-content-share-7508565523224432642-JJno/",
+    "point": "A 40% jump in removals could mean better detection, more harm or over-enforcement. Report outcome metrics next to operational ones, and tell leadership when they disagree.",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "measuring-what-matters",
+      "budgets-roadmaps-and-making-the-case"
+    ]
+  },
+  {
+    "id": "eNUvhJU8",
+    "title": "Automation rate isn't a measure of maturity",
+    "date": "2026-09-21",
+    "type": "Essay",
+    "topic": "Automation and decision quality",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-responsibleai-share-7507791297672486913-jc9j/",
+    "point": "Automate as much as the evidence supports. Where a wrong decision can't be reversed or someone's safety is at risk, automation prepares the case and a person closes it.",
+    "chapters": [
+      "detection-and-prevention",
+      "review-operations",
+      "moderator-wellbeing",
+      "ai-in-trust-and-safety"
+    ]
+  },
+  {
+    "id": "act-7506790883938295809",
+    "title": "You can't moderate your way out of a systems problem",
+    "date": "2026-09-18",
+    "type": "Essay",
+    "topic": "Safety by design and operations",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/",
+    "point": "Treating Trust & Safety mainly as an operations function is a mistake. Reputation, history, age and behavior signals belong in one risk model, automation needs clear limits, and safety belongs in the product architecture from the start.",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "detection-and-prevention",
+      "hiring-and-structuring-the-team",
+      "working-with-product-legal-and-leadership"
+    ]
+  }
+]
