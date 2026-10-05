@@ -423,7 +423,11 @@ footer .fine{color:#A0A6C0}
 .legal{border-left-color:var(--blue);border-radius:0 12px 12px 0}
 .prose blockquote{border-left-color:var(--blue)}
 .status .sq{border-radius:50%;background:var(--blue)}
-.open .sq{border-radius:50%}`;
+.open .sq{border-radius:50%}
+.jump{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px}
+.jump li{line-height:1.4}
+.jump i{margin-right:8px;color:var(--blue)}
+@media (max-width:640px){.jump{grid-template-columns:1fr}}`;
 
 const ICON = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="#121212"/><text x="16" y="21.5" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">SM</text></svg>');
 const page = ({title, desc, url, depth, body, script = ""}) => {
