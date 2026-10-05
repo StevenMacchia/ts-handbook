@@ -398,7 +398,32 @@ footer :focus-visible{outline-color:#fff}
 @media (max-width:900px){.hero{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}.hh{grid-template-columns:1fr;gap:18px;padding:40px 0 28px}.status{text-align:left;white-space:normal}.home{grid-template-columns:1fr;padding-top:20px}.home>section{padding-bottom:48px}.side{position:static;padding-bottom:56px}.proof{grid-template-columns:1fr;gap:16px;padding-bottom:48px}.sec-h,.row2,.cs-h,.steps>li,.jump-row,footer .wrap{grid-template-columns:1fr;gap:16px}.jump-row{gap:8px;margin:-4px 0 20px}.rows li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px}.rows li>:nth-child(n+3){grid-column:2}.toc li{grid-template-columns:34px minmax(0,1fr);gap:2px 12px}.toc .st{grid-column:2;grid-row:auto;display:flex;gap:12px;justify-items:start;padding-top:4px}.pr2,.st3{grid-template-columns:1fr}.pr2{gap:0}.pr+.pr{border-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top a.name{display:inline}.top .btn{margin-left:auto}section,.ch-page section{padding-bottom:56px}.ch-hero{padding:40px 0 32px}.stages{grid-template-columns:1fr;gap:28px;padding:22px}.cards{grid-template-columns:1fr}.feed{grid-template-columns:1fr;gap:40px}.posts li,.src li,.log>li,.feed .log>li,.feed .posts li{grid-template-columns:1fr;gap:4px}.posts time,.log time{padding-top:0}.posts .k{display:inline;margin:0 0 0 10px}.steps>li{gap:12px;padding:24px 0}.pn{grid-template-columns:1fr}.pn .next{grid-column:1;text-align:left}}
 @media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
 @media (max-height:640px){.side{position:static}}
-@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}`;
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+/* ---------- Aurora: the same light as the workbench and the personal site. Tokens, the wash, frosted panels, Inter, one violet accent ---------- */
+:root{--bg:#F7F8FC;--panel:rgba(255,255,255,.72);--ink:#15172B;--muted:#636A85;--line:rgba(21,23,43,.10);--strong:rgba(21,23,43,.22);--blue:#6D5DF6;--good:#1FA971;--mark:rgba(109,93,246,.14);--navy:#10121F;
+  --wash:radial-gradient(900px 420px at 72% -10%, rgba(109,93,246,.26), transparent 62%), radial-gradient(700px 380px at 22% 0%, rgba(255,160,120,.26), transparent 60%);
+  --shadow:0 1px 1px rgba(21,23,43,.04), 0 10px 30px rgba(21,23,43,.07)}
+body{background:var(--wash), var(--bg);background-repeat:no-repeat;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{letter-spacing:-.022em}
+h1{background:linear-gradient(100deg, var(--ink) 35%, var(--blue) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;width:fit-content}
+.top{border-bottom-color:var(--line)}
+.top .mark{width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#6D5DF6,#FF9A7A)}
+.btn{border-radius:10px;border-color:var(--line);background:#fff;box-shadow:0 1px 2px rgba(21,23,43,.05)}
+.btn:hover{background:#fff;border-color:var(--strong);box-shadow:var(--shadow)}
+.btn.primary,.btn.primary:hover{background:linear-gradient(135deg,#6D5DF6,#9B6BFF);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(109,93,246,.35)}
+.btn.primary:hover{background:linear-gradient(135deg,#7A6BFF,#A77DFF)}
+.card,.sbox,.tpl,.hs,.cover{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.sec-h,.open{border-top-color:var(--line)}
+.open .sq,.focus li::before{border-radius:50%;background:var(--blue)}
+.status{border-radius:999px}
+.filters button[aria-pressed="true"],.toc a[aria-current="page"]{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+footer{background:var(--navy);background-image:radial-gradient(700px 300px at 80% 120%, rgba(109,93,246,.35), transparent 60%)}
+footer .fine{color:#A0A6C0}
+.legal{border-left-color:var(--blue);border-radius:0 12px 12px 0}
+.prose blockquote{border-left-color:var(--blue)}
+.status .sq{border-radius:50%;background:var(--blue)}
+.open .sq{border-radius:50%}`;
 
 const ICON = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="#121212"/><text x="16" y="21.5" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">SM</text></svg>');
 const page = ({title, desc, url, depth, body, script = ""}) => {
@@ -416,11 +441,11 @@ const page = ({title, desc, url, depth, body, script = ""}) => {
 <meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}"><meta property="og:image" content="${HOME}og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${HOME}og-image.png">
-<meta name="theme-color" content="#121212">
+<meta name="theme-color" content="#6D5DF6">
 <link rel="icon" href="${ICON}">
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${ANALYTICS}"}'></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap">
 <style>
 ${CSS}
 </style>

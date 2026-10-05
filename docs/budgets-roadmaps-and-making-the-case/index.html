@@ -11,11 +11,11 @@
 <meta property="og:type" content="article"><meta property="og:title" content="19. Budgets, roadmaps and making the case · The T&amp;S Handbook"><meta property="og:description" content="How do you get the people and money the program needs?">
 <meta property="og:url" content="https://stevenmacchia.com/ts-handbook/budgets-roadmaps-and-making-the-case/"><meta property="og:image" content="https://stevenmacchia.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stevenmacchia.com/og-image.png">
-<meta name="theme-color" content="#121212">
+<meta name="theme-color" content="#6D5DF6">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23121212%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2221.5%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ESM%3C%2Ftext%3E%3C%2Fsvg%3E">
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6ed43d34957a49fcb90ec8e43f7db523"}'></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap">
 <style>
 :root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647}
 *{box-sizing:border-box}
@@ -275,6 +275,31 @@ footer :focus-visible{outline-color:#fff}
 @media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
 @media (max-height:640px){.side{position:static}}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+/* ---------- Aurora: the same light as the workbench and the personal site. Tokens, the wash, frosted panels, Inter, one violet accent ---------- */
+:root{--bg:#F7F8FC;--panel:rgba(255,255,255,.72);--ink:#15172B;--muted:#636A85;--line:rgba(21,23,43,.10);--strong:rgba(21,23,43,.22);--blue:#6D5DF6;--good:#1FA971;--mark:rgba(109,93,246,.14);--navy:#10121F;
+  --wash:radial-gradient(900px 420px at 72% -10%, rgba(109,93,246,.26), transparent 62%), radial-gradient(700px 380px at 22% 0%, rgba(255,160,120,.26), transparent 60%);
+  --shadow:0 1px 1px rgba(21,23,43,.04), 0 10px 30px rgba(21,23,43,.07)}
+body{background:var(--wash), var(--bg);background-repeat:no-repeat;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{letter-spacing:-.022em}
+h1{background:linear-gradient(100deg, var(--ink) 35%, var(--blue) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;width:fit-content}
+.top{border-bottom-color:var(--line)}
+.top .mark{width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#6D5DF6,#FF9A7A)}
+.btn{border-radius:10px;border-color:var(--line);background:#fff;box-shadow:0 1px 2px rgba(21,23,43,.05)}
+.btn:hover{background:#fff;border-color:var(--strong);box-shadow:var(--shadow)}
+.btn.primary,.btn.primary:hover{background:linear-gradient(135deg,#6D5DF6,#9B6BFF);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(109,93,246,.35)}
+.btn.primary:hover{background:linear-gradient(135deg,#7A6BFF,#A77DFF)}
+.card,.sbox,.tpl,.hs,.cover{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.sec-h,.open{border-top-color:var(--line)}
+.open .sq,.focus li::before{border-radius:50%;background:var(--blue)}
+.status{border-radius:999px}
+.filters button[aria-pressed="true"],.toc a[aria-current="page"]{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+footer{background:var(--navy);background-image:radial-gradient(700px 300px at 80% 120%, rgba(109,93,246,.35), transparent 60%)}
+footer .fine{color:#A0A6C0}
+.legal{border-left-color:var(--blue);border-radius:0 12px 12px 0}
+.prose blockquote{border-left-color:var(--blue)}
+.status .sq{border-radius:50%;background:var(--blue)}
+.open .sq{border-radius:50%}
 </style>
 </head>
 <body>
