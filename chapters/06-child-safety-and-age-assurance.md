@@ -40,7 +40,7 @@ Most debate about age assurance is about the method: face scans, ID documents, p
 
 This puts friction where the risk is. Most users never feel it, because most features don't need more than the first row. Context and platform matter a great deal: a learning app for 8-year-olds and a game with an adult audience will draw these lines in different places.
 
-The lines that matter most are usually 13, 16 and 18. They're where laws change (COPPA's under-13 consent rules, minimum ages for social media, adult content) and where your product should change what's allowed. Optimize your checks for getting those boundaries right, not for precision across every age.
+The lines that matter most are usually 13, 16 and 18. They're where laws change (COPPA's under-13 consent rules, minimum ages for social media, adult content; see [chapter 16](16-regulation-and-compliance.md)) and where your product should change what's allowed. Optimize your checks for getting those boundaries right, not for precision across every age.
 
 Errors aren't equal. Put an adult in a teen space and they get annoyed, and some borrow a younger relative's account. Put a 15-year-old in an adult space and every protection built for them is gone. When you tune a threshold, weigh those two mistakes differently.
 
@@ -80,7 +80,7 @@ So the response should build as signals stack:
 | Two or more within a short window | Add friction: gifting limits, a safety prompt to the child, no new private channels between the two accounts. |
 | A request to move to another app, or for images, after that | Restrict contact, and send the full history to a trained reviewer. |
 
-Thresholds should come from data, not instinct. Test them against past confirmed cases and past false alarms. Set them where precision holds and the review team can keep pace. Revisit them every quarter, because offenders learn what triggers friction and route around it. Detection tools now exist to help, such as Thorn's conversation classifiers, Roblox's open-sourced Sentinel and specialist vendors, and which fits depends on your volume and how much engineering you can put behind it. A tool still needs your thresholds and your reviewers behind it.
+Thresholds should come from data, not instinct. Test them against past confirmed cases and past false alarms. Set them where precision holds and the review team can keep pace. Revisit them every quarter, because offenders learn what triggers friction and route around it ([chapter 5](05-detection-and-prevention.md) covers setting thresholds from data). Detection tools now exist to help, such as Thorn's conversation classifiers, Roblox's open-sourced Sentinel and specialist vendors, and which fits depends on your volume and how much engineering you can put behind it ([chapter 9](09-choosing-vendors-and-tools.md)). A tool still needs your thresholds and your reviewers behind it.
 
 Privacy sets the other boundary. Limit pattern detection to adult-to-minor pairs. Start with metadata (who contacts whom, how often, from how new an account) before reading message content. Agree retention limits with Legal before launch. Check each market: rules on scanning private messages vary, especially in the EU.
 
@@ -104,7 +104,7 @@ The standard isn't speed. It's a safe child and a fully mapped network.
 
 Where the age lines and detection thresholds sit affects product, safety, legal and privacy at once. If nobody owns them, each team nudges them toward its own goals and nobody notices the drift. Give them one owner and the same sign-off as a policy change.
 
-Write every change down, with the numbers behind it. Every threshold gets tested the day a regulator, a parent or a court asks why a specific account was or wasn't restricted. That question is only answerable if one person owned the thresholds, each change was recorded, and the decision to report to law enforcement was made by people trained for it.
+Write every change down, with the numbers behind it. Every threshold gets tested the day a regulator, a parent or a court asks why a specific account was or wasn't restricted. That question is only answerable if one person owned the thresholds, each change was recorded, and the decision to report to law enforcement was made by people trained for it. [Chapter 4](04-writing-policy.md) covers treating thresholds as policy, and [chapter 16](16-regulation-and-compliance.md) covers building a record that holds up.
 
 ### 8. Measure prevention, not just removal
 

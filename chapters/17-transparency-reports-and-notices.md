@@ -70,7 +70,7 @@ A few rules make notices work in practice:
 - **Handle self-harm with care.** If the content was about suicide or self-harm, be supportive and point to help, without lecturing.
 - **Have a person approve every template,** and review templates whenever the policy behind them changes.
 
-The [enforcement notice writer](https://stevenmacchia.com/ts-workbench/#notice) drafts a notice from a decision and checks it against these elements. One split of ownership that works: Policy owns the wording, Legal checks the legal grounds, and Operations owns the templates in the tool.
+The [enforcement notice writer](https://stevenmacchia.com/ts-workbench/#notice) writes a notice from a decision and checks it against these elements. One split of ownership that works: Policy owns the wording, Legal checks the legal grounds, and Operations owns the templates in the tool.
 
 ### 3. Connect every notice to an appeal
 
@@ -176,7 +176,7 @@ Make that a process, not a hope:
 
 ## Do it with
 
-- **[Enforcement notice writer](https://stevenmacchia.com/ts-workbench/#notice)**: Draft a notice checked against what an EU statement of reasons must include. [Open content](https://github.com/stevenmacchia/ts-ai-assistants)
+- **[Enforcement notice writer](https://stevenmacchia.com/ts-workbench/#notice)**: Write a notice checked against what an EU statement of reasons must include. [Open content](https://github.com/stevenmacchia/ts-ai-assistants)
 - **[Transparency report builder](https://stevenmacchia.com/ts-workbench/#transparency)**: Build a DSA transparency report section by section, with a completeness check. [Open content](https://github.com/stevenmacchia/ts-ai-assistants)
 - **[Statement-of-reasons coverage](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/statement-of-reasons-coverage.md)** (metric): the share of restrictive actions that come with a compliant explanation, broken down by type of action.
 - **[Appeal overturn rate](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/appeal-overturn-rate.md)** (metric): how often appealed decisions are reversed, which shows which rules and notices users can't follow.

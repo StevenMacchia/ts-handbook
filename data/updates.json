@@ -1,5 +1,54 @@
 [
   {
+    "date": "2026-10-05",
+    "kind": "revised",
+    "chapters": [
+      "regulation-and-compliance"
+    ],
+    "post": "eUChy_Br",
+    "summary": "Added the US TAKE IT DOWN Act to the map of laws, with its 48-hour removal duty and a register row to copy, and a new step from Steven's post: each duty has an owner, but the whole picture needs one person, named by the leadership team."
+  },
+  {
+    "date": "2026-10-04",
+    "kind": "revised",
+    "chapters": [
+      "writing-policy",
+      "detection-and-prevention",
+      "review-operations",
+      "quality-calibration-and-appeals",
+      "measuring-what-matters",
+      "crisis-response",
+      "moderator-wellbeing",
+      "budgets-roadmaps-and-making-the-case"
+    ],
+    "post": null,
+    "summary": "Corrections from an independent fact-check: who can share signals through Lantern, which services Ofcom expects to use hash matching, which services must report on automated moderation under the DSA, and how firmly one moderator-wellbeing study states its finding. Retention analysis and quality sampling now read the same across chapters."
+  },
+  {
+    "date": "2026-10-04",
+    "kind": "revised",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "know-your-risks",
+      "the-first-90-days",
+      "writing-policy",
+      "detection-and-prevention",
+      "child-safety-and-age-assurance",
+      "review-operations",
+      "hiring-and-structuring-the-team",
+      "choosing-vendors-and-tools",
+      "quality-calibration-and-appeals",
+      "measuring-what-matters",
+      "crisis-response",
+      "moderator-wellbeing",
+      "working-with-product-legal-and-leadership",
+      "regulation-and-compliance",
+      "budgets-roadmaps-and-making-the-case"
+    ],
+    "post": null,
+    "summary": "Joined the chapters up: about 30 new cross-links, and each shared topic now has one home, with DSA reporting in chapter 17, severe-harm escalation in chapter 12 and the retention cohort in chapter 11."
+  },
+  {
     "date": "2026-10-04",
     "kind": "added",
     "chapters": [
@@ -63,7 +112,7 @@
   },
   {
     "date": "2026-10-03",
-    "kind": "drafted",
+    "kind": "written",
     "chapters": [
       "what-trust-and-safety-is-for",
       "know-your-risks",
@@ -85,16 +134,16 @@
       "budgets-roadmaps-and-making-the-case"
     ],
     "post": null,
-    "summary": "First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next."
+    "summary": "Full text of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next."
   },
   {
     "date": "2026-10-03",
-    "kind": "drafted",
+    "kind": "written",
     "chapters": [
       "child-safety-and-age-assurance"
     ],
     "post": null,
-    "summary": "First full draft: what each level of age assurance should unlock, safe defaults, grooming responses that build as signals stack, the account decision, and how to measure prevention."
+    "summary": "Written in full: what each level of age assurance should unlock, safe defaults, grooming responses that build as signals stack, the account decision, and how to measure prevention."
   },
   {
     "date": "2026-10-03",

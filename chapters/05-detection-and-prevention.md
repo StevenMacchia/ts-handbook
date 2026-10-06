@@ -17,7 +17,7 @@
 
 A lot of harmful content is never reported. Children rarely report what happens to them. Victims of a pile-on are outnumbered. Offenders who groom or scam move their targets to another app as fast as they can, so by the time anyone reports, the harm has often moved somewhere you can't see. If user reports are your only detection, you'll find harm late, and you'll only find the kinds people choose to report.
 
-Law sets a floor here, not a ceiling. In the US, providers that become aware of apparent child sexual abuse material must report it to NCMEC ([18 U.S.C. § 2258A](https://www.law.cornell.edu/uscode/text/18/2258A)), but the same section says it doesn't require you to monitor users or scan content (subsection (f)). Looking for harm is a choice you make, not one the law makes for you. In the UK, Ofcom's [illegal content codes of practice](https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online) recommend perceptual hash matching for known child sexual abuse material on larger or higher-risk user-to-user services, including file-sharing and file-storage services at high risk of it.
+Law sets a floor here, not a ceiling. In the US, providers that become aware of apparent child sexual abuse material must report it to NCMEC ([18 U.S.C. § 2258A](https://www.law.cornell.edu/uscode/text/18/2258A)), but the same section says it doesn't require you to monitor users or scan content (subsection (f)). Looking for harm is a choice you make, not one the law makes for you. In the UK, Ofcom's [illegal content codes of practice](https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online) recommend perceptual hash matching for known child sexual abuse material on large user-to-user services at medium or high risk of it, on services at high risk with more than 700,000 UK users, and on file-sharing and file-storage services at high risk, whatever their size.
 
 Detection has a cost when it's wrong, too. A system that catches more by acting on more will push up your proactive detection rate while good users pay for it. Detection is only working if it's measured.
 
@@ -109,7 +109,7 @@ When volume goes up and the rate stays put, that's a busy night. When one catego
 
 I'd set up an alert on that rate. Something simple works to start: if a category sits well above its usual level for that hour for 15 minutes or so, page whoever's on call.
 
-When it fires, respond in proportion. Locking the room punishes thousands of people for what a few hundred accounts are doing. Slowing down posting for accounts less than a week old can catch most of the people causing it and leave everyone else alone.
+When it fires, respond in proportion. Locking the room punishes thousands of people for what a few hundred accounts are doing. If most of the accounts involved are new, slowing down posting for accounts less than a week old targets them and leaves everyone else alone.
 
 Judge the alert by two numbers: how fast the team acts once it fires, and how many alerts turn out to be real coordinated activity. If most turn out to be reactions to something that happened in the game or the news, the threshold is too low. For new kinds of abuse that no alert covers yet, track how long they run before you notice, and log it in every incident review ([chapter 13](13-crisis-response.md)).
 
@@ -119,7 +119,7 @@ Harm that starts on one service often lands on another. Offenders make first con
 
 Programs that exist for this:
 
-- **[Lantern](https://technologycoalition.org/programs/lantern/)**, run by the Tech Coalition since 2023, lets qualifying tech companies and financial institutions share signals about online child sexual exploitation and abuse. That includes content signals such as hashes and URLs, and incident signals such as attempts to move conversations with minors off-platform.
+- **[Lantern](https://technologycoalition.org/programs/lantern/)**, run by the Tech Coalition since 2023, lets qualifying tech companies share signals about online child sexual exploitation and abuse. That includes content signals such as hashes and URLs, and incident signals such as attempts to move conversations with minors off-platform. Financial institutions can join on a receive-only basis.
 - **[GIFCT's hash-sharing database](https://gifct.org/hsdb/)** lets member companies match content against hashes of known terrorist and violent extremist material. Members share hashes, not the content.
 - **[StopNCII.org](https://stopncii.org/how-it-works/)** lets adults create a hash of their intimate images on their own device, so participating platforms can find and remove matching copies. The image never leaves the device.
 - **[Take It Down](https://takeitdown.ncmec.org/)**, from NCMEC, does the same for nude or sexually explicit images taken when the person was under 18.
@@ -180,7 +180,7 @@ In the EU, the GDPR's principles of data minimisation and storage limitation ([A
 
 From Steven's writing:
 
-- **[Watch the rate, not the volume](https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/)** (Oct 2, 2026): In Stream's live sports chat data, volume swung 7.5x but the rate of racist content held steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.
+- **[Watch the rate, not the volume](https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/)** (Oct 2, 2026): In live sports chat, volume swings hard while the rate of abusive content tends to hold steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.
 - **[Grooming is a pattern, not a message](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7511067864448237568-k7h4/)** (Sep 30, 2026): Responses build as signals stack on adult-to-minor contact, with thresholds tested on past cases, a queue worked by risk, privacy limits agreed up front, and four numbers that show it works.
 - **[Nudify apps: harm no single platform sees in full](https://www.linkedin.com/posts/stevenmacchia_nudify-apps-are-a-growing-problem-and-a-share-7510771967986155520-s7TP/)** (Sep 29, 2026): The image is made on one service, the tool promoted on another and the harm lands on a third. That's why cross-platform signal sharing through Lantern matters.
 - **[Games are where kids socialize now, and regulators know it](https://www.linkedin.com/posts/stevenmacchia_games-have-become-one-of-the-main-places-share-7510446882154864641-n3PV/)** (Sep 28, 2026): Grooming builds over weeks and usually moves off-platform. Protections that work act earlier and limit who can reach a child. Measure prevented contact, not just removals.

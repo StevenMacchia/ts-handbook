@@ -1,6 +1,6 @@
 # Chapter template
 
-Every chapter has the same shape, so readers always know where to look. To draft a chapter, copy everything below the line into its file in `chapters/`, then work through the outline that's already there.
+Every chapter has the same shape, so readers always know where to look. To write a chapter, copy everything below the line into its file in `chapters/`, then work through the outline that's already there.
 
 ## Rules for every chapter
 
@@ -18,7 +18,7 @@ Every chapter has the same shape, so readers always know where to look. To draft
 - **Keep the section names and formats exactly as below.** The website gives each section its own layout, the same components as the rest of stevenmacchia.com: "In one minute" becomes the summary strip under the title, "What good looks like" a panel with one column per stage, "How to do it" numbered steps, "Mistakes to avoid" numbered rows, each "Start from this template" block a panel, "Do it with" cards, and "Further reading" the same list as the writing page. So keep the bullet formats (`**Lead.** text`, `**[Name](url)**: description`, `**[Post title](url)** (Mon D, YYYY): the point`), start each step with `### N. Title`, and start each template block with a bold name. Any other section renders as text beside its heading. Run `npm run build` and look at the page before calling a chapter done.
 - **The website reads the data files.** On the site, "From Steven's writing" comes from `data/posts.json` (every post whose `chapters` list includes the chapter's slug, newest first, the latest five shown and the rest behind "Show more"), and the chapter's "Updated" date and "Recent changes" come from `data/updates.json`. The daily-post routine's sync script keeps the Markdown list under "Further reading" in step with the data (GitHub shows the Markdown), so don't edit that list by hand. The slug is the chapter's file name without its number and `.md`, and the build stops on a slug it doesn't know.
 
-Status values: **Outline** (what it will cover), **Draft** (written, not yet reviewed), **Published** (reviewed and live).
+Status values: **Outline** (what it will cover) and **Published** (written and live).
 
 ---
 

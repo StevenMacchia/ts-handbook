@@ -23,7 +23,7 @@ The return is real, but it hides. In raw retention data, harassed players often 
 
 | | Early | Growing | At scale or regulated |
 |---|---|---|---|
-| **What you have** | A one-page view of what you spend on people, vendors and tools, updated monthly; a short list of top risks and what covers each; one outcome metric shown next to the operational ones; and a regular update to the founders or executive team. | A cost model with its drivers and a capacity forecast; a matched-cohort retention analysis owned jointly with the data team; a roadmap by maturity area with an owner, a cost and a metric on every line; a quarterly executive review; and a cut plan agreed in advance. | Safety exposure as a standard cut on the retention dashboard; an investment case for every major ask, reviewed afterwards against what it promised; a budget tied to the risk register and to legal duties; and accepted risks signed off at the right level. |
+| **What you have** | A one-page view of what you spend on people, vendors and tools, updated monthly; a short list of top risks and what covers each; one outcome metric shown next to the operational ones; and a regular update to the founders or executive team. | A cost model with its drivers and a capacity forecast; safety exposure as a cut on the retention dashboard and a first matched-cohort retention analysis, both owned jointly with the data team; a roadmap by maturity area with an owner, a cost and a metric on every line; a quarterly executive review; and a cut plan agreed in advance. | A matched-cohort retention analysis every quarter; an investment case for every major ask, reviewed afterwards against what it promised; a budget tied to the risk register and to legal duties; and accepted risks signed off at the right level. |
 | **What you can show** | Cost per decision by queue next to QA agreement, the share of new users whose early sessions include an actioned incident, and what last quarter's spending changed. | 7- and 30-day return for exposed new users against a matched group, translated into revenue at risk; maturity ratings against stage targets each quarter; and whether last quarter's asks delivered. | Revenue at risk from exposure as a trend; outcome metrics that moved after specific investments; every legal duty funded and owned; and a record of accepted risks and what became of them. |
 
 ## How to do it
@@ -64,9 +64,7 @@ Report operational and outcome numbers side by side, and say so when they disagr
 
 ### 3. Make the revenue case with a matched cohort
 
-The cut that works is a matched cohort. Take new players whose early sessions included an actioned incident, and compare their 7- and 30-day return against new players with clean sessions, matched on playtime, mode, region and platform. Without the matching, the analysis measures engagement instead of harm. [Chapter 11](11-measuring-what-matters.md) and the [churn after toxic exposure](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/churn-after-toxic-exposure.md) page cover the method. Outside games, match on what drives exposure on your platform, such as audience size on a social app.
-
-A rough comparison, such as people who reported harassment against everyone else, can tell you where to look. A budget case needs the matched version.
+Start from the matched-cohort retention analysis in [chapter 11](11-measuring-what-matters.md): exposed new users compared on 7- and 30-day return with similar users who weren't exposed. That chapter and the [churn after toxic exposure](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/churn-after-toxic-exposure.md) page cover how to build it, what to match on and the numbers worth tracking. A rough comparison, such as people who reported harassment against everyone else, can tell you where to look. A budget case needs the matched version.
 
 Then turn the gap into money, using Finance's numbers rather than your own:
 
@@ -76,15 +74,9 @@ Then turn the gap into money, using Finance's numbers rather than your own:
 
 Here's an illustration of the arithmetic, from the metrics framework's worked example: exposed players retain at 52% after 30 days against 61% for matched players. A 9-point gap across 20,000 exposed players a month is about 1,800 players a month, and Finance can put a value on each one.
 
-Be honest about what it is. Present the result as a range, and call it an association unless you've run a proper causal analysis. With children's data, involve your privacy team and report only aggregates. An overclaimed number is the fastest way to lose the room the second time.
+Be honest about what it is. Present revenue at risk as a range, and call it an association unless you've run a proper causal analysis. An overclaimed number is the fastest way to lose the room the second time.
 
-Numbers worth tracking:
-
-- Share of new players whose first five matches include an actioned incident
-- D7 and D30 return for exposed new players against the matched group
-- Voice chat opt-out rate in a player's first week
-
-Safety exposure belongs as a standard cut on the retention dashboard, owned jointly by T&S and the data team and reviewed alongside every other churn driver. Once it's there, the revenue case is updated every month without anyone having to argue for it.
+Once safety exposure is a standard cut on the retention dashboard ([chapter 11](11-measuring-what-matters.md)), the revenue case is updated every month without anyone having to argue for it.
 
 ### 4. Count the players a top spender drives away
 
@@ -147,7 +139,7 @@ Tight years come. A team that has already decided what it would cut, and what it
 | Manual work that automation can take over, only where its overturn rate is at or below human review | Quality sampling and prevalence measurement, because without them you can't see what the other cuts did |
 | Reports and dashboards nobody uses | Appeals, because they're how you find out a cut went too far |
 
-Every cut accepts a risk, so treat it like any accepted risk. Write down what it saves, what risk it accepts, the metric to watch and a date to revisit. The person who owns the product outcome signs off, and the most serious risks go to the executive who owns safety risk. If the metric moves past an agreed limit, reverse the cut. A cut that nobody measured is a risk nobody accepted.
+Every cut accepts a risk, so treat it like any accepted risk ([chapter 15](15-working-with-product-legal-and-leadership.md)). Write down what it saves, what risk it accepts, the metric to watch and a date to revisit. The person who owns the product outcome signs off, and the most serious risks go to the executive who owns safety risk. If the metric moves past an agreed limit, reverse the cut. A cut that nobody measured is a risk nobody accepted.
 
 ## Mistakes to avoid
 

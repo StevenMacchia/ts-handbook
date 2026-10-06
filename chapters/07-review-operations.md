@@ -64,7 +64,7 @@ Give every item a severity tier when it comes in. A starting point:
 | 3 | Serious rule-breaking with no one in immediate danger: hate, graphic content, impersonation |
 | 4 | Low-harm content: spam, mild insults, off-topic posts |
 
-Within a tier, route by what the case needs:
+Tier 1 cases leave the normal queue for the severe-harm path in [chapter 12](12-severe-harm-escalations.md). Within a tier, route by what the case needs:
 
 - **Reach.** Content that's spreading fast or streaming live moves up.
 - **Language.** Send it to someone who reads the language natively, not through machine translation.
@@ -132,13 +132,9 @@ Some weeks, flagged cases will outnumber reviewers: a launch, a raid, a news eve
 - **Severe queues keep their people.** Never pull reviewers off child safety or threats to cover a louder incident.
 - **Low-severity backlog gets automated with checks.** Where models score clear-cut, low-harm cases with high accuracy, let them decide, spot-check the results, and tell users their reports are delayed.
 
-Volume swings with your product's rhythms, but the rate of a category, its share of everything you action, usually holds steady. When one category's rate climbs while volume is normal, something coordinated is usually happening: a raid, or a group targeting one person.
+Not every spike is organic. When one category's rate climbs while volume is normal, something coordinated is usually happening: a raid, or a group targeting one person. An alert on that rate pages on-call before the queue backs up ([chapter 5](05-detection-and-prevention.md) covers setting it and judging it).
 
-Alert on the rate. Something simple works to start: if a category sits well above its usual level for that hour for 15 minutes or so, page whoever's on call.
-
-Then respond in proportion. Locking the room punishes thousands of people for what a few hundred accounts are doing. Check how many of the accounts involved are new. If most are, I'd start by slowing down posting for accounts less than a week old. That catches most of the people causing it and leaves everyone else alone.
-
-Judge the alert by how fast the team acts once it fires and how many alerts turn out to be real coordination. If most of them are reactions to the event itself, the threshold is too low. [Chapter 13](13-crisis-response.md) covers spikes that become incidents.
+Then respond in proportion. Locking the room punishes thousands of people for what a few hundred accounts are doing. Check how many of the accounts involved are new. If most are, I'd start by slowing down posting for accounts less than a week old. That targets them and leaves everyone else alone. [Chapter 13](13-crisis-response.md) covers spikes that become incidents.
 
 ### 6. Decide what to keep in-house and what to send to a vendor
 
@@ -152,11 +148,11 @@ Most operations mix in-house and vendor teams. One common split:
 | The experts who calibrate everyone else | Extra capacity for spikes |
 | Cases that need wide access to private user data | Work you can describe fully in written guidance |
 
-Choose a vendor on evidence: a paid pilot on your own past cases, with your experts checking a blind sample. Wellness and security are minimums that no score elsewhere makes up for. The [vendor scorecard](https://stevenmacchia.com/ts-workbench/#vendors) has the weights and RFP questions, and [chapter 9](09-choosing-vendors-and-tools.md) covers contracts.
+[Chapter 9](09-choosing-vendors-and-tools.md) covers choosing the vendor on evidence, piloting it on your own past cases and writing the contract.
 
 Plan for the vendor going dark. One vendor at one site is a single point of failure. Once you can, spread work across sites or vendors in different regions, keep an in-house core for severe cases, and test the continuity plan, for example twice a year.
 
-Vendor reviewers are part of your safety system: same guidance at the same time, same calibration sessions, same wellbeing standards. Give them access only to what each case needs, and log every lookup ([chapter 8](08-hiring-and-structuring-the-team.md)).
+Vendor reviewers are part of your safety system: same guidance at the same time, same calibration sessions, same wellbeing standards ([chapter 14](14-moderator-wellbeing.md)). Give them access only to what each case needs, and log every lookup ([chapter 8](08-hiring-and-structuring-the-team.md)).
 
 ### 7. Write down who makes the hard calls, including at 2am
 
@@ -166,12 +162,12 @@ Every tier of escalation needs written decision rights: what it can decide witho
 |---|---|---|---|
 | Front line | Reviewer, in-house or vendor | Clear cases under written guidance | The guidance doesn't fit, or the case is tier 1 |
 | Specialist or shift lead | A trained specialist, or the lead on shift | Hard cases in their area, and protective restrictions | Law enforcement, a legal duty, the press or a high-profile account may be involved |
-| On-call manager | A named person on a rotation, with a named backup | Emergency contact with law enforcement, emergency measures on a feature, reports with a legal deadline | It needs a product change, a public statement or legal sign-off |
+| On-call manager | A named person on a rotation, with a named backup | Emergency referrals and disclosures to law enforcement, and emergency measures on a feature | It needs a product change, a public statement or legal sign-off |
 | Leadership | Head of Trust & Safety, with Legal and Comms | Public statements, legal positions, accepting a serious risk | |
 
-Child safety and threats to life need cover around the clock. At an early-stage company the rotation might be two people. Write it down anyway, and give the on-call person a number that works, a written protocol, and the authority to act on anything the protocol covers without waking an executive.
+The operational point: nobody on shift should have to wonder at 2am whether they're allowed to act. At an early-stage company the rotation might be two people. Write it down anyway, and give the on-call person a number that works, a written protocol, and the authority to act on anything the protocol covers without waking an executive. A protocol that only works because the right person happened to be online on a Saturday night isn't a protocol.
 
-Rehearse it. A protocol that only works because the right person happened to be online on a Saturday night isn't a protocol. The [tabletop](https://stevenmacchia.com/ts-workbench/#tabletop) scenario [The post six friends saw](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/emergency.md) tests exactly that. Decisions to report to law enforcement should be made by people trained for it. [Chapter 12](12-severe-harm-escalations.md) covers the first hour.
+Severe harm has its own path. Child sexual exploitation, a life at risk and emergency requests from police follow the tiers in [chapter 12](12-severe-harm-escalations.md), which sets out who is paged, which calls only trained people make, and how to test the rota out of hours.
 
 ### 8. Get a guidance change to every reviewer within hours, and check it landed
 
@@ -229,7 +225,7 @@ Measure two things: time from decision to every reviewer on duty acknowledging i
 
 From Steven's writing:
 
-- **[Watch the rate, not the volume](https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/)** (Oct 2, 2026): In Stream's live sports chat data, volume swung 7.5x but the rate of racist content held steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.
+- **[Watch the rate, not the volume](https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/)** (Oct 2, 2026): In live sports chat, volume swings hard while the rate of abusive content tends to hold steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.
 - **[Grooming is a pattern, not a message](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7511067864448237568-k7h4/)** (Sep 30, 2026): Responses build as signals stack on adult-to-minor contact, with thresholds tested on past cases, a queue worked by risk, privacy limits agreed up front, and four numbers that show it works.
 - **[Automation rate isn't a measure of maturity](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-responsibleai-share-7507791297672486913-jc9j/)** (Sep 21, 2026): Automate as much as the evidence supports. Where a wrong decision can't be reversed or someone's safety is at risk, automation prepares the case and a person closes it.
 

@@ -52,40 +52,40 @@ Every chapter opens with a one-minute summary, then shows what good looks like a
 
 | # | Chapter | The question it answers | Status |
 |---|---|---|---|
-| 1 | [What Trust & Safety is for](chapters/01-what-trust-and-safety-is-for.md) | What is this function for, and how do you know it's working? | Draft |
-| 2 | [Know your risks](chapters/02-know-your-risks.md) | How will people misuse this product, and which harms should you tackle first? | Draft |
-| 3 | [The first 90 days](chapters/03-the-first-90-days.md) | You're the first safety hire. What do you do first? | Draft |
+| 1 | [What Trust & Safety is for](chapters/01-what-trust-and-safety-is-for.md) | What is this function for, and how do you know it's working? | Published |
+| 2 | [Know your risks](chapters/02-know-your-risks.md) | How will people misuse this product, and which harms should you tackle first? | Published |
+| 3 | [The first 90 days](chapters/03-the-first-90-days.md) | You're the first safety hire. What do you do first? | Published |
 
 ### Part 2: Build
 
 | # | Chapter | The question it answers | Status |
 |---|---|---|---|
-| 4 | [Writing policy and an enforcement ladder](chapters/04-writing-policy.md) | How do you write rules people can follow and reviewers can apply the same way? | Draft |
-| 5 | [Detection and prevention](chapters/05-detection-and-prevention.md) | How do you find harm before users have to report it, and stop it before it happens? | Draft |
-| 6 | [Child safety and age assurance](chapters/06-child-safety-and-age-assurance.md) | How do you keep children safe on a product adults use too? | Draft |
-| 7 | [Standing up review operations](chapters/07-review-operations.md) | How do you build a review operation that's fast, consistent and affordable? | Draft |
-| 8 | [Hiring and structuring the team](chapters/08-hiring-and-structuring-the-team.md) | Who do you hire, in what order, and where should the team report? | Draft |
-| 9 | [Choosing vendors and tools](chapters/09-choosing-vendors-and-tools.md) | When should you buy, build or use open source, and how do you choose? | Draft |
+| 4 | [Writing policy and an enforcement ladder](chapters/04-writing-policy.md) | How do you write rules people can follow and reviewers can apply the same way? | Published |
+| 5 | [Detection and prevention](chapters/05-detection-and-prevention.md) | How do you find harm before users have to report it, and stop it before it happens? | Published |
+| 6 | [Child safety and age assurance](chapters/06-child-safety-and-age-assurance.md) | How do you keep children safe on a product adults use too? | Published |
+| 7 | [Standing up review operations](chapters/07-review-operations.md) | How do you build a review operation that's fast, consistent and affordable? | Published |
+| 8 | [Hiring and structuring the team](chapters/08-hiring-and-structuring-the-team.md) | Who do you hire, in what order, and where should the team report? | Published |
+| 9 | [Choosing vendors and tools](chapters/09-choosing-vendors-and-tools.md) | When should you buy, build or use open source, and how do you choose? | Published |
 
 ### Part 3: Run
 
 | # | Chapter | The question it answers | Status |
 |---|---|---|---|
-| 10 | [Quality, calibration and appeals](chapters/10-quality-calibration-and-appeals.md) | How do you know decisions are right, and fix them when they aren't? | Draft |
-| 11 | [Measuring what matters](chapters/11-measuring-what-matters.md) | Is the program making people safer, and how would you prove it? | Draft |
-| 12 | [Severe harm escalations](chapters/12-severe-harm-escalations.md) | What happens in the first hour after you find child sexual abuse material, a threat to life or a request from law enforcement? | Draft |
-| 13 | [Crisis response](chapters/13-crisis-response.md) | When something goes badly wrong in public, who decides what, and how fast? | Draft |
-| 14 | [Moderator wellbeing](chapters/14-moderator-wellbeing.md) | How do you protect the people who look at the worst content? | Draft |
-| 15 | [Working with Product, Legal, Comms and leadership](chapters/15-working-with-product-legal-and-leadership.md) | How do you get safety built in rather than bolted on? | Draft |
+| 10 | [Quality, calibration and appeals](chapters/10-quality-calibration-and-appeals.md) | How do you know decisions are right, and fix them when they aren't? | Published |
+| 11 | [Measuring what matters](chapters/11-measuring-what-matters.md) | Is the program making people safer, and how would you prove it? | Published |
+| 12 | [Severe harm escalations](chapters/12-severe-harm-escalations.md) | What happens in the first hour after you find child sexual abuse material, a threat to life or a request from law enforcement? | Published |
+| 13 | [Crisis response](chapters/13-crisis-response.md) | When something goes badly wrong in public, who decides what, and how fast? | Published |
+| 14 | [Moderator wellbeing](chapters/14-moderator-wellbeing.md) | How do you protect the people who look at the worst content? | Published |
+| 15 | [Working with Product, Legal, Comms and leadership](chapters/15-working-with-product-legal-and-leadership.md) | How do you get safety built in rather than bolted on? | Published |
 
 ### Part 4: Scale and govern
 
 | # | Chapter | The question it answers | Status |
 |---|---|---|---|
-| 16 | [Regulation and compliance](chapters/16-regulation-and-compliance.md) | Which laws apply to your service, and what do they make you do? | Draft |
-| 17 | [Transparency reports and enforcement notices](chapters/17-transparency-reports-and-notices.md) | How do you explain your decisions to users and the public? | Draft |
-| 18 | [AI in Trust & Safety](chapters/18-ai-in-trust-and-safety.md) | Where does AI help moderation, and how do you keep AI products safe? | Draft |
-| 19 | [Budgets, roadmaps and making the case](chapters/19-budgets-roadmaps-and-making-the-case.md) | How do you get the people and money the program needs? | Draft |
+| 16 | [Regulation and compliance](chapters/16-regulation-and-compliance.md) | Which laws apply to your service, and what do they make you do? | Published |
+| 17 | [Transparency reports and enforcement notices](chapters/17-transparency-reports-and-notices.md) | How do you explain your decisions to users and the public? | Published |
+| 18 | [AI in Trust & Safety](chapters/18-ai-in-trust-and-safety.md) | Where does AI help moderation, and how do you keep AI products safe? | Published |
+| 19 | [Budgets, roadmaps and making the case](chapters/19-budgets-roadmaps-and-making-the-case.md) | How do you get the people and money the program needs? | Published |
 
 ## Also in this repo
 
@@ -111,4 +111,4 @@ The handbook explains the job. The [Workbench](https://stevenmacchia.com/ts-work
 
 Content in this repo is licensed [CC BY 4.0](LICENSE): reuse and adapt it freely, with credit. Law notes are general information, not legal advice. Stories from past roles are anonymized.
 
-Written by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia), Trust & Safety leader, with AI-assisted drafting (Claude).
+Written by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia), Trust & Safety leader, with AI-assisted writing (Claude).

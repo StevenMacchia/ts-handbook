@@ -1,5 +1,18 @@
 [
   {
+    "id": "eUChy_Br",
+    "title": "Since 2024, the job is proving it works",
+    "date": "2026-10-05",
+    "type": "Essay",
+    "topic": "What's changing",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-ageassurance-share-7512890720316203008-kHP4/",
+    "point": "Since 2024 the question has moved from whether you have a policy to whether you can show it works: UK risk assessments that must be redone before significant changes, age assurance as the foundation, 48-hour removal of intimate images under the US TAKE IT DOWN Act, and free open-source tooling. Those duties land on different teams, so the leadership team should name one owner for the whole picture.",
+    "chapters": [
+      "working-with-product-legal-and-leadership",
+      "regulation-and-compliance"
+    ]
+  },
+  {
     "id": "ejnUt-5w",
     "title": "Saturday reading: child safety gaps in games, Ofcom in court and California's new laws",
     "date": "2026-10-03",
@@ -19,7 +32,7 @@
     "type": "Commentary",
     "topic": "Safety by design and operations",
     "url": "https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/",
-    "point": "In Stream's live sports chat data, volume swung 7.5x but the rate of racist content held steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.",
+    "point": "In live sports chat, volume swings hard while the rate of abusive content tends to hold steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.",
     "chapters": [
       "detection-and-prevention",
       "review-operations",

@@ -68,7 +68,7 @@ Most abuse comes through a small number of features. Know how each one gets misu
 | Live voice and video | Harm happens in real time and is hard to review afterwards: grooming, sexual exploitation, harassment, self-harm on stream | Eligibility rules for going live, instant stream shutdown, round-the-clock on-call cover, no private voice between adults and minors they don't know |
 | Location | Stalking, doxxing (publishing someone's address or other private details) and harm at in-person meetings | Approximate location by default, precise location opt-in and time-limited and never shown to strangers, location data stripped from photos |
 | Anonymity and easy sign-up | Ban evasion, bots, fake accounts at scale, guests who can't be held to account | Limited abilities for new accounts, rate limits, device and network signals to link banned accounts, no private messages or uploads for guests |
-| Generative AI | Sexual imagery of children, sexual deepfakes of real people, jailbreaks for dangerous information, harmful responses from AI companions | Input and output filters, a block on sexual images of real people, red-teaming before launch and after every model update, clear and repeated notice that users are talking to an AI |
+| Generative AI | Sexual imagery of children, sexual deepfakes of real people, jailbreaks for dangerous information, harmful responses from AI companions | Input and output filters, a block on sexual images of real people, red-teaming before launch and after every model update, clear and repeated notice that users are talking to an AI ([chapter 18](18-ai-in-trust-and-safety.md)) |
 
 Two things multiply every row: who's present and where. Children raise both the likelihood and the severity of the worst harms. New markets bring new laws and new languages your reviewers may not read. The [risk catalog](https://github.com/stevenmacchia/abuse-premortem/blob/main/risks.md) lists 58 risks in 14 areas, and the [safeguards library](https://github.com/stevenmacchia/abuse-premortem/blob/main/safeguards.md) lists 104 safeguards with an owner and effort for each.
 
@@ -131,7 +131,7 @@ The [coverage radar](https://stevenmacchia.com/ts-workbench/#coverage) does this
 
 The point is to see risk and readiness side by side. Most programs can list the harms they worry about, and separately the defenses they have. Without the two together, budget follows whoever argues loudest. A child safety policy with no proactive detection looks fine on paper until something goes wrong.
 
-By stage: an early team rates coverage once, for its top few harm areas, for example three or four. A growing team rates every area and reruns it regularly, for example each quarter. At scale, the coverage map is part of the risk assessment you'd show a regulator.
+By stage: an early team rates coverage once, for its top few harm areas, for example three or four. A growing team rates every area and reruns it regularly, for example each quarter. At scale, the coverage map is part of the risk assessment you'd show a regulator ([chapter 16](16-regulation-and-compliance.md)).
 
 ### 8. Check the review against what actually happened
 

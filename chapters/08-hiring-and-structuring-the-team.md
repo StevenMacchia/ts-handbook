@@ -8,7 +8,7 @@
 
 - **Hire for your risks, not an org chart.** The harms your product invites decide which skills you need first. For a long time, one person will cover several roles, so write down who wears which hat.
 - **Make the first hire someone who can write a rule, run a queue and handle an escalation.** Then add operations, investigations, data and engineering in the order your risks call for. Support for anyone who sees harmful content comes before any of them.
-- **Report where you can be heard before launch, and can't be overruled quietly.** Every reporting line has a trade-off. Whichever you pick, name the executive who owns safety risk and write down who decides what.
+- **Report where you can be heard before launch, and can't be overruled quietly.** That usually means Product or the executive level, not Operations. Every reporting line has a trade-off, so whichever you pick, name the executive who owns safety risk and write down who decides what.
 - **Interview for judgment, not knowledge of the rules.** Give candidates a case with no clean answer. Listen for what they'd want to know, what they'd do now that can be undone, and how they'd explain the decision later.
 - **Treat vendor staff as part of the team.** Same guidance, same calibration, same wellbeing standards, and career paths that don't run only through the worst queues.
 - **The mistake to avoid:** hiring a large review team before anyone owns policy, data and escalations. Reviewers can only be as consistent as the rules and the system around them.
@@ -95,7 +95,7 @@ Every option has trade-offs, but I have a view. Trust & Safety should report int
 Whichever you choose, three things matter more than the box on the org chart:
 
 - **Name the executive who owns safety risk**, and give the Trust & Safety lead a direct line to them for escalations, whatever the reporting line.
-- **Write down decision rights.** Who can change a policy, move a threshold, report to law enforcement, approve a public statement, or accept a known risk at launch. When a launch goes ahead with a known risk, the person who owns the product outcome signs off, with a date to revisit. Trust & Safety makes sure the risk is in front of them, and takes it to the executive who owns safety risk when it's too serious for one person.
+- **Write down decision rights.** Who can change a policy, move a threshold, report to law enforcement, approve a public statement, or accept a known risk at launch. When a launch goes ahead with a known risk, the person who owns the product outcome signs off, with a date to revisit. Trust & Safety makes sure the risk is in front of them, and takes it to the executive who owns safety risk when it's too serious for one person. [Chapter 15](15-working-with-product-legal-and-leadership.md) has one split of decisions with Legal and Comms.
 - **Keep the team out of a throughput-only scorecard.** If your leader judges you on tickets closed and cost per ticket, report outcomes beside them ([chapter 11](11-measuring-what-matters.md)), or the program will be run as a cost center.
 
 Revisit the reporting line when you change stage. What suited five people may not suit fifty.

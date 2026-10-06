@@ -5,8 +5,29 @@
   <link href="https://stevenmacchia.com/ts-handbook/updates/feed.xml" rel="self"/>
   <link href="https://stevenmacchia.com/ts-handbook/updates/"/>
   <id>https://stevenmacchia.com/ts-handbook/updates/</id>
-  <updated>2026-10-04T12:00:00Z</updated>
+  <updated>2026-10-05T12:00:00Z</updated>
   <author><name>Steven Macchia</name><uri>https://stevenmacchia.com/</uri></author>
+  <entry>
+    <title>Revised: 16. Regulation and compliance</title>
+    <link href="https://stevenmacchia.com/ts-handbook/regulation-and-compliance/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-05-1</id>
+    <updated>2026-10-05T12:00:00Z</updated>
+    <summary>Added the US TAKE IT DOWN Act to the map of laws, with its 48-hour removal duty and a register row to copy, and a new step from Steven's post: each duty has an owner, but the whole picture needs one person, named by the leadership team. Read the post: Since 2024, the job is proving it works (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-ageassurance-share-7512890720316203008-kHP4/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 4. Writing policy and an enforcement ladder, 5. Detection and prevention, 7. Standing up review operations and 5 more</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-5"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-5</id>
+    <updated>2026-10-04T12:00:00Z</updated>
+    <summary>Corrections from an independent fact-check: who can share signals through Lantern, which services Ofcom expects to use hash matching, which services must report on automated moderation under the DSA, and how firmly one moderator-wellbeing study states its finding. Retention analysis and quality sampling now read the same across chapters.</summary>
+  </entry>
+  <entry>
+    <title>Revised: 1. What Trust &amp; Safety is for, 2. Know your risks, 3. The first 90 days and 13 more</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-4"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-4</id>
+    <updated>2026-10-04T12:00:00Z</updated>
+    <summary>Joined the chapters up: about 30 new cross-links, and each shared topic now has one home, with DSA reporting in chapter 17, severe-harm escalation in chapter 12 and the retention cohort in chapter 11.</summary>
+  </entry>
   <entry>
     <title>Added: 1. What Trust &amp; Safety is for, 5. Detection and prevention, 8. Hiring and structuring the team and 1 more</title>
     <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-04-3"/>
@@ -29,18 +50,18 @@
     <summary>Added Steven's own calls from an interview: where Trust &amp; Safety should report, what to automate first, the one number to track from day one, who makes the 2am call, and more. Practical choices that vary by platform are now laid out as options.</summary>
   </entry>
   <entry>
-    <title>Drafted: 1. What Trust &amp; Safety is for, 2. Know your risks, 3. The first 90 days and 15 more</title>
+    <title>Written: 1. What Trust &amp; Safety is for, 2. Know your risks, 3. The first 90 days and 15 more</title>
     <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-03-3"/>
     <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-03-3</id>
     <updated>2026-10-03T12:00:00Z</updated>
-    <summary>First full drafts of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</summary>
+    <summary>Full text of the other 18 chapters, built on Steven's posts, the handbook's principles and the Workbench's open content, with every legal and factual claim checked against its source. Stories from Steven's own work come next.</summary>
   </entry>
   <entry>
-    <title>Drafted: 6. Child safety and age assurance</title>
+    <title>Written: 6. Child safety and age assurance</title>
     <link href="https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/#changes"/>
     <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-03-2</id>
     <updated>2026-10-03T12:00:00Z</updated>
-    <summary>First full draft: what each level of age assurance should unlock, safe defaults, grooming responses that build as signals stack, the account decision, and how to measure prevention.</summary>
+    <summary>Written in full: what each level of age assurance should unlock, safe defaults, grooming responses that build as signals stack, the account decision, and how to measure prevention.</summary>
   </entry>
   <entry>
     <title>Added: 1. What Trust &amp; Safety is for, 2. Know your risks, 4. Writing policy and an enforcement ladder and 12 more</title>

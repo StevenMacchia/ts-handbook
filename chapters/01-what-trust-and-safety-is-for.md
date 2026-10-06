@@ -61,31 +61,17 @@ T&S shares edges with at least five other functions. The names vary by company, 
 
 The rule: every harm in your risk register ([chapter 2](02-know-your-risks.md)) has exactly one owner. Shared work is fine. Shared ownership means nobody is accountable when it goes wrong.
 
-The T&S lead drafts the table with each partner team. It's done when each partner has agreed to it and the on-call list matches it.
+The T&S lead writes the table with each partner team. It's done when each partner has agreed to it and the on-call list matches it.
 
 ### 3. Make the safety case with your own data
 
 Pull raw retention data at most game studios and harassed players look like some of the best-retained users. They chat more, queue more and play longer, so they run into more abuse. A team that stops there concludes toxicity doesn't hurt retention, and the safety budget conversation ends before it starts.
 
-Industry surveys like the one above help, but they rarely move a budget. Your own data does, if it's cut correctly. The cut that works is a matched cohort:
-
-1. Take new users whose early sessions included an actioned incident: they were the target of something you confirmed and acted on.
-2. Match each one to a new user with clean sessions and similar activity. In a game, match on playtime, mode, region and platform.
-3. Compare their 7- and 30-day return.
-
-Without the matching, the analysis measures engagement instead of harm. Present the result as an association unless you've run a proper causal analysis.
+Industry surveys like the one above help, but they rarely move a budget. Your own data does, if it's cut correctly. The cut that works is a matched cohort: new users who were the target of an actioned incident in their early sessions, compared on 7- and 30-day return with similar new users who weren't. Without the matching, the analysis measures engagement instead of harm.
 
 The same blind spot affects enforcement on high-value users. Banning a top spender hits the revenue report the next day. The players they drove away stay invisible unless someone builds the cohort.
 
-Numbers worth tracking, from a game:
-
-- Share of new players whose first five matches include an actioned incident
-- D7 and D30 return (the share still active 7 and 30 days later) for exposed new players, against the matched group
-- Voice chat opt-out rate in a player's first week
-
-Other products need their own cut. On a dating app, focus on users harassed in their first week, when a bad experience makes people delete the app. On a social platform, match on audience size, because larger accounts are targeted more and churn differently. The [churn after toxic exposure](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/churn-after-toxic-exposure.md) page has the method and a starter query.
-
-By stage: an early team without a data team can compare the 30-day retention of users who filed a harassment report with everyone else. It's rough, but directional. A growing team builds the matched cohort once and reruns it on a regular cadence, such as every quarter. At scale, safety exposure is a standard cut on the retention dashboard, owned jointly by T&S and the data team, and reviewed with every other churn driver. [Chapter 19](19-budgets-roadmaps-and-making-the-case.md) turns this into a budget case.
+[Chapter 11](11-measuring-what-matters.md) covers how to build the cohort, what to match on for your kind of product and the numbers worth tracking. [Chapter 19](19-budgets-roadmaps-and-making-the-case.md) turns the result into a budget case.
 
 ### 4. Separate the machine from the outcome
 
@@ -154,7 +140,7 @@ Every later chapter ends its "What you can show" row with numbers. They roll up 
 | Users feel safe and stay | [Users who feel safe](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/users-who-feel-safe.md), [churn after toxic exposure](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/churn-after-toxic-exposure.md) |
 | Legal duties met, with evidence | [Statement-of-reasons coverage](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/statement-of-reasons-coverage.md), [systemic-risk assessment currency](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/systemic-risk-assessment-currency.md) |
 
-You don't need all of them at once. An early team picks the one north star that fits its product and tracks time to action on the most severe cases. A growing team adds decision quality and repeat offending. A team at scale or under regulation tracks all seven, each with a target and an owner.
+You don't need all of them at once. An early team picks the one north star that fits its product and tracks time to action on the most severe cases. If you can only track one number from day one, [chapter 11](11-measuring-what-matters.md) makes the case for harmful reach before action. A growing team adds decision quality and repeat offending. A team at scale or under regulation tracks all seven, each with a target and an owner.
 
 ## Mistakes to avoid
 

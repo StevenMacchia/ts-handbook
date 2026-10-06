@@ -83,7 +83,7 @@ Small interface choices change how much of each item a reviewer has to take in. 
 
 The research supports the first two, with a caveat. In a live review setting, simple grayscale transformations significantly changed the emotional impact of reviews without a significant drop in accuracy, while a full blur was challenging for reviewers ([Karunakaran and Ramakrishan, 2019](https://doi.org/10.1609/hcomp.v7i1.5270)). In experiments with crowd workers, interactive blurring reduced emotional impact without sacrificing accuracy or speed ([Das, Dang and Lease, 2020](https://doi.org/10.1609/hcomp.v8i1.7461)). So blur that reviewers control, not blur that gets in their way.
 
-You don't have to build these from scratch. ROOST's open-source review console, [Coop](https://github.com/roostorg/coop), blurs images and video by default with hover to reveal, offers grayscale and muted video, lets admins set organization-wide wellness defaults, and matches uploads against NCMEC's hashes of known child sexual abuse material. For hash matching, Microsoft's [PhotoDNA](https://www.microsoft.com/en-us/photodna) and Thorn's [Safer](https://safer.io/solutions/) are established options.
+You don't have to build these from scratch. ROOST's open-source review console, [Coop](https://github.com/roostorg/coop), blurs images and video by default with hover to reveal, offers grayscale and muted video, lets admins set organization-wide wellness defaults, and can match uploads against NCMEC's hash list of known child sexual abuse material once it's connected to Meta's Hasher-Matcher-Actioner with NCMEC credentials. For hash matching, Microsoft's [PhotoDNA](https://www.microsoft.com/en-us/photodna) and Thorn's [Safer](https://safer.io/solutions/) are established options.
 
 ### 5. Give support people actually use
 
@@ -94,7 +94,7 @@ A general employee assistance program, the counseling benefit offered to all sta
 - **A confidential way to step away.** Clear opt-out rules, so someone can leave a queue for a while without explaining why to the whole team.
 - **Rotation and real breaks.** Rotation off high-exposure queues, either on a fixed schedule or triggered by the cap, whichever your staffing can hold, and wellbeing time counted as planned time away from the queue, so it isn't taken out of anyone's targets ([chapter 7](07-review-operations.md)).
 - **Debriefs after severe cases.** After a self-harm emergency or a child safety case, offer a debrief and counseling, give time away from high-severity queues, and check exposure across the team. The tabletop scenario [The post six friends saw](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/emergency.md) rehearses that call.
-- **Colleagues and meaning.** In Spence's survey, supportive colleagues and feedback about the importance of the role softened the link between exposure and distress. Build time for peers to talk, and tell reviewers what their decisions led to: a child safeguarded, a network removed, a report that reached the right people.
+- **Colleagues and meaning.** In Spence's survey, the results suggested that supportive colleagues and feedback about the importance of the role softened the link between exposure and distress. Build time for peers to talk, and tell reviewers what their decisions led to: a child safeguarded, a network removed, a report that reached the right people.
 - **Trained managers who model it.** Leads should know the signs of secondary trauma and what to do next, and should take their own breaks and talk about it. When leads do, everyone else feels able to. UNI's protocols ask for trauma-informed training for supervisors as well as moderators.
 - **After they leave.** Support shouldn't end on someone's last day. The [maturity model](https://github.com/stevenmacchia/ts-maturity-model) treats support after people leave review roles as the mark of a leading program.
 
@@ -111,7 +111,7 @@ The people who label training data for safety classifiers, rate model outputs, r
 
 ### 7. Write wellbeing standards into vendor contracts, and check them
 
-If you use a vendor, its staff may make most of your review decisions and see much of the worst content. A contract that says "wellness program" without numbers or a way to check is a promise, not a standard. Write in:
+If you use a vendor, its staff may make most of your review decisions and see much of the worst content ([chapter 7](07-review-operations.md) covers which work to send them). A contract that says "wellness program" without numbers or a way to check is a promise, not a standard. Write in:
 
 - A maximum daily exposure to graphic content for each person, with logs you can see
 - Licensed counseling during employment and after someone leaves
@@ -121,9 +121,9 @@ If you use a vendor, its staff may make most of your review decisions and see mu
 - Your right to audit and visit
 - A price that pays for wellbeing time, not just decisions
 
-Choose vendors with this as a floor. In the [vendor scorecard](https://stevenmacchia.com/ts-workbench/#vendors), reviewer wellness carries 15% of the weight and has a minimum: a score of 2 or lower rules a vendor out, whatever its total. Hard daily exposure caps per person, counseling during and after employment and blurring by default earn a 5.
+Choose vendors with this as a floor: reviewer wellness is a minimum in the [vendor scorecard](https://stevenmacchia.com/ts-workbench/#vendors), and a vendor that falls below it is out whatever its total. Hard daily exposure caps per person, counseling during and after employment and blurring by default earn a 5.
 
-Then check it. Ask for exposure data by person, pseudonymized, not a summary slide. Compare attrition by queue against your own teams. Visit, and talk to reviewers without their managers in the room. When something goes wrong at the vendor, how you treat their people shapes the quality you get afterwards: if a site goes dark, keep paying and ask how you can help. [Chapter 9](09-choosing-vendors-and-tools.md) covers contracts in full.
+Then check it. Ask for exposure data by person, pseudonymized, not a summary slide. Compare attrition by queue against your own teams. Visit, and talk to reviewers without their managers in the room. When something goes wrong at the vendor, how you treat their people shapes the quality you get afterwards: if a site goes dark, keep paying and ask how you can help. [Chapter 9](09-choosing-vendors-and-tools.md) covers choosing the vendor and the rest of the contract.
 
 ### 8. Watch attrition and support use as early warnings
 
@@ -183,7 +183,7 @@ Outside sources:
 
 - **[Technology Coalition: Employee Resilience Guidebook](https://cdn.icmec.org/wp-content/uploads/2023/04/TechnologyCoalitionEmployeeResilienceGuidebookV2January2015.pdf)**: industry guidance on protecting staff who handle child sexual abuse images, from hiring and consent to counseling and opting out.
 - **[Steiger et al., The Psychological Well-Being of Content Moderators](https://doi.org/10.1145/3411764.3445092)**: a CHI 2021 review of the research on moderators' mental health and the ways to support them.
-- **[Spence et al., Content Moderator Mental Health, Secondary Trauma, and Well-being](https://pubmed.ncbi.nlm.nih.gov/38153846/)**: a 2024 survey linking how often moderators are exposed to distress and secondary trauma.
+- **[Spence et al., Content Moderator Mental Health, Secondary Trauma, and Well-being](https://pubmed.ncbi.nlm.nih.gov/38153846/)**: a 2024 survey linking how often moderators see distressing content to psychological distress and secondary trauma.
 - **[Das, Dang and Lease, Interactive Blurring Helps Moderators Reduce Exposure to Harmful Content](https://doi.org/10.1609/hcomp.v8i1.7461)**: experiments on blur designs that protect reviewers without slowing them down.
 - **[UNI Global Union: Mental Health Protocols for content moderation](https://uniglobalunion.org/news/tech-protocols/)**: the eight protocols moderators' unions are asking the tech supply chain to adopt.
 - **[Partnership on AI: Responsible Sourcing of Data Enrichment Services](https://partnershiponai.org/responsible-sourcing-considerations/)**: recommendations for AI developers on the working conditions of the people who label their data.

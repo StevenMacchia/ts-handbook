@@ -51,7 +51,7 @@ Where you draw the line depends on team size. Some ways it tends to fall:
 - **A growing team:** buy volume and keep judgment. Vendors handle scale and coverage, while policy, severe escalations and the hardest calls stay in-house.
 - **At scale:** own the core, meaning your review tooling, your data and your risk signals, and buy the specialist pieces, such as age assurance or threat intelligence, where a vendor's reach beats yours.
 
-These are starting points, not rules. Revisit the line every year as the team and the tools change.
+These are starting points, not rules. Revisit the line every year as the team and the tools change. For review work, [chapter 7](07-review-operations.md) covers which queues to keep in-house and which to send to a vendor.
 
 ### 2. Know the kinds of vendor
 
@@ -118,20 +118,20 @@ Sign a data agreement before the first case leaves your systems, and send only w
 
 ### 5. Write the terms that matter into the contract
 
-The contract is where the scorecard becomes enforceable. Legal usually drafts it, but the T&S owner decides what goes in.
+The contract is where the scorecard becomes enforceable. Legal usually writes it, but the T&S owner decides what goes in.
 
 | Term | What to write in |
 |---|---|
 | **Quality** | An agreement floor per policy area, measured by your team on a blind random sample, and what happens when it's missed |
 | **Response times** | Targets by severity that match your own, and when the clock starts: at the report or detection, not when a reviewer opens the case |
-| **Wellbeing** | Hard daily exposure limits per person, licensed counseling during and after employment, blurring and grayscale by default, attrition reporting and your right to audit. Hold vendors to the same standard as your own team ([chapter 14](14-moderator-wellbeing.md)) |
+| **Wellbeing** | The same standards you hold your own team to, written in with numbers and your right to audit. [Chapter 14](14-moderator-wellbeing.md) has the clauses to paste in |
 | **Data handling** | Processor terms where the GDPR applies, managed devices or clean rooms (secured workspaces where data can't be copied or removed), logged access, retention limits, no training on your data without your agreement, and a written process for illegal content |
 | **Surge** | How much extra capacity, how fast, and at what price |
-| **Reporting** | Decision-level data back to you, raw quality samples, quality misses escalated within an agreed time, and the information your transparency report needs |
+| **Reporting** | Decision-level data back to you, raw quality samples, quality misses escalated within an agreed time, and the information your transparency report needs ([chapter 17](17-transparency-reports-and-notices.md)) |
 | **Change notice** | For AI tools, notice before any model or threshold change, and the version on every result, so you can compare before and after |
 | **Exit** | Notice period, help with the handover, return or deletion of your data, and confirmation that your policies, training material and labeled data stay yours |
 
-Two terms need special care. First, wellbeing. Data labeling and AI training review are moderation work too, so labeling vendors get the same standards and escalation paths. Second, illegal content. In the US, the duty to report child sexual exploitation to NCMEC falls on the provider under [18 U.S.C. § 2258A](https://www.law.cornell.edu/uscode/text/18/2258A), so write down exactly what the vendor does when a reviewer finds it, and how fast that reaches your team.
+Two terms need special care. First, wellbeing. Data labeling and AI training review are moderation work too, so labeling vendors get the same standards and escalation paths ([chapter 14](14-moderator-wellbeing.md)). Second, illegal content. In the US, the duty to report child sexual exploitation to NCMEC falls on the provider under [18 U.S.C. § 2258A](https://www.law.cornell.edu/uscode/text/18/2258A), so write down exactly what the vendor does when a reviewer finds it, and how fast that reaches your team.
 
 ### 6. Manage the budget across several vendors
 
@@ -144,7 +144,7 @@ Plan for the day a vendor goes dark. The Workbench tabletop [The empty review fl
 By stage:
 
 - **Early:** one vendor is fine. Avoid volume minimums you can't hit and paid ramp time you didn't plan for.
-- **Growing:** forecast volume by queue, and keep the most severe work, such as child safety and credible threats, with your own team or your strongest vendor.
+- **Growing:** forecast volume by queue, and keep the most severe work, such as child safety and credible threats, with your own team or your strongest vendor, and keep its escalations and final calls in-house ([chapter 7](07-review-operations.md)).
 - **At scale:** make sure every critical queue can be handled by at least two sites or vendors, and that your answer key and training travel with the work.
 
 [Chapter 19](19-budgets-roadmaps-and-making-the-case.md) covers making the case for the money.
@@ -159,7 +159,7 @@ Most vendor problems show up after signing, slowly. Catch them with the same num
 
 Calibrate every team and vendor against one shared answer key ([chapter 10](10-quality-calibration-and-appeals.md)). Send policy changes to vendor reviewers the same day as your own, and give them the same escalation paths. Vendor staff who get guidance a week late will make last week's calls.
 
-Hold AI tools to the same rules as your own automation. A tool doesn't take on a new policy area until its overturn rate is at or below human review. Every model or threshold change gets a baseline before launch and a check after, and rolls back if the rate moves past an agreed limit.
+Hold AI tools to the same rules as your own automation ([chapter 18](18-ai-in-trust-and-safety.md)). A tool doesn't take on a new policy area until its overturn rate is at or below human review. Every model or threshold change gets a baseline before launch and a check after, and rolls back if the rate moves past an agreed limit.
 
 ### 8. Use free and open-source tools where you can run them
 

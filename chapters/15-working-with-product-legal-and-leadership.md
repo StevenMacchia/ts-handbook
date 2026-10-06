@@ -34,7 +34,7 @@ An abuse pre-mortem is the session where a team works out how a feature could be
 
 At that point, changing a default is easy. If new accounts shouldn't be able to message strangers, or should have a lower gifting cap in their first week, it's a quick edit to the spec. Once the feature has shipped and people are using it, the same change means taking something away from users. That's a much harder decision to get through.
 
-Most product launches get a security review. Almost none get an abuse review: who will misuse this, how, and what do we ship on day one to stop it. The [abuse pre-mortem](https://stevenmacchia.com/ts-workbench/#premortem) gives a team that review in one sitting: 12 plain questions about the product, the abuse risks that apply rated by severity and likelihood, the safeguards to ship first with an owner for each, and the laws likely to apply across seven jurisdictions. Bring its output to design review, not a list of concerns.
+Most product launches get a security review. Almost none get an abuse review: who will misuse this, how, and what do we ship on day one to stop it. The [abuse pre-mortem](https://stevenmacchia.com/ts-workbench/#premortem) gives a team that review in one sitting: 12 plain questions about the product, the abuse risks that apply rated by severity and likelihood, the safeguards to ship first with an owner for each, and the laws likely to apply across seven jurisdictions. Bring its output to design review, not a list of concerns. [Chapter 2](02-know-your-risks.md) covers running the pre-mortem and rating the risks it finds.
 
 For services under the UK Online Safety Act, a review before a significant change is part of the legal duty, and very large platforms in the EU have a similar duty before deploying high-impact features (see "Why it matters"). Australia's eSafety Commissioner sets out the same idea as [Safety by Design](https://www.esafety.gov.au/industry/safety-by-design): anticipate harms and build protections in from the start rather than retrofitting them.
 
@@ -54,7 +54,7 @@ Be selective about what gets a full review:
 | Changes what minors can do | Full pre-mortem |
 | Does none of these | A short checklist, which the product team can complete itself |
 
-The checklist covers the basics that apply to almost everything: can users report it and block people on it, do new accounts get the same reach as established ones, are minors' defaults unchanged, and is enough logged to enforce and to explain decisions. If any answer is worrying, it becomes a full review.
+The checklist covers the basics that apply to almost everything: can users report it and block people on it, do new accounts get the same limits here as everywhere else, are minors' defaults unchanged, and is enough logged to enforce and to explain decisions. If any answer is worrying, it becomes a full review.
 
 Then answer fast. Set a turnaround target in days and publish it. Make every review usable: name each safeguard, its owner and its rough effort, rank them, and say plainly which ones must ship before launch and which can follow. Give options with their costs, not a single "no". Product teams invite the reviewer who helps them ship safely, and route around the one who only says what's wrong.
 
@@ -197,6 +197,7 @@ The board needs safety risk on the same footing as other major risks: the top ri
 
 From Steven's writing:
 
+- **[Since 2024, the job is proving it works](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-ageassurance-share-7512890720316203008-kHP4/)** (Oct 5, 2026): Since 2024 the question has moved from whether you have a policy to whether you can show it works: UK risk assessments that must be redone before significant changes, age assurance as the foundation, 48-hour removal of intimate images under the US TAKE IT DOWN Act, and free open-source tooling. Those duties land on different teams, so the leadership team should name one owner for the whole picture.
 - **[Run the abuse pre-mortem at design review](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7511792474445750272-3rLV/)** (Oct 2, 2026): At design review, changing a default is a quick edit. After launch it means taking something away. T&S earns the invite by being selective and fast, and accepted risks get an owner and a date.
 - **[The era of voluntary child safety is ending](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-onlinesafety-share-7510666169993805824-VI4v/)** (Sep 29, 2026): India's push for age checks, Florida's case against OpenAI, Copilot data labeling, TikTok's Alabama settlement and Meta's New Mexico verdict. The question has moved from "do you have a policy?" to "can you prove it works?"
 - **[You can't moderate your way out of a systems problem](https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/)** (Sep 18, 2026): Treating Trust & Safety mainly as an operations function is a mistake. Reputation, history, age and behavior signals belong in one risk model, automation needs clear limits, and safety belongs in the product architecture from the start.

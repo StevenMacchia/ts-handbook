@@ -80,7 +80,7 @@ Rates hold steadier than volume. On a busy night, volume goes up and a category'
 
 I'd set up an alert on that rate. Something simple works to start: if a category sits well above its usual level for that hour for 15 minutes or so, page whoever's on call.
 
-When it fires, respond in proportion. Locking the room or turning off chat in the middle of a big event punishes thousands of people for what a few hundred accounts are doing. Raids often lean on new accounts, so I'd start by slowing down posting for accounts less than a week old. That catches most of the people causing it and leaves everyone else alone. Keep the friction where the attack is: a platform-wide limit on all new accounts stops thousands of real newcomers too, and offenders switch to older accounts.
+When it fires, respond in proportion. Locking the room or turning off chat in the middle of a big event punishes thousands of people for what a few hundred accounts are doing. Raids often lean on new accounts. If most of the accounts involved are new, I'd start by slowing down posting for accounts less than a week old. That targets them and leaves everyone else alone. Keep the friction where the attack is: a platform-wide limit on all new accounts stops thousands of real newcomers too, and offenders switch to older accounts.
 
 | What you see | First response | Not this |
 |---|---|---|
@@ -100,7 +100,7 @@ At an early stage, a daily chart of rates by category and one lever you can pull
 
 **Say quickly what you know, and nothing you don't.** "No comment" becomes the headline. Calling an incident "isolated and rare" before you know it is makes the next report worse. Denying something that turns out to be true makes the denial the story.
 
-**Match what enforcement actually does.** Public safety claims are evidence, so every number and every claim in a statement comes from the operations lead, not from a draft that sounded right. [Chapter 15](15-working-with-product-legal-and-leadership.md) covers keeping Comms and enforcement in step.
+**Match what enforcement actually does.** Public safety claims are evidence, so every number and every claim in a statement comes from the operations lead, not from a version that sounded right. [Chapter 15](15-working-with-product-legal-and-leadership.md) covers keeping Comms and enforcement in step.
 
 **Share outcomes, not methods, while it's live.** Publishing exactly how your detection works helps the people evading it. Say what you removed and what changed, and explain methods once the incident is over.
 
@@ -115,7 +115,7 @@ At an early stage, a daily chart of rates by category and one lever you can pull
 Incidents pull attention, and the quiet queues pay for it.
 
 - **Never pull staff off your highest-severity queues** to cover a louder incident. In The breath-hold challenge, moving reviewers off child safety clears the trend queue and misses the child-safety targets overnight.
-- **Triage by severity when capacity drops.** In [The empty review floor](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/vendor.md), a typhoon takes out 60% of reviewers. The strongest call moves everyone left onto child safety and threats, pauses low-severity work, automates only clear-cut, low-harm cases with spot checks, and tells people about the delays.
+- **Triage by severity when capacity drops.** In [The empty review floor](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/vendor.md), a typhoon takes out 60% of reviewers. The strongest call moves everyone left onto child safety and threats, pauses low-severity work, automates only clear-cut, low-harm cases with spot checks, and tells people about the delays. [Chapter 7](07-review-operations.md) covers planning for this before it happens.
 - **Run shifts.** A long incident needs handoffs, not heroes. People who handled harmful material during it need a debrief and time away from the worst queues ([chapter 14](14-moderator-wellbeing.md)).
 - **End emergency measures on purpose.** Measures left in place indefinitely start catching people they were never meant for. Review each one on its end date: keep it as policy, change it, or switch it off.
 
@@ -203,7 +203,7 @@ At an early stage, a short exercise with the founders and the first safety hire 
 
 From Steven's writing:
 
-- **[Watch the rate, not the volume](https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/)** (Oct 2, 2026): In Stream's live sports chat data, volume swung 7.5x but the rate of racist content held steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.
+- **[Watch the rate, not the volume](https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/)** (Oct 2, 2026): In live sports chat, volume swings hard while the rate of abusive content tends to hold steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.
 
 Outside sources:
 
