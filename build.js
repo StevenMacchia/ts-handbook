@@ -26,17 +26,39 @@ const CH = fs.readdirSync(path.join(ROOT, "chapters")).filter(f => /^\d\d-.+\.md
   const q = (lines.find(l => /^> \*\*.+\*\*$/.test(l)) || "").replace(/^> \*\*|\*\*$/g, "");
   const nav = lines.find(l => /^\*Part \d+: /.test(l)) || "";
   const part = +(nav.match(/^\*Part (\d+)/) || [0, 1])[1] - 1;
+  // Optional "*For: ...*" line naming who the chapter is written for; falls back to a default for the part
+  const forLine = lines.find(l => /^\*For: .+\*$/.test(l)) || "";
+  const forText = forLine ? forLine.replace(/^\*For: |\*$/g, "") : "";
   // The footer starts at the last rule followed by the "Part of The T&S Handbook" credit
   let end = lines.length;
   for (let i = lines.length - 1; i > 0; i--) if (lines[i] === "---" && lines.slice(i).join("\n").includes("Part of [The T&S Handbook]")) { end = i; break; }
-  const updated = (lines.slice(end).join("\n").match(/Last (?:updated|reviewed): (\d{4}-\d{2}-\d{2})/) || [])[1];
-  const body = lines.slice(1, end).filter(l => l !== lines[0] && !/^> \*\*.+\*\*$/.test(l) && l !== nav && !/^\*\*Status: /.test(l)).join("\n").trim();
+  const footer = lines.slice(end).join("\n");
+  const updated = (footer.match(/Last (?:updated|reviewed): (\d{4}-\d{2}-\d{2})/) || [])[1];
+  // A separate, honest "reviewed" date: only set when the footer says so explicitly, never guessed
+  const reviewed = (footer.match(/Last reviewed: (\d{4}-\d{2}-\d{2})/) || [])[1] || "";
+  const body = lines.slice(1, end).filter(l => l !== lines[0] && !/^> \*\*.+\*\*$/.test(l) && l !== nav && l !== forLine && !/^\*\*Status: /.test(l)).join("\n").trim();
   // A chapter that discusses law says so in its footer; its page then shows the legal notice under the title
-  const legal = /not legal advice/i.test(lines.slice(end).join("\n"));
-  return {file, n: +n, slug: file.slice(3, -3), title, q, part, body, updated, legal, status: STATUS[file] || "Outline"};
+  const legal = /not legal advice/i.test(footer);
+  return {file, n: +n, slug: file.slice(3, -3), title, q, part, forText, body, updated, reviewed, legal, status: STATUS[file] || "Outline"};
 });
 const bySlugFile = Object.fromEntries(CH.map(c => [c.file, c]));
 const bySlug = Object.fromEntries(CH.map(c => [c.slug, c]));
+// Who a chapter is for: its own "*For: ...*" line if it has one, else a default for the part
+const FOR_DEFAULT = ["founders and first safety hires", "safety leads building the function", "people running a team", "leads at scale or under regulation"];
+for (const c of CH) c.forWho = c.forText || FOR_DEFAULT[c.part] || "";
+// Chapters with a matching T&S Workbench tool for their template: an "Open in the workbench" link beside it. Skips chapters with no sensible match.
+const WORKBENCH_LINK = {
+  "choosing-vendors-and-tools": ["vendors", "vendor scorecard"],
+  "writing-policy": ["policy", "policy drafting"],
+  "crisis-response": ["tabletop", "incident tabletop"],
+  "measuring-what-matters": ["metrics", "metrics framework"],
+  "know-your-risks": ["premortem", "abuse pre-mortem"],
+  "child-safety-and-age-assurance": ["coppa", "COPPA/child-safety check"],
+  "regulation-and-compliance": ["dsa", "DSA readiness"],
+  "transparency-reports-and-notices": ["transparency", "transparency report builder"],
+  "budgets-roadmaps-and-making-the-case": ["maturity", "maturity model"],
+  "detection-and-prevention": ["coverage", "harm coverage radar"],
+};
 
 // Optional private list of terms that must never be published (kept outside this repo); the build stops if one appears
 const BLOCKED = path.join(ROOT, "..", "_build", "blocked-terms.txt");
@@ -440,10 +462,40 @@ footer :focus-visible{outline-color:#fff}
 /* Copy button on each template panel (hidden without JS) */
 .tph{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:-4px 0 4px}
 .tph .lbl{margin:0}
-.copy{flex:none;font:inherit;font-size:13px;font-weight:500;line-height:1.2;padding:5px 10px;border:1px solid var(--strong);border-radius:4px;background:#fff;color:var(--ink);cursor:pointer}
-.copy:hover{border-color:var(--ink)}
+.tph-actions{display:flex;gap:8px}
+.copy,.dl{flex:none;font:inherit;font-size:13px;font-weight:500;line-height:1.2;padding:5px 10px;border:1px solid var(--strong);border-radius:4px;background:#fff;color:var(--ink);cursor:pointer}
+.copy:hover,.dl:hover{border-color:var(--ink)}
 .copy[data-done="1"]{color:var(--good);border-color:var(--good)}
 .copy[data-done="0"]{color:var(--muted)}
+.wb-link{margin:0 0 20px}
+/* Spine: prev/next chapter nav already in .pn. Outline ("On this page"), read progress and the suggest-a-change link */
+.continue{margin:0 0 20px}
+.toc li.read .t{position:relative}
+.toc li.read .t::before{content:"✓ ";color:var(--good);font-weight:700}
+.suggest{margin:10px 0 0;font-size:14px}
+.suggest a{text-decoration:none}
+.suggest a:hover{text-decoration:underline}
+.toc-rail-d{margin:0 0 28px;border:1px solid var(--line);border-radius:12px;padding:6px 18px;background:var(--panel);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.toc-rail-d summary{cursor:pointer;padding:12px 0;font-weight:600;font-size:14.5px;list-style:none;color:var(--ink)}
+.toc-rail-d summary::-webkit-details-marker{display:none}
+.toc-rail-d summary::after{content:" ▾";color:var(--muted)}
+.toc-rail-d[open] summary::after{content:" ▴"}
+.toc-rail-d ol{list-style:none;margin:0;padding:0 0 14px}
+.toc-rail-d li{padding:4px 0}
+.toc-rail-d a{color:var(--muted);text-decoration:none;font-size:14px;line-height:1.5}
+.toc-rail-d a:hover{color:var(--ink);text-decoration:underline}
+.toc-rail-d a.on{color:var(--blue);font-weight:600}
+@media (min-width:1101px){
+  /* Narrow the reading column just enough to dock a rail beside it (960 + 24 gap + 160 rail = 1144, fits from 1101 up), and
+     tighten the step/section label column so a step's text doesn't lose half its width to the rail. */
+  .ch-page .wrap{max-width:960px;margin-left:calc((100vw - 1144px)/2);margin-right:0}
+  .ch-page .sec-h,.ch-page .cs-h,.ch-page .steps>li,.ch-page .jump-row{grid-template-columns:220px minmax(0,1fr)}
+  .toc-rail{position:fixed;top:132px;left:calc((100vw - 1144px)/2 + 984px);width:160px;max-height:calc(100vh - 160px);overflow:auto;z-index:2}
+  .toc-rail-d{border:0;background:none;padding:0;backdrop-filter:none;margin:0}
+  .toc-rail-d summary{display:none}
+  .toc-rail-d>ol{display:block!important;padding:0}
+  .toc-rail-d::before{content:"On this page";display:block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+}
 .pf{display:none}
 @media (max-width:900px){.hs{justify-items:start}.hs .srch,.srch{width:100%;max-width:none}.sres{position:static;width:auto;max-height:none;margin-top:10px;box-shadow:none}.hero{grid-template-columns:1fr;gap:28px;padding:48px 0 36px}.hh{grid-template-columns:1fr;gap:18px;padding:40px 0 28px}.status{text-align:left;white-space:normal}.home{grid-template-columns:1fr;padding-top:20px}.home>section{padding-bottom:48px}.side{position:static;padding-bottom:56px}.proof{grid-template-columns:1fr;gap:16px;padding-bottom:48px}.sec-h,.row2,.cs-h,.steps>li,.jump-row,footer .wrap{grid-template-columns:1fr;gap:16px}.jump-row{gap:8px;margin:-4px 0 20px}.rows li{grid-template-columns:40px minmax(0,1fr);gap:4px 12px}.rows li>:nth-child(n+3){grid-column:2}.toc li{grid-template-columns:34px minmax(0,1fr);gap:2px 12px}.toc .st{grid-column:2;grid-row:auto;display:flex;gap:12px;justify-items:start;padding-top:4px}.pr2,.st3{grid-template-columns:1fr}.pr2{gap:0}.pr+.pr{border-top:0}.wrap{padding:0 20px}.top{gap:16px}.top a:not(.btn){display:none}.top a.name{display:inline}.top .btn{margin-left:auto}section,.ch-page section{padding-bottom:56px}.ch-hero{padding:40px 0 32px}.stages{grid-template-columns:1fr;gap:28px;padding:22px}.cards{grid-template-columns:1fr}.feed{grid-template-columns:1fr;gap:40px}.posts li,.src li,.log>li,.feed .log>li,.feed .posts li{grid-template-columns:1fr;gap:4px}.posts time,.log time{padding-top:0}.posts .k{display:inline;margin:0 0 0 10px}.steps>li{gap:12px;padding:24px 0}.pn{grid-template-columns:1fr}.pn .next{grid-column:1;text-align:left}}
 @media (min-width:901px) and (max-width:1100px){.cards,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.home{grid-template-columns:minmax(0,1fr) 260px;gap:0 40px}}
@@ -483,7 +535,7 @@ footer .fine{color:#A0A6C0}
 @page{margin:18mm 16mm}
 html{scroll-behavior:auto}
 body{font-size:11pt;line-height:1.45;color:#000;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-header,footer,.pn,.toc-d,.jump-row,.srch,.sres,.chg,.fresh,.filters,.side,.cta,.ctl,.copy,.lnk,.btn,.open .sq,#changes,#new,.more,.more-d summary{display:none!important}
+header,footer,.pn,.toc-d,.jump-row,.srch,.sres,.chg,.fresh,.filters,.side,.cta,.ctl,.copy,.dl,.lnk,.btn,.open .sq,#changes,#new,.more,.more-d summary,.toc-rail,.continue,.wb-link,.suggest{display:none!important}
 .wrap{max-width:none;padding:0}
 a{color:inherit}
 .hero,.ch-hero,.hh{display:block;padding:0 0 14pt}
@@ -619,6 +671,14 @@ const filters = statuses.length > 1 ? `<div class="filters" id="filters" hidden>
 // Status filter (only when statuses differ), then an "Open all" toggle for the principles; both are hidden without JS
 const INDEX_JS = `(function(){var f=document.getElementById('filters');if(!f)return;f.hidden=false;var bs=[].slice.call(f.querySelectorAll('button')),rows=[].slice.call(document.querySelectorAll('.toc li')),parts=[].slice.call(document.querySelectorAll('.part'));bs.forEach(function(b){b.addEventListener('click',function(){var k=b.getAttribute('data-f');bs.forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});rows.forEach(function(r){r.hidden=k!=='all'&&r.getAttribute('data-status')!==k;});parts.forEach(function(p){p.hidden=!p.querySelector('.toc li:not([hidden])');});});});})();
 (function(){var b=document.getElementById('xall');if(!b)return;var ds=[].slice.call(document.querySelectorAll('#believes details'));if(!ds.length)return;b.hidden=false;function sync(){var all=ds.every(function(d){return d.open});b.textContent=all?'Close all':'Open all';b.setAttribute('data-open',String(all));}b.addEventListener('click',function(){var open=b.getAttribute('data-open')!=='true';ds.forEach(function(d){d.open=open});sync();});ds.forEach(function(d){d.addEventListener('toggle',sync)});sync();})();`;
+// Reading progress on the home page: a check on chapters read (localStorage "tsh:read", set from each chapter page) and a
+// "Continue from chapter N" button when a chapter was last opened (localStorage "tsh:last"). Degrades silently without storage.
+const PROGRESS_HOME_JS = `(function(){var read=[];try{read=JSON.parse(localStorage.getItem('tsh:read')||'[]')}catch(e){}
+read.forEach(function(s){var li=document.querySelector('.toc li[data-slug="'+s+'"]');if(li)li.classList.add('read')});
+var last=null;try{last=localStorage.getItem('tsh:last')}catch(e){}
+if(!last)return;var li=document.querySelector('.toc li[data-slug="'+last+'"]'),row=document.getElementById('continue-row'),btn=document.getElementById('continue-btn');
+if(!li||!row||!btn)return;var a=li.querySelector('.t a'),num=li.querySelector('i');if(!a||!num)return;
+btn.href=a.getAttribute('href');btn.textContent='Continue from chapter '+parseInt(num.textContent,10);row.hidden=false;})();`;
 
 /* ---------- Search, copy and print: small vanilla scripts, each a progressive enhancement over a page that works without them ---------- */
 // The search box (hidden until the script runs). "up" is the path to the handbook root, where search.json lives.
@@ -648,6 +708,19 @@ function legacy(s){var ta=document.createElement('textarea');ta.value=s;ta.setAt
 bs.forEach(function(b){var md=b.closest('.tpl').getAttribute('data-md'),t;b.hidden=false;b.addEventListener('click',function(){var done=function(ok){b.textContent=ok?'Copied':'Copy failed';b.setAttribute('data-done',ok?'1':'0');say(ok?'Template copied as Markdown.':'Copying failed. Select the template and copy it by hand.');clearTimeout(t);t=setTimeout(function(){b.textContent='Copy';b.removeAttribute('data-done')},1800)};if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(md).then(function(){done(true)},function(){done(legacy(md))});else done(legacy(md))})});})();`;
 // "Print or save as PDF" (hidden without JS; Ctrl+P prints the same stylesheet). Collapsed post lists open for the print and close again after.
 const PRINT_JS = `(function(){var b=document.querySelector('.print');if(!b)return;b.hidden=false;b.addEventListener('click',function(){window.print()});var opened=[];window.addEventListener('beforeprint',function(){opened=[].filter.call(document.querySelectorAll('details.more-d'),function(d){return !d.open});opened.forEach(function(d){d.open=true})});window.addEventListener('afterprint',function(){opened.forEach(function(d){d.open=false});opened=[]})})();`;
+// Download a template panel as its own Markdown file (a Blob, no server round trip). Next to each Copy button.
+const DOWNLOAD_JS = `(function(){var bs=[].slice.call(document.querySelectorAll('.tpl[data-md] .dl'));if(!bs.length||!window.Blob)return;bs.forEach(function(b){b.hidden=false;b.addEventListener('click',function(){var tpl=b.closest('.tpl'),md=tpl.getAttribute('data-md'),name=tpl.getAttribute('data-name')||'template';var blob=new Blob([md],{type:'text/markdown'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name+'.md';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(url)},1000)})})})();`;
+// "On this page": a collapsed <details> above the content below 1100px, forced open into the sticky right rail above it (a
+// native <details> only opens on user action or the "open" attribute, so JS sets that once the wide layout applies), and
+// highlights the section currently in view with IntersectionObserver. No dependencies.
+const OUTLINE_JS = `(function(){var nav=document.querySelector('.toc-rail');if(!nav)return;var d=nav.querySelector('.toc-rail-d');if(d&&window.matchMedia){var mq=window.matchMedia('(min-width:1101px)'),sync=function(){if(mq.matches)d.open=true};sync();(mq.addEventListener?mq.addEventListener('change',sync):mq.addListener(sync))}
+if(!window.IntersectionObserver)return;var map={};[].slice.call(nav.querySelectorAll('a')).forEach(function(a){map[a.getAttribute('href').slice(1)]=a});var secs=[].slice.call(document.querySelectorAll('main section[id]')).filter(function(s){return map[s.id]});if(!secs.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(en){var a=map[en.target.id];if(a)a.classList.toggle('on',en.isIntersecting)})},{rootMargin:'-15% 0px -70% 0px'});secs.forEach(function(s){obs.observe(s)})})();`;
+// Marks the chapter read in localStorage ("tsh:read") once the reader reaches its last section, and remembers it as the last-opened
+// chapter ("tsh:last") for the home page's "Continue from chapter N" button. All degrades silently when storage is unavailable.
+const progressChapterJS = (slug, lastId) => `(function(){try{localStorage.setItem('tsh:last','${slug}')}catch(e){}
+if(!${lastId ? "true" : "false"}||!window.IntersectionObserver)return;var el=document.getElementById('${lastId}');if(!el)return;
+var obs=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){try{var r=JSON.parse(localStorage.getItem('tsh:read')||'[]');if(r.indexOf('${slug}')===-1){r.push('${slug}');localStorage.setItem('tsh:read',JSON.stringify(r))}}catch(e){}obs.disconnect()}})},{threshold:0.1});
+obs.observe(el)})();`;
 
 // Sidebar teaser of a change: its date, kind and scope; the summary itself is in "What's new" below
 const scope = u => { const cs = u.chapters.map(s => bySlug[s]).sort((a, b) => a.n - b.n);
@@ -676,9 +749,10 @@ const indexBody = `<div class="wrap">
 </div>
 <div class="wrap home">
 <section id="contents">
+  <p class="continue" id="continue-row" hidden><a class="btn primary" id="continue-btn" href="#"></a></p>
   <div class="ch-h"><h2>Contents</h2><p class="intro">${CH.length} chapters in ${PARTS.length} parts. Read Part 1 in order. After that, go to the chapter for the problem in front of you.</p>${filters}</div>
 ${PARTS.map((p, pi) => `  <div class="part"><h3 class="ph"><i>Part ${pi + 1}</i>${esc(p)}</h3><ol class="toc">
-${CH.filter(c => c.part === pi).map(c => `    <li data-status="${c.status.toLowerCase()}"><i>${String(c.n).padStart(2, "0")}</i><span class="t"><a href="./${c.slug}/">${esc(c.title)}</a></span><p class="q">${esc(c.q)}</p><span class="st ${c.status.toLowerCase()}">${c.status === "Outline" ? `<span>Outline</span>` : ""}${fresh(c)}</span></li>`).join("\n")}
+${CH.filter(c => c.part === pi).map(c => `    <li data-status="${c.status.toLowerCase()}" data-slug="${c.slug}"><i>${String(c.n).padStart(2, "0")}</i><span class="t"><a href="./${c.slug}/">${esc(c.title)}</a></span><p class="q">${esc(c.q)}</p><span class="st ${c.status.toLowerCase()}">${c.status === "Outline" ? `<span>Outline</span>` : ""}${fresh(c)}</span></li>`).join("\n")}
   </ol></div>`).join("\n")}
 </section>
 ${sidebar}
@@ -702,7 +776,7 @@ ${whatsNew}`;
 fs.rmSync(OUT, {recursive: true, force: true});
 fs.mkdirSync(OUT, {recursive: true});
 fs.writeFileSync(path.join(OUT, ".nojekyll"), "");
-fs.writeFileSync(path.join(OUT, "index.html"), page({title: "The T&S Handbook · Steven Macchia", desc: "How to build and run a Trust & Safety team, from the first hire to a regulated program at scale. A free, open handbook in progress by Steven Macchia.", url: SITE, depth: 0, body: indexBody, script: INDEX_JS + "\n" + SEARCH_JS}));
+fs.writeFileSync(path.join(OUT, "index.html"), page({title: "The T&S Handbook · Steven Macchia", desc: "How to build and run a Trust & Safety team, from the first hire to a regulated program at scale. A free, open handbook in progress by Steven Macchia.", url: SITE, depth: 0, body: indexBody, script: INDEX_JS + "\n" + SEARCH_JS + "\n" + PROGRESS_HOME_JS}));
 
 /* ---------- Chapter pages: each section uses the same components as the rest of the site ---------- */
 const STAGE_D = Object.fromEntries(stages);
@@ -755,10 +829,14 @@ const SECTION = {
   },
   "Mistakes to avoid": (s, link) => head(s.title, "And what to do instead") +
     `<ol class="rows">${bullets(s.md).map((b, i) => { const [h, t] = lead(b); return `<li><i>${String(i + 1).padStart(2, "0")}</i><h3>${inline(h, link)}</h3><p>${inline(t, link)}</p></li>`; }).join("")}</ol>`,
-  // Each block becomes a panel with an anchor (tpl-N) and a Copy button; the block's own Markdown rides along in data-md for the button to copy
-  "Start from this template": (s, link) => head(s.title, "Copy it, fill it in, make it yours") + tplBlocks(s.md).map((block, i) => {
+  // Each block becomes a panel with an anchor (tpl-N), a Copy button and a Download button; the block's own Markdown rides along
+  // in data-md for both buttons, and data-name names the file. A chapter with a matching Workbench tool gets a link to open it.
+  "Start from this template": (s, link, c) => head(s.title, "Copy it, fill it in, make it yours") +
+    (WORKBENCH_LINK[c.slug] ? `<p class="wb-link"><a class="btn" href="${HOME}ts-workbench/#${WORKBENCH_LINK[c.slug][0]}">Open the ${esc(WORKBENCH_LINK[c.slug][1])} in the workbench →</a></p>` : "") +
+    tplBlocks(s.md).map((block, i) => {
     const lines = block.split("\n"), m = lines[0].match(/^\*\*(.+?)\*\*\s*(.*)$/), name = plain(tplName(block)) || "this template";
-    return `<div class="tpl" id="tpl-${i + 1}" data-md="${esc(block)}"><div class="tph"><p class="lbl">Template</p><button type="button" class="copy" hidden aria-label="Copy ${esc(name)} as Markdown">Copy</button></div>${m ? `<h3>${inline(m[1].replace(/\.$/, ""), link)}</h3>${m[2] ? `<p>${inline(m[2], link)}</p>` : ""}${md(lines.slice(1).join("\n").trim(), link)}` : md(block, link)}</div>`;
+    const file = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || `template-${i + 1}`;
+    return `<div class="tpl" id="tpl-${i + 1}" data-md="${esc(block)}" data-name="${esc(file)}"><div class="tph"><p class="lbl">Template</p><div class="tph-actions"><button type="button" class="copy" hidden aria-label="Copy ${esc(name)} as Markdown">Copy</button><button type="button" class="dl" hidden aria-label="Download ${esc(name)} as Markdown">Download</button></div></div>${m ? `<h3>${inline(m[1].replace(/\.$/, ""), link)}</h3>${m[2] ? `<p>${inline(m[2], link)}</p>` : ""}${md(lines.slice(1).join("\n").trim(), link)}` : md(block, link)}</div>`;
   }).join(""),
   "Do it with": (s, link) => {
     const RANK = {"Workbench tool": 0, Metric: 1, Reference: 2};
@@ -802,6 +880,14 @@ for (const c of CH) {
   const secs = splitSections(c.body), minute = secs.find(s => s.title === "In one minute");
   const words = c.body.replace(/\]\([^)]*\)/g, "]").split(/\s+/).filter(w => /[a-z]/i.test(w)).length;
   const changes = c.changes.length ? `<section id="changes"><div class="wrap"><div class="sec-h"><h2>Recent changes</h2><div><p class="big">${plural(c.changes.length, "change")} to this chapter, newest first</p><p class="intro">The <a href="../updates/">updates page</a> has every change to the handbook, by date.</p></div></div><ol class="log">${c.changes.slice(0, SHOW_CHANGES).map(u => updateRow(u, "../", {except: c.slug})).join("")}</ol>${c.changes.length > SHOW_CHANGES ? `<p class="more"><a href="../updates/">All ${plural(c.changes.length, "change")} on the updates page →</a></p>` : ""}</div></section>\n` : "";
+  // "On this page": the chapter's own h2 sections (not "In one minute", already at the top). Sticky in the right rail above
+  // 1100px, a collapsed <details> above the content below it; highlighted by section in view via OUTLINE_JS.
+  const outlineSecs = secs.filter(s => s !== minute), outlineLabel = s => s.title === "What this chapter will cover" ? "What it will cover" : s.title;
+  const outlineNav = outlineSecs.length > 1 ? `<div class="wrap"><nav class="toc-rail" aria-label="On this page"><details class="toc-rail-d"><summary>On this page</summary><ol>${outlineSecs.map(s => `<li><a href="#${slugify(s.title)}">${esc(outlineLabel(s))}</a></li>`).join("")}</ol></details></nav></div>\n` : "";
+  const lastId = outlineSecs.length ? slugify(outlineSecs[outlineSecs.length - 1].title) : "";
+  // The status badge: honest about review, not just authorship. Never a date that wasn't actually recorded.
+  const reviewBadge = c.status === "Outline" ? `<div><i class="sq outline" aria-hidden="true"></i><b>${esc(STATUS_TEXT.Outline)}</b></div>`
+    : `<div><i class="sq${c.reviewed ? "" : " outline"}" aria-hidden="true"></i><b>${c.reviewed ? `Reviewed ${fmtDate(c.reviewed)}` : "Draft, reviewed soon"}</b></div>`;
   const body = `<div class="ch-page">
 <div class="wrap">
   <div class="hero ch-hero">
@@ -811,17 +897,17 @@ for (const c of CH) {
       <p class="lead">${esc(c.q)}</p>
     </div>
     <div>
-      <div class="open">${c.status === "Outline" ? `<div><i class="sq outline" aria-hidden="true"></i><b>${esc(STATUS_TEXT.Outline)}</b></div>` : ""}<span>Chapter ${c.n} of ${CH.length}${c.status !== "Outline" ? ` · About ${Math.max(1, Math.round(words / 230))} minutes` : ""}</span>${c.updatedAt ? `<span>Updated ${fmtDate(c.updatedAt)}${c.changes.length ? `<span class="chg"> · <a href="#changes">What changed</a></span>` : ""}</span>` : ""}<details class="toc-d"><summary>All chapters</summary><div class="toc-list">${sideList(1, c)}</div></details>${searchForm("../")}<button type="button" class="lnk print" hidden>Print or save as PDF</button></div>
+      <div class="open">${reviewBadge}<span>Chapter ${c.n} of ${CH.length}${c.status !== "Outline" ? ` · About ${Math.max(1, Math.round(words / 230))} minutes` : ""}</span><span>For: ${esc(c.forWho)}</span>${c.updatedAt ? `<span>Updated ${fmtDate(c.updatedAt)}${c.changes.length ? `<span class="chg"> · <a href="#changes">What changed</a></span>` : ""}</span>` : ""}<details class="toc-d"><summary>All chapters</summary><div class="toc-list">${sideList(1, c)}</div></details>${searchForm("../")}<button type="button" class="lnk print" hidden>Print or save as PDF</button></div>
     </div>
   </div>
 ${c.legal ? `  <p class="legal" role="note">${LEGAL_NOTE}</p>
 ` : ""}${minute ? `  <div class="proof" id="in-one-minute"><p class="lbl">In one minute</p>${bullets(minute.md).map(b => { const [h, t] = lead(b); return `<div><b>${inline(h, link)}</b><span>${inline(t.charAt(0).toUpperCase() + t.slice(1), link)}</span></div>`; }).join("")}</div>\n` : ""}</div>
-${secs.filter(s => s !== minute).map(s => `<section id="${slugify(s.title)}"><div class="wrap">${(SECTION[s.title] || prose)(s, link, c)}</div></section>`).join("\n")}
-${changes}<section><div class="wrap"><nav class="pn" aria-label="Chapters">${prev ? `<a href="../${prev.slug}/"><span>← Chapter ${prev.n}</span><b>${esc(prev.title)}</b></a>` : ""}${next ? `<a class="next" href="../${next.slug}/"><span>Chapter ${next.n} →</span><b>${esc(next.title)}</b></a>` : ""}</nav></div></section>
-<div class="wrap"><p class="pf">${SITE}${c.slug}/ · The T&amp;S Handbook by Steven Macchia · CC BY 4.0 · General information, not legal advice</p></div>
+${outlineNav}${secs.filter(s => s !== minute).map(s => `<section id="${slugify(s.title)}"><div class="wrap">${(SECTION[s.title] || prose)(s, link, c)}</div></section>`).join("\n")}
+${changes}<section><div class="wrap"><nav class="pn" aria-label="Chapters">${prev ? `<a href="../${prev.slug}/"><span>← Part ${prev.part + 1} · Chapter ${prev.n}</span><b>${esc(prev.title)}</b></a>` : `<a href="../"><span>← Contents</span><b>Back to all ${CH.length} chapters</b></a>`}${next ? `<a class="next" href="../${next.slug}/"><span>Part ${next.part + 1} · Chapter ${next.n} →</span><b>${esc(next.title)}</b></a>` : `<a class="next" href="../updates/"><span>Updates →</span><b>What changed recently</b></a>`}</nav></div></section>
+<div class="wrap"><p class="pf">${SITE}${c.slug}/ · The T&amp;S Handbook by Steven Macchia · CC BY 4.0 · General information, not legal advice</p><p class="suggest"><a href="${REPO}/blob/main/chapters/${c.file}">Suggest a change on GitHub →</a></p></div>
 </div>`;
   fs.mkdirSync(path.join(OUT, c.slug), {recursive: true});
-  fs.writeFileSync(path.join(OUT, c.slug, "index.html"), page({title: `${c.n}. ${c.title} · The T&S Handbook`, desc: c.q, url: SITE + c.slug + "/", depth: 1, body, script: SEARCH_JS + "\n" + COPY_JS + "\n" + PRINT_JS}));
+  fs.writeFileSync(path.join(OUT, c.slug, "index.html"), page({title: `${c.n}. ${c.title} · The T&S Handbook`, desc: c.q, url: SITE + c.slug + "/", depth: 1, body, script: SEARCH_JS + "\n" + COPY_JS + "\n" + PRINT_JS + "\n" + DOWNLOAD_JS + "\n" + OUTLINE_JS + "\n" + progressChapterJS(c.slug, lastId)}));
 }
 
 /* ---------- Search index: every section, step and template as plain text, with the anchor each links to ---------- */
