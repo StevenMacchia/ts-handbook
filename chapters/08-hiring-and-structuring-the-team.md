@@ -188,6 +188,7 @@ How you treat vendor staff in a crisis shapes quality afterwards. If a site goes
 
 From Steven's writing:
 
+- **[What I'd tell myself in year one of Trust & Safety](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-contentmoderation-share-7513978054688395266-P3DE/)** (Oct 8, 2026): Five lessons from more than ten years in the field: treat safety as a systems problem built into the product, don't treat a ban as a closed case, measure what users experience rather than how busy the team was, let automation earn its scope, and give every risk one named owner.
 - **[You can't moderate your way out of a systems problem](https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/)** (Sep 18, 2026): Treating Trust & Safety mainly as an operations function is a mistake. Reputation, history, age and behavior signals belong in one risk model, automation needs clear limits, and safety belongs in the product architecture from the start.
 
 Outside sources:

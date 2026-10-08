@@ -236,6 +236,7 @@ Track time from confirmation to report at p50 and p90, how complete reports are,
 
 From Steven's writing:
 
+- **[Financial sextortion moves in hours, so start with what the teen sees](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7513612793984602112-urPF/)** (Oct 7, 2026): Financial sextortion can go from first contact to a payment demand inside a day, too fast for grooming detection built for weeks. Start with defaults that limit who can message a teen and notices about strangers, then a fast, shame-free response with an on-call emergency referral and a CyberTipline report.
 - **[A banned account is not a closed case](https://www.linkedin.com/posts/stevenmacchia_childsafety-trustandsafety-responsibleai-share-7509260900831260674-gar3/)** (Sep 25, 2026): Online enticement is a pattern of contact, not a file, and is now mandatory to report. The hard call is the account: ban visibly, or restrict quietly while the network is mapped.
 
 Outside sources:

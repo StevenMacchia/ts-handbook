@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-10-08",
+    "kind": "revised",
+    "chapters": [
+      "child-safety-and-age-assurance"
+    ],
+    "post": "ecDv8T9A",
+    "summary": "Added age checks based on account history and the mistake nobody appeals, and the Kansas settlement that wrote age checks and age-grouped chat into its terms."
+  },
+  {
+    "date": "2026-10-08",
+    "kind": "revised",
+    "chapters": [
+      "ai-in-trust-and-safety"
+    ],
+    "post": "eGGV8Pjb",
+    "summary": "Added PolicyLM-1.7B, a small open model that scores content against your written policy, and where to test it in the Workbench."
+  },
+  {
+    "date": "2026-10-08",
+    "kind": "new-principle",
+    "chapters": [
+      "what-trust-and-safety-is-for"
+    ],
+    "post": "ebfSvH8F",
+    "summary": "Sharpened principle 9: one named owner for every risk and threshold, because when two teams think they share a harm, nobody owns it."
+  },
+  {
+    "date": "2026-10-08",
+    "kind": "revised",
+    "chapters": [
+      "working-with-product-legal-and-leadership",
+      "crisis-response"
+    ],
+    "post": "eME9phJR",
+    "summary": "Added launch week: decide the friction for new accounts before launch, get it approved in advance, and review what it cost after week one."
+  },
+  {
+    "date": "2026-10-08",
+    "kind": "revised",
+    "chapters": [
+      "know-your-risks"
+    ],
+    "post": "evW2ycG2",
+    "summary": "Added Ofcom's investigation of a pre-launch risk assessment as a real test of the process, a row for disappearing content, and a record you could hand to a regulator within a day."
+  },
+  {
+    "date": "2026-10-08",
+    "kind": "revised",
+    "chapters": [
+      "child-safety-and-age-assurance"
+    ],
+    "post": "ek2kgK2Q",
+    "summary": "Added financial sextortion: why it moves faster than grooming, the defaults and notices that do most of the work, and how to answer a teen who reports it, from Steven's post."
+  },
+  {
     "date": "2026-10-05",
     "kind": "revised",
     "chapters": [

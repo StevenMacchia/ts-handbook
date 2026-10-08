@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06",
+ "generated": "2026-10-08",
  "handbook": "https://stevenmacchia.com/ts-handbook/",
  "updates": "https://stevenmacchia.com/ts-handbook/updates/",
  "parts": [
@@ -16,8 +16,8 @@
    "question": "What is this function for, and how do you know it's working?",
    "part": 1,
    "status": "Published",
-   "updated": "2026-10-04",
-   "posts": 3,
+   "updated": "2026-10-08",
+   "posts": 4,
    "url": "https://stevenmacchia.com/ts-handbook/what-trust-and-safety-is-for/"
   },
   {
@@ -27,8 +27,8 @@
    "question": "How will people misuse this product, and which harms should you tackle first?",
    "part": 1,
    "status": "Published",
-   "updated": "2026-10-04",
-   "posts": 2,
+   "updated": "2026-10-08",
+   "posts": 4,
    "url": "https://stevenmacchia.com/ts-handbook/know-your-risks/"
   },
   {
@@ -61,7 +61,7 @@
    "part": 2,
    "status": "Published",
    "updated": "2026-10-04",
-   "posts": 6,
+   "posts": 7,
    "url": "https://stevenmacchia.com/ts-handbook/detection-and-prevention/"
   },
   {
@@ -71,8 +71,8 @@
    "question": "How do you keep children safe on a product adults use too?",
    "part": 2,
    "status": "Published",
-   "updated": "2026-10-04",
-   "posts": 7,
+   "updated": "2026-10-08",
+   "posts": 10,
    "url": "https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/"
   },
   {
@@ -94,7 +94,7 @@
    "part": 2,
    "status": "Published",
    "updated": "2026-10-04",
-   "posts": 1,
+   "posts": 2,
    "url": "https://stevenmacchia.com/ts-handbook/hiring-and-structuring-the-team/"
   },
   {
@@ -127,7 +127,7 @@
    "part": 3,
    "status": "Published",
    "updated": "2026-10-04",
-   "posts": 3,
+   "posts": 4,
    "url": "https://stevenmacchia.com/ts-handbook/measuring-what-matters/"
   },
   {
@@ -138,7 +138,7 @@
    "part": 3,
    "status": "Published",
    "updated": "2026-10-04",
-   "posts": 1,
+   "posts": 2,
    "url": "https://stevenmacchia.com/ts-handbook/severe-harm-escalations/"
   },
   {
@@ -148,8 +148,8 @@
    "question": "When something goes badly wrong in public, who decides what, and how fast?",
    "part": 3,
    "status": "Published",
-   "updated": "2026-10-04",
-   "posts": 1,
+   "updated": "2026-10-08",
+   "posts": 2,
    "url": "https://stevenmacchia.com/ts-handbook/crisis-response/"
   },
   {
@@ -170,8 +170,8 @@
    "question": "How do you get safety built in rather than bolted on?",
    "part": 3,
    "status": "Published",
-   "updated": "2026-10-04",
-   "posts": 4,
+   "updated": "2026-10-08",
+   "posts": 6,
    "url": "https://stevenmacchia.com/ts-handbook/working-with-product-legal-and-leadership/"
   },
   {
@@ -193,7 +193,7 @@
    "part": 4,
    "status": "Published",
    "updated": "2026-10-04",
-   "posts": 0,
+   "posts": 1,
    "url": "https://stevenmacchia.com/ts-handbook/transparency-reports-and-notices/"
   },
   {
@@ -203,8 +203,8 @@
    "question": "Where does AI help moderation, and how do you keep AI products safe?",
    "part": 4,
    "status": "Published",
-   "updated": "2026-10-04",
-   "posts": 3,
+   "updated": "2026-10-08",
+   "posts": 6,
    "url": "https://stevenmacchia.com/ts-handbook/ai-in-trust-and-safety/"
   },
   {

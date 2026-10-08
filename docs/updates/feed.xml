@@ -5,8 +5,50 @@
   <link href="https://stevenmacchia.com/ts-handbook/updates/feed.xml" rel="self"/>
   <link href="https://stevenmacchia.com/ts-handbook/updates/"/>
   <id>https://stevenmacchia.com/ts-handbook/updates/</id>
-  <updated>2026-10-05T12:00:00Z</updated>
+  <updated>2026-10-08T12:00:00Z</updated>
   <author><name>Steven Macchia</name><uri>https://stevenmacchia.com/</uri></author>
+  <entry>
+    <title>Revised: 6. Child safety and age assurance</title>
+    <link href="https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-08-6</id>
+    <updated>2026-10-08T12:00:00Z</updated>
+    <summary>Added age checks based on account history and the mistake nobody appeals, and the Kansas settlement that wrote age checks and age-grouped chat into its terms. Read the post: What I'm reading: Ofcom and Instagram Instants, Ofcom's data demands in court, and Roblox in Kansas (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-share-7513201109180813312-FxKX/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 18. AI in Trust &amp; Safety</title>
+    <link href="https://stevenmacchia.com/ts-handbook/ai-in-trust-and-safety/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-08-5</id>
+    <updated>2026-10-08T12:00:00Z</updated>
+    <summary>Added PolicyLM-1.7B, a small open model that scores content against your written policy, and where to test it in the Workbench. Read the post: What I'm reading: an open policy model, Xbox's adult checks, Discord in Brazil and KOSA (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-ageassurance-share-7513555853422288897-CN1L/)</summary>
+  </entry>
+  <entry>
+    <title>New principle: 1. What Trust &amp; Safety is for</title>
+    <link href="https://stevenmacchia.com/ts-handbook/what-trust-and-safety-is-for/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-08-4</id>
+    <updated>2026-10-08T12:00:00Z</updated>
+    <summary>Sharpened principle 9: one named owner for every risk and threshold, because when two teams think they share a harm, nobody owns it. Read the post: What I'd tell myself in year one of Trust &amp; Safety (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-contentmoderation-share-7513978054688395266-P3DE/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 13. Crisis response, 15. Working with Product, Legal, Comms and leadership</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-08-3"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-08-3</id>
+    <updated>2026-10-08T12:00:00Z</updated>
+    <summary>Added launch week: decide the friction for new accounts before launch, get it approved in advance, and review what it cost after week one. Read the post: Launch week is the hardest test a safety program gets (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7512980609300930560-Azbb/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 2. Know your risks</title>
+    <link href="https://stevenmacchia.com/ts-handbook/know-your-risks/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-08-2</id>
+    <updated>2026-10-08T12:00:00Z</updated>
+    <summary>Added Ofcom's investigation of a pre-launch risk assessment as a real test of the process, a row for disappearing content, and a record you could hand to a regulator within a day. Read the post: If a regulator asked for your pre-launch risk record tomorrow (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-safetybydesign-share-7513247972571275264-_yf3/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 6. Child safety and age assurance</title>
+    <link href="https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-08-1</id>
+    <updated>2026-10-08T12:00:00Z</updated>
+    <summary>Added financial sextortion: why it moves faster than grooming, the defaults and notices that do most of the work, and how to answer a teen who reports it, from Steven's post. Read the post: Financial sextortion moves in hours, so start with what the teen sees (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7513612793984602112-urPF/)</summary>
+  </entry>
   <entry>
     <title>Revised: 16. Regulation and compliance</title>
     <link href="https://stevenmacchia.com/ts-handbook/regulation-and-compliance/#changes"/>

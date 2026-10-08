@@ -186,6 +186,10 @@ Make that a process, not a hope:
 
 ## Further reading
 
+From Steven's writing:
+
+- **[What I'm reading: Ofcom and Instagram Instants, Ofcom's data demands in court, and Roblox in Kansas](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-share-7513201109180813312-FxKX/)** (Oct 6, 2026): Ofcom is investigating whether Meta risk-assessed Instagram Instants before launch, and Meta, TikTok and X are challenging Ofcom's demands for moderation data in court. Kansas settled with Roblox for more than $10 million plus age checks and age-grouped chat, and OpenAI's own tests show its new EU text watermark weakens when 10% of the words are swapped.
+
 Outside sources:
 
 - **[Regulation (EU) 2022/2065, the Digital Services Act](https://eur-lex.europa.eu/eli/reg/2022/2065/oj)**: the official text. Article 17 covers statements of reasons, and Articles 15, 24 and 42 cover transparency reports.
