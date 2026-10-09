@@ -77,6 +77,10 @@ const published = CH.filter(c => c.status === "Published").length, drafted = CH.
 const loadJSON = f => fs.existsSync(path.join(ROOT, f)) ? JSON.parse(read(f)) : [];
 const POSTS = loadJSON("data/posts.json").slice().sort((a, b) => b.date.localeCompare(a.date));
 const UPDATES = loadJSON("data/updates.json").map(u => ({chapters: [], post: null, ...u})).sort((a, b) => b.date.localeCompare(a.date));
+// data/glossary.json: {term, definition, link: a URL or null}. Terms that appear in handbook chapters, exported from the
+// Workbench's own term dictionary (GT_MORE / MX_GLOSS). The first occurrence of each term in each chapter's prose is wrapped
+// in <abbr class="gl" title="...">; /glossary/ lists them all.
+const GLOSSARY = loadJSON("data/glossary.json").slice().sort((a, b) => a.term.localeCompare(b.term));
 const postById = Object.fromEntries(POSTS.map(p => [p.id, p]));
 {
   const bad = [];
@@ -134,12 +138,21 @@ function md(src, link) {
     if (/^```/.test(l)) { const buf = []; i++; while (i < L.length && !/^```/.test(L[i])) buf.push(L[i++]); i++; out.push(`<pre><code>${esc(buf.join("\n"))}</code></pre>`); continue; }
     if ((m = l.match(/^(#{1,4}) (.+)$/))) { const t = inline(m[2], link); out.push(`<h${m[1].length} id="${slugify(t)}">${t}</h${m[1].length}>`); i++; continue; }
     if (/^---+$/.test(l)) { out.push("<hr>"); i++; continue; }
-    if (/^>/.test(l)) { const buf = []; while (i < L.length && /^>/.test(L[i])) buf.push(L[i++].replace(/^> ?/, "")); out.push(`<blockquote>${md(buf.join("\n"), link)}</blockquote>`); continue; }
+    if (/^>/.test(l)) {
+      const buf = []; while (i < L.length && /^>/.test(L[i])) buf.push(L[i++].replace(/^> ?/, ""));
+      const joined = buf.join("\n");
+      // "> **Story.** text" is a first-person passage from experience: a distinct callout, not a plain quote
+      const story = joined.match(/^\*\*Story\.?\*\*\s*/);
+      out.push(story ? `<blockquote class="story"><p class="lbl">From Steven's work</p>${md(joined.slice(story[0].length), link)}</blockquote>` : `<blockquote>${md(joined, link)}</blockquote>`);
+      continue;
+    }
     if (/^\|/.test(l)) {
       const rows = []; while (i < L.length && /^\|/.test(L[i])) rows.push(L[i++]);
       const cells = r => r.replace(/^\||\|$/g, "").split("|").map(c => c.trim());
       const [head, , ...rest] = rows;
-      out.push(`<div class="tbl"><table><thead><tr>${cells(head).map(c => `<th>${inline(c, link)}</th>`).join("")}</tr></thead><tbody>${rest.map(r => `<tr>${cells(r).map(c => `<td>${inline(c, link)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
+      const headCells = cells(head), headPlain = headCells.map(c => esc(c.replace(/\*\*(.+?)\*\*/g, "$1").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")));
+      // data-label repeats the column header on every cell, read by the stacked phone layout below 640px (CSS only)
+      out.push(`<div class="tbl"><table><thead><tr>${headCells.map(c => `<th>${inline(c, link)}</th>`).join("")}</tr></thead><tbody>${rest.map(r => `<tr>${cells(r).map((c, ci) => `<td data-label="${headPlain[ci] || ""}">${inline(c, link)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
       continue;
     }
     if ((m = l.match(/^(\s*)([-*]|\d+\.) /))) {
@@ -161,6 +174,67 @@ function md(src, link) {
   }
   return out.join("\n");
 }
+
+/* ---------- Glossary: wrap the first occurrence of each term, per chapter, in the chapter's prose ----------
+   Terms with an uppercase letter (acronyms, names) match case-sensitively; others match case-insensitively. Both kinds
+   accept a trailing "s". Matches are found on the untouched text, longest term first, so multi-word terms win over a
+   shorter term they contain, and only the first still-unused match per term is wrapped. */
+const reEscape = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const GLOSS_BY_TERM = Object.fromEntries(GLOSSARY.map(g => [g.term, g]));
+const GLOSS_BY_LOWER = Object.fromEntries(GLOSSARY.map(g => [g.term.toLowerCase(), g.term]));
+const glossTerms = (loose) => GLOSSARY.filter(g => loose ? !/[A-Z]/.test(g.term) : /[A-Z]/.test(g.term)).map(g => g.term).sort((a, b) => b.length - a.length);
+const GLOSS_RE = [
+  glossTerms(false).length ? new RegExp(`\\b(${glossTerms(false).map(reEscape).join("|")})s?\\b`, "g") : null,
+  glossTerms(true).length ? new RegExp(`\\b(${glossTerms(true).map(reEscape).join("|")})s?\\b`, "gi") : null,
+].filter(Boolean);
+// Wraps unused terms found in one run of plain text (never inside a tag); "used" is shared across a whole chapter
+const glossMark = (text, used) => {
+  if (!GLOSS_RE.length || !text) return text;
+  const hits = [];
+  for (const re of GLOSS_RE) { re.lastIndex = 0; let m; while ((m = re.exec(text))) hits.push({i: m.index, len: m[0].length, raw: m[1]}); }
+  hits.sort((a, b) => a.i - b.i);
+  let out = "", last = 0;
+  for (const h of hits) {
+    if (h.i < last) continue; // overlaps a term already wrapped earlier in this text
+    const term = GLOSS_BY_TERM[h.raw] ? h.raw : GLOSS_BY_LOWER[h.raw.toLowerCase()];
+    if (!term || used.has(term)) continue;
+    used.add(term);
+    out += text.slice(last, h.i) + `<abbr class="gl" title="${esc(GLOSS_BY_TERM[term].definition)}">${text.slice(h.i, h.i + h.len)}</abbr>`;
+    last = h.i + h.len;
+  }
+  return out + text.slice(last);
+};
+// Skips headings, links and code, where a term shouldn't be marked; "used" tracks terms already wrapped in this chapter
+const GLOSS_SKIP = new Set(["a", "code", "pre", "h1", "h2", "h3", "h4", "h5", "h6"]);
+const glossWrapHTML = (html, used) => {
+  let depth = 0;
+  return html.split(/(<[^>]+>)/).map(tok => {
+    const m = tok.match(/^<\/?([a-zA-Z0-9]+)[^>]*?(\/?)>$/);
+    if (m) {
+      if (GLOSS_SKIP.has(m[1].toLowerCase()) && !m[2]) depth = Math.max(0, depth + (tok[1] === "/" ? -1 : 1));
+      return tok;
+    }
+    return depth > 0 ? tok : glossMark(tok, used);
+  }).join("");
+};
+// Only wraps terms inside <div class="prose">...</div> blocks (a chapter's actual prose, never the template panels,
+// which aren't marked "prose"), finding each block's true matching close by counting nested <div>s.
+const wrapProseGlossary = (html, used) => {
+  const marker = '<div class="prose"'; let out = "", i = 0;
+  while (true) {
+    const start = html.indexOf(marker, i);
+    if (start < 0) { out += html.slice(i); break; }
+    out += html.slice(i, start);
+    const openEnd = html.indexOf(">", start) + 1;
+    const divRe = /<div[\s>]|<\/div>/g; divRe.lastIndex = openEnd;
+    let depth = 1, m, closeIdx = -1;
+    while ((m = divRe.exec(html))) { if (m[0].startsWith("<div")) depth++; else if (--depth === 0) { closeIdx = m.index; break; } }
+    if (closeIdx < 0) { out += html.slice(start); break; }
+    out += html.slice(start, openEnd) + glossWrapHTML(html.slice(openEnd, closeIdx), used) + "</div>";
+    i = closeIdx + 6;
+  }
+  return out;
+};
 
 /* ---------- Page shell ---------- */
 const CSS = `:root{--bg:#FFFFFF;--panel:#F3F2EF;--ink:#121212;--muted:#595959;--line:#DDDAD4;--strong:#B9B5AD;--blue:#1A47B8;--good:#067647;--mark:#EEF2FC}
@@ -346,16 +420,33 @@ h2{font-size:36px}
 .prose li::marker{color:var(--muted)}
 .prose h3,.prose h4{font-size:17px;letter-spacing:-.01em;line-height:1.3;margin:24px 0 8px}
 .prose blockquote{margin:20px 0;padding:2px 0 2px 18px;border-left:3px solid var(--ink)}
+.prose blockquote.story{padding:24px 28px;border-left:0}
+.prose blockquote.story>:last-child{margin-bottom:0}
 .prose code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em;background:var(--panel);padding:1px 5px;border-radius:3px}
+abbr.gl{font-style:normal;text-decoration:underline dotted;text-decoration-color:var(--strong);text-underline-offset:3px;cursor:help}
 .prose pre{background:var(--panel);padding:16px;border-radius:4px;overflow:auto}
 .prose pre code{background:none;padding:0}
 .prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
 .prose a,.src a,.posts h3 a,.posts h4 a,.log .ch a{overflow-wrap:anywhere}
-.tbl{overflow-x:auto;margin:4px 0 20px}
+.tbl{overflow-x:auto;max-width:100%;margin:4px 0 20px}
 .tbl table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
-.tbl th{text-align:left;vertical-align:bottom;font-size:13px;font-weight:500;color:var(--muted);padding:0 16px 10px 0;border-bottom:1px solid var(--ink)}
+.tbl th{text-align:left;vertical-align:bottom;font-size:13px;font-weight:500;color:var(--muted);padding:0 16px 10px 0;border-bottom:1px solid var(--ink);position:sticky;top:0;background:var(--bg)}
 .tbl td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
 .tbl td:first-child{font-weight:500}
+/* Below 640px, each row becomes a card with the header repeated as a label beside every value (CSS only, data-label on each td) */
+@media (max-width:640px){
+  .tbl{overflow-x:visible}
+  .tbl table{display:block;width:100%}
+  .tbl thead{display:none}
+  .tbl tbody{display:block}
+  .tbl tr{display:block;margin:0 0 14px;padding:4px 14px;border:1px solid var(--line);border-radius:10px}
+  .tbl tr:last-child{margin-bottom:0}
+  .tbl td{display:grid;grid-template-columns:minmax(0,38%) minmax(0,1fr);gap:2px 14px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .tbl td:first-child{padding-top:10px}
+  .tbl td:last-child{border-bottom:0;padding-bottom:10px}
+  .tbl td::before{content:attr(data-label);font-size:12px;font-weight:600;color:var(--muted)}
+  .tbl td:empty::before{content:none}
+}
 .stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;background:var(--panel);border-radius:4px;padding:32px}
 .stages h3{font-size:20px;line-height:1.2}
 .stages .d{margin:8px 0 0;color:var(--muted);font-size:14px}
@@ -407,10 +498,11 @@ h2{font-size:36px}
 .src{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .src li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:32px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
 .src li span{color:var(--muted)}
-.src a{font-weight:500}
+.src a,.src b{font-weight:500}
 .cover li{grid-template-columns:56px minmax(0,1fr)}
 .cover p{color:var(--ink);font-size:16px}
 .story{background:var(--panel);border-radius:4px;padding:28px 32px}
+.story>.lbl{margin:0 0 10px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 .pn{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .pn a{display:grid;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;min-width:0}
 .pn a:hover{background:var(--panel)}
@@ -442,17 +534,16 @@ footer :focus-visible{outline-color:#fff}
 .sres{position:absolute;z-index:5;top:100%;right:0;margin-top:8px;width:min(540px,calc(100vw - 40px));max-height:min(520px,72vh);overflow:auto;padding:14px 18px 8px;background:#fff;border:1px solid var(--strong);border-radius:4px;box-shadow:0 12px 32px rgba(18,18,18,.12);text-align:left;white-space:normal}
 .sres .lbl{margin:0 0 8px}
 .sres ol{list-style:none;margin:0;padding:0}
-.sres .sc{padding:10px 0;border-top:1px solid var(--line)}
-.sres .sc>a{display:block;color:var(--ink);text-decoration:none;font-weight:600;font-size:15.5px;line-height:1.3;letter-spacing:-.01em}
-.sres .sc>a i{font-family:"IBM Plex Mono",ui-monospace,monospace;font-style:normal;font-weight:400;font-size:12.5px;color:var(--muted);margin-right:8px}
-.sres .sc>a:hover{text-decoration:underline}
-.sres .ss{margin:6px 0 0}
-.sres .ss li{margin:2px 0}
-.sres .ss a{display:block;padding:4px 0 4px 12px;border-left:2px solid var(--line);color:var(--ink);text-decoration:none;font-size:14px;line-height:1.4}
-.sres .ss a:hover,.sres .ss a:focus-visible{border-left-color:var(--ink)}
-.sres .ss a:hover b{text-decoration:underline}
-.sres .ss b{display:block;font-weight:600}
-.sres .ss span{display:block;color:var(--muted);font-size:13.5px}
+.sres .grp{margin:0}
+.sres .glbl{margin:14px 0 2px;padding-top:10px;border-top:1px solid var(--line);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.sres .grp:first-child .glbl{margin-top:0;padding-top:0;border-top:0}
+.sres .gi{list-style:none;margin:0;padding:0}
+.sres .it{padding:8px 0;border-top:1px solid var(--line)}
+.sres .it:first-child{border-top:0}
+.sres .it a{display:block;color:var(--ink);text-decoration:none}
+.sres .it a:hover b,.sres .it a:focus-visible b{text-decoration:underline}
+.sres .it b{display:block;font-weight:600;font-size:15px;line-height:1.3;letter-spacing:-.01em}
+.sres .it span{display:block;color:var(--muted);font-size:13.5px;margin-top:2px}
 .sres mark{background:var(--mark);color:var(--ink);font-weight:600;border-radius:2px;padding:0 1px}
 .open .srch{margin-top:6px}
 /* Quiet actions styled as links: the print control on chapter pages */
@@ -606,7 +697,7 @@ ${CSS}
 <main>
 ${body}
 </main>
-<footer><div class="wrap"><h2>Get in touch.</h2><div class="c"><a href="mailto:${EMAIL}">${EMAIL}</a><a href="${LINKEDIN}">LinkedIn</a><a href="${RESUME}" download>Resume</a></div><div class="fine"><span>© ${new Date().getFullYear()} Steven Macchia · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="${REPO}">Source</a> · <a href="${up}updates/">Updates</a></span><span>Written with AI assistance · Not legal advice: check with your own legal team · Visits counted without cookies</span></div></div></footer>
+<footer><div class="wrap"><h2>Get in touch.</h2><div class="c"><a href="mailto:${EMAIL}">${EMAIL}</a><a href="${LINKEDIN}">LinkedIn</a><a href="${RESUME}" download>Resume</a></div><div class="fine"><span>© ${new Date().getFullYear()} Steven Macchia · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="${REPO}">Source</a> · <a href="${up}updates/">Updates</a> · <a href="${up}glossary/">Glossary</a></span><span>Written with AI assistance · Not legal advice: check with your own legal team · Visits counted without cookies</span></div></div></footer>
 ${script ? `<script>${script}</script>\n` : ""}</body>
 </html>
 `;
@@ -683,19 +774,23 @@ btn.href=a.getAttribute('href');btn.textContent='Continue from chapter '+parseIn
 /* ---------- Search, copy and print: small vanilla scripts, each a progressive enhancement over a page that works without them ---------- */
 // The search box (hidden until the script runs). "up" is the path to the handbook root, where search.json lives.
 const searchForm = up => `<form class="srch" role="search" data-up="${up}" hidden><label class="vh" for="q">Search the handbook. Press slash to jump here.</label><div class="sbox"><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14"/></svg><input type="search" id="q" name="q" placeholder="Search the handbook" autocomplete="off" spellcheck="false"><span class="kbd" aria-hidden="true">/</span></div><p class="vh" role="status"></p><div class="sres" hidden><p class="lbl" aria-hidden="true"></p><ol></ol></div></form>`;
-// Loads search.json on first focus, ranks chapters by how often and where the words appear (title, section heading, text), and shows
-// the six closest chapters with up to three sections each, a snippet with the words marked, and a link to the section's anchor
+// Loads search.json on first focus (one combined index for the handbook's chapters, Steven's posts, the Workbench tools and
+// the updates log) and ranks items by where the words appear (title, then summary/tags/part, then the body text). Results
+// are grouped by kind, chapters first, each group with a small label; a snippet under each title has the words marked.
 const SEARCH_JS = `(function(){var f=document.querySelector('form.srch');if(!f||!window.fetch||!window.Promise)return;var q=f.querySelector('input'),res=f.querySelector('.sres'),cnt=res.querySelector('.lbl'),list=res.querySelector('ol'),live=f.querySelector('[role=status]'),up=f.getAttribute('data-up'),data=null,loading=null;f.hidden=false;
-function load(){if(!loading)loading=fetch(up+'search.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){data=d.chapters;data.forEach(function(c){c.h=(c.title+' '+c.q).toLowerCase();c.s.forEach(function(s){s.t=s[1].toLowerCase();s.l=s[2].toLowerCase();s.h=s.t+' '+s.l})})},function(){cnt.textContent=live.textContent='Search is unavailable right now.';list.textContent='';res.hidden=false});return loading}
+var KIND_ORDER=['chapter','post','tool','update'],KIND_LABEL={chapter:'Chapter',post:'Post',tool:'Tool',update:'Update'};
+function load(){if(!loading)loading=fetch(up+'search.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){data=d.items.map(function(it){return {kind:it.kind,title:it.title,url:it.url,ti:it.title.toLowerCase(),h:((it.summary||'')+' '+(it.tags||[]).join(' ')+' '+(it.part||'')).toLowerCase(),tx:(it.text||'').toLowerCase(),snipsrc:it.text||it.summary||''}})},function(){cnt.textContent=live.textContent='Search is unavailable right now.';list.textContent='';res.hidden=false});return loading}
 function count(h,t){var n=0,i=-1;while(n<9&&(i=h.indexOf(t,i+1))>-1)n++;return n}
 function rx(s){return s.replace(/[.*+?^$()|[\\]\\\\{}]/g,'\\\\$&')}
-function search(terms){var out=[];data.forEach(function(c){var cs=0,secs=[];for(var i=0;i<terms.length;i++){var t=terms[i],inCh=c.h.indexOf(t)>-1;if(c.title.toLowerCase().indexOf(t)>-1)cs+=20;else if(inCh)cs+=8;if(!inCh&&!c.s.some(function(s){return s.h.indexOf(t)>-1}))return}c.s.forEach(function(s){var sc=0,d=0;terms.forEach(function(t){var n=count(s.h,t);if(n){d++;sc+=2+n+(s.t.indexOf(t)>-1?6:0)}});if(d)secs.push({s:s,d:d,sc:sc})});secs.sort(function(a,b){return b.d-a.d||b.sc-a.sc});secs.forEach(function(x){cs+=x.sc});out.push({c:c,secs:secs.slice(0,3),sc:cs})});out.sort(function(a,b){return b.sc-a.sc});return out}
-function snip(s,terms){var text=s[2],pos=-1;terms.forEach(function(t){var i=s.l.indexOf(t);if(i>-1&&(pos<0||i<pos))pos=i});if(pos<0)return text.slice(0,160)+(text.length>160?'\\u2026':'');var a=Math.max(0,pos-70),b=Math.min(text.length,pos+130);if(a>0){var sp=text.indexOf(' ',a);if(sp>-1&&sp<pos)a=sp+1}if(b<text.length){var e=text.lastIndexOf(' ',b);if(e>pos)b=e}return (a>0?'\\u2026':'')+text.slice(a,b)+(b<text.length?'\\u2026':'')}
+function search(terms){var out=[];data.forEach(function(it){var sc=0,hit=false;terms.forEach(function(t){if(it.ti.indexOf(t)>-1){sc+=20;hit=true}else if(it.h.indexOf(t)>-1){sc+=8;hit=true}var n=count(it.tx,t);if(n){sc+=2+n;hit=true}});if(hit)out.push({it:it,sc:sc})});out.sort(function(a,b){return b.sc-a.sc});return out}
+function snip(it,terms){var text=it.snipsrc,low=it.tx,pos=-1;terms.forEach(function(t){var i=low.indexOf(t);if(i>-1&&(pos<0||i<pos))pos=i});if(pos<0)return text.slice(0,160)+(text.length>160?'\\u2026':'');var a=Math.max(0,pos-70),b=Math.min(text.length,pos+130);if(a>0){var sp=text.indexOf(' ',a);if(sp>-1&&sp<pos)a=sp+1}if(b<text.length){var e=text.lastIndexOf(' ',b);if(e>pos)b=e}return (a>0?'\\u2026':'')+text.slice(a,b)+(b<text.length?'\\u2026':'')}
 function mark(el,text,re){text.split(re).forEach(function(p,i){if(!p)return;if(i%2){var m=document.createElement('mark');m.textContent=p;el.appendChild(m)}else el.appendChild(document.createTextNode(p))})}
 function el(tag,cls,parent){var e=document.createElement(tag);if(cls)e.className=cls;if(parent)parent.appendChild(e);return e}
 function render(){var v=q.value.trim(),terms=v.toLowerCase().split(/\\s+/).filter(function(t,i,a){return t.length>1&&a.indexOf(t)===i});if(!terms.length){res.hidden=true;list.textContent='';live.textContent='';return}
-load().then(function(){if(!data)return;var hits=search(terms),re=new RegExp('('+terms.map(rx).join('|')+')','ig'),n=hits.length,msg=n?(n===1?'1 chapter mentions ':n+' chapters mention ')+'\\u201c'+v+'\\u201d'+(n>6?'. Showing the six closest.':''):'Nothing mentions \\u201c'+v+'\\u201d. Try a shorter or different word.';list.textContent='';cnt.textContent=live.textContent=msg;
-hits.slice(0,6).forEach(function(h){var li=el('li','sc',list),a=el('a','',li);a.href=up+h.c.slug+'/';el('i','',a).textContent=h.c.n;a.appendChild(document.createTextNode(h.c.title));if(!h.secs.length)return;var ol=el('ol','ss',li);h.secs.forEach(function(x){var s=x.s,b=el('a','',el('li','',ol));b.href=up+h.c.slug+'/'+(s[0]?'#'+s[0]:'');mark(el('b','',b),s[1],re);mark(el('span','',b),snip(s,terms),re)})});res.hidden=false})}
+load().then(function(){if(!data)return;var hits=search(terms),re=new RegExp('('+terms.map(rx).join('|')+')','ig'),byKind={};hits.forEach(function(h){(byKind[h.it.kind]=byKind[h.it.kind]||[]).push(h)});
+var n=hits.length,msg=n?(n===1?'1 result for ':n+' results for ')+'\\u201c'+v+'\\u201d':'Nothing found for \\u201c'+v+'\\u201d. Try a shorter or different word.';list.textContent='';cnt.textContent=live.textContent=msg;
+KIND_ORDER.forEach(function(k){var arr=byKind[k];if(!arr||!arr.length)return;var grp=el('li','grp',list);el('p','glbl',grp).textContent=KIND_LABEL[k]+(arr.length>1?'s':'');var gi=el('ol','gi',grp);arr.slice(0,6).forEach(function(h){var li=el('li','it',gi),a=el('a','',li);a.href=h.it.url;mark(el('b','',a),h.it.title,re);mark(el('span','',a),snip(h.it,terms),re)})});
+res.hidden=false})}
 q.addEventListener('input',render);
 q.addEventListener('focus',function(){load();if(q.value.trim()&&list.children.length)res.hidden=false});
 f.addEventListener('submit',function(e){e.preventDefault();render();load().then(function(){var a=list.querySelector('a');if(a&&!res.hidden)a.focus()})});
@@ -797,21 +892,6 @@ const plain = s => s.replace(/```[\s\S]*?```/g, " ").split("\n").filter(l => !/^
   .replace(/^#{1,6}\s+/gm, "").replace(/^>\s?/gm, "").replace(/^\s*(?:[-*]|\d+\.)\s+/gm, "")
   .replace(/\[([^\]]+)\]\([^)\s]+\)/g, "$1").replace(/\*\*|`/g, "").replace(/(^|[^\w])\*(?!\s)([^*\n]+?)\*(?!\w)/g, "$1$2")
   .replace(/^\s*\|\s*|\s*\|\s*$/gm, "").replace(/\s*\|\s*/g, " · ").replace(/\s+/g, " ").replace(/(?:\s*·\s*){2,}/g, " · ").replace(/^\s*·\s*|\s*·\s*$/g, "").trim();
-// One search entry per section, step and template: [anchor on the chapter page, heading, plain text]
-const searchEntries = c => {
-  const out = [];
-  for (const s of splitSections(c.body)) {
-    if (s.title === "In one minute") out.push(["in-one-minute", s.title, plain(s.md)]);
-    else if (s.title === "How to do it") {
-      const [intro, ...parts] = s.md.split(/^### /m);
-      if (intro.trim()) out.push([slugify(s.title), s.title, plain(intro)]);
-      parts.forEach((x, i) => { const [t, ...rest] = x.split("\n"), m = t.match(/^(\d+)\.\s*(.+)$/), n = m ? m[1] : String(i + 1); out.push([`step-${n}`, `Step ${n}. ${plain(m ? m[2] : t)}`, plain(rest.join("\n"))]); });
-    }
-    else if (s.title === "Start from this template") tplBlocks(s.md).forEach((b, i) => out.push([`tpl-${i + 1}`, `Template: ${plain(tplName(b)) || "untitled"}`, plain(b.replace(/^\*\*.+?\*\*\s*/, ""))]));
-    else out.push([slugify(s.title), s.title === "What this chapter will cover" ? "What it will cover" : s.title, plain(s.md)]);
-  }
-  return out;
-};
 const head = (title, big) => `<div class="sec-h"><h2>${esc(title)}</h2>${big ? `<p class="big">${big}</p>` : "<span></span>"}</div>`;
 const prose = (s, link) => `<div class="cs-h"><h2>${esc(s.title)}</h2><div class="prose">${md(s.md, link)}</div></div>`;
 const SECTION = {
@@ -870,7 +950,7 @@ const SECTION = {
   },
   "What this chapter will cover": (s, link) => head("What it will cover", "This chapter isn't written yet. Here's the outline.") +
     `<ol class="rows cover">${bullets(s.md).map((b, i) => `<li><i>${String(i + 1).padStart(2, "0")}</i><p>${inline(b, link)}</p></li>`).join("")}</ol>`,
-  "From the field": (s, link) => head(s.title) + `<div class="story prose">${md(s.md, link)}</div>`
+  "From the field": (s, link) => head(s.title) + `<div class="story prose"><p class="lbl">From Steven's work</p>${md(s.md, link)}</div>`
 };
 const STATUS_TEXT = {Outline: "Outline: not written yet", Published: "Published"};
 const SHOW_CHANGES = 5;
@@ -906,12 +986,62 @@ ${outlineNav}${secs.filter(s => s !== minute).map(s => `<section id="${slugify(s
 ${changes}<section><div class="wrap"><nav class="pn" aria-label="Chapters">${prev ? `<a href="../${prev.slug}/"><span>← Part ${prev.part + 1} · Chapter ${prev.n}</span><b>${esc(prev.title)}</b></a>` : `<a href="../"><span>← Contents</span><b>Back to all ${CH.length} chapters</b></a>`}${next ? `<a class="next" href="../${next.slug}/"><span>Part ${next.part + 1} · Chapter ${next.n} →</span><b>${esc(next.title)}</b></a>` : `<a class="next" href="../updates/"><span>Updates →</span><b>What changed recently</b></a>`}</nav></div></section>
 <div class="wrap"><p class="pf">${SITE}${c.slug}/ · The T&amp;S Handbook by Steven Macchia · CC BY 4.0 · General information, not legal advice</p><p class="suggest"><a href="${REPO}/blob/main/chapters/${c.file}">Suggest a change on GitHub →</a></p></div>
 </div>`;
+  const glossed = wrapProseGlossary(body, new Set()); // first occurrence of each term, within this chapter's prose only
   fs.mkdirSync(path.join(OUT, c.slug), {recursive: true});
-  fs.writeFileSync(path.join(OUT, c.slug, "index.html"), page({title: `${c.n}. ${c.title} · The T&S Handbook`, desc: c.q, url: SITE + c.slug + "/", depth: 1, body, script: SEARCH_JS + "\n" + COPY_JS + "\n" + PRINT_JS + "\n" + DOWNLOAD_JS + "\n" + OUTLINE_JS + "\n" + progressChapterJS(c.slug, lastId)}));
+  fs.writeFileSync(path.join(OUT, c.slug, "index.html"), page({title: `${c.n}. ${c.title} · The T&S Handbook`, desc: c.q, url: SITE + c.slug + "/", depth: 1, body: glossed, script: SEARCH_JS + "\n" + COPY_JS + "\n" + PRINT_JS + "\n" + DOWNLOAD_JS + "\n" + OUTLINE_JS + "\n" + progressChapterJS(c.slug, lastId)}));
 }
 
-/* ---------- Search index: every section, step and template as plain text, with the anchor each links to ---------- */
-fs.writeFileSync(path.join(OUT, "search.json"), JSON.stringify({generated: TODAY, handbook: SITE, chapters: CH.map(c => ({n: c.n, slug: c.slug, title: c.title, q: c.q, s: searchEntries(c)}))}));
+/* ---------- Search index: one combined index for all three properties (the handbook, the writing page and the Workbench) ----------
+   {generated, items: [{kind, title, url, summary, date, tags, part, text}]}, read by SEARCH_JS above. "kind" is one of
+   "chapter" (all 19, with the "In one minute" text as the summary and the chapter body as text), "post" (from
+   ../linkedin-posts/posts.json, linked to its slug in ../stevenmacchia.github.io/writing/slugs.json), "tool" (the Workbench
+   routes, a static list kept in step with src/partNav.js's ROUTE_LABEL and the tool cards in src/partH4.js and partAI.js) and
+   "update" (data/updates.json). Kept well under 600KB by capping "text" at 2000 characters and "summary" at 200. */
+const truncate = (s, n) => { s = (s || "").trim(); if (s.length <= n) return s; const cut = s.slice(0, n - 1); const sp = cut.lastIndexOf(" "); return (sp > n * 0.6 ? cut.slice(0, sp) : cut) + "…"; };
+
+// The Workbench's tool cards (src/partH4.js: the ten "tool(...)" cards plus notice/appeal/transparency from src/partAI.js's
+// AI_TOOLS), named from src/partNav.js's ROUTE_LABEL. A static list: the workbench isn't read at build time (see CLAUDE.md).
+const WB = "https://stevenmacchia.com/ts-workbench/#";
+const TOOLS = [
+  {route: "premortem", title: "Abuse pre-mortem", summary: "Profile a product and see how it will be misused before launch."},
+  {route: "maturity", title: "Program maturity", summary: "Rate your program in eight areas and get a roadmap for the biggest gaps."},
+  {route: "coverage", title: "Coverage radar", summary: "See where your products' risk outruns the defenses you have in place."},
+  {route: "tabletop", title: "Incident tabletop", summary: "Rehearse a crisis and learn from every call, with the law behind it."},
+  {route: "policy", title: "Policy stress-tester", summary: "Paste a rule to find vague words, missing exceptions and hard edge cases."},
+  {route: "coppa", title: "COPPA readiness", summary: "Check children's privacy against the amended Rule, with drafts for Legal."},
+  {route: "dsa", title: "DSA readiness", summary: "Find which EU Digital Services Act duties apply to you, article by article, with drafts for Legal."},
+  {route: "vendors", title: "Vendor scorecard", summary: "Choose a moderation vendor on evidence, with RFP questions."},
+  {route: "eval", title: "Classifier eval", summary: "Build a labeled test set from a rule and see where a moderation classifier fails, with what to change."},
+  {route: "metrics", title: "Metrics framework", summary: "A reference for learning: the numbers a T&S program runs on, and how to measure each one."},
+  {route: "notice", title: "Enforcement notice writer", summary: "Draft a clear, fair notice to a user whose content or account you actioned, and check it against what a statement of reasons needs to include."},
+  {route: "appeal", title: "Appeal reviewer", summary: "Get a structured second opinion on a user's appeal: each part of the rule tested against the facts, the user's arguments weighed fairly, and a suggested reply."},
+  {route: "transparency", title: "Transparency report", summary: "Build the transparency report the EU Digital Services Act asks for: the right sections for your type of service, a completeness check, and a summary written by Claude."},
+];
+
+const chapterItems = CH.map(c => {
+  const minuteSec = splitSections(c.body).find(s => s.title === "In one minute");
+  return {kind: "chapter", title: c.title, url: SITE + c.slug + "/", summary: truncate(minuteSec ? plain(bullets(minuteSec.md).join(" ")) : c.q, 200),
+    date: c.updatedAt || null, tags: [], part: PARTS[c.part] || null, text: truncate(plain(c.body), 2000)};
+});
+
+// Posts: ../linkedin-posts/posts.json, linked to the writing page via ../stevenmacchia.github.io/writing/slugs.json. A post
+// missing from slugs.json gets the same lowercase, hyphenated slug build-writing.js would derive, and the fallback is logged.
+const slugify2 = s => String(s).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "post";
+const LP_POSTS_FILE = path.join(ROOT, "..", "linkedin-posts", "posts.json"), LP_SLUGS_FILE = path.join(ROOT, "..", "stevenmacchia.github.io", "writing", "slugs.json");
+const LP_POSTS = fs.existsSync(LP_POSTS_FILE) ? JSON.parse(fs.readFileSync(LP_POSTS_FILE, "utf8")) : [];
+const LP_SLUGS = fs.existsSync(LP_SLUGS_FILE) ? JSON.parse(fs.readFileSync(LP_SLUGS_FILE, "utf8")).posts || {} : {};
+const postItems = LP_POSTS.map(p => {
+  let slug = LP_SLUGS[p.id];
+  if (!slug) { slug = slugify2(p.title); console.log(`search index: post "${p.id}" has no slug in writing/slugs.json, derived "${slug}"`); }
+  return {kind: "post", title: p.title, url: `${WRITING}${slug}/`, summary: truncate(p.point, 200), date: p.date, tags: p.themes || [], part: null, text: truncate(p.body || p.point, 2000)};
+});
+
+const updateItems = UPDATES.map(u => ({kind: "update", title: kindLabel(u.kind), url: SITE + "updates/", summary: truncate(u.summary, 200), date: u.date, tags: [kindLabel(u.kind)], part: null, text: truncate(u.summary, 2000)}));
+
+const toolItems = TOOLS.map(t => ({kind: "tool", title: t.title, url: WB + t.route, summary: truncate(t.summary, 200), date: null, tags: [], part: null, text: truncate(t.summary, 2000)}));
+
+const SEARCH_INDEX = {generated: TODAY, items: [...chapterItems, ...postItems, ...toolItems, ...updateItems]};
+fs.writeFileSync(path.join(OUT, "search.json"), JSON.stringify(SEARCH_INDEX));
 
 /* ---------- Updates: the whole change log by month and day, plus an Atom feed ---------- */
 const months = [];
@@ -965,7 +1095,28 @@ ${UPDATES.slice(0, 50).map(u => { const p = u.post && postById[u.post], one = u.
 </feed>
 `);
 
+/* ---------- Glossary: every term from data/glossary.json, A to Z ---------- */
+const glossaryBody = `<div class="ch-page">
+<div class="wrap">
+  <div class="hero ch-hero">
+    <div>
+      <p class="lbl"><a href="../">The T&amp;S Handbook</a> · Glossary</p>
+      <h1>Glossary</h1>
+      <p class="lead">Acronyms and Trust &amp; Safety jargon used across the handbook, in plain language.</p>
+      <div class="cta"><a class="btn primary" href="../">Back to the handbook</a></div>
+    </div>
+    <div><div class="open"><div><i class="sq" aria-hidden="true"></i><b>${plural(GLOSSARY.length, "term")}</b></div><span>The first time a term appears in a chapter, it's underlined; hover or focus it for this same definition.</span></div></div>
+  </div>
+</div>
+<section><div class="wrap">
+  <ul class="src">${GLOSSARY.map(g => `<li id="${slugify(g.term)}">${g.link ? `<a href="${esc(g.link)}">${esc(g.term)}</a>` : `<b>${esc(g.term)}</b>`}<span>${esc(g.definition)}</span></li>`).join("")}</ul>
+</div></section>
+</div>`;
+fs.mkdirSync(path.join(OUT, "glossary"), {recursive: true});
+fs.writeFileSync(path.join(OUT, "glossary", "index.html"), page({title: "Glossary · The T&S Handbook", desc: "Acronyms and Trust & Safety jargon used across the handbook, in plain language.", url: SITE + "glossary/", depth: 1, body: glossaryBody}));
+
 // A small public index of the chapters for other sites (the Workbench) to read: status and dates stay honest without a rebuild there
 fs.writeFileSync(path.join(OUT, "chapters.json"), JSON.stringify({generated: TODAY, handbook: SITE, updates: SITE + "updates/", parts: PARTS,
   chapters: CH.map(c => ({n: c.n, slug: c.slug, title: c.title, question: c.q, part: c.part + 1, status: c.status, updated: c.updatedAt || null, posts: c.posts.length, url: SITE + c.slug + "/"}))}, null, 1) + "\n");
-console.log(`built ${CH.length} chapters, the updates page and the feed into docs/ (${published} published, ${drafted} unreviewed, ${UPDATES.length} updates, ${POSTS.length} posts)`);
+console.log(`built ${CH.length} chapters, the updates page, the glossary (${GLOSSARY.length} terms) and the feed into docs/ (${published} published, ${drafted} unreviewed, ${UPDATES.length} updates, ${POSTS.length} posts)`);
+console.log(`search.json: ${SEARCH_INDEX.items.length} items (${chapterItems.length} chapters, ${postItems.length} posts, ${toolItems.length} tools, ${updateItems.length} updates), ${(fs.statSync(path.join(OUT, "search.json")).size / 1024).toFixed(1)} KB`);

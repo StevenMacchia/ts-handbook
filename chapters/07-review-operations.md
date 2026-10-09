@@ -76,7 +76,7 @@ For large or multi-risk services, Ofcom's codes recommend the same thinking: a p
 
 Keep queues few. Each needs trained people, cover on every shift and its own target, so split one only when the skill, the tool or the target is different.
 
-In my experience, the first thing to break as volume grows is the tooling, before headcount. Reviewers end up jumping between too many systems, and the context for a decision gets lost between them. Before you add reviewers, put what a reviewer needs for a case in one place: the content, the account's history, past actions and reports, and the guidance that applies. Open-source consoles such as ROOST's [Coop](https://github.com/roostorg/coop) are built around that idea.
+> **Story.** In my experience, the first thing to break as volume grows is the tooling, before headcount. Reviewers end up jumping between too many systems, and the context for a decision gets lost between them. Before you add reviewers, put what a reviewer needs for a case in one place: the content, the account's history, past actions and reports, and the guidance that applies. Open-source consoles such as ROOST's [Coop](https://github.com/roostorg/coop) are built around that idea.
 
 ### 3. Set response-time targets you can keep
 
