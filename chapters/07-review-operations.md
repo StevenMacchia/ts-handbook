@@ -74,7 +74,7 @@ Tier 1 cases leave the normal queue for the severe-harm path in [chapter 12](12-
 
 For large or multi-risk services, Ofcom's codes recommend the same thinking: a prioritization policy that weighs how many people could encounter the content, how severe the harm could be, and how likely it is to be illegal, including whether a trusted flagger reported it.
 
-Keep queues few. Each needs trained people, cover on every shift and its own target, so split one only when the skill, the tool or the target is different.
+Keep queues few. Each needs trained people, cover on every shift and its own target, so split one only when the skill, the tool or the target is different. Four queues is plenty for a first operation: tier 1 on the severe path, one for tiers 2 and 3, one for tier 4, and one per language you can't read in-house.
 
 > **Story.** In my experience, the first thing to break as volume grows is the tooling, before headcount. Reviewers end up jumping between too many systems, and the context for a decision gets lost between them. Before you add reviewers, put what a reviewer needs for a case in one place: the content, the account's history, past actions and reports, and the guidance that applies. Open-source consoles such as ROOST's [Coop](https://github.com/roostorg/coop) are built around that idea.
 
@@ -238,4 +238,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
