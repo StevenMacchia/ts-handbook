@@ -34,8 +34,6 @@ One launch is enough to test that. In October 2026, Ofcom opened an investigatio
 
 ### 1. Decide which launches get a full review
 
-If every product team pre-mortems only one kind of launch, make it anything that changes what children can do or who can reach them.
-
 Being invited to design review is something T&S earns. You earn it by being selective and fast. A review that slows every release won't stay in the launch plan for long.
 
 Give a full pre-mortem to any launch that does at least one of these:
@@ -44,6 +42,8 @@ Give a full pre-mortem to any launch that does at least one of these:
 - **Moves money or items between users.** Gifting, virtual currency, tips, trading, payouts, marketplace sales.
 - **Exposes location.** Maps, nearby features, check-ins, in-person meetups, photos that carry location data.
 - **Changes what minors can do.** New features open to under-18s, or any change to their defaults.
+
+If a product team will only ever pre-mortem one kind of launch, make it the last one: anything that changes what children can do or who can reach them.
 
 Everything else gets a short checklist the product team fills in themselves (there's one under the templates below). If any answer worries you, it becomes a full review.
 
@@ -56,6 +56,8 @@ A pre-mortem is a session where the team assumes the project has already failed 
 A typical room: the product manager who owns the outcome, the engineering lead, the designer, and T&S, though on a small team one person may fill two of those seats. Add Legal and Privacy when minors, money or new markets are involved. Walk through the product the way an abuser would: who can I reach, what can I send, what can I take, and what happens if I'm banned?
 
 The Workbench's [abuse pre-mortem](https://stevenmacchia.com/ts-workbench/#premortem) structures this as 12 plain questions: what you're building, what people can do in it, whether anyone under 18 could use it, whether strangers can make contact, what it takes to make an account, whether money changes hands, where it will be used, how many people use it, and who deals with safety problems today. It returns the risks that apply, rated, the safeguards to ship before launch with an owner for each in priority order, the laws that likely apply in your markets, and a launch plan you can send to Jira, Linear or GitHub.
+
+Run the first one on the product you already have, not on the next launch. Most of the risk you carry is already live, and the first pre-mortem usually finds a default (open messaging to new accounts, gifting with no cap) that nobody chose on purpose. That list becomes the risk register the rest of this chapter works from.
 
 The output of the session is a short record: the risks, the rating for each, the safeguards you'll ship, and any risk you're accepting. Changes made now are cheap. If new accounts shouldn't be able to message strangers, or should have a lower gifting cap in their first week, that's an edit to the spec today and a fight with users after launch.
 
@@ -107,6 +109,8 @@ Give each safeguard an owner by function, because most of them aren't T&S work. 
 - **Legal and compliance:** reporting duties, notice channels, records
 
 Some safeguards cost the feature its own metric. A gifting limit on new accounts will reduce gifting, and revenue usually wins that argument. Don't fight it twice. Agree the exit criteria up front: what the safeguard protects against, which number would show it's no longer needed, and when you'll look again. Then the follow-up is a check against an agreed bar, not a new negotiation.
+
+<!-- STORY: a safeguard that cost a feature its metric (a gifting cap, a messaging limit), how the exit criteria were agreed, and whether the number ever showed it could be removed -->
 
 ### 6. Give every accepted risk an owner and a date
 
@@ -222,4 +226,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
