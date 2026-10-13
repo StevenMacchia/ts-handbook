@@ -71,6 +71,8 @@ There's no single right order: it's a choice your risks should make. For a consu
 
 Then a policy specialist and a legal or compliance partner, as your markets and laws demand.
 
+<!-- STORY: the order you actually hired in when building from zero, which hire you'd move earlier with hindsight, and why -->
+
 Other orders are just as defensible, depending on what you face first:
 
 - **Engineer earlier** when safety tooling and product changes would do more than headcount, for example when reviewers are slowed by poor tools or the biggest risks can be designed out.
@@ -83,7 +85,7 @@ Some things are better bought than hired at first: review volume and language co
 
 ### 4. Decide where the team reports
 
-Every option has trade-offs, but I have a view. Trust & Safety should report into Product or directly to the executive level, and work across every team: Product, Engineering, Legal, Operations, Support and Comms. Making safety a function of Operations is a mistake, and I've written about why: [You can't moderate your way out of a systems problem](https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/). At scale, you can't moderate your way out of a systems problem. Under Operations, safety gets judged on throughput and cost per ticket, and the work that prevents harm, policy, detection and getting into design reviews, gets starved. Here are the options, with their trade-offs:
+Every option has trade-offs, but I have a view. Trust & Safety should report into Product or directly to the executive level, and work across every team: Product, Engineering, Legal, Operations, Support and Comms. Making safety a function of Operations is a mistake, and I've written about why: [You can't moderate your way out of a systems problem](https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/). Under Operations, safety gets judged on throughput and cost per ticket, and the work that prevents harm, policy, detection and getting into design reviews, gets starved. Here are the options, with their trade-offs:
 
 | Reports into | Strengths | Risks | Works best when |
 |---|---|---|---|
@@ -201,4 +203,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
