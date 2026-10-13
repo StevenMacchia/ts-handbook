@@ -55,8 +55,11 @@ The protections most likely to work act before any harmful message is sent. For 
 - Precise location is off, and photos have location data removed.
 - Gifts, currency transfers and spending are limited, especially from new accounts.
 - No advertising based on profiling. The DSA bans it when a platform is reasonably certain the user is a minor.
+- Parents can see and change who can contact their child in one place.
 
 The UK's [Children's Code](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/) expects high-privacy defaults like these for services likely to be used by under-18s. Your own data will usually point the same way. If you look at where confirmed cases began, many start with an open message from an adult the child didn't follow. That's a default setting to change, not a moderation problem to staff up for.
+
+Defaults have to do the work most parents won't. Ofcom's October 2026 Growing Up Gaming research found that 55% of children who game online play with people they've never met offline at least sometimes, and that strangers are parents' biggest concern about gaming, yet only 43% of parents set rules about who their child plays with ([Ofcom](https://www.ofcom.org.uk/online-safety/protecting-children/stranger-danger-tops-parents-online-gaming-worries)). Keep the control for who can contact a child to one clear switch, not a maze of settings. The EU's proposed [KIDS Act](https://commission.europa.eu/news-and-media/news/eu-kids-act-helping-children-navigate-safer-online-world-2026-09-17_en) (September 2026) would prohibit unsolicited contact from strangers, and it covers online games.
 
 ### 3. Treat age as something that can change
 
@@ -120,6 +123,7 @@ Completion rate (how many users finished an age check) is a weak metric on its o
 - **Time from first signal to protective action** on adult-to-minor contact.
 - **Share of confirmed cases caught before the move to another app.**
 - **Precision at each step** of the grooming response, and **how long high-risk cases wait** for review.
+- **Strangers reaching children:** how often an account a child doesn't know contacts them, week by week. You want it going down, whatever happens to removals.
 - **Confirmed unsafe-contact cases per 10,000 young users**, split by how the contact started, so you can close the path, not just ban the account.
 
 ## Mistakes to avoid
@@ -165,6 +169,7 @@ Completion rate (how many users finished an age check) is a weak metric on its o
 
 From Steven's writing:
 
+- **[Parents' top gaming concern is the rule they set least](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-gamingsafety-share-7515766955706826752-8pJN/)** (Oct 13, 2026): Ofcom's Growing Up Gaming research: 55% of children who game online play with people they've never met offline at least sometimes, and strangers are parents' top concern, yet only 43% set rules about who their child plays with. Platforms should close that gap with defaults (contact limited to people a child knows, friction on adults reaching unknown children, one clear parental switch) and measure how often strangers reach kids.
 - **[Financial sextortion moves in hours, so start with what the teen sees](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7513612793984602112-urPF/)** (Oct 7, 2026): Financial sextortion can go from first contact to a payment demand inside a day, too fast for grooming detection built for weeks. Start with defaults that limit who can message a teen and notices about strangers, then a fast, shame-free response with an on-call emergency referral and a CyberTipline report.
 - **[What I'm reading: an open policy model, Xbox's adult checks, Discord in Brazil and KOSA](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-ageassurance-share-7513555853422288897-CN1L/)** (Oct 7, 2026): An open-weights model that scores a message against your written policy in milliseconds (Musubi's PolicyLM-1.7B, which the Workbench's classifier eval can now run), Xbox marking some long-time accounts as adults from their account activity, a Brazilian interim order for Discord to add age verification and parental supervision, and KOSA now needing a recorded Senate vote.
 - **[What I'm reading: Ofcom and Instagram Instants, Ofcom's data demands in court, and Roblox in Kansas](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-share-7513201109180813312-FxKX/)** (Oct 6, 2026): Ofcom is investigating whether Meta risk-assessed Instagram Instants before launch, and Meta, TikTok and X are challenging Ofcom's demands for moderation data in court. Kansas settled with Roblox for more than $10 million plus age checks and age-grouped chat, and OpenAI's own tests show its new EU text watermark weakens when 10% of the words are swapped.
@@ -187,4 +192,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
