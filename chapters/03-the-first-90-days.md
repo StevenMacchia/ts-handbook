@@ -53,6 +53,10 @@ The output is a one-page map of how safety works today and a short list of gaps,
 
 My default when building from scratch: close the worst gaps first. Learning how everything else works runs alongside it, but a missing reporting path for child safety or threats to life can't wait for the listening tour to finish.
 
+<!-- STORY: the first weeks of building the function from zero: which of the three gaps was open on day one, who you borrowed (an engineer, a lawyer) to close it, and how long it took -->
+
+The three gaps are the ones you'll borrow people for. Ask for an engineer for a fixed number of days and a standing hour with Legal in week one, and say what each is for. A first hire who waits for headcount before closing these is still waiting at day 90.
+
 Three gaps come before everything else, because the harm they allow can't be undone.
 
 **Child safety reporting.** If you host images or video, match uploads against hashes of known child sexual abuse material (CSAM). A hash is a digital fingerprint that lets you spot a known image without anyone looking at it. You don't need to build this. Microsoft's [PhotoDNA](https://www.microsoft.com/en-us/photodna) is free for qualified organizations, and ROOST's open-source [Coop](https://roost.tools/coop/) offers a free workflow for hash matching, review and CyberTipline reporting. If US law applies to you, register with NCMEC before you need it. Registered providers get a secure reporting route that lets them submit the images and video with their reports ([NCMEC transparency report](https://www.missingkids.org/content/dam/missingkids/pdfs/OJJDP-NCMEC-Transparency-CY-2023-Report.pdf)). A completed report is treated as a request to preserve its contents for one year ([§ 2258A(h)](https://www.law.cornell.edu/uscode/text/18/2258A)). Set up a restricted escalation path so only trained people handle these cases. [Chapter 6](06-child-safety-and-age-assurance.md) and [chapter 12](12-severe-harm-escalations.md) go deeper, and [chapter 16](16-regulation-and-compliance.md) covers duties outside the US.
@@ -207,4 +211,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
