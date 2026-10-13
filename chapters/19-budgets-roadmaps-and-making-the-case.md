@@ -47,20 +47,11 @@ By stage: an early team divides each vendor invoice by the decisions it covered,
 
 ### 2. Stop being judged by throughput
 
-If your team took down 40% more harmful content last quarter than the quarter before, is that good news? You don't know yet. It could mean detection improved, harm grew, or automation got more aggressive and legitimate users are paying for it. Volume can't tell you which, and a budget argued on volume invites one response: do the same volume for less.
+A budget argued on volume invites one response: do the same volume for less. [Chapter 11](11-measuring-what-matters.md) covers why removals, reports received, automation rate and accounts banned stay off the executive slide, and which outcome questions replace them. What matters here is how the budget itself is framed.
 
-Keep these off the executive slide: total items removed, reports received, automation rate on its own, moderator headcount and accounts banned. Each can rise for good or bad reasons, and none says what users experience. Automation rate is an efficiency metric, not a measure of maturity. It counts the decisions people didn't make, not whether they were right.
+"Child safety: 12 reviewers" is a cost line, and a cost line gets benchmarked. "Child safety: unsafe contact per 10,000 young users, down from last quarter, and what it takes to keep it falling" is an outcome with a price, and an outcome gets funded or consciously declined. Write every line of the ask in the second form: the outcome, its current value and trend, and the people, vendors or tools that move it. Where an outcome isn't measured yet, say so and make the first ask the measurement.
 
-Lead with the outcome questions instead:
-
-- Is exposure to severe harm going down?
-- After enforcement, do bad actors stop, or come back on new accounts?
-- Are we catching high-risk behavior earlier?
-- What are appeals telling us about where our policy or automation is wrong?
-
-Then frame the budget the same way. "Child safety: 12 reviewers" is a cost line. "Child safety: unsafe contact per 10,000 young users, down from last quarter, and what it takes to keep it falling" is an outcome with a price. [Chapter 11](11-measuring-what-matters.md) covers the metrics.
-
-Report operational and outcome numbers side by side, and say so when they disagree. It takes discipline to walk into a business review and say, "Our numbers are up, and I'm not convinced we're safer." That's the conversation that earns credibility, directs investment to the right places and keeps Trust & Safety from being judged like a cost center measured by throughput.
+Then report operational and outcome numbers side by side, and say so when they disagree. Walking into a business review and saying "our numbers are up, and I'm not convinced we're safer" is what keeps the program from being judged like a cost center measured by throughput, and it is the only way the next ask is believed.
 
 ### 3. Make the revenue case with a matched cohort
 
@@ -75,6 +66,8 @@ Then turn the gap into money, using Finance's numbers rather than your own:
 Here's an illustration of the arithmetic, from the metrics framework's worked example: exposed players retain at 52% after 30 days against 61% for matched players. A 9-point gap across 20,000 exposed players a month is about 1,800 players a month, and Finance can put a value on each one.
 
 Be honest about what it is. Present revenue at risk as a range, and call it an association unless you've run a proper causal analysis. An overclaimed number is the fastest way to lose the room the second time.
+
+<!-- STORY: the budget case that got a yes: which number did it (a cohort gap, an incident, a legal deadline), who in the room it persuaded, and what the first ask that failed had been missing -->
 
 Once safety exposure is a standard cut on the retention dashboard ([chapter 11](11-measuring-what-matters.md)), the revenue case is updated every month without anyone having to argue for it.
 
@@ -207,4 +200,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
