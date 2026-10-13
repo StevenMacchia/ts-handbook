@@ -17,7 +17,7 @@
 
 A lot of harmful content is never reported. Children rarely report what happens to them. Victims of a pile-on are outnumbered. Offenders who groom or scam move their targets to another app as fast as they can, so by the time anyone reports, the harm has often moved somewhere you can't see. If user reports are your only detection, you'll find harm late, and you'll only find the kinds people choose to report.
 
-Law sets a floor here, not a ceiling. In the US, providers that become aware of apparent child sexual abuse material must report it to NCMEC ([18 U.S.C. § 2258A](https://www.law.cornell.edu/uscode/text/18/2258A)), but the same section says it doesn't require you to monitor users or scan content (subsection (f)). Looking for harm is a choice you make, not one the law makes for you. In the UK, Ofcom's [illegal content codes of practice](https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online) recommend perceptual hash matching for known child sexual abuse material on large user-to-user services at medium or high risk of it, on services at high risk with more than 700,000 UK users, and on file-sharing and file-storage services at high risk, whatever their size.
+Law sets a floor here, not a ceiling. In the US, providers that become aware of apparent child sexual abuse material must report it to NCMEC ([18 U.S.C. § 2258A](https://www.law.cornell.edu/uscode/text/18/2258A)), but the same section says it doesn't require you to monitor users or scan content (subsection (f)). Looking for harm is a choice you make, not one the law makes for you. In the UK, Ofcom's [illegal content codes of practice](https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online) recommend perceptual hash matching for known child sexual abuse material on large user-to-user services at medium or high risk of it, on services at high risk with more than 700,000 UK users, and on file-sharing and file-storage services at high risk, whatever their size. Ofcom revised the codes in September 2026, and the revised edition, which applies from 30 September 2026, changes the hash-matching measures, so check the thresholds against the current codes rather than this paragraph.
 
 Detection has a cost when it's wrong, too. A system that catches more by acting on more will push up your proactive detection rate while good users pay for it. Detection is only working if it's measured.
 
@@ -59,6 +59,8 @@ Each step can be innocent on its own. Together they're a pattern. Reviewing mess
 
 So decide what you're watching for each harm. Sometimes it's a single item. Often it's an account, a relationship between two accounts, or a group of accounts acting together. Keep a short signal history for each one, within a retention window you've agreed with Legal, so the third signal can be read next to the first two.
 
+Start with one pattern, not a platform for all of them. Take the top risk from your pre-mortem, write down the three or four signals that precede it (for grooming: an adult account friending many unconnected minors, an early gift, a request to move to voice), and have an engineer log those signals per relationship for a month before anything acts on them. A month of logged signals against your confirmed cases is what step 5 needs to set the first threshold.
+
 ### 3. Let the response build as signals stack
 
 Because each signal is weak on its own, the response should get stronger as signals add up:
@@ -71,7 +73,10 @@ Because each signal is weak on its own, the response should get stronger as sign
 
 This is the graduated approach in [chapter 4](04-writing-policy.md) applied to detection. Act automatically where the evidence is clear and the action can be undone. Use friction and limits where it's less certain. Gather more signals where you can't support a decision yet. Send it to a person where an error would cost too much.
 
-When flagged cases outnumber reviewers, protective actions stay automatic and the queue is worked by risk. A restricted account waiting a day for review is a cost worth paying ([chapter 7](07-review-operations.md)). [Chapter 6](06-child-safety-and-age-assurance.md) sets out this ladder in full for adult-to-minor contact.
+When flagged cases outnumber reviewers, protective actions stay automatic and the queue is worked by risk. A restricted account waiting a day for review is a cost worth paying ([chapter 7](07-review-operations.md)).
+
+<!-- STORY: a signal ladder in practice: the first version of the thresholds, what it got wrong (too many flags, or the wrong accounts), and what changed after the first quarter -->
+ [Chapter 6](06-child-safety-and-age-assurance.md) sets out this ladder in full for adult-to-minor contact.
 
 ### 4. Prevent before you remove
 
@@ -199,4 +204,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
