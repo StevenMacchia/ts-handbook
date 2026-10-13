@@ -123,6 +123,10 @@ Numbers worth tracking:
 
 Safety exposure belongs as a standard cut on the retention dashboard, owned jointly by T&S and data teams and reviewed alongside every other churn driver.
 
+<!-- STORY: the first time the matched cohort was built: what the raw retention data said first, what the matched comparison showed, and what leadership did with it -->
+
+The ask to the data team is small and specific: one analyst for about two weeks, access to the enforcement log joined to the retention table, and the brief in the template below agreed before anyone pulls a number. Agreeing the brief first is what stops the result being argued away as a cut that was chosen to flatter the program.
+
 A few cautions. Define exposure as being the target of a confirmed incident, not just filing a report. Present the result as a range, and call it an association unless you've run a proper causal analysis. Outside games, match on what drives exposure on your platform, such as audience size on a social app, because larger accounts are targeted more and churn differently. On a dating app, focus on users harassed in their first week, when a bad experience makes people delete the app. With children's data, involve your privacy team and report only aggregates. The [churn after toxic exposure](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/churn-after-toxic-exposure.md) page has the steps and a starter query. [Chapter 19](19-budgets-roadmaps-and-making-the-case.md) turns the result into a budget case.
 
 ### 7. Log the data from day one
@@ -227,4 +231,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
