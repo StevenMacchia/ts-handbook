@@ -40,7 +40,7 @@ Quality assurance (QA) means re-checking a sample of past decisions to see wheth
 
 Keep quality independent of the operations team it measures. If the people being measured choose the sample, the number will always look great.
 
-By stage: an early team can start with a lead re-reviewing a handful of random decisions per reviewer each week, for example five, in a shared spreadsheet. A growing team needs a quality function the operations team doesn't control: its own reporting line is one way to get that. At scale, quality covers every vendor and language with native-speaker experts.
+By stage: an early team can start with a lead re-reviewing a handful of random decisions per reviewer each week, for example five, in a shared spreadsheet, with a column for "guidance unclear" so the rewrites in step 2 have a source. A growing team needs a quality function the operations team doesn't control: its own reporting line is one way to get that. At scale, quality covers every vendor and language with native-speaker experts.
 
 ### 2. Run calibration sessions, and measure agreement
 
@@ -103,6 +103,8 @@ Overturn data is something you can govern with. These are the rules I'd put in p
 - **Automation doesn't expand into a new policy area until its overturn rate is at or below human review** in that area.
 - **Every model or threshold change gets an overturn baseline before launch and a check an agreed number of weeks after.** If the rate moves past an agreed limit, the change rolls back.
 - **Decide in advance what earns automation more scope, and what takes it away.** Write it down before the launch, not after the results.
+
+<!-- STORY: a model or threshold change that the overturn check caught: what the baseline was, how far it moved, and whether the rollback rule held under pressure to keep the automation on -->
 
 Overturns aren't the only gate. Pair them with precision from blind sampling, because appeals arrive slowly and only from people who chose to appeal ([precision and recall by policy area](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/precision-and-recall-by-policy-area.md)). Record every scope change and rollback with the numbers behind it and the name of the person who signed it off. When a regulator or a court asks why automation made a decision, that record is the answer.
 
@@ -184,4 +186,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
