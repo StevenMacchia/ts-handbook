@@ -45,7 +45,7 @@ Most T&S teams can list what they do. Fewer can say what it's for. Start with fo
 
 The jobs sometimes pull against each other. Speed can cost fairness, and a cautious legal reading can slow protection. Decide in advance which one wins where. One rule this handbook holds to: where a wrong decision can't be reversed or someone's safety is at risk, automation can prepare the case, but a person closes it.
 
-Usually the T&S lead writes the page and an executive sponsor signs it, which in a small company may be a founder. It's done when a product manager, a lawyer and a support lead can each say what T&S does, and what it doesn't.
+Usually the T&S lead writes the page and an executive sponsor signs it, which in a small company may be a founder. Put the reporting line on the page too. T&S belongs in Product or at the executive level, working across every team; making it a function of Operations is the mistake that turns it into a queue ([chapter 8](08-hiring-and-structuring-the-team.md)). It's done when a product manager, a lawyer and a support lead can each say what T&S does, and what it doesn't.
 
 ### 2. Draw the borders with neighboring teams
 
@@ -70,6 +70,8 @@ Pull raw retention data at most game studios and harassed players look like some
 Industry surveys like the one above help, but they rarely move a budget. Your own data does, if it's cut correctly. The cut that works is a matched cohort: new users who were the target of an actioned incident in their early sessions, compared on 7- and 30-day return with similar new users who weren't. Without the matching, the analysis measures engagement instead of harm.
 
 The same blind spot affects enforcement on high-value users. Banning a top spender hits the revenue report the next day. The players they drove away stay invisible unless someone builds the cohort.
+
+<!-- STORY: the first time a matched cohort (or the lack of one) changed a budget or ban decision about a high-value toxic player -->
 
 [Chapter 11](11-measuring-what-matters.md) covers how to build the cohort, what to match on for your kind of product and the numbers worth tracking. [Chapter 19](19-budgets-roadmaps-and-making-the-case.md) turns the result into a budget case.
 
@@ -102,7 +104,7 @@ A small team might fold the first two into one meeting, and a live product with 
 
 Put operational and outcome numbers on the same page, and read them together. When they disagree, say so. It takes discipline to walk into a business review and say, "Our numbers are up, and I'm not convinced we're safer." That's the conversation that earns credibility, sends investment to the right places, and keeps T&S from being judged like a cost center measured by throughput.
 
-Know the limits of each signal. Appeal overturns only measure over-enforcement, because nobody appeals the harm you missed, so pair them with a random sample of what users actually see. Measure for a while before you commit to a target, for example six to eight weeks, because early targets are guesses.
+Know the limits of each signal. Appeal overturns only measure over-enforcement, because nobody appeals the harm you missed, so pair them with a random sample of what users actually see. Measure before you commit to a target, for example six to eight weeks, because a target set in week one is a guess that someone will later be held to.
 
 Keep what the company says in public in line with what enforcement actually does. Public safety claims are evidence in litigation. [Chapter 11](11-measuring-what-matters.md) covers measurement in depth, and [chapter 15](15-working-with-product-legal-and-leadership.md) covers reporting to executives and the board.
 
@@ -213,4 +215,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.

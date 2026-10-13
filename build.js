@@ -36,7 +36,7 @@ const CH = fs.readdirSync(path.join(ROOT, "chapters")).filter(f => /^\d\d-.+\.md
   const updated = (footer.match(/Last (?:updated|reviewed): (\d{4}-\d{2}-\d{2})/) || [])[1];
   // A separate, honest "reviewed" date: only set when the footer says so explicitly, never guessed
   const reviewed = (footer.match(/Last reviewed: (\d{4}-\d{2}-\d{2})/) || [])[1] || "";
-  const body = lines.slice(1, end).filter(l => l !== lines[0] && !/^> \*\*.+\*\*$/.test(l) && l !== nav && l !== forLine && !/^\*\*Status: /.test(l)).join("\n").trim();
+  const body = lines.slice(1, end).filter(l => l !== lines[0] && !/^> \*\*.+\*\*$/.test(l) && l !== nav && l !== forLine && !/^\*\*Status: /.test(l)).join("\n").replace(/<!--[\s\S]*?-->[ \t]*\n?/g, "").trim(); // HTML comments (author notes such as STORY placeholders) never reach the page or the search index
   // A chapter that discusses law says so in its footer; its page then shows the legal notice under the title
   const legal = /not legal advice/i.test(footer);
   return {file, n: +n, slug: file.slice(3, -3), title, q, part, forText, body, updated, reviewed, legal, status: STATUS[file] || "Outline"};
