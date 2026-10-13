@@ -116,6 +116,10 @@ A vendor's numbers come from someone else's content and someone else's policies.
 
 Sign a data agreement before the first case leaves your systems, and send only what the test needs. Keep child sexual abuse material out of every pilot set. Handling it is tightly regulated ([chapter 12](12-severe-harm-escalations.md)).
 
+<!-- STORY: a pilot on your own past cases that changed the choice: the vendor that won the demo and lost the blind sample, or the language gap the pilot found -->
+
+The pilot is also where you learn what the vendor's reviewers will go through. Ask to see the queue from a reviewer's seat for an hour: the tool, the blurring, how a reviewer flags a case they can't bear. If that view isn't offered, the wellness score in the RFP is a claim, not evidence.
+
 ### 5. Write the terms that matter into the contract
 
 The contract is where the scorecard becomes enforceable. Legal usually writes it, but the T&S owner decides what goes in.
@@ -240,4 +244,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
