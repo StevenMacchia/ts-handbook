@@ -76,9 +76,9 @@ All four matter, and none of them can wait for a meeting. Run them in this order
 
 In a raid, a group floods a room, a match or a creator's stream with abuse. Raids are easy to miss in raw numbers, because volume swings with everything that happens on the platform.
 
-Rates hold steadier than volume. On a busy night, volume goes up and a category's rate usually stays put. So use rates as baselines. If one category's rate climbs while volume is normal, that usually means something coordinated: a raid, or a group targeting one player.
+Rates hold steadier than volume, so the alert that catches a raid is on a category's rate for that hour, not its count; [chapter 5](05-detection-and-prevention.md) covers setting that alert and judging it. What this chapter adds is the response once it fires.
 
-I'd set up an alert on that rate. Something simple works to start: if a category sits well above its usual level for that hour for 15 minutes or so, page whoever's on call.
+<!-- STORY: a raid during a live event: what the alert looked like, which lever was pulled, what it cost the people who weren't involved, and what was pre-approved next time -->
 
 When it fires, respond in proportion. Locking the room or turning off chat in the middle of a big event punishes thousands of people for what a few hundred accounts are doing. Raids often lean on new accounts. If most of the accounts involved are new, I'd start by slowing down posting for accounts less than a week old. That targets them and leaves everyone else alone. Keep the friction where the attack is: a platform-wide limit on all new accounts stops thousands of real newcomers too, and offenders switch to older accounts. Before a big launch or event, get this response approved in advance, so the on-call lead isn't hunting for sign-off at 2am ([chapter 15](15-working-with-product-legal-and-leadership.md)).
 
@@ -89,8 +89,6 @@ When it fires, respond in proportion. Locking the room or turning off chat in th
 | Organizers identified | Ban the organizing accounts and the accounts linked to them, and share them with the platform where they organize | Banning only the accounts that sent the messages |
 
 Raids are usually organized somewhere else. In [The swatting threat](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/swatting.md), the attackers coordinate in a server on another chat platform, and sharing the organizing accounts with that platform's trust and safety team is what collapses the campaign. When fake accounts get past sign-up checks, as in [The sock puppet surge](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/bots.md), limit what new accounts can do until they behave like real users.
-
-To know if it's working, I'd look at how fast the team acts once an alert goes off, and how many alerts turn out to be real coordinated activity. If most of them end up being a reaction to something in the game, the threshold is set too low.
 
 At an early stage, a daily chart of rates by category and one lever you can pull by hand are enough. A growing team automates the alert for each category. At scale, baselines need to be set by market and language, because what's normal differs between them. [Chapter 5](05-detection-and-prevention.md) covers detection in more depth.
 
@@ -216,4 +214,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
