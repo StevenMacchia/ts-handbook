@@ -78,6 +78,8 @@ Removal is one response. It shouldn't be the only one. Match the response to how
 | **Temporary suspension** | The account is locked or read-only for a set time | Repeated violations after warnings |
 | **Permanent ban** | The account is removed, with checks for ban evasion | Severe harm, or repeat violations after a suspension |
 
+<!-- STORY: a case where a feature limit (gifting, messaging, streaming) did what a suspension would not, or where a suspension was the wrong tool -->
+
 Feature limits are underused. If someone misuses gifting, take away gifting. The same logic works for groups. When a raid hits a busy chat and most of the accounts involved are new, slowing posting for accounts less than a week old targets them and leaves everyone else alone. Locking the room punishes thousands of people for what a few hundred accounts are doing ([chapter 5](05-detection-and-prevention.md)).
 
 **Some harms skip the ladder.** Child sexual abuse material, adults enticing children, credible threats, terrorist content and trafficking go straight to removal, preservation, reporting where the law requires it, and an account decision made by trained people ([chapter 6](06-child-safety-and-age-assurance.md), [chapter 12](12-severe-harm-escalations.md)). Name these harms in the policy so nobody applies a warning to them.
@@ -114,7 +116,7 @@ A rule that reads well can still split reviewers down the middle. Find out befor
 4. **Run the same set through a model** that sees only the rule. The [classifier eval](https://stevenmacchia.com/ts-workbench/#eval) can have Claude label your cases from the rule as written. If a model reading the rule can't reach the right answer, a new reviewer in another market probably won't either.
 5. **Fix the words, then run it again.** Add an example, tighten a definition or state which exception wins.
 
-Decide what "ready" means before you look at the results. For example: both reviewers agree on every clear case, and every borderline disagreement has been resolved by a change to the text. Then keep the set. It becomes the regression test you run every time the rule changes.
+Decide what "ready" means before you look at the results. For example: both reviewers agree on every clear case, and every borderline disagreement has been resolved by a change to the text, not by a conversation that only those two people remember. Then keep the set. It becomes the regression test you run every time the rule changes.
 
 ### 6. Write rules a model can apply
 
@@ -207,4 +209,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
