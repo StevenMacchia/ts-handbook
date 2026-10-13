@@ -72,6 +72,9 @@ The law points the same way in places. Under the EU's Digital Services Act, deci
 
 Where to start depends on the size of your team. For a small team, clear-cut, high-volume cases are a great place to begin: spam, obvious nudity and matches against known-bad hashes, where the evidence is clear and the volume would otherwise bury your reviewers. Larger teams often get more from automating triage and case preparation first, so people spend their time on the calls that need judgment. Either way, the scope grows only as the evidence supports it.
 
+<!-- STORY: the first automated action that earned its scope: what it was allowed to do at first, what the overturn baseline showed, and when (or whether) it was allowed to do more -->
+
+
 The fastest way to know whether automation has started getting things wrong is already in your data: the decisions users contest and win. Broken out by policy area, enforcement source and market, appeal overturns show where guidance is unclear, where automated decisions hold up worse than human review, where language and context are getting lost, and where a model has drifted. They often show drift weeks before anything else does.
 
 A few rules I'd put in place:
@@ -132,8 +135,8 @@ Several of these are now law:
 |---|---|---|
 | California | [SB 243](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243), in force since 1 January 2026 | Companion chatbot operators must disclose that the chatbot isn't human where a reasonable person could be misled, and keep and publish a protocol for preventing suicide and self-harm content that includes referrals to crisis services. For users they know are minors: disclose that it's AI, remind them by default at least every three hours to take a break, and take reasonable measures to prevent sexually explicit visual material. Annual reports to the state's Office of Suicide Prevention start in July 2027, and users can sue. |
 | New York | [General Business Law Article 47](https://www.nysenate.gov/legislation/laws/GBS/A47), in force since 5 November 2025 | AI companions need a protocol to detect and address suicidal ideation and self-harm and refer users to crisis services, and must tell users they aren't talking to a human at the start of an interaction and at least every three hours. |
-| EU | [AI Act, Article 50](https://eur-lex.europa.eu/eli/reg/2024/1689/oj), applying since 2 August 2026 | Tell people they're interacting with an AI unless it's obvious, and mark AI-generated content in a machine-readable way. The Commission says generative systems already on the market before that date have [until December 2026](https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems) to add the marking. Deployers must disclose deepfakes. |
-| UK | Online Safety Act | Ofcom's guidance is that a chatbot is covered when users can share what it generates with other users, when it searches multiple websites or databases to answer, or when it can generate pornography, which then needs highly effective age assurance ([Ofcom](https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/ai-chatbots-and-online-regulation-what-you-need-to-know)). |
+| EU | [AI Act, Article 50](https://eur-lex.europa.eu/eli/reg/2024/1689/oj), applying since 2 August 2026 | Tell people they're interacting with an AI unless it's obvious, and mark AI-generated text, audio, images and video in a machine-readable way. Generative systems already on the market before 2 August 2026 have [until 2 December 2026](https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems) to add the marking (the Digital Omnibus on AI, in force since July 2026); the disclosure duties are not delayed. Deployers must disclose deepfakes, at the latest when people first see them. |
+| UK | Online Safety Act | Ofcom has said a chatbot is covered when users can share what it generates with other users, when it searches multiple websites or databases to answer, or when it can generate pornography, which then needs highly effective age assurance ([Ofcom](https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/ai-chatbots-and-online-regulation-what-you-need-to-know)). The pornography limb is in the Act itself ([section 79(6)](https://www.legislation.gov.uk/ukpga/2023/50/section/79)); confirm the other two against Ofcom's current guidance before relying on them. |
 
 Expect more states and countries to follow, so give each duty an owner rather than treating compliance as a one-off launch task ([chapter 16](16-regulation-and-compliance.md)).
 
@@ -203,4 +206,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
