@@ -44,17 +44,9 @@ At an early stage, the founder or first safety hire simply asks to be in the roo
 
 Being invited early is something T&S earns. A review that slows every release won't stay in the launch plan for long, so two things matter: being selective, and answering in days.
 
-Be selective about what gets a full review:
+Be selective about what gets a full review. The four triggers (strangers can contact each other, money or items move between users, location is exposed, what minors can do changes) and the short checklist for everything else are in [chapter 2](02-know-your-risks.md), with templates. What this chapter adds is the working relationship: who runs the review, how fast it answers, and what the product team gets back.
 
-| If the launch... | Review |
-|---|---|
-| Lets strangers contact each other | Full pre-mortem |
-| Moves money or items between users | Full pre-mortem |
-| Exposes location | Full pre-mortem |
-| Changes what minors can do | Full pre-mortem |
-| Does none of these | A short checklist, which the product team can complete itself |
-
-The checklist covers the basics that apply to almost everything: can users report it and block people on it, do new accounts get the same limits here as everywhere else, are minors' defaults unchanged, and is enough logged to enforce and to explain decisions. If any answer is worrying, it becomes a full review.
+<!-- STORY: the review that earned T&S a standing slot in design review: what was asked, how fast the answer came back, and what the product team shipped differently -->
 
 Then answer fast. Set a turnaround target in days and publish it. Make every review usable: name each safeguard, its owner and its rough effort, rank them, and say plainly which ones must ship before launch and which can follow. Give options with their costs, not a single "no". Product teams invite the reviewer who helps them ship safely, and route around the one who only says what's wrong.
 
@@ -83,9 +75,9 @@ If a launch goes ahead with a known risk, the person who owns the product outcom
 
 Decide in advance what counts as too serious, so escalation isn't a matter of nerve. A reasonable line: anything that could seriously harm a child, put someone's physical safety at risk, breach a legal duty, or is likely to become a news story or a regulator's question goes up.
 
-Every company needs a named person at the top who owns safety risk. In the UK, Ofcom's codes of practice for the illegal content duties recommend that every service name an individual accountable to its most senior governance body for compliance with those duties and the reporting and complaints duties ([Ofcom, illegal content codes for user-to-user services](https://www.ofcom.org.uk/siteassets/resources/documents/online-safety/information-for-industry/illegal-harms/illegal-content-codes-of-practice-for-user-to-user-services-24-feb.pdf?v=391889)). Whatever your market, the person who takes the most serious risk decisions should be the person accountable for them.
+Every company needs a named person at the top who owns safety risk. In the UK, Ofcom's codes of practice for the illegal content duties recommend that every service name an individual accountable to its most senior governance body for compliance with those duties and the reporting and complaints duties ([Ofcom, illegal content codes of practice](https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online); the revised codes apply from 30 September 2026). Whatever your market, the person who takes the most serious risk decisions should be the person accountable for them.
 
-Then measure the review itself. Track two numbers: how many incidents in a feature's first 90 days the review predicted, and how many accepted risks turned into incidents. If the second number keeps climbing, risks are being accepted at too low a level.
+Then measure the review itself, with the two numbers in [chapter 2](02-know-your-risks.md): incidents the review predicted, and accepted risks that became incidents. The second one is the number to bring to the executive who owns safety risk, because when it climbs, risks are being accepted at too low a level, and that is their problem to fix, not the reviewer's.
 
 ### 5. Treat public safety claims as evidence
 
@@ -153,15 +145,6 @@ The board needs safety risk on the same footing as other major risks: the top ri
 
 ## Start from this template
 
-**Launch review triggers.** Answer before design review. Any "yes" means a full pre-mortem.
-
-| Does the launch... | Yes or no |
-|---|---|
-| Let strangers contact each other? | |
-| Move money or items between users? | |
-| Expose location? | |
-| Change what minors can do? | |
-
 **Accepted risk sign-off.** One per accepted risk, kept in one register.
 
 | Field | Entry |
@@ -216,4 +199,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
