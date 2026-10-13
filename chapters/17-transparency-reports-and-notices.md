@@ -49,6 +49,9 @@ By stage: an early team covers removals and account actions first. A growing tea
 
 If a notice does only one thing, it should name the exact rule and what the person did that broke it. Everything else builds on that.
 
+<!-- STORY: what changed in appeals or support volume when notices started naming the exact rule and the specific content, instead of "you broke our guidelines" -->
+
+
 The DSA lists what a statement of reasons must contain ([Article 17(3)](https://eur-lex.europa.eu/eli/reg/2022/2065/oj)). Each element has a plain-language version a user can act on:
 
 | DSA element | In the notice | What good looks like |
@@ -99,14 +102,14 @@ The [data to log](https://github.com/stevenmacchia/ts-metrics-framework/blob/mai
 
 Under the DSA, the [Commission's Implementing Regulation (EU) 2024/2835](https://eur-lex.europa.eu/eli/reg_impl/2024/2835/oj) sets the format and the calendar:
 
-- **Templates.** The Commission's CSV or XLSX templates apply from 1 July 2025, and the first reports using them were published in February 2026.
+- **Templates.** The Commission's CSV or XLSX templates apply from 1 July 2025. Very large platforms' first templated reports (July to December 2025) were due by the end of February 2026; for everyone else 2025 was a transition year, so the first full year on the templates is 2026, due by the end of February 2027.
 - **Periods.** Most services report on the calendar year. Very large platforms report every six months, January to June and July to December.
 - **Deadline.** Publish within two months of the end of each period.
 - **Retention.** Keep each report, and every published version, publicly available for at least five years.
 
 Micro and small enterprises are exempt from the report unless they're very large platforms (Article 15(2)). Online platforms other than micro and small enterprises (Article 19) must also publish their average monthly active users in the EU at least every six months (Article 24(2)), and submit every statement of reasons to the Commission's DSA Transparency Database without undue delay, with no personal data in it (Article 24(5)). The Commission [explains how the database works](https://digital-strategy.ec.europa.eu/en/policies/dsa-brings-transparency).
 
-Other regimes set their own terms. In the UK, Ofcom gives each categorised service a transparency notice every year that specifies what to report, in what format and by when, and the information must be complete and accurate in all material respects ([Online Safety Act, section 77](https://www.legislation.gov.uk/ukpga/2023/50/section/77)). In Australia, the eSafety Commissioner can require services to report on how they meet the Basic Online Safety Expectations ([Online Safety Act 2021, sections 49 and 56](https://www.legislation.gov.au/C2021A00076/latest/text)).
+Other regimes set their own terms. In the UK, Ofcom gives each categorised service (its register was published in July 2026) a transparency notice every year that specifies what to report, in what format and by when, and the information must be complete and accurate in all material respects ([Online Safety Act, section 77](https://www.legislation.gov.uk/ukpga/2023/50/section/77)). In Australia, the eSafety Commissioner can require services to report on how they meet the Basic Online Safety Expectations ([Online Safety Act 2021, sections 49 and 56](https://www.legislation.gov.au/C2021A00076/latest/text)).
 
 The template is the floor. Add a readable summary on top: what the main numbers mean, what changed since the last report and why, and where you think you got things wrong. Put outcomes next to activity. If removals rose 40%, say whether that's better detection, more harm or more good users caught by mistake, and how you know. A report that only counts removals tells readers how busy you were, not whether anyone is safer.
 
@@ -200,4 +203,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
