@@ -59,7 +59,7 @@ Then tag each queue with an exposure level, for example high, medium or low. Gra
 You can't manage exposure you don't measure. Track [graphic-exposure hours per reviewer](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/graphic-exposure-hours-per-reviewer.md): hours each person spends on high-exposure queues each week.
 
 - **Log it from the case tool, not from self-reporting**, so the number doesn't depend on anyone remembering, or wanting to admit, how long they spent.
-- **Set daily and weekly caps with a clinical partner.** There's no agreed, evidence-based number for how much is too much. The Technology Coalition's guidebook says limiting time exposed to child sexual abuse material is key, without naming a figure ([Employee Resilience Guidebook](https://cdn.icmec.org/wp-content/uploads/2023/04/TechnologyCoalitionEmployeeResilienceGuidebookV2January2015.pdf)). Start with your clinician's advice, then adjust on what you see in attrition, survey results and support use.
+- **Set daily and weekly caps with a clinical partner.** There's no agreed, evidence-based number for how much is too much, so the cap is a decision you make with a clinician and write down, not a figure you borrow. The Technology Coalition's guidebook says limiting time exposed to child sexual abuse material is key, without naming a figure ([Employee Resilience Guidebook](https://cdn.icmec.org/wp-content/uploads/2023/04/TechnologyCoalitionEmployeeResilienceGuidebookV2January2015.pdf)). Start with your clinician's advice, then adjust on what you see in attrition, survey results and support use.
 - **Decide what happens at the cap.** The person moves to lower-exposure work, with no loss of pay or standing. If hitting the cap costs people anything, they'll hide their hours.
 - **Alert leads before someone reaches the cap**, not after.
 - **Report the spread and the number of people over the cap.** Averages hide individuals. A team can average well under the cap while the few people trained for the child-safety queue sit far above it.
@@ -96,6 +96,9 @@ A general employee assistance program, the counseling benefit offered to all sta
 - **Debriefs after severe cases.** After a self-harm emergency or a child safety case, offer a debrief and counseling, give time away from high-severity queues, and check exposure across the team. The tabletop scenario [The post six friends saw](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/emergency.md) rehearses that call.
 - **Colleagues and meaning.** In Spence's survey, the results suggested that supportive colleagues and feedback about the importance of the role softened the link between exposure and distress. Build time for peers to talk, and tell reviewers what their decisions led to: a child safeguarded, a network removed, a report that reached the right people.
 - **Trained managers who model it.** Leads should know the signs of secondary trauma and what to do next, and should take their own breaks and talk about it. When leads do, everyone else feels able to. UNI's protocols ask for trauma-informed training for supervisors as well as moderators.
+
+<!-- STORY: a lead modelling the break: what it looked like on the team when the lead stepped off a severe queue and said so, and what changed in how reviewers used the opt-out -->
+
 - **After they leave.** Support shouldn't end on someone's last day. The [maturity model](https://github.com/stevenmacchia/ts-maturity-model) treats support after people leave review roles as the mark of a leading program.
 
 ### 6. Treat data labeling and AI training review as moderation work
@@ -190,4 +193,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-03.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE).
+*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE).
