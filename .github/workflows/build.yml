@@ -13,11 +13,10 @@ jobs:
       # one so the build runs; the real check against that list happens on the author's machine before publishing.
       - run: mkdir -p ../_build && touch ../_build/blocked-terms.txt
       - run: node build.js
-      # chapters.json and search.json carry the build date; pin it to the committed one so only real drift fails.
+      # chapters.json carries the build date; pin it to the committed one so only real drift fails.
       - run: |
-          for f in chapters.json search.json; do
-            old=$(git show HEAD:docs/$f | grep -o -m1 '"generated": *"[0-9-]*"')
-            sed -i "0,/\"generated\": *\"[0-9-]*\"/s//$old/" docs/$f
-          done
-      # Fails if the committed docs/ is not what the committed sources build to.
-      - run: git diff --exit-code -- docs/
+          old=$(git show HEAD:docs/chapters.json | grep -o -m1 '"generated": *"[0-9-]*"')
+          sed -i "0,/\"generated\": *\"[0-9-]*\"/s//$old/" docs/chapters.json
+      # Fails if the committed docs/ is not what the committed sources build to. search.json is left out: it also reads
+      # ../linkedin-posts and ../stevenmacchia.github.io, which are separate repos not present on the runner.
+      - run: git diff --exit-code -- docs/ ':!docs/search.json'
