@@ -11,7 +11,7 @@ jobs:
         with: {node-version: 22}
       # build.js reads ../_build/blocked-terms.txt, a private list kept outside this repo. The runner gets an empty
       # one so the build runs; the real check against that list happens on the author's machine before publishing.
-      - run: mkdir -p ../_build && : > ../_build/blocked-terms.txt
+      - run: mkdir -p ../_build && touch ../_build/blocked-terms.txt
       - run: node build.js
       # chapters.json and search.json carry the build date; pin it to the committed one so only real drift fails.
       - run: |
