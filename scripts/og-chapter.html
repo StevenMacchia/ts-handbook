@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>og</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+body{font-family:Inter,sans-serif;color:#15172B;background:
+  radial-gradient(760px 420px at 78% -12%, rgba(109,93,246,.32), transparent 62%),
+  radial-gradient(560px 360px at 14% -4%, rgba(255,160,120,.30), transparent 60%),#F7F8FC;position:relative}
+.top{position:absolute;left:72px;right:72px;top:64px;display:flex;align-items:center;gap:12px;font-size:22px;font-weight:600}
+.top i{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#6D5DF6,#FF9A7A);flex:none}
+.top span{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:19px;font-weight:500;color:#636A85}
+.eyebrow{position:absolute;left:72px;right:72px;top:158px;font-family:"IBM Plex Mono",monospace;font-size:21px;font-weight:500;color:#6D5DF6;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+h1{position:absolute;left:72px;right:72px;top:206px;margin:0;line-height:1.16;letter-spacing:-.03em;font-weight:800;
+  background:linear-gradient(100deg,#15172B 45%,#6D5DF6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.foot{position:absolute;left:72px;right:72px;bottom:60px;padding-top:26px;border-top:1px solid rgba(21,23,43,.12);display:flex;align-items:center;gap:18px}
+.foot b{font-weight:600;font-size:19px;color:#15172B}
+.foot span{margin-left:auto;color:#636A85;font-size:19px;font-family:"IBM Plex Mono",monospace}
+</style></head><body>
+<div class="top"><i></i>Steven Macchia<span>The T&amp;S Handbook</span></div>
+<div class="eyebrow" id="e"></div>
+<h1 id="t"></h1>
+<div class="foot"><b>A free, open handbook</b><span>stevenmacchia.com/ts-handbook</span></div>
+<script>
+var p = new URLSearchParams(location.search);
+var title = p.get('title') || '';
+var h1 = document.getElementById('t');
+h1.textContent = title;
+document.getElementById('e').textContent = p.get('eyebrow') || '';
+var len = title.length;
+var size = len > 70 ? 56 : len > 52 ? 64 : len > 34 ? 76 : len > 22 ? 88 : 104;
+h1.style.fontSize = size + 'px';
+</script>
+</body></html>
