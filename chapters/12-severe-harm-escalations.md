@@ -109,7 +109,7 @@ Either way, the first move is the same: the account can no longer reach children
 
 A quiet restriction still means no messages, friend requests, gifts or new private channels with minors, and no uploads. It isn't leaving the account as it was.
 
-<!-- STORY: a severe case where the account decision was the hard part: what law enforcement asked for, how long the quiet restriction ran, and what the network turned out to be -->
+> **Story.** I set up a gaming platform's NCMEC partnership and the escalation workflows for child safety and severe abuse, and the escalations I handle now run through NCMEC, our legal counsel and the authorities. The report is the start of the work, not the end of it. After it come the investigation, the preservation requests and the law enforcement inquiries, and each of those needs the account's history, its contacts and what it uploaded to still be there when someone asks. That's the practical case for deciding the account on purpose: cut every path to a child the same day, then keep the record whole for whoever asks next.
 
 
 Mapping the network means following the signals: shared devices, payment details, sign-up patterns, gift history and who the account contacted. In the tabletop's [The gifts that weren't gifts](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/gifting.md), one parent's report leads to 40 other child accounts and six linked adult accounts. The strongest response reviews all of them and reaches the other families through their parent accounts. Offenders work across services too, so share signals through programs such as the Tech Coalition's [Lantern](https://technologycoalition.org/programs/lantern/) where you're eligible.
