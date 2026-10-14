@@ -1,0 +1,7 @@
+# Keep LF on every checkout (Windows and Linux runners) so the built docs/ compare byte for byte.
+build.js text=auto eol=lf
+package.json text=auto eol=lf
+README.md text=auto eol=lf
+chapters/** text=auto eol=lf
+data/** text=auto eol=lf
+docs/** text=auto eol=lf
