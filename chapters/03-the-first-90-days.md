@@ -53,7 +53,7 @@ The output is a one-page map of how safety works today and a short list of gaps,
 
 My default when building from scratch: close the worst gaps first. Learning how everything else works runs alongside it, but a missing reporting path for child safety or threats to life can't wait for the listening tour to finish.
 
-<!-- STORY: the first weeks of building the function from zero: which of the three gaps was open on day one, who you borrowed (an engineer, a lawyer) to close it, and how long it took -->
+> **Story.** I built a gaming platform's Trust & Safety function from zero, alongside its community, social and support functions, and I wrote the Community Standards, the enforcement procedures and the operational playbooks from scratch. The first Trust & Safety team grew out of that work. The NCMEC partnership, and the escalation workflows for child safety, severe abuse and illegal content, came in the role after, once the function existed. Knowing what I know now, I'd register with NCMEC and write the severe-harm path in the first month, before most of the other rules were written.
 
 The three gaps are the ones you'll borrow people for. Ask for an engineer for a fixed number of days and a standing hour with Legal in week one, and say what each is for. A first hire who waits for headcount before closing these is still waiting at day 90.
 

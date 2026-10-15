@@ -67,7 +67,7 @@ Here's an illustration of the arithmetic, from the metrics framework's worked ex
 
 Be honest about what it is. Present revenue at risk as a range, and call it an association unless you've run a proper causal analysis. An overclaimed number is the fastest way to lose the room the second time.
 
-<!-- STORY: the budget case that got a yes: which number did it (a cohort gap, an incident, a legal deadline), who in the room it persuaded, and what the first ask that failed had been missing -->
+> **Story.** The case I'd point to is a platform-wide user reputation system, a zero-to-one build I led. The projection attached to it was more than $1M a year in savings, with better moderation efficiency and enforcement accuracy next to the saving rather than instead of it. One number of that size, stated as an outcome with a price, does more in the room than any volume chart, and the system got built. What I'd add now is the second half of this step: the retention gap beside the cost saving, so the ask carries a revenue number as well as a cost one.
 
 Once safety exposure is a standard cut on the retention dashboard ([chapter 11](11-measuring-what-matters.md)), the revenue case is updated every month without anyone having to argue for it.
 
