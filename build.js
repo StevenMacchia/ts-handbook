@@ -668,7 +668,7 @@ main a[href^="http"]::after{content:" (" attr(href) ")";font-family:"IBM Plex Mo
 }`;
 
 const ICON = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="#121212"/><text x="16" y="21.5" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">SM</text></svg>');
-const page = ({title, desc, url, depth, body, script = ""}) => {
+const page = ({title, desc, url, depth, body, script = "", image = HOME + "og-image.png", ld = []}) => {
   const up = depth ? "../" : "./";
   return `<!doctype html>
 <html lang="en">
@@ -681,8 +681,9 @@ const page = ({title, desc, url, depth, body, script = ""}) => {
 <link rel="canonical" href="${url}">
 <link rel="alternate" type="application/atom+xml" title="The T&amp;S Handbook: updates" href="${SITE}updates/feed.xml">
 <meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
-<meta property="og:url" content="${url}"><meta property="og:image" content="${HOME}og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${HOME}og-image.png">
+<meta property="og:url" content="${url}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${image}">
+${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o).split("<").join(String.fromCharCode(92) + "u003c")}</script>`).join(String.fromCharCode(10))}
 <meta name="theme-color" content="#6D5DF6">
 <link rel="icon" href="${ICON}">
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${ANALYTICS}"}'></script>
@@ -868,8 +869,12 @@ ${sidebar}
 ${whatsNew}`;
 
 /* ---------- Write ---------- */
+// Chapter share cards survive the wipe: keep the PNGs in memory, scripts/cards.js puts them back or re-renders them
+const OLD_CARDS = {};
+for (const c of CH) { const f = path.join(OUT, c.slug, "card.png"); if (fs.existsSync(f)) OLD_CARDS[c.slug] = fs.readFileSync(f); }
 fs.rmSync(OUT, {recursive: true, force: true});
 fs.mkdirSync(OUT, {recursive: true});
+const CARDS = require("./scripts/cards.js")({root: ROOT, out: OUT, chapters: CH, parts: PARTS, old: OLD_CARDS});
 fs.writeFileSync(path.join(OUT, ".nojekyll"), "");
 fs.writeFileSync(path.join(OUT, "index.html"), page({title: "The T&S Handbook · Steven Macchia", desc: "How to build and run a Trust & Safety team, from the first hire to a regulated program at scale. A free, open handbook in progress by Steven Macchia.", url: SITE, depth: 0, body: indexBody, script: INDEX_JS + "\n" + SEARCH_JS + "\n" + PROGRESS_HOME_JS}));
 
@@ -988,7 +993,19 @@ ${changes}<section><div class="wrap"><nav class="pn" aria-label="Chapters">${pre
 </div>`;
   const glossed = wrapProseGlossary(body, new Set()); // first occurrence of each term, within this chapter's prose only
   fs.mkdirSync(path.join(OUT, c.slug), {recursive: true});
-  fs.writeFileSync(path.join(OUT, c.slug, "index.html"), page({title: `${c.n}. ${c.title} · The T&S Handbook`, desc: c.q, url: SITE + c.slug + "/", depth: 1, body: glossed, script: SEARCH_JS + "\n" + COPY_JS + "\n" + PRINT_JS + "\n" + DOWNLOAD_JS + "\n" + OUTLINE_JS + "\n" + progressChapterJS(c.slug, lastId)}));
+  // Structured data: Article (dates from the change log: first entry is publication, the chapter's updated date is the modification) and BreadcrumbList
+  const chUrl = SITE + c.slug + "/", cardUrl = CARDS.have[c.slug] ? chUrl + "card.png" : HOME + "og-image.png";
+  const firstDate = c.changes.length ? c.changes[c.changes.length - 1].date : c.updatedAt;
+  const person = {"@type": "Person", name: "Steven Macchia", url: HOME};
+  const ld = [{"@context": "https://schema.org", "@type": "Article", headline: c.title, description: c.q, author: person, publisher: person,
+    ...(firstDate ? {datePublished: firstDate} : {}), ...(c.updatedAt ? {dateModified: c.updatedAt} : {}),
+    mainEntityOfPage: {"@type": "WebPage", "@id": chUrl}, image: [cardUrl], url: chUrl, inLanguage: "en", isPartOf: {"@type": "Book", name: "The T&S Handbook", url: SITE},
+    license: "https://creativecommons.org/licenses/by/4.0/"},
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+      {"@type": "ListItem", position: 1, name: "The T&S Handbook", item: SITE},
+      {"@type": "ListItem", position: 2, name: `Part ${c.part + 1}: ${PARTS[c.part]}`, item: SITE + "#contents"},
+      {"@type": "ListItem", position: 3, name: `${c.n}. ${c.title}`, item: chUrl}]}];
+  fs.writeFileSync(path.join(OUT, c.slug, "index.html"), page({title: `${c.n}. ${c.title} · The T&S Handbook`, desc: c.q, url: chUrl, depth: 1, image: cardUrl, ld, body: glossed, script: SEARCH_JS + "\n" + COPY_JS + "\n" + PRINT_JS + "\n" + DOWNLOAD_JS + "\n" + OUTLINE_JS + "\n" + progressChapterJS(c.slug, lastId)}));
 }
 
 /* ---------- Search index: one combined index for all three properties (the handbook, the writing page and the Workbench) ----------
@@ -1120,3 +1137,11 @@ fs.writeFileSync(path.join(OUT, "chapters.json"), JSON.stringify({generated: TOD
   chapters: CH.map(c => ({n: c.n, slug: c.slug, title: c.title, question: c.q, part: c.part + 1, status: c.status, updated: c.updatedAt || null, posts: c.posts.length, url: SITE + c.slug + "/"}))}, null, 1) + "\n");
 console.log(`built ${CH.length} chapters, the updates page, the glossary (${GLOSSARY.length} terms) and the feed into docs/ (${published} published, ${drafted} unreviewed, ${UPDATES.length} updates, ${POSTS.length} posts)`);
 console.log(`search.json: ${SEARCH_INDEX.items.length} items (${chapterItems.length} chapters, ${postItems.length} posts, ${toolItems.length} tools, ${updateItems.length} updates), ${(fs.statSync(path.join(OUT, "search.json")).size / 1024).toFixed(1)} KB`);
+
+/* ---------- sitemap.xml and robots.txt ---------- */
+const lastUpdate = UPDATES.length ? UPDATES[0].date : TODAY;
+const siteLastmod = [lastUpdate, ...CH.map(c => c.updatedAt)].filter(Boolean).sort().pop();
+const SITEMAP = [[SITE, siteLastmod], ...CH.map(c => [SITE + c.slug + "/", c.updatedAt]), [SITE + "updates/", lastUpdate], [SITE + "glossary/", ""]];
+fs.writeFileSync(path.join(OUT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${SITEMAP.map(([u, d]) => `  <url><loc>${u}</loc>${d ? `<lastmod>${d}</lastmod>` : ""}</url>`).join("\n")}\n</urlset>\n`);
+fs.writeFileSync(path.join(OUT, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE}sitemap.xml\n`);
+console.log(`sitemap.xml: ${SITEMAP.length} urls; chapter cards: ${CARDS.present}/${CH.length} present (${(CARDS.bytes / 1024 / 1024).toFixed(2)} MB total), ${CARDS.rendered} (re)rendered this run${CARDS.failed ? `, ${CARDS.failed} FAILED` : ""}`);
