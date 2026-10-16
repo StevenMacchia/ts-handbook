@@ -19,6 +19,8 @@ Any product where people meet, talk, trade or create will be misused by some of 
 
 Without a clear purpose, the function drifts into one of two shapes. It becomes a support queue that reacts to whatever gets reported, or a removal machine judged by throughput. Neither can tell leadership whether users are safer.
 
+When the function works, it's invisible. Users aren't being harassed, scammed or groomed, and the company isn't facing regulator letters, fines, lawsuits or ugly headlines. Protecting users and protecting the company are the same work, and the better it's done, the less anyone sees it. So the program needs outcome numbers that show what didn't happen ([chapter 11](11-measuring-what-matters.md)), or it becomes an easy line to cut in a tough quarter ([chapter 19](19-budgets-roadmaps-and-making-the-case.md)).
+
 The cost shows up in the business, not just in user harm. In a 2023 white paper from Take This, using survey data Nielsen collected from 2,328 players in North America, 61% said they had at least once decided not to spend money in a game because of how other players treated them, and 60% had quit a match or a game because of harassment or hate ([Take This, Toxic Gamers Are Alienating Your Core Demographic](https://www.takethis.org/wp-content/uploads/2023/08/ToxicGamersBottomLineReport_TakeThis.pdf)).
 
 Parts of the job are also law now. In the EU, the Digital Services Act requires hosting services to let anyone flag illegal content (Article 16) and to explain each restriction to the user with a statement of reasons (Article 17) ([Regulation (EU) 2022/2065](https://eur-lex.europa.eu/eli/reg/2022/2065/oj)). In the UK, the Online Safety Act requires user-to-user services to assess the risk of illegal content on their service ([section 9](https://www.legislation.gov.uk/ukpga/2023/50/section/9)) and to let users report it easily ([section 20](https://www.legislation.gov.uk/ukpga/2023/50/section/20)). The question has moved from "do you have a policy?" to "can you prove it works?"
@@ -201,6 +203,7 @@ You don't need all of them at once. An early team picks the one north star that 
 
 From Steven's writing:
 
+- **[A good Trust & Safety program is invisible](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-leadership-onlinesafety-share-7516517440193933313-TnPy/)** (Oct 15, 2026): When Trust & Safety works, neither users nor the company get hurt, so nobody sees it and leadership finds it easy to devalue and cut. Make it visible by measuring what didn't happen: exposure to harm, repeat offenders, time to action on the worst cases, and what users who ran into harm do next.
 - **[What I'd tell myself in year one of Trust & Safety](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-contentmoderation-share-7513978054688395266-P3DE/)** (Oct 8, 2026): Five lessons from more than ten years in the field: treat safety as a systems problem built into the product, don't treat a ban as a closed case, measure what users experience rather than how busy the team was, let automation earn its scope, and give every risk one named owner.
 - **[Harassed players look like your best-retained users](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/)** (Oct 1, 2026): Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.
 - **[Activity is easy to measure. Impact is harder.](https://www.linkedin.com/posts/stevenmacchia_if-your-team-took-down-40-more-harmful-content-share-7508565523224432642-JJno/)** (Sep 23, 2026): A 40% jump in removals could mean better detection, more harm or over-enforcement. Report outcome metrics next to operational ones, and tell leadership when they disagree.
@@ -215,4 +218,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-15. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.

@@ -74,7 +74,6 @@ Where to start depends on the size of your team. For a small team, clear-cut, hi
 
 > **Story.** On a short-form video platform, automation earned its scope in stages. It started as AI-assisted detection with a person deciding: the system surfaced the nuanced and high-risk cases, and a trained reviewer closed them. Then I led the migration of AI-assisted moderation and scanning for visual and text content, and with it defined the safety use cases, the escalation logic and the success metrics the automation would be judged on. Today that scanning covers billions of items a month, with OCR, image, video and audio vendors working alongside human review, and the part of the job that doesn't go away is evaluating what it gets wrong and where a person still has to sit.
 
-
 The fastest way to know whether automation has started getting things wrong is already in your data: the decisions users contest and win. Broken out by policy area, enforcement source and market, appeal overturns show where guidance is unclear, where automated decisions hold up worse than human review, where language and context are getting lost, and where a model has drifted. They often show drift weeks before anything else does.
 
 A few rules I'd put in place:

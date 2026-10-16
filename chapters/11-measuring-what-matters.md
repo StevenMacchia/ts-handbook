@@ -15,7 +15,7 @@
 
 ## Why it matters
 
-What gets measured gets resourced. When a program is rewarded for activity, it optimizes for activity: more removals, more reports closed, a higher automation rate. Those numbers are easy to produce and almost always go up and to the right. None of them says whether users are safer, so a safety team measured only by throughput gets judged like a cost center.
+What gets measured gets resourced. When a program is rewarded for activity, it optimizes for activity: more removals, more reports closed, a higher automation rate. Those numbers are easy to produce and almost always go up and to the right. None of them says whether users are safer, so a safety team measured only by throughput gets judged like a cost center. It gets harder when the program works, because success is an absence: harm that didn't reach people, offenders who didn't come back. Outcome metrics are how you count what didn't happen.
 
 The outcomes are real and measurable. In a 2023 Take This report based on a Nielsen poll of 2,328 teens and adults in North America, 61% of players said they had at least once decided not to spend money in a game because of how other players treated them, and 60% had quit a match or a game because of harassment and hate ([Take This, 2023](https://www.takethis.org/wp-content/uploads/2023/08/ToxicGamersBottomLineReport_TakeThis.pdf)). But surveys rarely move a budget. Your own data does, if it's cut correctly.
 
@@ -217,6 +217,7 @@ Activity is easy to measure. Impact is harder.
 
 From Steven's writing:
 
+- **[A good Trust & Safety program is invisible](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-leadership-onlinesafety-share-7516517440193933313-TnPy/)** (Oct 15, 2026): When Trust & Safety works, neither users nor the company get hurt, so nobody sees it and leadership finds it easy to devalue and cut. Make it visible by measuring what didn't happen: exposure to harm, repeat offenders, time to action on the worst cases, and what users who ran into harm do next.
 - **[What I'd tell myself in year one of Trust & Safety](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-contentmoderation-share-7513978054688395266-P3DE/)** (Oct 8, 2026): Five lessons from more than ten years in the field: treat safety as a systems problem built into the product, don't treat a ban as a closed case, measure what users experience rather than how busy the team was, let automation earn its scope, and give every risk one named owner.
 - **[Harassed players look like your best-retained users](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/)** (Oct 1, 2026): Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.
 - **[Appeal overturns: the early warning for automation](https://www.linkedin.com/posts/stevenmacchia_as-more-enforcement-moves-to-automation-share-7508900187977854976-DLyv/)** (Sep 24, 2026): Overturned appeals show drift weeks before anything else. Automation expands only where its overturn rate matches human review, and changes roll back when the rate moves.
@@ -231,4 +232,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-15. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.

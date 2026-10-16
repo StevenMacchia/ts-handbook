@@ -111,7 +111,6 @@ A quiet restriction still means no messages, friend requests, gifts or new priva
 
 > **Story.** I set up a gaming platform's NCMEC partnership and the escalation workflows for child safety and severe abuse, and the escalations I handle now run through NCMEC, our legal counsel and the authorities. The report is the start of the work, not the end of it. After it come the investigation, the preservation requests and the law enforcement inquiries, and each of those needs the account's history, its contacts and what it uploaded to still be there when someone asks. That's the practical case for deciding the account on purpose: cut every path to a child the same day, then keep the record whole for whoever asks next.
 
-
 Mapping the network means following the signals: shared devices, payment details, sign-up patterns, gift history and who the account contacted. In the tabletop's [The gifts that weren't gifts](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/gifting.md), one parent's report leads to 40 other child accounts and six linked adult accounts. The strongest response reviews all of them and reaches the other families through their parent accounts. Offenders work across services too, so share signals through programs such as the Tech Coalition's [Lantern](https://technologycoalition.org/programs/lantern/) where you're eligible.
 
 If law enforcement asks you not to alert the account holder, Legal handles the request and records it. Some court orders forbid you from telling anyone about a request ([18 U.S.C. § 2705(b)](https://www.law.cornell.edu/uscode/text/18/2705)). Nothing about a quiet restriction should leave a child exposed while you wait.
@@ -226,6 +225,7 @@ Track time from confirmation to report at p50 and p90, how complete reports are,
 
 ## Do it with
 
+- **[Child-safety reporting](https://stevenmacchia.com/ts-workbench/#reporting)**: Check whether you can remove, preserve, report and handle the account the way the law in each of your markets requires, and leave with the first-hour procedure, a preservation policy, a law-enforcement requests procedure and a memo for Legal.
 - **[Incident tabletop](https://stevenmacchia.com/ts-workbench/#tabletop)**: Rehearse a crisis, with a lesson and the law behind every call. [Open content](https://github.com/stevenmacchia/incident-tabletop)
 - **[The post six friends saw](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/emergency.md)**: A teenager posts that they'll end their life tonight, then police ask for data without a warrant.
 - **[The gifts that weren't gifts](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/gifting.md)**: An adult grooms an 11-year-old with in-game gifts, and one account leads to a network.

@@ -51,7 +51,6 @@ If a notice does only one thing, it should name the exact rule and what the pers
 
 <!-- STORY: what changed in appeals or support volume when notices started naming the exact rule and the specific content, instead of "you broke our guidelines" -->
 
-
 The DSA lists what a statement of reasons must contain ([Article 17(3)](https://eur-lex.europa.eu/eli/reg/2022/2065/oj)). Each element has a plain-language version a user can act on:
 
 | DSA element | In the notice | What good looks like |

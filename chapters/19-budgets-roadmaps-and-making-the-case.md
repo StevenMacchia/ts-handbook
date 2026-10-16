@@ -17,6 +17,8 @@
 
 What gets measured gets resourced. When a program is rewarded for activity, it optimizes for activity, and when it asks for money with activity, the answer is usually a question about doing the same work more cheaply. Activity numbers almost always go up and to the right, so on a budget slide the program looks like a growing cost with no visible return.
 
+Success makes the case harder still. When the program works, nothing happens: users aren't harassed, scammed or groomed, and the company gets no regulator letters, fines, lawsuits or ugly headlines, no advertisers or partners walking away, and no app store trouble. Nobody sees what didn't happen, so leadership can find the program easy to devalue, and it becomes an easy line to cut in a tough quarter, right up until something goes wrong. The answer is to measure what didn't happen, which steps 2 and 3 cover.
+
 The return is real, but it hides. In raw retention data, harassed players often look like some of the best-retained users, because they chat more, queue more and play longer, so they run into more abuse. A team that stops there concludes toxicity doesn't hurt retention, and the safety budget conversation ends before it starts. Players say otherwise: in a 2023 Take This report based on a Nielsen poll of 2,328 teens and adults in North America, 61% said they had at least once decided not to spend money in a game because of how other players treated them ([Take This, 2023](https://www.takethis.org/wp-content/uploads/2023/08/ToxicGamersBottomLineReport_TakeThis.pdf)). But surveys rarely move a budget. A company's own data does, if it's cut correctly.
 
 ## What good looks like
@@ -137,6 +139,7 @@ Every cut accepts a risk, so treat it like any accepted risk ([chapter 15](15-wo
 ## Mistakes to avoid
 
 - **Defending the budget with volume.** Lead with outcomes and risk, and keep volume in the operations review.
+- **Letting a quiet year argue for cuts.** Nothing going wrong is the result the budget paid for. Show what didn't happen: exposure to harm, repeat offenders, time to action on the worst cases and the retention gap.
 - **Showing raw retention data.** Build the matched cohort first, or harassment will look like it improves retention.
 - **Claiming causation from a correlation.** Present a range, and call it an association unless you've run a causal analysis.
 - **Optimizing cost per decision alone.** Show it next to QA agreement, and count rework and appeals.
@@ -188,6 +191,7 @@ Every cut accepts a risk, so treat it like any accepted risk ([chapter 15](15-wo
 
 From Steven's writing:
 
+- **[A good Trust & Safety program is invisible](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-leadership-onlinesafety-share-7516517440193933313-TnPy/)** (Oct 15, 2026): When Trust & Safety works, neither users nor the company get hurt, so nobody sees it and leadership finds it easy to devalue and cut. Make it visible by measuring what didn't happen: exposure to harm, repeat offenders, time to action on the worst cases, and what users who ran into harm do next.
 - **[Harassed players look like your best-retained users](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-gamedev-userretention-share-7511499525035847680-wRsb/)** (Oct 1, 2026): Raw retention data hides the cost of toxicity because harassed players are the most engaged. A matched cohort shows it, and safety exposure belongs on the retention dashboard.
 - **[Activity is easy to measure. Impact is harder.](https://www.linkedin.com/posts/stevenmacchia_if-your-team-took-down-40-more-harmful-content-share-7508565523224432642-JJno/)** (Sep 23, 2026): A 40% jump in removals could mean better detection, more harm or over-enforcement. Report outcome metrics next to operational ones, and tell leadership when they disagree.
 
@@ -200,4 +204,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-15. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.

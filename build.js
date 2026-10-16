@@ -36,7 +36,7 @@ const CH = fs.readdirSync(path.join(ROOT, "chapters")).filter(f => /^\d\d-.+\.md
   const updated = (footer.match(/Last (?:updated|reviewed): (\d{4}-\d{2}-\d{2})/) || [])[1];
   // A separate, honest "reviewed" date: only set when the footer says so explicitly, never guessed
   const reviewed = (footer.match(/Last reviewed: (\d{4}-\d{2}-\d{2})/) || [])[1] || "";
-  const body = lines.slice(1, end).filter(l => l !== lines[0] && !/^> \*\*.+\*\*$/.test(l) && l !== nav && l !== forLine && !/^\*\*Status: /.test(l)).join("\n").replace(/<!--[\s\S]*?-->[ \t]*\n?/g, "").trim(); // HTML comments (author notes such as STORY placeholders) never reach the page or the search index
+  const body = lines.slice(1, end).filter(l => l !== lines[0] && !/^> \*\*.+\*\*$/.test(l) && (!nav || l !== nav) && (!forLine || l !== forLine) && !/^\*\*Status: /.test(l)).join("\n").replace(/<!--[\s\S]*?-->[ \t]*\n?/g, "").trim(); // HTML comments (author notes such as STORY placeholders) never reach the page or the search index
   // A chapter that discusses law says so in its footer; its page then shows the legal notice under the title
   const legal = /not legal advice/i.test(footer);
   return {file, n: +n, slug: file.slice(3, -3), title, q, part, forText, body, updated, reviewed, legal, status: STATUS[file] || "Outline"};
@@ -53,7 +53,8 @@ const WORKBENCH_LINK = {
   "crisis-response": ["tabletop", "incident tabletop"],
   "measuring-what-matters": ["metrics", "metrics framework"],
   "know-your-risks": ["premortem", "abuse pre-mortem"],
-  "child-safety-and-age-assurance": ["coppa", "COPPA/child-safety check"],
+  "child-safety-and-age-assurance": ["grooming", "grooming pathway review"],
+  "severe-harm-escalations": ["reporting", "child-safety reporting check"],
   "regulation-and-compliance": ["dsa", "DSA readiness"],
   "transparency-reports-and-notices": ["transparency", "transparency report builder"],
   "budgets-roadmaps-and-making-the-case": ["maturity", "maturity model"],
@@ -1026,8 +1027,11 @@ const TOOLS = [
   {route: "maturity", title: "Program maturity", summary: "Rate your program in eight areas and get a roadmap for the biggest gaps."},
   {route: "coverage", title: "Coverage radar", summary: "See where your products' risk outruns the defenses you have in place."},
   {route: "tabletop", title: "Incident tabletop", summary: "Rehearse a crisis and learn from every call, with the law behind it."},
+  {route: "postmortem", title: "Incident post-mortem", summary: "After a real incident, write a blameless post-mortem in fifteen minutes: a one-page document, a grade for the response, and three actions with owners and dates."},
   {route: "policy", title: "Policy stress-tester", summary: "Paste a rule to find vague words, missing exceptions and hard edge cases."},
   {route: "coppa", title: "COPPA readiness", summary: "Check children's privacy against the amended Rule, with drafts for Legal."},
+  {route: "grooming", title: "Grooming pathway review", summary: "See how an adult could reach a child through your product's features, and what's in the way at each of six stages."},
+  {route: "reporting", title: "Child-safety reporting", summary: "Check whether you can remove, preserve, report and handle the account when you find child sexual exploitation, market by market."},
   {route: "dsa", title: "DSA readiness", summary: "Find which EU Digital Services Act duties apply to you, article by article, with drafts for Legal."},
   {route: "vendors", title: "Vendor scorecard", summary: "Choose a moderation vendor on evidence, with RFP questions."},
   {route: "eval", title: "Classifier eval", summary: "Build a labeled test set from a rule and see where a moderation classifier fails, with what to change."},

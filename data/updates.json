@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-10-15",
+    "kind": "revised",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "measuring-what-matters"
+    ],
+    "post": "eAvrx38s",
+    "summary": "Added that good Trust & Safety is invisible because users and the company aren't getting hurt, and that outcome metrics are how you count what didn't happen."
+  },
+  {
+    "date": "2026-10-15",
+    "kind": "revised",
+    "chapters": [
+      "budgets-roadmaps-and-making-the-case"
+    ],
+    "post": "eAvrx38s",
+    "summary": "Added why a program that works is easy to cut: success means nothing happens, so nobody sees it. Measure what didn't happen, and don't let a quiet year argue for cuts."
+  },
+  {
     "date": "2026-10-13",
     "kind": "revised",
     "chapters": [

@@ -162,6 +162,8 @@ Completion rate (how many users finished an age check) is a weak metric on its o
 
 ## Do it with
 
+- **[Grooming pathway review](https://stevenmacchia.com/ts-workbench/#grooming)**: Map how an adult could find, reach, bond with, isolate and exploit a child through your product's features, see what's in the way at each stage, and leave with a product brief on safe defaults, a response ladder, a leadership page and starter rules.
+- **[Child-safety reporting](https://stevenmacchia.com/ts-workbench/#reporting)**: Check the first hour after a case against the reporting duties in each of your markets.
 - **[COPPA readiness](https://stevenmacchia.com/ts-workbench/#coppa)**: Check a service against the US COPPA Rule's duties for children under 13.
 - **[Abuse pre-mortem](https://stevenmacchia.com/ts-workbench/#premortem)**: Profile a product and see its child safety risks and safeguards before launch. [Open content](https://github.com/stevenmacchia/abuse-premortem)
 - **[Incident tabletop](https://stevenmacchia.com/ts-workbench/#tabletop)**: Rehearse [The gifts that weren't gifts](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/gifting.md) (a kids' multiplayer game), [The gift card ultimatum](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/sextortion.md) (sextortion on a teen social app) and [The 15-year-old on the app](https://github.com/stevenmacchia/incident-tabletop/blob/main/scenarios/minor.md) (a minor on an 18+ service).

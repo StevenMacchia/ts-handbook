@@ -93,7 +93,6 @@ Each row has an owner, and the register as a whole needs one too. Often the risk
 
 <!-- STORY: the first time the duty register was built: which duty turned out to have no owner, or two, and how it was found -->
 
-
 T&S owns the processes and the evidence, Product and Engineering build what's missing, and whoever plays the compliance role keeps the register honest. Very large platforms must set up a compliance function independent of operations ([Article 41](https://eur-lex.europa.eu/eli/reg/2022/2065/oj)). [Chapter 8](08-hiring-and-structuring-the-team.md) covers where that role sits.
 
 The test of a row: could its owner show a regulator the evidence within a day? For statements of reasons, that could be a monthly sample of notices checked against the list in DSA Article 17 ([chapter 17](17-transparency-reports-and-notices.md)). For a UK risk assessment, it's the written record section 23 requires. If the answer is no, the row is a gap with a date, not a tick.
