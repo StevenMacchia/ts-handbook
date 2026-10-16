@@ -190,6 +190,7 @@ Make that a process, not a hope:
 
 From Steven's writing:
 
+- **[Every public safety claim is something someone can test](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-compliance-share-7516878246228066304-lb45/)** (Oct 16, 2026): State attorneys general are testing whether what platforms told parents about safety matches what happened, as in Florida's new consumer protection suit against Discord. Give one person the list of public safety claims, attach the evidence behind each, be exact about age checks, and recheck the list whenever the product changes.
 - **[What I'm reading: Ofcom and Instagram Instants, Ofcom's data demands in court, and Roblox in Kansas](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-share-7513201109180813312-FxKX/)** (Oct 6, 2026): Ofcom is investigating whether Meta risk-assessed Instagram Instants before launch, and Meta, TikTok and X are challenging Ofcom's demands for moderation data in court. Kansas settled with Roblox for more than $10 million plus age checks and age-grouped chat, and OpenAI's own tests show its new EU text watermark weakens when 10% of the words are swapped.
 
 Outside sources:

@@ -83,9 +83,9 @@ Then measure the review itself, with the two numbers in [chapter 2](02-know-your
 
 Public safety claims are litigation evidence. What Comms says has to match what enforcement actually does.
 
-In the US, the Federal Trade Commission Act declares unfair or deceptive acts or practices in commerce unlawful ([15 U.S.C. § 45](https://www.law.cornell.edu/uscode/text/15/45)), and state attorneys general bring cases under their own consumer protection laws, as New Mexico did. A safety claim that enforcement can't back up is a deception claim waiting to happen.
+In the US, the Federal Trade Commission Act declares unfair or deceptive acts or practices in commerce unlawful ([15 U.S.C. § 45](https://www.law.cornell.edu/uscode/text/15/45)), and state attorneys general bring cases under their own consumer protection laws, as New Mexico did. Much of the current US pressure on games and chat platforms comes this way. In October 2026, Florida's attorney general sued Discord under the state's Deceptive and Unfair Trade Practices Act, alleging it marketed itself as safe for minors, and asked for an order barring it from doing so without real age verification ([Florida Attorney General](https://www.myfloridalegal.com/newsrelease/attorney-general-james-uthmeier-files-lawsuit-against-discord-deceiving-florida)). New Jersey brought a similar suit in 2025 ([New Jersey Attorney General](https://www.njoag.gov/ag-platkin-sues-messaging-app-discord-for-unlawful-practices-that-expose-nj-kids-to-child-predators-and-violent-sexual-content/)). These are allegations, and neither case has been decided. The question in each is whether what the company told parents matches what happened on the platform. A safety claim that enforcement can't back up is a deception claim waiting to happen.
 
-So keep a register of every public safety claim: on the website, in help pages, in app store listings, in press statements and in answers to regulators. For each one, record the evidence behind it, who owns it and when it was last checked. When enforcement changes, such as an automation rollback, a vendor change or a policy shift, check which claims it touches.
+So keep a register of every public safety claim: on the website, in help pages, in app store listings, in press statements, in answers to regulators, and in the sales and partner decks nobody remembers sending. Give one person the list, and build it with Legal and Marketing in the room. For each claim, attach the evidence behind it (the control, the metric, when it was last tested), and fix or soften anything that has none. Be exact about age checks, because a self-declared birthday and a verified age are different claims. Then recheck the list whenever the product changes, not only enforcement: a default flipped off can make a true sentence false without anyone touching the page. An automation rollback, a vendor change or a policy shift needs the same check ([Every public safety claim is something someone can test](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-compliance-share-7516878246228066304-lb45/)).
 
 Watch the absolutes. "Zero tolerance", "we remove all" and "never" are hard to prove and easy to disprove with one screenshot. Say what you do and how: "we use automated detection and human review to find and remove..." is a claim you can stand behind. In the incident tabletop, a "zero tolerance" statement with no details leads the reporter to note that you didn't describe any changes.
 
@@ -139,7 +139,7 @@ The board needs safety risk on the same footing as other major risks: the top ri
 - **Saying no without options.** Rank the safeguards, name owners, and say what must ship before launch and what can follow.
 - **Arguing about a safeguard forever.** Agree exit criteria up front, and decide on the date with the data.
 - **Letting risk be accepted by silence.** The product owner signs off in writing, with a date. The most serious risks go to the executive who owns safety risk.
-- **Publishing claims enforcement can't back.** Keep a claims register, avoid absolutes, and recheck claims when enforcement changes.
+- **Publishing claims enforcement can't back.** Keep a claims register, avoid absolutes, and recheck claims when the product or enforcement changes.
 - **Stamping everything "privileged".** Ask Legal what should be run under privilege, and keep facts in operational records.
 - **Reporting activity as success.** Put outcomes next to operations, and say when they disagree.
 
@@ -163,9 +163,9 @@ The board needs safety risk on the same footing as other major risks: the top ri
 |---|---|---|---|---|---|
 | | | | | | |
 
-**Public safety claims register.** Recheck whenever enforcement changes.
+**Public safety claims register.** One owner. Recheck whenever the product or enforcement changes.
 
-| Claim, as published | Where it appears | Evidence behind it | Owner | Last checked |
+| Claim, as published | Where it appears | Evidence behind it (control, metric, last tested) | Owner | Last checked |
 |---|---|---|---|---|
 | | | | | |
 
@@ -182,6 +182,7 @@ The board needs safety risk on the same footing as other major risks: the top ri
 
 From Steven's writing:
 
+- **[Every public safety claim is something someone can test](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-compliance-share-7516878246228066304-lb45/)** (Oct 16, 2026): State attorneys general are testing whether what platforms told parents about safety matches what happened, as in Florida's new consumer protection suit against Discord. Give one person the list of public safety claims, attach the evidence behind each, be exact about age checks, and recheck the list whenever the product changes.
 - **[If a regulator asked for your pre-launch risk record tomorrow](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-safetybydesign-share-7513247972571275264-_yf3/)** (Oct 6, 2026): Ofcom's investigation into whether Meta risk-assessed Instagram Instants before launch is a test any service with UK users could face. Do the assessment at design review with a named sign-off, decide how disappearing content gets reported, and file a dated record you could hand over within a day.
 - **[Launch week is the hardest test a safety program gets](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7512980609300930560-Azbb/)** (Oct 5, 2026): Most of what goes wrong in launch week is decided before day one. Pre-approve friction for new and unverified accounts, triage by severity, watch the rate of abuse rather than raw counts, and agree with product how much friction you'll accept, then review it after week one.
 - **[Since 2024, the job is proving it works](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-ageassurance-share-7512890720316203008-kHP4/)** (Oct 5, 2026): Since 2024 the question has moved from whether you have a policy to whether you can show it works: UK risk assessments that must be redone before significant changes, age assurance as the foundation, 48-hour removal of intimate images under the US TAKE IT DOWN Act, and free open-source tooling. Those duties land on different teams, so the leadership team should name one owner for the whole picture.
