@@ -80,9 +80,14 @@ const POSTS = loadJSON("data/posts.json").slice().sort((a, b) => b.date.localeCo
 const UPDATES = loadJSON("data/updates.json").map(u => ({chapters: [], post: null, ...u})).sort((a, b) => b.date.localeCompare(a.date));
 // data/glossary.json: {term, definition, link: a URL or null}. Terms that appear in handbook chapters, exported from the
 // Workbench's own term dictionary (GT_MORE / MX_GLOSS). The first occurrence of each term in each chapter's prose is wrapped
-// in <abbr class="gl" title="...">; /glossary/ lists them all.
+// in <a class="gl" href="../glossary/#id" title="..."> (keyboard focusable, and a tap opens the entry); /glossary/ lists them all.
 const GLOSSARY = loadJSON("data/glossary.json").slice().sort((a, b) => a.term.localeCompare(b.term));
 const postById = Object.fromEntries(POSTS.map(p => [p.id, p]));
+// Each post's page on stevenmacchia.com/writing/, from the site's slugs.json (the same file the search index uses). A post with
+// no slug there falls back to its LinkedIn URL rather than a link that might not exist.
+const LP_SLUGS_FILE = path.join(ROOT, "..", "stevenmacchia.github.io", "writing", "slugs.json");
+const LP_SLUGS = fs.existsSync(LP_SLUGS_FILE) ? JSON.parse(fs.readFileSync(LP_SLUGS_FILE, "utf8")).posts || {} : {};
+const postHref = p => LP_SLUGS[p.id] ? `${WRITING}${LP_SLUGS[p.id]}/` : p.url;
 {
   const bad = [];
   POSTS.forEach(p => (p.chapters || []).forEach(s => bySlug[s] || bad.push(`data/posts.json, post ${p.id}: no chapter has the slug "${s}"`)));
@@ -200,7 +205,7 @@ const glossMark = (text, used) => {
     const term = GLOSS_BY_TERM[h.raw] ? h.raw : GLOSS_BY_LOWER[h.raw.toLowerCase()];
     if (!term || used.has(term)) continue;
     used.add(term);
-    out += text.slice(last, h.i) + `<abbr class="gl" title="${esc(GLOSS_BY_TERM[term].definition)}">${text.slice(h.i, h.i + h.len)}</abbr>`;
+    out += text.slice(last, h.i) + `<a class="gl" href="../glossary/#${slugify(term)}" title="${esc(GLOSS_BY_TERM[term].definition)}">${text.slice(h.i, h.i + h.len)}</a>`;
     last = h.i + h.len;
   }
   return out + text.slice(last);
@@ -386,6 +391,8 @@ h2{font-size:36px}
 .log .meta,.posts .meta{font-size:13.5px}
 .log .meta a,.posts .meta a{text-decoration:none}
 .log .meta a:hover,.posts .meta a:hover{text-decoration:underline}
+.posts .meta.alt{font-size:12.5px;margin-top:2px}
+.posts .meta.alt a{color:var(--muted)}
 .log ol{list-style:none;margin:0;padding:0;display:grid;gap:20px}
 .feed .log>li,.feed .posts li{grid-template-columns:64px minmax(0,1fr);gap:20px}
 .more{margin:16px 0 0;font-size:15px;font-weight:500}
@@ -425,7 +432,9 @@ h2{font-size:36px}
 .prose blockquote.story{padding:24px 28px;border-left:0}
 .prose blockquote.story>:last-child{margin-bottom:0}
 .prose code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em;background:var(--panel);padding:1px 5px;border-radius:3px}
-abbr.gl{font-style:normal;text-decoration:underline dotted;text-decoration-color:var(--strong);text-underline-offset:3px;cursor:help}
+a.gl,.prose a.gl{color:inherit;font-style:normal;text-decoration:underline dotted;text-decoration-color:var(--strong);text-decoration-thickness:1.5px;text-underline-offset:3px}
+a.gl:hover,a.gl:focus-visible{text-decoration-color:var(--blue);color:var(--blue)}
+.src li:target{background:var(--mark);box-shadow:-12px 0 0 var(--mark),12px 0 0 var(--mark)}
 .prose pre{background:var(--panel);padding:16px;border-radius:4px;overflow:auto}
 .prose pre code{background:none;padding:0}
 .prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
@@ -563,6 +572,8 @@ footer :focus-visible{outline-color:#fff}
 .wb-link{margin:0 0 20px}
 /* Spine: prev/next chapter nav already in .pn. Outline ("On this page"), read progress and the suggest-a-change link */
 .continue{margin:0 0 20px}
+.rp{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;pointer-events:none}
+.rp i{display:block;height:100%;width:0;background:var(--blue)}
 .toc li.read .t{position:relative}
 .toc li.read .t::before{content:"✓ ";color:var(--good);font-weight:700}
 .suggest{margin:10px 0 0;font-size:14px}
@@ -667,12 +678,14 @@ h2,.ch-page .sec-h h2,.cs-h h2{font-size:17pt}
 .tbl th{font-size:8.5pt}
 .tbl td{padding:5pt 8pt 5pt 0}
 main a[href^="http"]::after{content:" (" attr(href) ")";font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8pt;color:#444;word-break:break-all;font-weight:400}
+.rp{display:none}
 .pf{display:block;margin-top:24pt;padding-top:8pt;border-top:1px solid #000;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:8.5pt;color:#444}
 }`;
 
 const ICON = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="#121212"/><text x="16" y="21.5" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">SM</text></svg>');
-const page = ({title, desc, url, depth, body, script = "", image = HOME + "og-image.png", ld = []}) => {
-  const up = depth ? "../" : "./";
+const page = ({title, desc, url, depth, body, script = "", image = HOME + "og-image.png", ld = [], notFound = false}) => {
+  // notFound: the 404 page is served for any missing path at any depth, so its links are absolute, and it is not indexed
+  const up = notFound ? SITE : depth ? "../" : "./";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -681,7 +694,7 @@ const page = ({title, desc, url, depth, body, script = "", image = HOME + "og-im
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="author" content="Steven Macchia">
-<link rel="canonical" href="${url}">
+${notFound ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${url}">`}
 <link rel="alternate" type="application/atom+xml" title="The T&amp;S Handbook: updates" href="${SITE}updates/feed.xml">
 <meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -720,12 +733,12 @@ const updateBody = (u, up, except = "") => {
   const slugs = except === true ? [] : u.chapters.filter(s => s !== except), p = u.post && postById[u.post];
   // On a chapter's own page, a change shared with a few other chapters names them; one shared with many just says so
   const ch = !slugs.length ? "" : except ? (slugs.length > 3 ? `With ${slugs.length} other chapters` : "Also: " + chLinks(slugs, up)) : chLinks(slugs, up);
-  return `<span class="k">${esc(kindLabel(u.kind))}</span>${ch ? `<span class="ch">${ch}</span>` : ""}<p>${esc(u.summary)}</p>${p ? `<p class="meta"><a href="${esc(p.url)}">Read the post: ${esc(p.title)} →</a></p>` : ""}`;
+  return `<span class="k">${esc(kindLabel(u.kind))}</span>${ch ? `<span class="ch">${ch}</span>` : ""}<p>${esc(u.summary)}</p>${p ? `<p class="meta"><a href="${esc(postHref(p))}">Read the post: ${esc(p.title)} →</a></p>` : ""}`;
 };
 const updateRow = (u, up, {except = "", short = false} = {}) => `<li><time datetime="${u.date}">${short ? shortDate(u.date) : fmtDate(u.date)}</time><div>${updateBody(u, up, except)}</div></li>`;
 const postRow = (p, up, {except = "", h = "h3", short = false} = {}) => {
   const others = (p.chapters || []).filter(s => s !== except);
-  return `<li><div><time datetime="${p.date}">${short ? shortDate(p.date) : fmtDate(p.date)}</time>${short ? "" : `<span class="k">${esc(p.type)}</span>`}</div><div><${h}><a href="${esc(p.url)}">${esc(p.title)}</a></${h}><p>${esc(p.point)}</p>${others.length ? `<p class="meta">${except ? "Also in" : "In the handbook"}: ${chLinks(others, up)}</p>` : ""}</div></li>`;
+  return `<li><div><time datetime="${p.date}">${short ? shortDate(p.date) : fmtDate(p.date)}</time>${short ? "" : `<span class="k">${esc(p.type)}</span>`}</div><div><${h}><a href="${esc(postHref(p))}">${esc(p.title)}</a></${h}><p>${esc(p.point)}</p>${others.length ? `<p class="meta">${except ? "Also in" : "In the handbook"}: ${chLinks(others, up)}</p>` : ""}${postHref(p) !== p.url ? `<p class="meta alt"><a href="${esc(p.url)}">Also on LinkedIn ↗</a></p>` : ""}</div></li>`;
 };
 // The latest few posts, then the rest behind a native disclosure, so a chapter with 30 posts stays short
 const SHOW_POSTS = 5;
@@ -786,14 +799,15 @@ var KIND_ORDER=['chapter','post','tool','update'],KIND_LABEL={chapter:'Chapter',
 function load(){if(!loading)loading=fetch(up+'search.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){data=d.items.map(function(it){return {kind:it.kind,title:it.title,url:it.url,ti:it.title.toLowerCase(),h:((it.summary||'')+' '+(it.tags||[]).join(' ')+' '+(it.part||'')).toLowerCase(),tx:(it.text||'').toLowerCase(),snipsrc:it.text||it.summary||''}})},function(){cnt.textContent=live.textContent='Search is unavailable right now.';list.textContent='';res.hidden=false});return loading}
 function count(h,t){var n=0,i=-1;while(n<9&&(i=h.indexOf(t,i+1))>-1)n++;return n}
 function rx(s){return s.replace(/[.*+?^$()|[\\]\\\\{}]/g,'\\\\$&')}
-function search(terms){var out=[];data.forEach(function(it){var sc=0,hit=false;terms.forEach(function(t){if(it.ti.indexOf(t)>-1){sc+=20;hit=true}else if(it.h.indexOf(t)>-1){sc+=8;hit=true}var n=count(it.tx,t);if(n){sc+=2+n;hit=true}});if(hit)out.push({it:it,sc:sc})});out.sort(function(a,b){return b.sc-a.sc});return out}
+function search(terms){var out=[],whole=terms.join(' ');data.forEach(function(it){var sc=0,hit=false;terms.forEach(function(t){if(it.ti.indexOf(t)>-1){sc+=20;hit=true}else if(it.h.indexOf(t)>-1){sc+=8;hit=true}var n=count(it.tx,t);if(n){sc+=2+n;hit=true}});if(hit){var ex=it.ti===whole;if(ex)sc+=1000;out.push({it:it,sc:sc,ex:ex})}});out.sort(function(a,b){return b.sc-a.sc});return out}
 function snip(it,terms){var text=it.snipsrc,low=it.tx,pos=-1;terms.forEach(function(t){var i=low.indexOf(t);if(i>-1&&(pos<0||i<pos))pos=i});if(pos<0)return text.slice(0,160)+(text.length>160?'\\u2026':'');var a=Math.max(0,pos-70),b=Math.min(text.length,pos+130);if(a>0){var sp=text.indexOf(' ',a);if(sp>-1&&sp<pos)a=sp+1}if(b<text.length){var e=text.lastIndexOf(' ',b);if(e>pos)b=e}return (a>0?'\\u2026':'')+text.slice(a,b)+(b<text.length?'\\u2026':'')}
 function mark(el,text,re){text.split(re).forEach(function(p,i){if(!p)return;if(i%2){var m=document.createElement('mark');m.textContent=p;el.appendChild(m)}else el.appendChild(document.createTextNode(p))})}
 function el(tag,cls,parent){var e=document.createElement(tag);if(cls)e.className=cls;if(parent)parent.appendChild(e);return e}
 function render(){var v=q.value.trim(),terms=v.toLowerCase().split(/\\s+/).filter(function(t,i,a){return t.length>1&&a.indexOf(t)===i});if(!terms.length){res.hidden=true;list.textContent='';live.textContent='';return}
 load().then(function(){if(!data)return;var hits=search(terms),re=new RegExp('('+terms.map(rx).join('|')+')','ig'),byKind={};hits.forEach(function(h){(byKind[h.it.kind]=byKind[h.it.kind]||[]).push(h)});
 var n=hits.length,msg=n?(n===1?'1 result for ':n+' results for ')+'\\u201c'+v+'\\u201d':'Nothing found for \\u201c'+v+'\\u201d. Try a shorter or different word.';list.textContent='';cnt.textContent=live.textContent=msg;
-KIND_ORDER.forEach(function(k){var arr=byKind[k];if(!arr||!arr.length)return;var grp=el('li','grp',list);el('p','glbl',grp).textContent=KIND_LABEL[k]+(arr.length>1?'s':'');var gi=el('ol','gi',grp);arr.slice(0,6).forEach(function(h){var li=el('li','it',gi),a=el('a','',li);a.href=h.it.url;mark(el('b','',a),h.it.title,re);mark(el('span','',a),snip(h.it,terms),re)})});
+var order=KIND_ORDER.slice();if(hits.length&&hits[0].ex){order.splice(order.indexOf(hits[0].it.kind),1);order.unshift(hits[0].it.kind)}
+order.forEach(function(k){var arr=byKind[k];if(!arr||!arr.length)return;var grp=el('li','grp',list);el('p','glbl',grp).textContent=KIND_LABEL[k]+(arr.length>1?'s':'');var gi=el('ol','gi',grp);arr.slice(0,6).forEach(function(h){var li=el('li','it',gi),a=el('a','',li);a.href=h.it.url;mark(el('b','',a),h.it.title,re);mark(el('span','',a),snip(h.it,terms),re)})});
 res.hidden=false})}
 q.addEventListener('input',render);
 q.addEventListener('focus',function(){load();if(q.value.trim()&&list.children.length)res.hidden=false});
@@ -813,7 +827,17 @@ const DOWNLOAD_JS = `(function(){var bs=[].slice.call(document.querySelectorAll(
 // native <details> only opens on user action or the "open" attribute, so JS sets that once the wide layout applies), and
 // highlights the section currently in view with IntersectionObserver. No dependencies.
 const OUTLINE_JS = `(function(){var nav=document.querySelector('.toc-rail');if(!nav)return;var d=nav.querySelector('.toc-rail-d');if(d&&window.matchMedia){var mq=window.matchMedia('(min-width:1101px)'),sync=function(){if(mq.matches)d.open=true};sync();(mq.addEventListener?mq.addEventListener('change',sync):mq.addListener(sync))}
-if(!window.IntersectionObserver)return;var map={};[].slice.call(nav.querySelectorAll('a')).forEach(function(a){map[a.getAttribute('href').slice(1)]=a});var secs=[].slice.call(document.querySelectorAll('main section[id]')).filter(function(s){return map[s.id]});if(!secs.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(en){var a=map[en.target.id];if(a)a.classList.toggle('on',en.isIntersecting)})},{rootMargin:'-15% 0px -70% 0px'});secs.forEach(function(s){obs.observe(s)})})();`;
+var map={};[].slice.call(nav.querySelectorAll('a')).forEach(function(a){map[a.getAttribute('href').slice(1)]=a});var secs=[].slice.call(document.querySelectorAll('main section[id]')).filter(function(s){return map[s.id]});if(!secs.length)return;
+var hds=secs.map(function(s){return s.querySelector('h2')||s}),cur=null,tick=0;
+function off(){var o=96,h=document.querySelector('header');if(h){var p=getComputedStyle(h).position;if(p==='sticky'||p==='fixed')o+=h.offsetHeight}return o}
+function spy(){tick=0;var o=off(),de=document.documentElement,bottom=window.innerHeight+(window.pageYOffset||de.scrollTop)>=de.scrollHeight-2,idx=-1;
+if(bottom)idx=secs.length-1;else for(var i=0;i<secs.length;i++){if(hds[i].getBoundingClientRect().top<=o)idx=i;else break}
+var id=idx>-1?secs[idx].id:null;if(id===cur)return;cur=id;secs.forEach(function(s){var a=map[s.id];a.classList.toggle('on',s.id===id);if(s.id===id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}
+function req(){if(!tick)tick=window.requestAnimationFrame?requestAnimationFrame(spy):setTimeout(spy,16)}window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',req);spy()})();`;
+// Reading progress: a 3px accent bar fixed at the top whose width follows the scroll. Width only, no transition, so it behaves the
+// same under prefers-reduced-motion.
+const PROGRESS_BAR_JS = `(function(){var b=document.querySelector('.rp i');if(!b)return;var t=0;function set(){t=0;var h=document.documentElement,max=h.scrollHeight-window.innerHeight,p=max>0?Math.min(1,Math.max(0,(window.pageYOffset||h.scrollTop)/max)):0;b.style.width=(p*100).toFixed(2)+'%'}
+function req(){if(!t)t=window.requestAnimationFrame?requestAnimationFrame(set):setTimeout(set,16)}window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',req);set()})();`;
 // Marks the chapter read in localStorage ("tsh:read") once the reader reaches its last section, and remembers it as the last-opened
 // chapter ("tsh:last") for the home page's "Continue from chapter N" button. All degrades silently when storage is unavailable.
 const progressChapterJS = (slug, lastId) => `(function(){try{localStorage.setItem('tsh:last','${slug}')}catch(e){}
@@ -826,7 +850,7 @@ const scope = u => { const cs = u.chapters.map(s => bySlug[s]).sort((a, b) => a.
   return !cs.length ? "The handbook" : cs.length <= 2 ? cs.map(c => `<a href="./${c.slug}/">${c.n}. ${esc(c.title)}</a>`).join(", ") : `${cs.length} chapters`; };
 const sidePosts = latestPosts.slice(0, 3), sideUpdates = UPDATES.slice(0, 3);
 const sidebar = sidePosts.length || sideUpdates.length ? `<aside class="side" aria-label="Latest posts and updates">
-${sidePosts.length ? `  <div class="sb"><h3 class="lbl">Latest posts</h3><ol class="sl">${sidePosts.map(p => `<li><a href="${esc(p.url)}">${esc(p.title)}</a><span class="k"><time datetime="${p.date}">${shortDate(p.date)}</time> · ${esc(p.type)}</span></li>`).join("")}</ol><p class="more"><a href="${WRITING}">All writing →</a></p></div>` : ""}
+${sidePosts.length ? `  <div class="sb"><h3 class="lbl">Latest posts</h3><ol class="sl">${sidePosts.map(p => `<li><a href="${esc(postHref(p))}">${esc(p.title)}</a><span class="k"><time datetime="${p.date}">${shortDate(p.date)}</time> · ${esc(p.type)}</span></li>`).join("")}</ol><p class="more"><a href="${WRITING}">All writing →</a></p></div>` : ""}
 ${sideUpdates.length ? `  <div class="sb"><h3 class="lbl">Recent updates</h3><ol class="sl up">${sideUpdates.map(u => `<li><time datetime="${u.date}">${shortDate(u.date)}</time><span>${esc(kindLabel(u.kind))} · ${scope(u)}</span></li>`).join("")}</ol><p class="more"><a href="#new">What's new ↓</a><a href="./updates/">All updates →</a></p></div>` : ""}
 </aside>` : "";
 const fromLinks = p => (p.from.match(/\[[^\]]+\]\([^)\s]+\)/g) || []).map(l => inline(l, link0)).join(" · ");
@@ -836,7 +860,7 @@ const half = Math.ceil(principles.length / 2);
 const indexBody = `<div class="wrap">
   <div class="hh">
     <div>
-      <p class="lbl">Free and open · By <a href="${HOME}">Steven Macchia</a>, Trust &amp; Safety leader</p>
+      <p class="lbl">Free and open · By <a href="${HOME}">Steven Macchia</a>, Head of Trust &amp; Safety</p>
       <h1>The T&amp;S Handbook</h1>
       <p class="lead">How do you build and run a Trust &amp; Safety team, from the first hire to a regulated program at scale?</p>
       <p class="sub">A practitioner's handbook in ${CH.length} chapters for founders, product leaders and new Trust &amp; Safety leads. No sign-up.</p>
@@ -974,9 +998,18 @@ for (const c of CH) {
   const outlineNav = outlineSecs.length > 1 ? `<div class="wrap"><nav class="toc-rail" aria-label="On this page"><details class="toc-rail-d"><summary>On this page</summary><ol>${outlineSecs.map(s => `<li><a href="#${slugify(s.title)}">${esc(outlineLabel(s))}</a></li>`).join("")}</ol></details></nav></div>\n` : "";
   const lastId = outlineSecs.length ? slugify(outlineSecs[outlineSecs.length - 1].title) : "";
   // The status badge: honest about review, not just authorship. Never a date that wasn't actually recorded.
+  const sameYear = (a, b) => a.slice(0, 4) === b.slice(0, 4);
+  // One line for both dates: the earlier one drops its year when it is the same year. A review older than the last update stays
+  // (it means the content review, not the sync) and comes second.
+  const dateLine = (() => { const r = c.reviewed, u = c.updatedAt; if (!r || !u) return "";
+    if (r === u) return `Reviewed and updated ${fmtDate(r)}`;
+    const [a, al, b, bl] = r < u ? [u, "Updated", r, "Reviewed"] : [r, "Reviewed", u, "Updated"];
+    return `${al} ${sameYear(a, b) ? shortDate(a) : fmtDate(a)} · ${bl} ${fmtDate(b)}`; })();
+  const chgLink = c.changes.length ? `<span><a href="#changes">What changed</a></span>` : "";
   const reviewBadge = c.status === "Outline" ? `<div><i class="sq outline" aria-hidden="true"></i><b>${esc(STATUS_TEXT.Outline)}</b></div>`
-    : `<div><i class="sq${c.reviewed ? "" : " outline"}" aria-hidden="true"></i><b>${c.reviewed ? `Reviewed ${fmtDate(c.reviewed)}` : "Draft, reviewed soon"}</b></div>`;
+    : `<div><i class="sq${c.reviewed ? "" : " outline"}" aria-hidden="true"></i><b>${c.reviewed ? (dateLine || `Reviewed ${fmtDate(c.reviewed)}`) : "Draft, reviewed soon"}</b></div>`;
   const body = `<div class="ch-page">
+<div class="rp" aria-hidden="true"><i></i></div>
 <div class="wrap">
   <div class="hero ch-hero">
     <div>
@@ -985,7 +1018,7 @@ for (const c of CH) {
       <p class="lead">${esc(c.q)}</p>
     </div>
     <div>
-      <div class="open">${reviewBadge}<span>Chapter ${c.n} of ${CH.length}${c.status !== "Outline" ? ` · About ${Math.max(1, Math.round(words / 230))} minutes` : ""}</span><span>For: ${esc(c.forWho)}</span>${c.updatedAt ? `<span>Updated ${fmtDate(c.updatedAt)}${c.changes.length ? `<span class="chg"> · <a href="#changes">What changed</a></span>` : ""}</span>` : ""}<details class="toc-d"><summary>All chapters</summary><div class="toc-list">${sideList(1, c)}</div></details>${searchForm("../")}<button type="button" class="lnk print" hidden>Print or save as PDF</button></div>
+      <div class="open">${reviewBadge}<span>Chapter ${c.n} of ${CH.length}${c.status !== "Outline" ? ` · About ${Math.max(1, Math.round(words / 230))} minutes` : ""}</span><span>For: ${esc(c.forWho)}</span>${c.updatedAt && !dateLine ? `<span>Updated ${fmtDate(c.updatedAt)}${c.changes.length ? `<span class="chg"> · <a href="#changes">What changed</a></span>` : ""}</span>` : dateLine ? chgLink : ""}<details class="toc-d"><summary>All chapters</summary><div class="toc-list">${sideList(1, c)}</div></details>${searchForm("../")}<button type="button" class="lnk print" hidden>Print or save as PDF</button></div>
     </div>
   </div>
 ${c.legal ? `  <p class="legal" role="note">${LEGAL_NOTE}</p>
@@ -1008,7 +1041,7 @@ ${changes}<section><div class="wrap"><nav class="pn" aria-label="Chapters">${pre
       {"@type": "ListItem", position: 1, name: "The T&S Handbook", item: SITE},
       {"@type": "ListItem", position: 2, name: `Part ${c.part + 1}: ${PARTS[c.part]}`, item: SITE + "#contents"},
       {"@type": "ListItem", position: 3, name: `${c.n}. ${c.title}`, item: chUrl}]}];
-  fs.writeFileSync(path.join(OUT, c.slug, "index.html"), page({title: `${c.n}. ${c.title} · The T&S Handbook`, desc: c.q, url: chUrl, depth: 1, image: cardUrl, ld, body: glossed, script: SEARCH_JS + "\n" + COPY_JS + "\n" + PRINT_JS + "\n" + DOWNLOAD_JS + "\n" + OUTLINE_JS + "\n" + progressChapterJS(c.slug, lastId)}));
+  fs.writeFileSync(path.join(OUT, c.slug, "index.html"), page({title: `${c.n}. ${c.title} · The T&S Handbook`, desc: c.q, url: chUrl, depth: 1, image: cardUrl, ld, body: glossed, script: SEARCH_JS + "\n" + COPY_JS + "\n" + PRINT_JS + "\n" + DOWNLOAD_JS + "\n" + OUTLINE_JS + "\n" + PROGRESS_BAR_JS + "\n" + progressChapterJS(c.slug, lastId)}));
 }
 
 /* ---------- Search index: one combined index for all three properties (the handbook, the writing page and the Workbench) ----------
@@ -1050,9 +1083,8 @@ const chapterItems = CH.map(c => {
 // Posts: ../linkedin-posts/posts.json, linked to the writing page via ../stevenmacchia.github.io/writing/slugs.json. A post
 // missing from slugs.json gets the same lowercase, hyphenated slug build-writing.js would derive, and the fallback is logged.
 const slugify2 = s => String(s).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "post";
-const LP_POSTS_FILE = path.join(ROOT, "..", "linkedin-posts", "posts.json"), LP_SLUGS_FILE = path.join(ROOT, "..", "stevenmacchia.github.io", "writing", "slugs.json");
+const LP_POSTS_FILE = path.join(ROOT, "..", "linkedin-posts", "posts.json");
 const LP_POSTS = fs.existsSync(LP_POSTS_FILE) ? JSON.parse(fs.readFileSync(LP_POSTS_FILE, "utf8")) : [];
-const LP_SLUGS = fs.existsSync(LP_SLUGS_FILE) ? JSON.parse(fs.readFileSync(LP_SLUGS_FILE, "utf8")).posts || {} : {};
 const postItems = LP_POSTS.map(p => {
   let slug = LP_SLUGS[p.id];
   if (!slug) { slug = slugify2(p.title); console.log(`search index: post "${p.id}" has no slug in writing/slugs.json, derived "${slug}"`); }
@@ -1128,7 +1160,7 @@ const glossaryBody = `<div class="ch-page">
       <p class="lead">Acronyms and Trust &amp; Safety jargon used across the handbook, in plain language.</p>
       <div class="cta"><a class="btn primary" href="../">Back to the handbook</a></div>
     </div>
-    <div><div class="open"><div><i class="sq" aria-hidden="true"></i><b>${plural(GLOSSARY.length, "term")}</b></div><span>The first time a term appears in a chapter, it's underlined; hover or focus it for this same definition.</span></div></div>
+    <div><div class="open"><div><i class="sq" aria-hidden="true"></i><b>${plural(GLOSSARY.length, "term")}</b></div><span>The first time a term appears in a chapter it has a dotted underline and links here. Hover or focus it to read the definition in place; on a touch screen, tap it to open the entry.</span></div></div>
   </div>
 </div>
 <section><div class="wrap">
@@ -1136,6 +1168,22 @@ const glossaryBody = `<div class="ch-page">
 </div></section>
 </div>`;
 fs.mkdirSync(path.join(OUT, "glossary"), {recursive: true});
+// 404.html: GitHub Pages serves this for any missing path under /ts-handbook/ (a project site published from /docs), in the
+// handbook's own chrome. Links are absolute because the page can be served from any depth.
+const notFoundBody = `<div class="ch-page">
+<div class="wrap">
+  <div class="hero ch-hero">
+    <div>
+      <p class="lbl"><a href="${SITE}">The T&amp;S Handbook</a> · Page not found</p>
+      <h1>That chapter isn't here</h1>
+      <p class="lead">The link may be old, or the page may have moved. Start from the contents, or search.</p>
+      <div class="cta"><a class="btn primary" href="${SITE}#contents">See the contents</a><a class="go" href="${SITE}updates/">What changed recently →</a></div>
+    </div>
+    <div class="hs">${searchForm(SITE)}</div>
+  </div>
+</div>
+</div>`;
+fs.writeFileSync(path.join(OUT, "404.html"), page({title: "Page not found · The T&S Handbook", desc: "That page isn't in the handbook. Start from the contents or search.", url: SITE, depth: 0, body: notFoundBody, script: SEARCH_JS, notFound: true}));
 fs.writeFileSync(path.join(OUT, "glossary", "index.html"), page({title: "Glossary · The T&S Handbook", desc: "Acronyms and Trust & Safety jargon used across the handbook, in plain language.", url: SITE + "glossary/", depth: 1, body: glossaryBody}));
 
 // A small public index of the chapters for other sites (the Workbench) to read: status and dates stay honest without a rebuild there
