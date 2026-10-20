@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-10-19",
+    "kind": "new-principle",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "detection-and-prevention"
+    ],
+    "post": "eZNBKf2S",
+    "summary": "Sharpened principle 4: harm moves across channels, from text to voice to another app, so the response has to reach every channel, and where children and adults share voice, children get the same protection there as in text."
+  },
+  {
+    "date": "2026-10-19",
+    "kind": "revised",
+    "chapters": [
+      "child-safety-and-age-assurance"
+    ],
+    "post": "eZNBKf2S",
+    "summary": "Added that voice needs the same protection as text, because grooming in games often moves to voice before another app."
+  },
+  {
+    "date": "2026-10-19",
+    "kind": "revised",
+    "chapters": [
+      "detection-and-prevention"
+    ],
+    "post": "eZNBKf2S",
+    "summary": "Added voice chat as the gap in most games' detection: why voice reviewed only after a report fails, from letting reports carry the audio to proactive voice tools, and what the UK's Online Safety Act covers."
+  },
+  {
     "date": "2026-10-16",
     "kind": "revised",
     "chapters": [

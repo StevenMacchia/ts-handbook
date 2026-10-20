@@ -47,6 +47,10 @@ If you host images or video, hash matching is usually the first proactive layer 
 
 Rate each of your top harms against these layers with the [coverage radar](https://stevenmacchia.com/ts-workbench/#coverage). Usually detection engineering owns the systems and policy owns what they're trying to find, though on a small team that may be one person. You're done when every high-risk harm has at least one layer that doesn't depend on a user report.
 
+Voice is where many games are furthest behind on that test. Text chat got filters and logs years ago. In a lot of games, voice is still only looked at when a player reports it, and by then the audio is often gone, so the report goes nowhere and players learn to stop reporting ([Voice chat is where safety in games is furthest behind](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-gamingsafety-share-7517957140028981249-us_1/)). If a game puts children and adults in voice together, it owes children the same protection there as in text. At a minimum, let a report carry the audio: PlayStation, for example, lets players report a 40-second clip from the last five minutes of voice chat ([PlayStation](https://www.playstation.com/support/account/ps5-report-behaviour/)). Proactive tools exist now too. Modulate's [ToxMod](https://www.modulate.ai/products/toxmod) analyzes live voice channels and sends moderators clips with context, [Stream](https://getstream.io/moderation/live/) captions live calls and audio rooms and checks the transcript against the same policy as text, and in June 2026 4Players announced that customers of its ODIN voice platform can add Aiba's Amanda, which reads the transcript in context for toxic behavior, grooming and radicalization ([4Players](https://www.4players.io/newsroom/odin-aiba-partnership-announcement/)). These are examples, not recommendations, so test any of them on your own audio first ([chapter 9](09-choosing-vendors-and-tools.md)).
+
+The law is catching up. The UK's Online Safety Act counts oral communications as content ([section 236](https://www.legislation.gov.uk/ukpga/2023/50/section/236)), so group voice chat and recorded voice messages on a user-to-user service are regulated user-generated content. Only a live call between two users, with nothing else attached, is exempt ([section 55](https://www.legislation.gov.uk/ukpga/2023/50/section/55)). Tell players voice is moderated, and agree consent and retention with Legal before launch, because recording rules differ by market (step 8).
+
 ### 2. Detect the pattern, not the message
 
 Many serious harms don't show up in a single message. They show up as a sequence:
@@ -151,6 +155,7 @@ In the EU, the GDPR's principles of data minimisation and storage limitation ([A
 - **Celebrating a rising proactive detection rate on its own.** Read it next to precision. More catches can mean more good users caught by mistake.
 - **Alerting on volume.** Alert on the rate of each category for that hour, and judge the alert by how many fires were real.
 - **Locking the room.** Slow down the accounts causing the problem instead of punishing everyone in the space.
+- **Leaving voice to reports alone.** If children and adults share voice, make sure a report carries the audio, and consider a proactive layer, so voice gets the same protection as text.
 - **Scanning everything because you can.** Narrow the scope, use metadata first, agree retention and check each market's rules.
 
 ## Start from this template
@@ -185,6 +190,7 @@ In the EU, the GDPR's principles of data minimisation and storage limitation ([A
 
 From Steven's writing:
 
+- **[Voice chat is where safety in games is furthest behind](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-gamingsafety-share-7517957140028981249-us_1/)** (Oct 19, 2026): In many games voice is only looked at after a player reports it, when the audio is already gone, so reports go nowhere and players stop reporting. The tools for proactive voice moderation exist and the law is catching up, so a game that puts children and adults in voice owes children the same protection there as in text.
 - **[Launch week is the hardest test a safety program gets](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-safetybydesign-productmanagement-share-7512980609300930560-Azbb/)** (Oct 5, 2026): Most of what goes wrong in launch week is decided before day one. Pre-approve friction for new and unverified accounts, triage by severity, watch the rate of abuse rather than raw counts, and agree with product how much friction you'll accept, then review it after week one.
 - **[Watch the rate, not the volume](https://www.linkedin.com/posts/stevenmacchia_kenzie-wilson-at-stream-published-a-super-ugcPost-7511811574127312896-HAsd/)** (Oct 2, 2026): In live sports chat, volume swings hard while the rate of abusive content tends to hold steady. Alert on rate jumps to spot raids, and slow down new accounts instead of locking the room.
 - **[Grooming is a pattern, not a message](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-onlinesafety-share-7511067864448237568-k7h4/)** (Sep 30, 2026): Responses build as signals stack on adult-to-minor contact, with thresholds tested on past cases, a queue worked by risk, privacy limits agreed up front, and four numbers that show it works.

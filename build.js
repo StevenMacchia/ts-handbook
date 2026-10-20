@@ -49,7 +49,7 @@ for (const c of CH) c.forWho = c.forText || FOR_DEFAULT[c.part] || "";
 // Chapters with a matching T&S Workbench tool for their template: an "Open in the workbench" link beside it. Skips chapters with no sensible match.
 const WORKBENCH_LINK = {
   "choosing-vendors-and-tools": ["vendors", "vendor scorecard"],
-  "writing-policy": ["policy", "policy drafting"],
+  "writing-policy": ["policy", "policy stress-tester"],
   "crisis-response": ["tabletop", "incident tabletop"],
   "measuring-what-matters": ["metrics", "metrics framework"],
   "know-your-risks": ["premortem", "abuse pre-mortem"],
@@ -1007,7 +1007,7 @@ for (const c of CH) {
     return `${al} ${sameYear(a, b) ? shortDate(a) : fmtDate(a)} · ${bl} ${fmtDate(b)}`; })();
   const chgLink = c.changes.length ? `<span><a href="#changes">What changed</a></span>` : "";
   const reviewBadge = c.status === "Outline" ? `<div><i class="sq outline" aria-hidden="true"></i><b>${esc(STATUS_TEXT.Outline)}</b></div>`
-    : `<div><i class="sq${c.reviewed ? "" : " outline"}" aria-hidden="true"></i><b>${c.reviewed ? (dateLine || `Reviewed ${fmtDate(c.reviewed)}`) : "Draft, reviewed soon"}</b></div>`;
+    : `<div><i class="sq${c.reviewed ? "" : " outline"}" aria-hidden="true"></i><b>${c.reviewed ? (dateLine || `Reviewed ${fmtDate(c.reviewed)}`) : (c.updatedAt ? `Updated ${fmtDate(c.updatedAt)}` : "")}</b></div>`;
   const body = `<div class="ch-page">
 <div class="rp" aria-hidden="true"><i></i></div>
 <div class="wrap">
@@ -1062,14 +1062,14 @@ const TOOLS = [
   {route: "tabletop", title: "Incident tabletop", summary: "Rehearse a crisis and learn from every call, with the law behind it."},
   {route: "postmortem", title: "Incident post-mortem", summary: "After a real incident, write a blameless post-mortem in fifteen minutes: a one-page document, a grade for the response, and three actions with owners and dates."},
   {route: "policy", title: "Policy stress-tester", summary: "Paste a rule to find vague words, missing exceptions and hard edge cases."},
-  {route: "coppa", title: "COPPA readiness", summary: "Check children's privacy against the amended Rule, with drafts for Legal."},
+  {route: "coppa", title: "COPPA readiness", summary: "Check children's privacy against the amended Rule, with write-ups for Legal."},
   {route: "grooming", title: "Grooming pathway review", summary: "See how an adult could reach a child through your product's features, and what's in the way at each of six stages."},
   {route: "reporting", title: "Child-safety reporting", summary: "Check whether you can remove, preserve, report and handle the account when you find child sexual exploitation, market by market."},
-  {route: "dsa", title: "DSA readiness", summary: "Find which EU Digital Services Act duties apply to you, article by article, with drafts for Legal."},
+  {route: "dsa", title: "DSA readiness", summary: "Find which EU Digital Services Act duties apply to you, article by article, with write-ups for Legal."},
   {route: "vendors", title: "Vendor scorecard", summary: "Choose a moderation vendor on evidence, with RFP questions."},
   {route: "eval", title: "Classifier eval", summary: "Build a labeled test set from a rule and see where a moderation classifier fails, with what to change."},
   {route: "metrics", title: "Metrics framework", summary: "A reference for learning: the numbers a T&S program runs on, and how to measure each one."},
-  {route: "notice", title: "Enforcement notice writer", summary: "Draft a clear, fair notice to a user whose content or account you actioned, and check it against what a statement of reasons needs to include."},
+  {route: "notice", title: "Enforcement notice writer", summary: "Write a clear, fair notice to a user whose content or account you actioned, and check it against what a statement of reasons needs to include."},
   {route: "appeal", title: "Appeal reviewer", summary: "Get a structured second opinion on a user's appeal: each part of the rule tested against the facts, the user's arguments weighed fairly, and a suggested reply."},
   {route: "transparency", title: "Transparency report", summary: "Build the transparency report the EU Digital Services Act asks for: the right sections for your type of service, a completeness check, and a summary written by Claude."},
 ];

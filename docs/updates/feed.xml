@@ -5,8 +5,29 @@
   <link href="https://stevenmacchia.com/ts-handbook/updates/feed.xml" rel="self"/>
   <link href="https://stevenmacchia.com/ts-handbook/updates/"/>
   <id>https://stevenmacchia.com/ts-handbook/updates/</id>
-  <updated>2026-10-16T12:00:00Z</updated>
+  <updated>2026-10-19T12:00:00Z</updated>
   <author><name>Steven Macchia</name><uri>https://stevenmacchia.com/</uri></author>
+  <entry>
+    <title>New principle: 1. What Trust &amp; Safety is for, 5. Detection and prevention</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-19-3"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-19-3</id>
+    <updated>2026-10-19T12:00:00Z</updated>
+    <summary>Sharpened principle 4: harm moves across channels, from text to voice to another app, so the response has to reach every channel, and where children and adults share voice, children get the same protection there as in text. Read the post: Voice chat is where safety in games is furthest behind (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-gamingsafety-share-7517957140028981249-us_1/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 6. Child safety and age assurance</title>
+    <link href="https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-19-2</id>
+    <updated>2026-10-19T12:00:00Z</updated>
+    <summary>Added that voice needs the same protection as text, because grooming in games often moves to voice before another app. Read the post: Voice chat is where safety in games is furthest behind (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-gamingsafety-share-7517957140028981249-us_1/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 5. Detection and prevention</title>
+    <link href="https://stevenmacchia.com/ts-handbook/detection-and-prevention/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-19-1</id>
+    <updated>2026-10-19T12:00:00Z</updated>
+    <summary>Added voice chat as the gap in most games' detection: why voice reviewed only after a report fails, from letting reports carry the audio to proactive voice tools, and what the UK's Online Safety Act covers. Read the post: Voice chat is where safety in games is furthest behind (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-gamingsafety-share-7517957140028981249-us_1/)</summary>
+  </entry>
   <entry>
     <title>Revised: 15. Working with Product, Legal, Comms and leadership</title>
     <link href="https://stevenmacchia.com/ts-handbook/working-with-product-legal-and-leadership/#changes"/>
