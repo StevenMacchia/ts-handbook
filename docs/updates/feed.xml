@@ -5,8 +5,22 @@
   <link href="https://stevenmacchia.com/ts-handbook/updates/feed.xml" rel="self"/>
   <link href="https://stevenmacchia.com/ts-handbook/updates/"/>
   <id>https://stevenmacchia.com/ts-handbook/updates/</id>
-  <updated>2026-10-19T12:00:00Z</updated>
+  <updated>2026-10-22T12:00:00Z</updated>
   <author><name>Steven Macchia</name><uri>https://stevenmacchia.com/</uri></author>
+  <entry>
+    <title>Revised: 18. AI in Trust &amp; Safety</title>
+    <link href="https://stevenmacchia.com/ts-handbook/ai-in-trust-and-safety/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-22-2</id>
+    <updated>2026-10-22T12:00:00Z</updated>
+    <summary>Added that automation savings belong partly in senior people who can own and explain decisions. Read the post: How small can a T&amp;S team get now that AI tools are this good? (https://www.linkedin.com/posts/stevenmacchia_ive-been-in-a-few-conversations-lately-with-share-7519010754390401024-JU4C/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 8. Hiring and structuring the team</title>
+    <link href="https://stevenmacchia.com/ts-handbook/hiring-and-structuring-the-team/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-22-1</id>
+    <updated>2026-10-22T12:00:00Z</updated>
+    <summary>Added how to answer 'how small can the team get now that AI is this good': automate the clear-cut volume, put the savings into senior owners of policy, appeals and risk, and why one person and a dashboard is a regulatory liability. Read the post: How small can a T&amp;S team get now that AI tools are this good? (https://www.linkedin.com/posts/stevenmacchia_ive-been-in-a-few-conversations-lately-with-share-7519010754390401024-JU4C/)</summary>
+  </entry>
   <entry>
     <title>New principle: 1. What Trust &amp; Safety is for, 5. Detection and prevention</title>
     <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-19-3"/>

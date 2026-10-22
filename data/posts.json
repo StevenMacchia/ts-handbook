@@ -1,5 +1,19 @@
 [
   {
+    "id": "eKAPu_TP",
+    "title": "How small can a T&S team get now that AI tools are this good?",
+    "date": "2026-10-22",
+    "type": "Essay",
+    "topic": "Automation and decision quality",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_ive-been-in-a-few-conversations-lately-with-share-7519010754390401024-JU4C/",
+    "point": "AI tools now handle much of the clear-cut review volume, but regulators expect people who can own and explain decisions: qualified staff on appeals under the DSA and a named accountable person under Ofcom's codes. Automate the clear-cut volume and put the savings into senior owners of policy, appeals, risk and emerging threats.",
+    "chapters": [
+      "hiring-and-structuring-the-team",
+      "regulation-and-compliance",
+      "ai-in-trust-and-safety"
+    ]
+  },
+  {
     "id": "eZNBKf2S",
     "title": "Voice chat is where safety in games is furthest behind",
     "date": "2026-10-19",

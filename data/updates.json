@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-10-22",
+    "kind": "revised",
+    "chapters": [
+      "ai-in-trust-and-safety"
+    ],
+    "post": "eKAPu_TP",
+    "summary": "Added that automation savings belong partly in senior people who can own and explain decisions."
+  },
+  {
+    "date": "2026-10-22",
+    "kind": "revised",
+    "chapters": [
+      "hiring-and-structuring-the-team"
+    ],
+    "post": "eKAPu_TP",
+    "summary": "Added how to answer 'how small can the team get now that AI is this good': automate the clear-cut volume, put the savings into senior owners of policy, appeals and risk, and why one person and a dashboard is a regulatory liability."
+  },
+  {
     "date": "2026-10-19",
     "kind": "new-principle",
     "chapters": [

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19",
+ "generated": "2026-10-22",
  "handbook": "https://stevenmacchia.com/ts-handbook/",
  "updates": "https://stevenmacchia.com/ts-handbook/updates/",
  "parts": [
@@ -93,8 +93,8 @@
    "question": "Who do you hire, in what order, and where should the team report?",
    "part": 2,
    "status": "Published",
-   "updated": "2026-10-13",
-   "posts": 2,
+   "updated": "2026-10-22",
+   "posts": 3,
    "url": "https://stevenmacchia.com/ts-handbook/hiring-and-structuring-the-team/"
   },
   {
@@ -182,7 +182,7 @@
    "part": 4,
    "status": "Published",
    "updated": "2026-10-13",
-   "posts": 5,
+   "posts": 6,
    "url": "https://stevenmacchia.com/ts-handbook/regulation-and-compliance/"
   },
   {
@@ -203,8 +203,8 @@
    "question": "Where does AI help moderation, and how do you keep AI products safe?",
    "part": 4,
    "status": "Published",
-   "updated": "2026-10-13",
-   "posts": 6,
+   "updated": "2026-10-22",
+   "posts": 7,
    "url": "https://stevenmacchia.com/ts-handbook/ai-in-trust-and-safety/"
   },
   {

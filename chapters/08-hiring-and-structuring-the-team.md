@@ -19,6 +19,8 @@ Many Trust & Safety teams start by accident. Someone in support starts handling 
 
 Regulators now expect named accountability. In the UK, Ofcom's [illegal content codes of practice](https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/statement-protecting-people-from-illegal-harms-online) recommend that every user-to-user service names a person accountable to its most senior governance body for complying with its illegal content duties and its reporting and complaints duties. In the EU, the Digital Services Act requires very large online platforms and search engines to set up a compliance function that is independent of their operational functions, with a head who reports directly to the management body ([Article 41](https://eur-lex.europa.eu/eli/reg/2022/2065/oj)). How you structure the team is now part of how you show you're in control of the risk.
 
+Better AI tools have added a question leadership now asks: how small can the team get? Classifiers and pattern detection handle a lot of clear-cut volume that needed people two years ago. The duties above still need people who understand the policy, the product and the regulator, and who can put their name on a decision. So automate the clear-cut volume and put the savings into senior people who own policy, appeals, risk and emerging threats. A team cut down to one person and a dashboard saves money until a regulator asks why the system made a specific call and nobody inside the company can answer. Penalties can reach 6% of annual worldwide turnover under the DSA ([Article 52(3)](https://eur-lex.europa.eu/eli/reg/2022/2065/oj)) and the greater of £18 million or 10% of qualifying worldwide revenue under the Online Safety Act ([Schedule 13](https://www.legislation.gov.uk/ukpga/2023/50/schedule/13/paragraph/4)).
+
 ## What good looks like
 
 | | Early | Growing | At scale or regulated |
@@ -147,6 +149,7 @@ How you treat vendor staff in a crisis shapes quality afterwards. If a site goes
 - **Borrowing data and engineering indefinitely.** Somebody on your team has to own the numbers and the tools.
 - **Reporting into a line that measures only throughput.** Report outcomes beside activity, or the program will be run as a cost center.
 - **Leaving safety risk without an executive owner.** Name one, and write down who decides what.
+- **Cutting to one person and a dashboard once AI takes the volume.** Automate the clear-cut work, and put the savings into senior owners of policy, appeals, risk and emerging threats who can explain any decision to a regulator.
 - **Interviewing for knowledge of the rules.** Test judgment with a case that has no clean answer.
 - **Making the worst queue the path to promotion.** Rotate exposure and offer a specialist track.
 - **Treating vendor reviewers as a ticket count.** Same guidance, calibration, escalation and wellbeing as your own team.
@@ -190,6 +193,7 @@ How you treat vendor staff in a crisis shapes quality afterwards. If a site goes
 
 From Steven's writing:
 
+- **[How small can a T&S team get now that AI tools are this good?](https://www.linkedin.com/posts/stevenmacchia_ive-been-in-a-few-conversations-lately-with-share-7519010754390401024-JU4C/)** (Oct 22, 2026): AI tools now handle much of the clear-cut review volume, but regulators expect people who can own and explain decisions: qualified staff on appeals under the DSA and a named accountable person under Ofcom's codes. Automate the clear-cut volume and put the savings into senior owners of policy, appeals, risk and emerging threats.
 - **[What I'd tell myself in year one of Trust & Safety](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-onlinesafety-contentmoderation-share-7513978054688395266-P3DE/)** (Oct 8, 2026): Five lessons from more than ten years in the field: treat safety as a systems problem built into the product, don't treat a ban as a closed case, measure what users experience rather than how busy the team was, let automation earn its scope, and give every risk one named owner.
 - **[You can't moderate your way out of a systems problem](https://www.linkedin.com/feed/update/urn:li:activity:7506790883938295809/)** (Sep 18, 2026): Treating Trust & Safety mainly as an operations function is a mistake. Reputation, history, age and behavior signals belong in one risk model, automation needs clear limits, and safety belongs in the product architecture from the start.
 
@@ -203,4 +207,4 @@ Outside sources:
 
 ---
 
-*Last updated: 2026-10-13. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
+*Last updated: 2026-10-22. Last reviewed: 2026-10-13.* Part of [The T&S Handbook](../README.md) by [Steven Macchia](https://www.linkedin.com/in/stevenmacchia). Content licensed [CC BY 4.0](../LICENSE). Law notes are general information, not legal advice: check with your own legal team before acting on them.
