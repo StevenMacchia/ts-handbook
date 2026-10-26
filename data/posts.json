@@ -1,5 +1,30 @@
 [
   {
+    "id": "ecznDEKE",
+    "title": "Mexico's age-check decree: build to the strictest bar you face",
+    "date": "2026-10-26",
+    "type": "Essay",
+    "topic": "What's changing",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-ageassurance-share-7520542161449185281-B1o6/",
+    "point": "Mexico's presidential decree, in force since October 14, 2026, requires platforms, video games and app stores included, to use age checks that go beyond self-declaration, start new accounts on the strictest settings and give parents supervision tools, with a report due within 30 days. With no two markets asking for quite the same thing, build one approach to age assurance and child defaults to the strictest bar you face.",
+    "chapters": [
+      "child-safety-and-age-assurance"
+    ]
+  },
+  {
+    "id": "eGEPdCxy",
+    "title": "A T&S policy gets tested every day, on cases nobody wrote into it",
+    "date": "2026-10-23",
+    "type": "Essay",
+    "topic": "Safety by design and operations",
+    "url": "https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-leadership-share-7519414958695227392-v2Bl/",
+    "point": "A policy only works once it's built into reviewer guidance, product requirements and enforcement tools, and it's never finished: the edge cases reviewers hit every week should flow back into regular updates, each with a recorded reason. The test is consistency, the same call on the same case whoever reviews it and whoever's account it is, which the EU's Digital Services Act also expects.",
+    "chapters": [
+      "writing-policy",
+      "quality-calibration-and-appeals"
+    ]
+  },
+  {
     "id": "eKAPu_TP",
     "title": "How small can a T&S team get now that AI tools are this good?",
     "date": "2026-10-22",

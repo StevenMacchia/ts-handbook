@@ -1,5 +1,42 @@
 [
   {
+    "date": "2026-10-26",
+    "kind": "new-principle",
+    "chapters": [
+      "what-trust-and-safety-is-for",
+      "child-safety-and-age-assurance"
+    ],
+    "post": "ecznDEKE",
+    "summary": "Sharpened principle 7: build one approach to age assurance to the strictest bar you face, not a patch for every country."
+  },
+  {
+    "date": "2026-10-26",
+    "kind": "revised",
+    "chapters": [
+      "child-safety-and-age-assurance"
+    ],
+    "post": "ecznDEKE",
+    "summary": "Added Mexico's October 2026 decree, which requires age checks beyond a typed birthday and the strictest settings by default, and why one approach built to the strictest bar beats a patch per country."
+  },
+  {
+    "date": "2026-10-23",
+    "kind": "revised",
+    "chapters": [
+      "quality-calibration-and-appeals"
+    ],
+    "post": "eGEPdCxy",
+    "summary": "Added a separate quality sample for high-profile accounts, so you can show the same case gets the same call whoever's account it is."
+  },
+  {
+    "date": "2026-10-23",
+    "kind": "revised",
+    "chapters": [
+      "writing-policy"
+    ],
+    "post": "eGEPdCxy",
+    "summary": "Added the edge-case loop: give reviewers a way to send cases the policy didn't cover back to its owner, fold them in on a schedule with the reason for each change, and test the result for consistency, big accounts included."
+  },
+  {
     "date": "2026-10-22",
     "kind": "revised",
     "chapters": [

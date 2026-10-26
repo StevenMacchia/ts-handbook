@@ -5,8 +5,36 @@
   <link href="https://stevenmacchia.com/ts-handbook/updates/feed.xml" rel="self"/>
   <link href="https://stevenmacchia.com/ts-handbook/updates/"/>
   <id>https://stevenmacchia.com/ts-handbook/updates/</id>
-  <updated>2026-10-22T12:00:00Z</updated>
+  <updated>2026-10-26T12:00:00Z</updated>
   <author><name>Steven Macchia</name><uri>https://stevenmacchia.com/</uri></author>
+  <entry>
+    <title>New principle: 1. What Trust &amp; Safety is for, 6. Child safety and age assurance</title>
+    <link href="https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-26-2"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-26-2</id>
+    <updated>2026-10-26T12:00:00Z</updated>
+    <summary>Sharpened principle 7: build one approach to age assurance to the strictest bar you face, not a patch for every country. Read the post: Mexico's age-check decree: build to the strictest bar you face (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-ageassurance-share-7520542161449185281-B1o6/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 6. Child safety and age assurance</title>
+    <link href="https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-26-1</id>
+    <updated>2026-10-26T12:00:00Z</updated>
+    <summary>Added Mexico's October 2026 decree, which requires age checks beyond a typed birthday and the strictest settings by default, and why one approach built to the strictest bar beats a patch per country. Read the post: Mexico's age-check decree: build to the strictest bar you face (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-childsafety-ageassurance-share-7520542161449185281-B1o6/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 10. Quality, calibration and appeals</title>
+    <link href="https://stevenmacchia.com/ts-handbook/quality-calibration-and-appeals/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-23-2</id>
+    <updated>2026-10-23T12:00:00Z</updated>
+    <summary>Added a separate quality sample for high-profile accounts, so you can show the same case gets the same call whoever's account it is. Read the post: A T&amp;S policy gets tested every day, on cases nobody wrote into it (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-leadership-share-7519414958695227392-v2Bl/)</summary>
+  </entry>
+  <entry>
+    <title>Revised: 4. Writing policy and an enforcement ladder</title>
+    <link href="https://stevenmacchia.com/ts-handbook/writing-policy/#changes"/>
+    <id>https://stevenmacchia.com/ts-handbook/updates/#u-2026-10-23-1</id>
+    <updated>2026-10-23T12:00:00Z</updated>
+    <summary>Added the edge-case loop: give reviewers a way to send cases the policy didn't cover back to its owner, fold them in on a schedule with the reason for each change, and test the result for consistency, big accounts included. Read the post: A T&amp;S policy gets tested every day, on cases nobody wrote into it (https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-leadership-share-7519414958695227392-v2Bl/)</summary>
+  </entry>
   <entry>
     <title>Revised: 18. AI in Trust &amp; Safety</title>
     <link href="https://stevenmacchia.com/ts-handbook/ai-in-trust-and-safety/#changes"/>

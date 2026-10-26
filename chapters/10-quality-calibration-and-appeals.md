@@ -34,7 +34,7 @@ Quality assurance (QA) means re-checking a sample of past decisions to see wheth
 
 **How much.** Different methods work, and the right one depends on what you need to know. A flat number per reviewer, for example 20 to 30 checks a month, is enough to see each person's trend without burying the QA team; fewer, and one bad day swings the number. Sizing by risk puts more checks on severe queues and new reviewers and fewer on low-risk ones. A share of volume, for example 2 to 5% of decisions per queue, keeps the sample in step with workload. If you need a precise rate for a whole queue or vendor, size the sample with the method on the [QA agreement rate](https://github.com/stevenmacchia/ts-metrics-framework/blob/main/metrics/qa-agreement-rate.md) page.
 
-**From where.** Draw at random within each queue, vendor and policy area, so small areas aren't drowned out by big ones. Sample automated decisions as well as human ones. Include decisions to leave something up, not only decisions to remove it, or QA will only ever find over-enforcement.
+**From where.** Draw at random within each queue, vendor and policy area, so small areas aren't drowned out by big ones. Sample automated decisions as well as human ones. Include decisions to leave something up, not only decisions to remove it, or QA will only ever find over-enforcement. And draw a separate sample from high-profile accounts, such as big creators and top spenders, then compare their agreement and overturn rates with everyone else's. Same case, same call, whoever's account it is.
 
 **Who checks the checkers.** Experts re-label each sampled decision blind, without seeing the original call or who made it. Before they judge anyone, have the experts label the same set and measure how often they agree with each other. That's your ceiling. If experts agree 95% of the time, a vendor at 94% is near the limit and a vendor at 86% has a training gap.
 
@@ -173,6 +173,7 @@ Appeal data is useful and incomplete. Read it with its limits in mind.
 
 From Steven's writing:
 
+- **[A T&S policy gets tested every day, on cases nobody wrote into it](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-leadership-share-7519414958695227392-v2Bl/)** (Oct 23, 2026): A policy only works once it's built into reviewer guidance, product requirements and enforcement tools, and it's never finished: the edge cases reviewers hit every week should flow back into regular updates, each with a recorded reason. The test is consistency, the same call on the same case whoever reviews it and whoever's account it is, which the EU's Digital Services Act also expects.
 - **[Appeal overturns: the early warning for automation](https://www.linkedin.com/posts/stevenmacchia_as-more-enforcement-moves-to-automation-share-7508900187977854976-DLyv/)** (Sep 24, 2026): Overturned appeals show drift weeks before anything else. Automation expands only where its overturn rate matches human review, and changes roll back when the rate moves.
 
 Outside sources:

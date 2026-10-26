@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22",
+ "generated": "2026-10-26",
  "handbook": "https://stevenmacchia.com/ts-handbook/",
  "updates": "https://stevenmacchia.com/ts-handbook/updates/",
  "parts": [
@@ -16,7 +16,7 @@
    "question": "What is this function for, and how do you know it's working?",
    "part": 1,
    "status": "Published",
-   "updated": "2026-10-19",
+   "updated": "2026-10-26",
    "posts": 5,
    "url": "https://stevenmacchia.com/ts-handbook/what-trust-and-safety-is-for/"
   },
@@ -49,8 +49,8 @@
    "question": "How do you write rules people can follow and reviewers can apply the same way?",
    "part": 2,
    "status": "Published",
-   "updated": "2026-10-13",
-   "posts": 1,
+   "updated": "2026-10-23",
+   "posts": 2,
    "url": "https://stevenmacchia.com/ts-handbook/writing-policy/"
   },
   {
@@ -71,8 +71,8 @@
    "question": "How do you keep children safe on a product adults use too?",
    "part": 2,
    "status": "Published",
-   "updated": "2026-10-19",
-   "posts": 12,
+   "updated": "2026-10-26",
+   "posts": 13,
    "url": "https://stevenmacchia.com/ts-handbook/child-safety-and-age-assurance/"
   },
   {
@@ -115,8 +115,8 @@
    "question": "How do you know decisions are right, and fix them when they aren't?",
    "part": 3,
    "status": "Published",
-   "updated": "2026-10-13",
-   "posts": 1,
+   "updated": "2026-10-23",
+   "posts": 2,
    "url": "https://stevenmacchia.com/ts-handbook/quality-calibration-and-appeals/"
   },
   {

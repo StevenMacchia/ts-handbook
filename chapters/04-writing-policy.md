@@ -141,6 +141,8 @@ A change only counts once reviewers apply it. One routine that works for each ch
 - **Check agreement soon after, for example the following week.** If quality checks on the changed area drop, the note didn't land or the rule isn't clear. [Chapter 7](07-review-operations.md) covers getting a change to hundreds of reviewers within hours.
 - **Tell users about significant changes.** The DSA ([Article 14(2)](https://eur-lex.europa.eu/eli/reg/2022/2065/oj)) requires you to inform users of any significant change to your terms.
 
+The cases nobody wrote into the policy are the best source of updates you'll get, and reviewers hit them every week. Give them a way to flow back up, such as a "guidance unclear" flag in the review tool that lands with the policy owner, and fold them into the guidance on a regular schedule, writing down why each change was made. The test of all of it is consistency: same case, same call, no matter who reviews it or whose account it is, big creators and top spenders included ([A T&S policy gets tested every day, on cases nobody wrote into it](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-leadership-share-7519414958695227392-v2Bl/)).
+
 Then review each policy on a schedule, and sooner when the data says so. When one policy area keeps running a high appeal overturn rate, review the guidance itself first, before anyone looks at reviewer performance. A rule that many reviewers get "wrong" is usually a rule that's unclear.
 
 ## Mistakes to avoid
@@ -197,6 +199,7 @@ Then review each policy on a schedule, and sooner when the data says so. When on
 
 From Steven's writing:
 
+- **[A T&S policy gets tested every day, on cases nobody wrote into it](https://www.linkedin.com/posts/stevenmacchia_trustandsafety-contentmoderation-leadership-share-7519414958695227392-v2Bl/)** (Oct 23, 2026): A policy only works once it's built into reviewer guidance, product requirements and enforcement tools, and it's never finished: the edge cases reviewers hit every week should flow back into regular updates, each with a recorded reason. The test is consistency, the same call on the same case whoever reviews it and whoever's account it is, which the EU's Digital Services Act also expects.
 - **[Age assurance: what should each check unlock?](https://www.linkedin.com/posts/stevenmacchia_most-of-the-debate-about-age-assurance-in-share-7510763675658477568-IVax/)** (Sep 29, 2026): The method matters less than what each level of assurance lets a user do. Errors aren't equal, accounts change hands, and someone has to own the thresholds.
 
 Outside sources:
